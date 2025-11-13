@@ -107,14 +107,14 @@ export default function Home() {
 
       {/* About Section */}
       <div className="bg-dark text-black py-10 ">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8">
           <AboutMe />
         </div>
       </div>
 
       {/* Skills Section */}
       <div className="bg-dark text-light py-16">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-16 flex items-center gap-4">
             SKILLS
             <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
@@ -160,7 +160,7 @@ export default function Home() {
 
       {/* Portfolio Section */}
       <div className="bg-dark text-light py-12">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="mb-12 flex items-center justify-between">
           <h2 className="portfolio-title text-4xl font-bold flex items-center gap-4">
             MY WORK

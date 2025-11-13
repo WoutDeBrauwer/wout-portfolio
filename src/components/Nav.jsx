@@ -33,7 +33,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black border-b border-white/10">
-      <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 flex justify-between items-center h-20">
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-10 flex justify-between items-center h-20">
         {/* Logo */}
         <Link
           to="/"
@@ -125,7 +125,7 @@ export default function Nav() {
                   <Link
                     to={link.path}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-black rounded-2xl shadow-md border border-white/10"
+                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-black shadow-md border border-white/10"
                   >
                     {link.label}
                   </Link>

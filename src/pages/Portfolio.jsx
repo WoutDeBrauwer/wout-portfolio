@@ -7,7 +7,7 @@ import { portfolioItems } from '../data/portfolioItems'
 export default function Portfolio() {
   return (
     <div className="bg-dark py-16">
-      <div className="max-w-[1600px] mx-auto px-5">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
       <h1 className="text-4xl font-bold text-white mb-16 flex items-center gap-4">
         MY WORK
         <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>

@@ -33,7 +33,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black border-b border-white/10">
-      <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-10 flex justify-between items-center h-20">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 flex justify-between items-center h-20">
         {/* Logo */}
         <Link
           to="/"

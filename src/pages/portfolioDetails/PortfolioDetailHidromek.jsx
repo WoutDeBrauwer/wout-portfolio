@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function PortfolioDetailHidromek() {
   return (
     <div className="bg-dark min-h-screen w-full p-0">
-      <div className="max-w-[1600px] mx-auto px-5 py-10 md:px-10 text-white">
+      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 py-10 md:px-10 text-white">
         {/* Teruglink */}
         <div className="mb-12">
           <Link to="/portfolio" className="text-primary underline">← Terug naar portfolio</Link>

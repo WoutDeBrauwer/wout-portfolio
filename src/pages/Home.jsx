@@ -22,7 +22,7 @@ export default function Home() {
         aria-label="Hero">
         {/* VIDEO rechts (hidden on small screens for performance) */}
         <video
-          className="hidden md:block absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
           src="/images/Images/Portfolio-wout-video-header.mp4"
           autoPlay
           loop

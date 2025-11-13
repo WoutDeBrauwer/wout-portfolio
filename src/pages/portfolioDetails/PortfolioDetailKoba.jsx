@@ -12,7 +12,7 @@ export default function PortfolioDetailKoba() {
 
   return (
     <div className="bg-dark min-h-screen w-full p-0">
-      <div className="max-w-[1600px] mx-auto p-10 text-white">
+      <div className="max-w-[1600px] mx-auto px-5 py-10 md:px-10 text-white">
         {/* Teruglink */}
         <div className="mb-12">
           <a href="/portfolio" className="text-primary underline">

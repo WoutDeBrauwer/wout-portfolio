@@ -164,7 +164,7 @@ export default function Nav() {
         {isOpen && (
           <div
             ref={overlayRef}
-            className="md:hidden fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex flex-col h-screen"
+            className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-50 flex flex-col h-screen"
             style={{ height: '100dvh' }}
             role="dialog"
             aria-modal="true"

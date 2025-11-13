@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function PortfolioDetailVariablePaginas() {
   return (
     <div className="bg-dark min-h-screen w-full p-0">
-      <div className="max-w-[1600px] mx-auto p-10 text-white">
+      <div className="max-w-[1600px] mx-auto px-5 py-10 md:px-10 text-white">
         <div className="mb-12">
           <Link to="/portfolio" className="text-primary underline">← Terug naar portfolio</Link>
         </div>

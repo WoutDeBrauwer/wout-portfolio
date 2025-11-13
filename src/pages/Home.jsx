@@ -161,16 +161,16 @@ export default function Home() {
       {/* Portfolio Section */}
       <div className="bg-dark text-light py-12">
         <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="mb-12 flex items-center justify-between">
+        <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="portfolio-title text-4xl font-bold flex items-center gap-4">
             MY WORK
             <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
           </h2>
 
           <Link
-                  to="/portfolio"
-                  className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
-                  Bekijk alle portfolio items
+            to="/portfolio"
+            className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
+            Bekijk alle portfolio items
           </Link>
         </div>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

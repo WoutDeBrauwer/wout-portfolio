@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
-import gsap from 'gsap';
 
 export default function Nav() {
   const location = useLocation();
@@ -24,11 +23,14 @@ export default function Nav() {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       document.documentElement.style.overflowX = 'hidden';
+      // helper class so other fixed UI (floating contact) can be hidden
+      document.body.classList.add('menu-open');
       window.addEventListener('keydown', onKey);
       if (mainEl) mainEl.setAttribute('aria-hidden', 'true');
     } else {
       document.body.style.overflow = '';
       document.documentElement.style.overflowX = '';
+      document.body.classList.remove('menu-open');
       window.removeEventListener('keydown', onKey);
       if (mainEl) mainEl?.removeAttribute('aria-hidden');
     }
@@ -71,51 +73,11 @@ export default function Nav() {
     return () => document.removeEventListener('keydown', handleTab);
   }, [isOpen]);
 
-  // Open animatie menu
-  useEffect(() => {
-    if (isOpen && overlayRef.current) {
-      const overlay = overlayRef.current;
-      const items = overlay.querySelectorAll('.menu-item');
-      gsap.fromTo(
-        overlay,
-        { y: -18, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.28, ease: 'power2.out' }
-      );
-      gsap.fromTo(
-        items,
-        { y: 8, opacity: 0, scale: 0.98 },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.36,
-          stagger: 0.06,
-          ease: 'power3.out',
-        }
-      );
-    }
-  }, [isOpen]);
+  // Open animation removed: use CSS only to avoid GSAP 'target not found' warnings
+  useEffect(() => {}, [isOpen]);
 
-  // Init animatie bij route change
-  useEffect(() => {
-    gsap.fromTo(
-      '.nav-container',
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all' }
-    );
-    gsap.fromTo(
-      '.nav-logo-text',
-      { opacity: 0, y: -10 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        delay: 0.2,
-        ease: 'power2.out',
-        clearProps: 'all',
-      }
-    );
-  }, []);
+  // Removed GSAP route entrance animations to avoid selector issues on pages
+  useEffect(() => {}, []);
 
   const isActive = (path) =>
     location.pathname === path
@@ -194,19 +156,7 @@ export default function Nav() {
               PORTFOLIO.
             </div>
             <button
-              onClick={() => {
-                if (overlayRef.current) {
-                  gsap.to(overlayRef.current, {
-                    y: -20,
-                    opacity: 0,
-                    duration: 0.22,
-                    ease: 'power2.in',
-                    onComplete: () => setIsOpen(false),
-                  });
-                } else {
-                  setIsOpen(false);
-                }
-              }}
+              onClick={() => setIsOpen(false)}
               aria-label="Close menu"
               className="p-2 rounded-md text-white hover:bg-white/5 mr-2"
             >

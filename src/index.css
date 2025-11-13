@@ -24,6 +24,12 @@ img, video, iframe {
   display: block;
 }
 
+/* While mobile menu is open, hide floating contact button to avoid it
+   covering or intercepting taps on the menu on small devices */
+.menu-open .floating-contact {
+  display: none !important;
+}
+
 @layer utilities {
   .arrow-bounce {
     animation: arrowBounce 2.4s ease-in-out infinite;

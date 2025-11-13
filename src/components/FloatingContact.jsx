@@ -67,7 +67,7 @@ export default function FloatingContact() {
   }, [open]);
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end gap-2 z-50">
+    <div className="floating-contact fixed bottom-6 right-6 flex flex-col items-end gap-2 z-50">
       <button
         ref={buttonRef}
         className={`flex items-center gap-2 bg-black text-white font-semibold shadow-lg transition-all duration-300 

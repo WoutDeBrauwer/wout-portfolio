@@ -23,7 +23,7 @@ export default function Home() {
         {/* VIDEO rechts */}
         <video
           className="absolute top-0 right-0 w-full h-full object-cover"
-          src="/Images/Portfolio-wout-video-header.mp4"
+          src="/images/Images/Portfolio-wout-video-header.mp4"
           autoPlay
           loop
           muted

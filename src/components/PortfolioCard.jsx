@@ -10,7 +10,7 @@ export default function PortfolioCard({ title, image, tags, link }) {
           src={image}
           alt={title}
           onError={(e) => {
-            e.currentTarget.src = "/Images/Template-portfolio-item.jpg";
+            e.currentTarget.src = "/images/Images/Template-portfolio-item.jpg";
           }}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
         />

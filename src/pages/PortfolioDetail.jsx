@@ -37,7 +37,7 @@ export default function PortfolioDetail() {
           <img
             src={item.image}
             alt={item.title}
-               onError={e => { e.currentTarget.src = '/Images/Template-portfolio-item.jpg' }}
+               onError={e => { e.currentTarget.src = '/images/Images/Template-portfolio-item.jpg' }}
             className="w-full h-64 object-cover rounded-xl mb-4"
           />
           <h1 className="text-3xl font-bold mb-2">{item.title}</h1>

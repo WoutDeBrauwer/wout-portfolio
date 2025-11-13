@@ -4,9 +4,9 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 export default function PortfolioDetailKoba() {
   const screenshots = [
-    "/Images/Koba/Portfolio-wout-Koba-screenshot-map-page.png",
-    "/Images/Koba/Portfolio-wout-Koba-screenshot-vacature.png",
-    "/Images/Koba/Portfolio-wout-Koba-screenshot-studiekiezer-selectedItem.png"
+    "/images/Images/Koba/Portfolio-wout-Koba-screenshot-map-page.png",
+    "/images/Images/Koba/Portfolio-wout-Koba-screenshot-vacature.png",
+    "/images/Images/Koba/Portfolio-wout-Koba-screenshot-studiekiezer-selectedItem.png"
   ];
 
   return (
@@ -23,7 +23,7 @@ export default function PortfolioDetailKoba() {
         <div className="grid grid-cols-2 gap-16 mb-16">
           <div>
             <img
-              src="/Images/Template-portfolio-item.jpg"
+              src="/images/Images/Template-portfolio-item.jpg"
               alt="KOBA Metropool overzicht"
               className="w-full h-[400px] object-cover rounded-xl shadow"
             />

@@ -168,7 +168,7 @@ export default function Nav() {
         {isOpen && (
           <div
             ref={overlayRef}
-            className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-[9999] flex flex-col"
+            className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-[9999] flex flex-col pointer-events-auto"
             role="dialog"
             aria-modal="true"
           >
@@ -191,9 +191,9 @@ export default function Nav() {
             </div>
 
             {/* Scrollable content area — center menu vertically between header and footer */}
-            <div className="overflow-auto px-6 pb-8 flex flex-col items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100vh - 64px)', minHeight: 'calc(100vh - 64px)' }}>
-              <div className="w-full max-w-md mx-auto">
-                <div className="bg-white/3 backdrop-blur-lg rounded-2xl p-4 space-y-4">
+            <div className="overflow-auto px-4 pb-8 flex flex-col items-center justify-start" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100vh - 64px)', minHeight: 'calc(100vh - 64px)' }}>
+              <div className="w-full">
+                <div className="bg-white/3 backdrop-blur-lg rounded-2xl p-4 space-y-4 mx-4">
                   <nav className="flex flex-col items-center gap-4">
                     <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">HOME</Link>
                     <Link to="/portfolio" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">MY WORK</Link>

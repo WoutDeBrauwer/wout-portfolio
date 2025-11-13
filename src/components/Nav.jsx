@@ -32,7 +32,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black/70 backdrop-blur-lg border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black border-b border-white/10">
       <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 flex justify-between items-center h-20">
         {/* Logo */}
         <Link
@@ -88,7 +88,7 @@ export default function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[10001] bg-gradient-to-b from-black/95 via-black/90 to-black/80 backdrop-blur-xl flex flex-col"
+            className="fixed inset-0 z-[10001] bg-black flex flex-col"
             role="dialog"
             aria-modal="true"
           >
@@ -125,7 +125,7 @@ export default function Nav() {
                   <Link
                     to={link.path}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-white/5 hover:bg-white/10 rounded-2xl shadow-md border border-white/10 backdrop-blur-sm"
+                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-black rounded-2xl shadow-md border border-white/10"
                   >
                     {link.label}
                   </Link>

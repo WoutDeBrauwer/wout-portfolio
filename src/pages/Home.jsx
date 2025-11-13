@@ -58,16 +58,16 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="inline-block bg-white text-[#111111] px-6 py-3 rounded-md font-semibold shadow hover:opacity-90 transition">
                   Contact
-                </a>
-                <a
-                  href="/portfolio"
+                </Link>
+                <Link
+                  to="/portfolio"
                   className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
                   Portfolio
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,11 +1,12 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 
 export default function Nav() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const overlayRef = useRef(null);
 
   // Scroll detectie voor nav achtergrond
   useEffect(() => {
@@ -85,7 +86,7 @@ export default function Nav() {
           {/* Mobile hamburger button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(true)}
               aria-label="Open menu"
               className="p-2 inline-flex items-center justify-center rounded-md text-white hover:bg-white/5"
             >
@@ -98,11 +99,40 @@ export default function Nav() {
       </div>
         {/* Mobile menu overlay */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center gap-8">
-            <button onClick={() => setIsOpen(false)} aria-label="Close menu" className="absolute top-6 right-6 p-2 rounded-md text-white hover:bg-white/5">✕</button>
-            <Link to="/" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">HOME</Link>
-            <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">MY WORK</Link>
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">CONTACT</Link>
+          <div
+            ref={overlayRef}
+            className="md:hidden fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex flex-col items-center justify-center gap-8 px-6"
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              onClick={() => {
+                // animate close then set state
+                if (overlayRef.current) {
+                  gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) });
+                } else {
+                  setIsOpen(false);
+                }
+              }}
+              aria-label="Close menu"
+              className="absolute top-6 right-6 p-2 rounded-md text-white hover:bg-white/5"
+            >
+              ✕
+            </button>
+
+            <div className="w-full max-w-md flex flex-col items-center gap-6">
+              <div className="text-white text-3xl font-bold tracking-wider">PORTFOLIO.</div>
+
+              <nav className="flex flex-col items-center gap-6 mt-4">
+                <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">HOME</Link>
+                <Link to="/portfolio" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">MY WORK</Link>
+                <Link to="/contact" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">CONTACT</Link>
+              </nav>
+
+              <div className="w-full h-px bg-white/10 mt-6"></div>
+
+              <p className="text-center text-white/70">Snelle links en contact — tik om te sluiten</p>
+            </div>
           </div>
         )}
       </nav>

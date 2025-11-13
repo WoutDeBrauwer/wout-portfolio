@@ -1,213 +1,133 @@
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState, useRef } from 'react';
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
   const location = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const overlayRef = useRef(null);
 
-  // Scroll detectie voor nav achtergrond
+  // Disable body scroll when menu is open
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [menuOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
-
-  // Lock body scroll wanneer menu open is + sluit op Escape
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && isOpen && setIsOpen(false);
-    const mainEl = document.querySelector('main');
-
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflowX = 'hidden';
-      // helper class so other fixed UI (floating contact) can be hidden
-      document.body.classList.add('menu-open');
-      window.addEventListener('keydown', onKey);
-      if (mainEl) mainEl.setAttribute('aria-hidden', 'true');
-    } else {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflowX = '';
-      document.body.classList.remove('menu-open');
-      window.removeEventListener('keydown', onKey);
-      if (mainEl) mainEl?.removeAttribute('aria-hidden');
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflowX = '';
-      window.removeEventListener('keydown', onKey);
-      if (mainEl) mainEl?.removeAttribute('aria-hidden');
-    };
-  }, [isOpen]);
-
-  // Focus trap
-  useEffect(() => {
-    if (!isOpen || !overlayRef.current) return;
-    const overlay = overlayRef.current;
-    const focusableSelector =
-      'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
-    const focusable = Array.from(
-      overlay.querySelectorAll(focusableSelector)
-    ).filter((el) => el.offsetParent !== null);
-    if (!focusable.length) return;
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-
-    const handleTab = (e) => {
-      if (e.key !== 'Tab') return;
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    };
-
-    setTimeout(() => first.focus(), 0);
-    document.addEventListener('keydown', handleTab);
-    return () => document.removeEventListener('keydown', handleTab);
-  }, [isOpen]);
-
-  // Open animation removed: use CSS only to avoid GSAP 'target not found' warnings
-  useEffect(() => {}, [isOpen]);
-
-  // Removed GSAP route entrance animations to avoid selector issues on pages
-  useEffect(() => {}, []);
 
   const isActive = (path) =>
     location.pathname === path
-      ? 'text-primary after:w-[11px]'
-      : 'text-white after:w-0';
+      ? "text-primary after:w-[12px]"
+      : "text-white after:w-0";
+
+  const navLinks = [
+    { path: "/", label: "HOME" },
+    { path: "/portfolio", label: "MY WORK" },
+    { path: "/contact", label: "CONTACT" },
+  ];
 
   return (
-    <nav
-      className={`fixed left-0 right-0 top-0 z-[99999] transition-all duration-300 bg-black backdrop-blur-md overflow-x-hidden`}
-    >
-      <div className="nav-container max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8 overflow-x-hidden">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex items-center overflow-hidden">
-            <Link to="/" className="nav-logo-text text-2xl font-bold text-white">
-              PORTFOLIO.
-            </Link>
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black/80 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+        {/* Logo */}
+        <Link to="/" className="text-2xl font-bold text-white select-none">
+          PORTFOLIO.
+        </Link>
 
-          {/* Desktop links */}
-          <div className="hidden md:flex items-center space-x-6">
-            {[
-              { path: '/', label: 'HOME' },
-              { path: '/portfolio', label: 'MY WORK' },
-              { path: '/contact', label: 'CONTACT' },
-            ].map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`nav-item relative text-sm font-medium transition-colors ${isActive(
-                  link.path
-                )} after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Hamburger */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(true)}
-              aria-label="Open menu"
-              className="p-2 inline-flex items-center justify-center rounded-md text-white hover:bg-white/5"
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`relative text-sm font-medium transition-colors ${isActive(
+                link.path
+              )} after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all`}
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </button>
-          </div>
+              {link.label}
+            </Link>
+          ))}
         </div>
+
+        {/* Hamburger */}
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="md:hidden p-2 rounded-md text-white hover:bg-white/10"
+          aria-label="Open menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
 
-      {/* Mobile menu overlay */}
-      {isOpen && (
-        <div
-          ref={overlayRef}
-          className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-[100000] flex flex-col pointer-events-auto"
-          role="dialog"
-          aria-modal="true"
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between px-4 pt-6 pb-2">
-            <div className="text-white text-lg font-bold tracking-wider ml-2">
-              PORTFOLIO.
-            </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              aria-label="Close menu"
-              className="p-2 rounded-md text-white hover:bg-white/5 mr-2"
-            >
-              ✕
-            </button>
-          </div>
-
-          {/* Content */}
-          <div
-            className="overflow-auto px-4 pb-8 flex flex-col items-center justify-start"
-            style={{
-              WebkitOverflowScrolling: 'touch',
-              maxHeight: 'calc(100vh - 64px)',
-              minHeight: 'calc(100vh - 64px)',
-            }}
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            ref={overlayRef}
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[10001] bg-black/90 backdrop-blur-lg flex flex-col"
+            role="dialog"
+            aria-modal="true"
           >
-            <div className="w-full">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 space-y-4 mx-4">
-                <nav className="flex flex-col items-center gap-4">
-                  <Link
-                    to="/"
-                    onClick={() => setIsOpen(false)}
-                    className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/10 hover:bg-white/20 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm"
-                  >
-                    HOME
-                  </Link>
-                  <Link
-                    to="/portfolio"
-                    onClick={() => setIsOpen(false)}
-                    className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/10 hover:bg-white/20 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm"
-                  >
-                    MY WORK
-                  </Link>
-                  <Link
-                    to="/contact"
-                    onClick={() => setIsOpen(false)}
-                    className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/10 hover:bg-white/20 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm"
-                  >
-                    CONTACT
-                  </Link>
-                </nav>
-              </div>
+            {/* Header */}
+            <div className="flex justify-between items-center px-5 pt-6 pb-3">
+              <span className="text-white text-xl font-bold">PORTFOLIO.</span>
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="p-2 text-white rounded-md hover:bg-white/10"
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
             </div>
 
-            <div className="w-full h-px bg-white/10 my-6 max-w-md mx-auto"></div>
-            <p className="text-center text-white/70 max-w-md mx-auto">
+            {/* Links */}
+            <motion.nav
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 20, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="flex flex-col items-center gap-4 px-6 mt-6"
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setMenuOpen(false)}
+                  className="w-full text-center text-2xl font-semibold text-white hover:text-primary transition py-4 bg-white/10 hover:bg-white/20 rounded-2xl shadow-md"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </motion.nav>
+
+            {/* Footer info */}
+            <div className="mt-auto pb-8 text-center text-white/60 text-sm">
               Snelle links en contact — tik om te sluiten
-            </p>
-          </div>
-        </div>
-      )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

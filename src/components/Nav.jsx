@@ -1,195 +1,145 @@
-// src/components/Nav.jsx
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
-  const [open, setOpen] = useState(false);
-  const drawerRef = useRef(null);
-  const firstFocusableRef = useRef(null);
-  const lastFocusableRef = useRef(null);
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const overlayRef = useRef(null);
 
-  const links = [
-    { to: '/', label: 'Home' },
-    { to: '/portfolio', label: 'Portfolio' },
-    { to: '/contact', label: 'Contact' },
+  // Disable body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => (document.body.style.overflow = "");
+  }, [menuOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  const isActive = (path) =>
+    location.pathname === path
+      ? "text-primary after:w-[12px]"
+      : "text-white after:w-0";
+
+  const navLinks = [
+    { path: "/", label: "HOME" },
+    { path: "/portfolio", label: "MY WORK" },
+    { path: "/contact", label: "CONTACT" },
   ];
 
-  // Close drawer on route change
-  useEffect(() => {
-    setOpen(false);
-  }, [location.pathname]);
-
-  // Prevent body scroll when menu open
-  useEffect(() => {
-    if (open) {
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.left = '0';
-      document.body.style.right = '0';
-      return () => {
-        document.body.style.position = '';
-        document.body.style.top = '';
-        window.scrollTo(0, scrollY);
-      };
-    }
-  }, [open]);
-
-  // Close on Escape and trap focus inside drawer
-  useEffect(() => {
-    if (!open) return;
-
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'textarea',
-      'input[type="text"]',
-      'input[type="radio"]',
-      'input[type="checkbox"]',
-      'select',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    const focusable = drawerRef.current
-      ? Array.from(drawerRef.current.querySelectorAll(focusableSelectors))
-      : [];
-
-    if (focusable.length > 0) {
-      firstFocusableRef.current = focusable[0];
-      lastFocusableRef.current = focusable[focusable.length - 1];
-      firstFocusableRef.current.focus();
-    }
-
-    const onKey = (e) => {
-      if (e.key === 'Escape') {
-        setOpen(false);
-        return;
-      }
-      if (e.key === 'Tab') {
-        // simple focus trap
-        if (document.activeElement === lastFocusableRef.current && !e.shiftKey) {
-          e.preventDefault();
-          firstFocusableRef.current.focus();
-        } else if (document.activeElement === firstFocusableRef.current && e.shiftKey) {
-          e.preventDefault();
-          lastFocusableRef.current.focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, [open]);
-
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 dark:bg-gray-900/70 backdrop-blur-md z-50 border-b border-gray-200 dark:border-transparent">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-[10000] bg-black/70 backdrop-blur-lg border-b border-white/10">
+      <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-10 flex justify-between items-center h-20">
         {/* Logo */}
-        <Link to="/" className="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-          Wout De Brauwer
+        <Link
+          to="/"
+          className="text-2xl font-bold text-white select-none tracking-tight hover:text-primary transition"
+        >
+          PORTFOLIO<span className="text-primary">.</span>
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map(l => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === '/'}
-              className={({ isActive }) =>
-                `text-sm font-medium transition ${
-                  isActive ? 'text-black dark:text-white' : 'text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white'
-                }`
-              }
+        {/* Desktop menu */}
+        <div className="hidden md:flex items-center space-x-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`relative text-sm tracking-wide font-medium transition-all duration-200 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all ${isActive(
+                link.path
+              )} hover:text-primary`}
             >
-              {l.label}
-            </NavLink>
+              {link.label}
+            </Link>
           ))}
         </div>
 
-        {/* Mobile hamburger */}
-        <div className="md:hidden">
-          <button
-            aria-controls="mobile-menu"
-            aria-expanded={open}
-            aria-label={open ? 'Sluit menu' : 'Open menu'}
-            onClick={() => setOpen(v => !v)}
-            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        {/* Hamburger */}
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="md:hidden p-2 rounded-md text-white hover:bg-white/10 transition"
+          aria-label="Open menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            {open ? (
-              // Close icon
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            ) : (
-              // Hamburger icon
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            )}
-          </button>
-        </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </div>
 
-      {/* Overlay */}
-      <div
-        className={`fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-200 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-        onClick={() => setOpen(false)}
-        aria-hidden={!open}
-      />
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            ref={overlayRef}
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[10001] bg-gradient-to-b from-black/95 via-black/90 to-black/80 backdrop-blur-xl flex flex-col"
+            role="dialog"
+            aria-modal="true"
+          >
+            {/* Header */}
+            <div className="flex justify-between items-center px-5 pt-6 pb-3">
+              <span className="text-white text-xl font-bold tracking-tight">
+                PORTFOLIO<span className="text-primary">.</span>
+              </span>
+              <button
+                onClick={() => setMenuOpen(false)}
+                className="p-2 text-white rounded-md hover:bg-white/10 transition"
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            </div>
 
-      {/* Drawer */}
-      <aside
-        id="mobile-menu"
-        ref={drawerRef}
-        className={`fixed top-0 right-0 h-full w-72 max-w-[80vw] bg-white dark:bg-gray-800 z-50 transform transition-transform duration-300 ease-in-out shadow-xl
-          ${open ? 'translate-x-0' : 'translate-x-full'}`}
-        aria-hidden={!open}
-      >
-        <div className="px-6 py-6 flex flex-col h-full">
-          <div className="flex items-center justify-between mb-6">
-            <Link to="/" className="text-lg font-semibold text-gray-900 dark:text-white" onClick={() => setOpen(false)}>
-              Wout De Brauwer
-            </Link>
-            <button
-              onClick={() => setOpen(false)}
-              aria-label="Sluit menu"
-              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            {/* Links */}
+            <motion.nav
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 25, opacity: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="flex flex-col items-center gap-5 px-6 mt-10"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M6 6L18 18M6 18L18 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-          </div>
-
-          <nav className="flex-1">
-            <ul className="flex flex-col gap-4 text-lg">
-              {links.map((l) => (
-                <li key={l.to}>
-                  <NavLink
-                    to={l.to}
-                    end={l.to === '/'}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `block px-2 py-2 rounded-md transition ${
-                        isActive ? 'text-black dark:text-white font-semibold' : 'text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white'
-                      }`
-                    }
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.path}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * i, duration: 0.3 }}
+                  className="w-full"
+                >
+                  <Link
+                    to={link.path}
+                    onClick={() => setMenuOpen(false)}
+                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-white/5 hover:bg-white/10 rounded-2xl shadow-md border border-white/10 backdrop-blur-sm"
                   >
-                    {l.label}
-                  </NavLink>
-                </li>
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
-            </ul>
-          </nav>
+            </motion.nav>
 
-          {/* Optional small footer in drawer */}
-          <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} Wout De Brauwer
-          </div>
-        </div>
-      </aside>
+            {/* Footer info */}
+            <div className="mt-auto pb-10 text-center text-white/60 text-xs tracking-widest uppercase">
+              © {new Date().getFullYear()} Wout De Brauwer
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -42,7 +42,7 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-dark text-white py-20 px-6"
+      className="bg-dark text-white"
       id="about"
     >
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row  gap-12">

@@ -5,7 +5,7 @@ export default function PortfolioCard({ title, image, tags, link }) {
     <div className="relative bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
       
       {/* Achtergrondafbeelding */}
-      <div className="relative h-80 w-full">
+      <div className="relative h-56 md:h-80 w-full">
         <img
           src={image}
           alt={title}

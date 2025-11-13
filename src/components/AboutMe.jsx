@@ -49,7 +49,7 @@ export default function AboutSection() {
         {/* Foto */}
         <div ref={imageRef} className="w-full md:w-1/3 flex justify-center">
           <img
-            src="Images/Portfolio-profielfoto.webp"
+            src="\public\images\Images\Portfolio-profielfoto.webp"
             alt="profielfoto"
             className="w-80 md:w-[440px] h-auto rounded-2xl object-cover shadow-lg"
           />

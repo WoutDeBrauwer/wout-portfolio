@@ -8,11 +8,11 @@ export default function Contact() {
       {/* Zwarte achtergrond links */}
       <div className="hidden lg:block absolute top-0 left-0 h-full w-1/2 bg-dark z-0"></div>
       <div className="flex-1 flex items-stretch justify-center relative z-10">
-        <div className="max-w-[1600px] w-full flex flex-col lg:flex-row mx-auto px-5">
+        <div className="max-w-[1600px] w-full flex flex-col lg:flex-row mx-auto px-5 pb-12 md:pb-20">
           {/* Linkerzijde: zwart */}
-          <div className="flex-1 flex items-start bg-transparent py-10 md:py-20">
-            <div className="max-w-[800px] w-full px-5 md:px-10 text-white">
-              <h1 className="text-[2rem] lg:text-[5rem] font-bold leading-none">
+          <div className="flex-1 flex items-start bg-transparent py-6 md:py-20">
+            <div className="max-w-[800px] w-full px-5 md:px-10">
+              <h1 className="text-[2rem] lg:text-[5rem] font-bold leading-none text-black lg:text-white">
                 CONTACT ME
               </h1>
             </div>

@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import PortfolioDetail from './pages/PortfolioDetail'
 import Contact from './pages/Contact.jsx'
-import FloatingContact from 'components\FloatingContact.jsx'
+import FloatingContact from './components/FloatingContact.jsx'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 

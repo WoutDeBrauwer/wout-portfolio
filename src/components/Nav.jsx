@@ -187,9 +187,9 @@ export default function Nav() {
               </button>
             </div>
 
-            {/* Scrollable content area — limit to viewport minus header */}
-            <div className="overflow-auto px-6 pb-8" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100dvh - 64px)' }}>
-              <div className="w-full max-w-md mx-auto mt-4">
+            {/* Scrollable content area — center menu vertically between header and footer */}
+            <div className="overflow-auto px-6 pb-8 flex flex-col items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100dvh - 64px)', minHeight: 'calc(100dvh - 64px)' }}>
+              <div className="w-full max-w-md mx-auto">
                 <div className="bg-white/3 backdrop-blur-lg rounded-2xl p-4 space-y-4">
                   <nav className="flex flex-col items-center gap-4">
                     <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">HOME</Link>
@@ -202,14 +202,6 @@ export default function Nav() {
               <div className="w-full h-px bg-white/10 my-6 max-w-md mx-auto"></div>
 
               <p className="text-center text-white/70 max-w-md mx-auto">Snelle links en contact — tik om te sluiten</p>
-
-              {/* replicate a bit of site content for scroll testing */}
-              <div className="mt-6 max-w-md mx-auto space-y-6">
-                {/* small previews to make scrolling possible */}
-                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
-                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
-                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
-              </div>
             </div>
           </div>
         )}

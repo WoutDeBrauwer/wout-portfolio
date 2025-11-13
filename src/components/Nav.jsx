@@ -33,7 +33,7 @@ export default function Nav() {
       { opacity: 0, y: -10 },
       { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power2.out', clearProps: 'all' }
     );
-  }, [location.pathname]);
+  }, []);
 
   // Active link styling: tekstkleur en klein streepje
   const isActive = (path) => {

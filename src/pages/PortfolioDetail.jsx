@@ -23,7 +23,7 @@ export default function PortfolioDetail() {
 
   if (CustomDetail) {
     return (
-      <React.Suspense fallback={<div className="p-10">Laden...</div>}>
+      <React.Suspense fallback={<div className="p-10 min-h-[60vh] bg-dark" aria-hidden="true"></div>}>
         <CustomDetail />
       </React.Suspense>
     );

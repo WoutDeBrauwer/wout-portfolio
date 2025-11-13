@@ -41,7 +41,7 @@ export default function Home() {
                 MY NAME IS
               </p>
 
-              <h1 className="text-5xl sm:text-6xl md:text-[5.2rem] lg:text-[6.2rem] font-extrabold leading-tight mb-6">
+              <h1 className="text-5xl sm:text-6xl md:text-[5.2rem] lg:text-[6.2rem] font-extrabold leading-tight mb-6 sm:mb-2">
                 <Typewriter text="WOUT" speed={120} />
               </h1>
 

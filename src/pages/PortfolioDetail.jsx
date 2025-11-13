@@ -38,7 +38,7 @@ export default function PortfolioDetail() {
             src={item.image}
             alt={item.title}
                onError={e => { e.currentTarget.src = '/images/Images/Template-portfolio-item.jpg' }}
-            className="w-full h-64 object-cover rounded-xl mb-4"
+            className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"
           />
           <h1 className="text-3xl font-bold mb-2">{item.title}</h1>
           <div className="flex flex-wrap gap-2 mb-2">

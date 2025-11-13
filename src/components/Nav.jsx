@@ -165,9 +165,9 @@ export default function Nav() {
               {/* replicate a bit of site content for scroll testing */}
               <div className="mt-6 max-w-md mx-auto space-y-6">
                 {/* small previews to make scrolling possible */}
-                <div className="h-40 rounded-xl bg-white/5" />
-                <div className="h-40 rounded-xl bg-white/5" />
-                <div className="h-40 rounded-xl bg-white/5" />
+                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
+                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
+                <div className="h-28 md:h-40 rounded-xl bg-white/5" />
               </div>
             </div>
           </div>

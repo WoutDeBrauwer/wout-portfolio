@@ -26,7 +26,7 @@ export default function PortfolioDetailKoba() {
             <img
               src="/images/Images/Template-portfolio-item.jpg"
               alt="KOBA Metropool overzicht"
-              className="w-full h-[400px] object-cover rounded-xl shadow"
+              className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow"
             />
           </div>
 

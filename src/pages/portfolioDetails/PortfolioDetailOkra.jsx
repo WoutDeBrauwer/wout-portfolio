@@ -18,7 +18,7 @@ export default function PortfolioDetailOkra() {
             <img
               src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png"
               alt="OKRA Reizen overzicht"
-              className="w-full h-[400px] object-cover rounded-xl shadow"
+              className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow"
             />
           </div>
           <div>

@@ -13,7 +13,7 @@ export default function PortfolioDetailHidromek() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/portfolio/hidromek.jpg" alt="Hidromek overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/portfolio/hidromek.jpg" alt="Hidromek overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Hidromek</h1>

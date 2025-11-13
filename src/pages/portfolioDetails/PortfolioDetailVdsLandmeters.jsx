@@ -13,7 +13,7 @@ export default function PortfolioDetailVdsLandmeters() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/Images/VdsLandmeters/vdslandmeters-overview.jpg" alt="VDS Landmeters overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/VdsLandmeters/vdslandmeters-overview.jpg" alt="VDS Landmeters overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">VDS Landmeters</h1>

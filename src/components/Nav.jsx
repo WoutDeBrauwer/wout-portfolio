@@ -26,18 +26,59 @@ export default function Nav() {
       if (e.key === 'Escape' && isOpen) setIsOpen(false);
     };
 
+    const mainEl = document.querySelector('main');
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', onKey);
+      if (mainEl) mainEl.setAttribute('aria-hidden', 'true');
     } else {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', onKey);
+      if (mainEl) mainEl.removeAttribute('aria-hidden');
     }
 
     return () => {
       document.body.style.overflow = '';
       window.removeEventListener('keydown', onKey);
+      if (mainEl) mainEl.removeAttribute('aria-hidden');
     };
+  }, [isOpen]);
+
+  // Focus trap: keep focus inside overlay when open
+  useEffect(() => {
+    if (!isOpen || !overlayRef.current) return;
+
+    const overlay = overlayRef.current;
+    const focusableSelector = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusable = Array.from(overlay.querySelectorAll(focusableSelector)).filter((el) => el.offsetParent !== null);
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    const handleTab = (e) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    // Focus the first focusable element (close button)
+    setTimeout(() => {
+      first.focus();
+    }, 0);
+
+    document.addEventListener('keydown', handleTab);
+    return () => document.removeEventListener('keydown', handleTab);
   }, [isOpen]);
 
   // Open animation for mobile menu items

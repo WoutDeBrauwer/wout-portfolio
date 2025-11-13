@@ -12,7 +12,7 @@ export default function PortfolioDetailVdsLandmeters() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/vdslandmeters-overview.jpg" alt="VDS Landmeters overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/VdsLandmeters/vdslandmeters-overview.jpg" alt="VDS Landmeters overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">VDS Landmeters</h1>
@@ -61,9 +61,9 @@ export default function PortfolioDetailVdsLandmeters() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/vdslandmeters-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/vdslandmeters-projecten.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
-            <img src="/images/vdslandmeters-drones.jpg" alt="Drones screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/VdsLandmeters/vdslandmeters-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/VdsLandmeters/vdslandmeters-projecten.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/VdsLandmeters/vdslandmeters-drones.jpg" alt="Drones screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

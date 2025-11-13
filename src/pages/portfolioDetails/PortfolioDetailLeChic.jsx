@@ -12,7 +12,7 @@ export default function PortfolioDetailLeChic() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/lechic-overview.jpg" alt="Le Chic overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/LeChic/lechic-overview.jpg" alt="Le Chic overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Le Chic Hairboetiek</h1>
@@ -60,9 +60,9 @@ export default function PortfolioDetailLeChic() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/lechic-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/lechic-webshop.jpg" alt="Webshop screenshot" className="rounded-lg shadow" />
-            <img src="/images/lechic-producten.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/LeChic/lechic-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/LeChic/lechic-webshop.jpg" alt="Webshop screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/LeChic/lechic-producten.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export default function PortfolioDetailArteVerde() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/arte-verde-overview.jpg" alt="Arte-Verde overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/ArteVerde/arte-verde-overview.jpg" alt="Arte-Verde overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Arte-Verde</h1>
@@ -60,9 +60,9 @@ export default function PortfolioDetailArteVerde() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/arte-verde-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/arte-verde-projecten.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
-            <img src="/images/arte-verde-biozwembad.jpg" alt="Biozwembad screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/ArteVerde/arte-verde-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/ArteVerde/arte-verde-projecten.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/ArteVerde/arte-verde-biozwembad.jpg" alt="Biozwembad screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

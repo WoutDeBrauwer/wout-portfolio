@@ -12,7 +12,7 @@ export default function PortfolioDetailBiaform() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/biaform-overview.jpg" alt="Biaform overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/Biaform/biaform-overview.jpg" alt="Biaform overzicht" className="w-full h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Biaform Provital</h1>
@@ -60,9 +60,9 @@ export default function PortfolioDetailBiaform() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/biaform-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/biaform-producten.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
-            <img src="/images/biaform-recepten.jpg" alt="Recepten screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Biaform/biaform-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Biaform/biaform-producten.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Biaform/biaform-recepten.jpg" alt="Recepten screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

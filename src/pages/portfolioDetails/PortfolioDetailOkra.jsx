@@ -15,7 +15,7 @@ export default function PortfolioDetailOkra() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
             <img
-              src="/images/okra-overview.jpg"
+              src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png"
               alt="OKRA Reizen overzicht"
               className="w-full h-[400px] object-cover rounded-xl shadow"
             />
@@ -89,17 +89,17 @@ export default function PortfolioDetailOkra() {
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <img
-              src="/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.png"
+              src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.png"
               alt="Detailpagina screenshot"
               className="rounded-lg shadow"
             />
             <img
-              src="/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png"
+              src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png"
               alt="Homepage screenshot"
               className="rounded-lg shadow"
             />
             <img
-              src="/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen.png"
+              src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen.png"
               alt="Reiszoeker screenshot"
               className="rounded-lg shadow"
             />

@@ -61,7 +61,7 @@ export default function PortfolioDetailVdsLandmeters() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <img src="/images/Images/VdsLandmeters/vdslandmeters-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
             <img src="/images/Images/VdsLandmeters/vdslandmeters-projecten.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
             <img src="/images/Images/VdsLandmeters/vdslandmeters-drones.jpg" alt="Drones screenshot" className="rounded-lg shadow" />

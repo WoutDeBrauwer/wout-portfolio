@@ -107,7 +107,7 @@ export default function PortfolioDetailKoba() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <PhotoProvider>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {screenshots.map((src, i) => (
                 <PhotoView key={i} src={src}>
                   <div className="overflow-hidden rounded-xl shadow-lg group cursor-pointer">

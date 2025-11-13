@@ -65,7 +65,7 @@ export default function PortfolioDetailHidromek() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <img src="/images/Images/Hidromek/Portfolio-wout-Hidromek-homepage.png" alt="Homepage screenshot" className="rounded-lg shadow" />
             <img src="/images/Images/Hidromek/Portfolio-wout-Hidromek-productcatalogus.png" alt="Productcatalogus screenshot" className="rounded-lg shadow" />
             <img src="/images/Images/Hidromek/Portfolio-wout-Hidromek-contact.png" alt="Contact screenshot" className="rounded-lg shadow" />

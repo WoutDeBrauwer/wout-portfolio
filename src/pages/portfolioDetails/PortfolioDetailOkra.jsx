@@ -88,7 +88,7 @@ export default function PortfolioDetailOkra() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <img
               src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.png"
               alt="Detailpagina screenshot"

@@ -1,0 +1,11 @@
+.floating-contact {
+  @apply fixed bottom-5 right-5 flex flex-col gap-2 z-50;
+
+  a {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-center shadow-lg;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

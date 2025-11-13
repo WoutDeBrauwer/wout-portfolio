@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PortfolioDetailVariablePaginas() {
   return (
     <div className="bg-dark min-h-screen w-full p-0">
       <div className="max-w-[1600px] mx-auto p-10 text-white">
         <div className="mb-12">
-          <a href="/portfolio" className="text-primary underline">← Terug naar portfolio</a>
+          <Link to="/portfolio" className="text-primary underline">← Terug naar portfolio</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>

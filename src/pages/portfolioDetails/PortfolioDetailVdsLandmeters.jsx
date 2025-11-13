@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function PortfolioDetailVdsLandmeters() {
   return (
@@ -6,7 +7,7 @@ export default function PortfolioDetailVdsLandmeters() {
       <div className="max-w-[1600px] mx-auto p-10 text-white">
         {/* Teruglink */}
         <div className="mb-12">
-          <a href="/portfolio" className="text-primary underline">← Terug naar portfolio</a>
+          <Link to="/portfolio" className="text-primary underline">← Terug naar portfolio</Link>
         </div>
 
         {/* Header sectie */}

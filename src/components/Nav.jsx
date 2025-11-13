@@ -5,6 +5,7 @@ import gsap from 'gsap';
 export default function Nav() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Scroll detectie voor nav achtergrond
   useEffect(() => {
@@ -85,3 +86,12 @@ export default function Nav() {
     </nav>
   );
 }
+          {/* Mobile menu overlay */}
+          {isOpen && (
+            <div className="md:hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center gap-8">
+              <button onClick={() => setIsOpen(false)} aria-label="Close menu" className="absolute top-6 right-6 p-2 rounded-md text-white hover:bg-white/5">✕</button>
+              <Link to="/" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">HOME</Link>
+              <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">MY WORK</Link>
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">CONTACT</Link>
+            </div>
+          )}

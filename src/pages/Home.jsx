@@ -20,9 +20,9 @@ export default function Home() {
         className="relative flex items-center overflow-hidden"
         style={{height: "calc(100vh - 5rem)"}}
         aria-label="Hero">
-        {/* VIDEO rechts */}
+        {/* VIDEO rechts (hidden on small screens for performance) */}
         <video
-          className="absolute top-0 right-0 w-full h-full object-cover"
+          className="hidden md:block absolute top-0 right-0 w-full h-full object-cover"
           src="/images/Images/Portfolio-wout-video-header.mp4"
           autoPlay
           loop
@@ -45,7 +45,7 @@ export default function Home() {
                 <Typewriter text="WOUT" speed={120} />
               </h1>
 
-              <div className="text-2xl sm:text-3xl md:text-[3.8rem] lg:text-[4.5rem] font-semibold tracking-widest uppercase text-white/90 mb-9 inline-block whitespace-nowrap">
+              <div className="text-4xl sm:text-5xl md:text-[3.8rem] lg:text-[4.5rem] font-semibold tracking-widest uppercase text-white/90 mb-9 inline-block whitespace-nowrap">
                 <Typewriter text="DE BRAUWER" speed={120} />
               </div>
 
@@ -173,7 +173,7 @@ export default function Home() {
             Bekijk alle portfolio items
           </a>
         </div>
-            <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {featured.slice(0, 3).map((item) => (
                 <Link key={item.id} to={`/portfolio/${item.id}`}>
                   <PortfolioCard {...item} />

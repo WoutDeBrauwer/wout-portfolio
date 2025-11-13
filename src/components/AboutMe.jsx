@@ -45,7 +45,7 @@ export default function AboutSection() {
       className="bg-dark text-white"
       id="about"
     >
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row  gap-12">
+      <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row  gap-12">
         {/* Foto */}
         <div ref={imageRef} className="w-full md:w-1/3 flex justify-center">
             <img

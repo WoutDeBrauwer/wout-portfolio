@@ -63,8 +63,8 @@ export default function Nav() {
             </Link>
           </div>
 
-          {/* Navigatie links */}
-          <div className="flex items-center space-x-6">
+          {/* Desktop links (hidden on small) */}
+          <div className="hidden md:flex items-center space-x-6">
             {[
               { path: '/', label: 'HOME' },
               { path: '/portfolio', label: 'MY WORK' },
@@ -81,17 +81,30 @@ export default function Nav() {
               </Link>
             ))}
           </div>
+
+          {/* Mobile hamburger button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Open menu"
+              className="p-2 inline-flex items-center justify-center rounded-md text-white hover:bg-white/5"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
-  );
-}
-          {/* Mobile menu overlay */}
-          {isOpen && (
-            <div className="md:hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center gap-8">
-              <button onClick={() => setIsOpen(false)} aria-label="Close menu" className="absolute top-6 right-6 p-2 rounded-md text-white hover:bg-white/5">✕</button>
-              <Link to="/" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">HOME</Link>
-              <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">MY WORK</Link>
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">CONTACT</Link>
-            </div>
-          )}
+        {/* Mobile menu overlay */}
+        {isOpen && (
+          <div className="md:hidden fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center gap-8">
+            <button onClick={() => setIsOpen(false)} aria-label="Close menu" className="absolute top-6 right-6 p-2 rounded-md text-white hover:bg-white/5">✕</button>
+            <Link to="/" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">HOME</Link>
+            <Link to="/portfolio" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">MY WORK</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="text-2xl font-bold text-white">CONTACT</Link>
+          </div>
+        )}
+      </nav>
+      );
+    }

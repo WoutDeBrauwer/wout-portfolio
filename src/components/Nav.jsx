@@ -118,8 +118,8 @@ export default function Nav() {
   const isHome = location.pathname === '/';
 
   return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 bg-black backdrop-blur-md`}>
-      <div className="nav-container max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8">
+    <nav className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 bg-black backdrop-blur-md overflow-x-hidden`}>
+      <div className="nav-container max-w-[1600px] mx-auto px-5 sm:px-6 lg:px-8 overflow-x-hidden">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center overflow-hidden">

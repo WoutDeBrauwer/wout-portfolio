@@ -7,22 +7,28 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className="text-white text-lg font-medium mb-6">Contact</h3>
-            <div className="space-y-3 text-white">
-              <p>Wout</p>
+            <div className="space-y-1 text-white">
+              <p>Wout De Brauwer</p>
               <p>Front-end Developer</p>
-              <p>België</p>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-white text-lg font-medium mb-6">Contact Info</h3>
-            <div className="space-y-3 text-white">
-              <p>Email: wout@example.com</p>
-              <p>Tel: +32 123 45 67 89</p>
-              <p>LinkedIn: /in/wout</p>
-            </div>
+        <div>
+          <h3 className="text-white text-lg font-medium mb-6">Contact Info</h3>
+          <div className="space-y-3 text-white">
+            <p> Email:{" "}
+              <a href="mailto:woutdebrauwer@outlook.com" className="underline hover:text-gray-300 transition">woutdebrauwer@outlook.com</a>
+            </p>
+            <p>
+              Tel:{" "}
+              <a href="tel:+32498154845" className="underline hover:text-gray-300 transition">+32 498 15 48 45</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/wout-de-brauwer-881b73247" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300 transition">LinkedIn</a>
+            </p>
           </div>
-          
+</div>
+
           <div>
             <h3 className="text-white text-lg font-medium mb-6">Let&apos;s Connect</h3>
             <div className="space-y-3 text-white">

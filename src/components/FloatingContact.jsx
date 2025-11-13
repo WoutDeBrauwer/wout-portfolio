@@ -88,13 +88,13 @@ export default function FloatingContact() {
         className={`flex flex-col mt-2 gap-2 ${open ? "block" : "hidden"}`}
       >
         <a
-          href="mailto:wout@example.com"
+          href="mailto:woutdebrauwer@outlook.com"
           className="flex items-center gap-2 bg-white text-black px-4 py-3 rounded-full shadow-lg transition-transform hover:-translate-y-1"
         >
           ✉️ Email
         </a>
         <a
-          href="tel:+32123456789"
+          href="tel:+32498154845"
           className="flex items-center gap-2 bg-white text-black px-4 py-3 rounded-full shadow-lg transition-transform hover:-translate-y-1"
         >
           <FontAwesomeIcon icon={faPhone} className="text-black h-5 w-5" />

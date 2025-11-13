@@ -125,7 +125,7 @@ export default function Nav() {
                   <Link
                     to={link.path}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-black shadow-md border border-white/10"
+                    className="block text-center text-2xl font-semibold tracking-wide text-white hover:text-primary transition py-4 bg-black shadow-md"
                   >
                     {link.label}
                   </Link>

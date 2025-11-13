@@ -40,6 +40,16 @@ export default function Nav() {
     };
   }, [isOpen]);
 
+  // Open animation for mobile menu items
+  useEffect(() => {
+    if (isOpen && overlayRef.current) {
+      const overlay = overlayRef.current;
+      const items = overlay.querySelectorAll('.menu-item');
+      gsap.fromTo(overlay, { y: -18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.28, ease: 'power2.out' });
+      gsap.fromTo(items, { y: 8, opacity: 0, scale: 0.98 }, { y: 0, opacity: 1, scale: 1, duration: 0.36, stagger: 0.06, ease: 'power3.out' });
+    }
+  }, [isOpen]);
+
   // Animatie op elke route change
   useEffect(() => {
     gsap.fromTo(
@@ -142,11 +152,15 @@ export default function Nav() {
 
             {/* Scrollable content area — limit to viewport minus header */}
             <div className="overflow-auto px-6 pb-8" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100dvh - 64px)' }}>
-              <nav className="flex flex-col items-start gap-6 mt-4 max-w-md mx-auto">
-                <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">HOME</Link>
-                <Link to="/portfolio" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">MY WORK</Link>
-                <Link to="/contact" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">CONTACT</Link>
-              </nav>
+              <div className="w-full max-w-md mx-auto mt-4">
+                <div className="bg-white/3 backdrop-blur-lg rounded-2xl p-4 space-y-4">
+                  <nav className="flex flex-col items-center gap-4">
+                    <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">HOME</Link>
+                    <Link to="/portfolio" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">MY WORK</Link>
+                    <Link to="/contact" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="menu-item w-full text-center text-2xl sm:text-3xl font-semibold text-white hover:text-primary transition bg-white/3 hover:bg-white/5 rounded-xl py-4 px-6 shadow-lg backdrop-blur-sm">CONTACT</Link>
+                  </nav>
+                </div>
+              </div>
 
               <div className="w-full h-px bg-white/10 my-6 max-w-md mx-auto"></div>
 

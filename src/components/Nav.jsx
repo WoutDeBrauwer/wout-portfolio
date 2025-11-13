@@ -30,16 +30,20 @@ export default function Nav() {
 
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      // prevent horizontal scroll / overscroll on some browsers when overlay is open
+      document.documentElement.style.overflowX = 'hidden';
       window.addEventListener('keydown', onKey);
       if (mainEl) mainEl.setAttribute('aria-hidden', 'true');
     } else {
       document.body.style.overflow = '';
+      document.documentElement.style.overflowX = '';
       window.removeEventListener('keydown', onKey);
       if (mainEl) mainEl.removeAttribute('aria-hidden');
     }
 
     return () => {
       document.body.style.overflow = '';
+      document.documentElement.style.overflowX = '';
       window.removeEventListener('keydown', onKey);
       if (mainEl) mainEl.removeAttribute('aria-hidden');
     };
@@ -164,8 +168,7 @@ export default function Nav() {
         {isOpen && (
           <div
             ref={overlayRef}
-            className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-50 flex flex-col h-screen"
-            style={{ height: '100dvh' }}
+            className="md:hidden fixed inset-0 bg-black backdrop-blur-sm z-50 flex flex-col"
             role="dialog"
             aria-modal="true"
           >
@@ -188,7 +191,7 @@ export default function Nav() {
             </div>
 
             {/* Scrollable content area — center menu vertically between header and footer */}
-            <div className="overflow-auto px-6 pb-8 flex flex-col items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100dvh - 64px)', minHeight: 'calc(100dvh - 64px)' }}>
+            <div className="overflow-auto px-6 pb-8 flex flex-col items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100vh - 64px)', minHeight: 'calc(100vh - 64px)' }}>
               <div className="w-full max-w-md mx-auto">
                 <div className="bg-white/3 backdrop-blur-lg rounded-2xl p-4 space-y-4">
                   <nav className="flex flex-col items-center gap-4">

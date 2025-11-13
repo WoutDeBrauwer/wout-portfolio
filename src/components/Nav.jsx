@@ -117,7 +117,8 @@ export default function Nav() {
         {isOpen && (
           <div
             ref={overlayRef}
-            className="md:hidden fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex flex-col"
+            className="md:hidden fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex flex-col h-screen"
+            style={{ height: '100dvh' }}
             role="dialog"
             aria-modal="true"
           >
@@ -139,8 +140,8 @@ export default function Nav() {
               </button>
             </div>
 
-            {/* Scrollable content area */}
-            <div className="overflow-auto px-6 pb-8" style={{ WebkitOverflowScrolling: 'touch' }}>
+            {/* Scrollable content area — limit to viewport minus header */}
+            <div className="overflow-auto px-6 pb-8" style={{ WebkitOverflowScrolling: 'touch', maxHeight: 'calc(100dvh - 64px)' }}>
               <nav className="flex flex-col items-start gap-6 mt-4 max-w-md mx-auto">
                 <Link to="/" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">HOME</Link>
                 <Link to="/portfolio" onClick={() => { if (overlayRef.current) gsap.to(overlayRef.current, { y: -20, opacity: 0, duration: 0.22, ease: 'power2.in', onComplete: () => setIsOpen(false) }); else setIsOpen(false); }} className="text-3xl font-semibold text-white hover:text-primary transition">MY WORK</Link>

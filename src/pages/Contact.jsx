@@ -18,7 +18,7 @@ export default function Contact() {
             </div>
           </div>
           {/* Rechterzijde: wit */}
-          <div className="flex-1 text-black flex flex-col justify-center gap-5 px-10 pl-40">
+          <div className="flex-1 text-black flex flex-col justify-center gap-5 px-6 md:px-10 lg:pl-40">
             <div className="max-w-xl mb-8 text-lg">
               <p>
                 Op zoek naar een enthousiaste junior developer die met frisse energie en nieuwsgierigheid jouw team kan versterken?

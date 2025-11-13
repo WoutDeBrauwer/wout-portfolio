@@ -48,11 +48,11 @@ export default function AboutSection() {
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row  gap-12">
         {/* Foto */}
         <div ref={imageRef} className="w-full md:w-1/3 flex justify-center">
-          <img
-            src="\public\images\Images\Portfolio-profielfoto.webp"
-            alt="profielfoto"
-            className="w-80 md:w-[440px] h-auto rounded-2xl object-cover shadow-lg"
-          />
+            <img
+              src="/images/Images/Portfolio-profielfoto.webp"
+              alt="profielfoto"
+              className="w-80 md:w-[440px] h-auto rounded-2xl object-cover shadow-lg"
+            />
         </div>
 
         {/* Tekst */}

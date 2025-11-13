@@ -170,7 +170,7 @@ export default function Home() {
           <Link
                   to="/portfolio"
                   className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
-                  Portfolio
+                  Bekijk alle portfolio items
           </Link>
         </div>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

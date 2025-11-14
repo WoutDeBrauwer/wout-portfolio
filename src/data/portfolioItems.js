@@ -11,7 +11,7 @@ export const portfolioItems = [
     id: 2,
     title: 'OKRA-reizen',
     description: '',
-    image: '/images/Images/Template-portfolio-item.jpg',
+    image: '/images/Okra/Portfolio-wout-Okra-reizen-overzichtsfoto.jpg',
     tags: ['ACF', 'PHP', 'Wordpress'],
     url: 'https://okra-reizen.be/',
   },

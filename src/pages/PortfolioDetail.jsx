@@ -14,9 +14,9 @@ export default function PortfolioDetail() {
     3: React.lazy(() => import('./portfolioDetails/PortfolioDetailArteVerde')),
     4: React.lazy(() => import('./portfolioDetails/PortfolioDetailLeChic')),
     5: React.lazy(() => import('./portfolioDetails/PortfolioDetailHidromek')),
-    7: React.lazy(() => import('./portfolioDetails/PortfolioDetailBiaform')),
-    8: React.lazy(() => import('./portfolioDetails/PortfolioDetailVdsLandmeters')),
-    9: React.lazy(() => import('./portfolioDetails/PortfolioDetailVariablePaginas')),
+    6: React.lazy(() => import('./portfolioDetails/PortfolioDetailBiaform')),
+    7: React.lazy(() => import('./portfolioDetails/PortfolioDetailVdsLandmeters')),
+    8: React.lazy(() => import('./portfolioDetails/PortfolioDetailVariablePaginas')),
   };
 
   const CustomDetail = customDetails[item.id];

@@ -36,7 +36,7 @@ export const portfolioItems = [
     title: 'Hidromek',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',
-    tags: ['Wordpress', 'PHP'],
+    tags: ['Wordpress', 'PHP', 'ACF'],
     url: 'https://hidromek.be/',
   },
   {
@@ -46,14 +46,6 @@ export const portfolioItems = [
     image: '/images/Images/Template-portfolio-item.jpg',
     tags: ['Wordpress', 'PHP', 'WPML'],
     url: 'https://biaform-provital.com/',
-  },
-  {
-    id: 7,
-    title: 'VDS Landmeters',
-    description: '',
-    image: '/images/Images/Template-portfolio-item.jpg',
-    tags: ['Wordpress', 'Design'],
-    url: 'https://vdslandmeters.be/',
   },
     {
     id: 8,

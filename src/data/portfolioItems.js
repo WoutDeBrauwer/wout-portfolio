@@ -20,7 +20,7 @@ export const portfolioItems = [
     title: 'Arte-Verde',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',
-    tags: ['Wordpress', 'PHP', 'GSAP'],
+    tags: ['Wordpress', 'PHP', 'GSAP', 'ACF'],
     url: 'https://arte-verde.be/',
   },
   {
@@ -31,9 +31,16 @@ export const portfolioItems = [
     tags: ['Wordpress', 'Woocommece', 'Ultimate member'],
     url: 'https://www.lechichairboetiek.be/',
   },
-
   {
-    id: 7,
+    id: 5,
+    title: 'Hidromek',
+    description: '',
+    image: '/images/Images/Template-portfolio-item.jpg',
+    tags: ['Wordpress', 'PHP'],
+    url: 'https://hidromek.be/',
+  },
+  {
+    id: 6,
     title: 'Biaform Provital',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',
@@ -41,7 +48,7 @@ export const portfolioItems = [
     url: 'https://biaform-provital.com/',
   },
   {
-    id: 8,
+    id: 7,
     title: 'VDS Landmeters',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',
@@ -49,7 +56,7 @@ export const portfolioItems = [
     url: 'https://vdslandmeters.be/',
   },
     {
-    id: 9,
+    id: 8,
     title: 'Variable paginas',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',

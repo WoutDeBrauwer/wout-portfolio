@@ -106,7 +106,7 @@ export default function Home() {
       </header>
 
       {/* About Section */}
-      <div className="bg-dark text-black py-10 ">
+      <div className="bg-dark text-black py-10 pt-16">
         <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
           <AboutMe />
         </div>

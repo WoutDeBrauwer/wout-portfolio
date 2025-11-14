@@ -31,14 +31,7 @@ export const portfolioItems = [
     tags: ['Wordpress', 'Woocommece', 'Ultimate member'],
     url: 'https://www.lechichairboetiek.be/',
   },
-  {
-    id: 5,
-    title: 'Hidromek',
-    description: '',
-    image: '/images/Images/Template-portfolio-item.jpg',
-    tags: ['Wordpress', 'PHP', 'WPML'],
-    url: 'https://hidromek.be/',
-  },
+
   {
     id: 7,
     title: 'Biaform Provital',

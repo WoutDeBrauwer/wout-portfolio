@@ -1,5 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
+
+const screenshots = [
+  '/images/Images/LeChic/Portfolio-Wout-lechic-home.webp',
+  '/images/Images/LeChic/Portfolio-Wout-lechic-tussen-pagina.jpg',
+  '/images/Images/LeChic/Portfolio-Wout-lechic-professionals-pagina.jpg',
+  '/images/Images/LeChic/Portfolio-Wout-lechic-webshop.jpg',
+];
 
 export default function PortfolioDetailLeChic() {
   return (
@@ -60,12 +69,17 @@ export default function PortfolioDetailLeChic() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/Images/LeChic/Portfolio-Wout-lechic-tussen-pagina.jpg" alt="Webshop screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/LeChic/Portfolio-Wout-lechic-professionals-pagina.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/LeChic/Portfolio-Wout-lechic-webshop.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/LeChic/Portfolio-Wout-lechic-home.webp" alt="Homepage screenshot" className="rounded-lg shadow" />
-          </div>
+          <PhotoProvider>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {screenshots.map((src, i) => (
+                <PhotoView key={i} src={src}>
+                  <div className="overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                    <img src={src} alt={`Screenshot ${i + 1}`} className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-300" />
+                  </div>
+                </PhotoView>
+              ))}
+            </div>
+          </PhotoProvider>
         </div>
       </div>
     </div>

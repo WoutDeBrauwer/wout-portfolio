@@ -1,5 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
+
+const screenshots = [
+  '/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-Home.jpg',
+  '/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-projectDetail.jpg',
+  '/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-projectpagina.jpg',
+];
 
 export default function PortfolioDetailArteVerde() {
   return (
@@ -13,7 +21,7 @@ export default function PortfolioDetailArteVerde() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="/images/Images/ArteVerde\Arte-verde-tuin.jpg" alt="Arte-Verde overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/ArteVerde/Arte-verde-tuin.jpg" alt="Arte-Verde overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Arte-Verde</h1>
@@ -60,11 +68,17 @@ export default function PortfolioDetailArteVerde() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-Home.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-projectDetail.jpg" alt="Projecten screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/ArteVerde/Portfolio-Wout-Arte-verde-projectpagina.jpg" alt="Biozwembad screenshot" className="rounded-lg shadow" />
-          </div>
+          <PhotoProvider>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {screenshots.map((src, i) => (
+                <PhotoView key={i} src={src}>
+                  <div className="overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                    <img src={src} alt={`Screenshot ${i + 1}`} className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-300" />
+                  </div>
+                </PhotoView>
+              ))}
+            </div>
+          </PhotoProvider>
         </div>
       </div>
     </div>

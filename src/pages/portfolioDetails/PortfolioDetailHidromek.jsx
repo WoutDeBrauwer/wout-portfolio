@@ -13,7 +13,7 @@ export default function PortfolioDetailHidromek() {
         {/* Header sectie */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
-            <img src="\Images\Hidromek\Portfolio-Wout-hidromek-overzichtfoto.jpg" alt="Hidromek overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
+            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg" alt="Hidromek overzicht" className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow" />
           </div>
           <div>
             <h1 className="text-4xl font-bold mb-6">Hidromek</h1>
@@ -66,9 +66,9 @@ export default function PortfolioDetailHidromek() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="\Images\Hidromek\Portfolio-Wout-hidromek-Home.webp" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="\Images\Hidromek\Portfolio-Wout-hidromek-machine-detail.webp" alt="Productcatalogus screenshot" className="rounded-lg shadow" />
-            <img src="\Images\Hidromek\Portfolio-Wout-hidromek-machines-pagina.webp" alt="Contact screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-Home.webp" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-machine-detail.webp" alt="Productcatalogus screenshot" className="rounded-lg shadow" />
+            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-machines-pagina.webp" alt="Contact screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

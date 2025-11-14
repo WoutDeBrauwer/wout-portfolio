@@ -175,7 +175,7 @@ export default function Home() {
         </div>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {featured.slice(0, 3).map((item) => (
-                <Link key={item.id} to={`/portfolio/${item.id}`}>
+                <Link key={item.id} to={`/portfolio/${item.slug}`}>
                   <PortfolioCard {...item} />
                 </Link>
               ))}

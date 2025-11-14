@@ -24,7 +24,7 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioItems.map(item => (
-            <Link key={item.id} to={`/portfolio/${item.id}`}>
+            <Link key={item.id} to={`/portfolio/${item.slug}`}>
               <PortfolioCard {...item} />
             </Link>
           ))}

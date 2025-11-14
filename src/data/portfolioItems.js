@@ -2,6 +2,7 @@ export const portfolioItems = [
   {
     id: 1,
     title: 'Koba Metropool',
+    slug: 'koba-metropool',
     description: '',
     image: '/images/Images/Koba/Portfolio-wout-koba-overzichtsfoto.jpg',
     tags: ['Wordpress', 'PHP', 'API Integration'],
@@ -10,6 +11,7 @@ export const portfolioItems = [
   {
     id: 2,
     title: 'OKRA-reizen',
+    slug: 'okra-reizen',
     description: '',
     image: '/images/Images/Okra/Portfolio-wout-Okra-reizen-overzichtsfoto.jpg',
     tags: ['ACF', 'PHP', 'Wordpress'],
@@ -18,6 +20,7 @@ export const portfolioItems = [
   {
     id: 3,
     title: 'Arte-Verde',
+    slug: 'arte-verde',
     description: '',
     image: '/images/Images/ArteVerde/Arte-verde-tuin.jpg',
     tags: ['Wordpress', 'PHP', 'GSAP', 'ACF'],
@@ -26,6 +29,7 @@ export const portfolioItems = [
   {
     id: 4,
     title: 'Le chic hairboetiek',
+    slug: 'le-chic-hairboetiek',
     description: '',
     image: '/images/Images/LeChic/Portfolio-wout-lechic-overzichtsfoto.jpg',
     tags: ['Wordpress', 'Woocommece', 'Ultimate member'],
@@ -34,6 +38,7 @@ export const portfolioItems = [
   {
     id: 5,
     title: 'Hidromek',
+    slug: 'hidromek',
     description: '',
     image: '/images/Images/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg',
     tags: ['Wordpress', 'PHP', 'ACF'],
@@ -42,6 +47,7 @@ export const portfolioItems = [
   {
     id: 6,
     title: 'Biaform Provital',
+    slug: 'biaform-provital',
     description: '',
     image: '/images/Images/Biaform/Portfolio-wout-Biaform-overzichtfoto.jpg',
     tags: ['Wordpress', 'PHP', 'WPML'],
@@ -50,6 +56,7 @@ export const portfolioItems = [
     {
     id: 8,
     title: 'Variable paginas',
+    slug: 'variable-paginas',
     description: '',
     image: '/images/Images/Template-portfolio-item.jpg',
     tags: ['Wordpress', 'Design', 'PHP', 'spreadsheet'],

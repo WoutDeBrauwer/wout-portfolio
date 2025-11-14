@@ -54,7 +54,7 @@ function AppInner() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+          <Route path="/portfolio/:slug" element={<PortfolioDetail />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

@@ -47,3 +47,13 @@ img, video, iframe {
   }
 }
 
+/* Ensure the photo-view lightbox appears above fixed nav and overlays */
+.react-photo-view, .react-photo-view-mask, .react-photo-view-wrapper {
+  z-index: 11000 !important;
+}
+
+/* Allow touch gestures inside the photo viewer on mobile */
+.react-photo-view-image {
+  touch-action: pinch-zoom; /* enable pinch gestures where supported */
+}
+

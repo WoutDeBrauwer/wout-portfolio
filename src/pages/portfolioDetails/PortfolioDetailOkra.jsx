@@ -16,7 +16,7 @@ export default function PortfolioDetailOkra() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
             <img
-              src="/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png"
+              src="/images/Images/Okra/Portfolio-wout-Okra-reizen-overzichtsfoto.jpg"
               alt="OKRA Reizen overzicht"
               className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow"
             />

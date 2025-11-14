@@ -3,7 +3,7 @@ export const portfolioItems = [
     id: 1,
     title: 'Koba Metropool',
     description: '',
-    image: '/images/Images/Template-portfolio-item.jpg',
+    image: '/Images/Koba/Portfolio-wout-Biaform-overzichtfoto.jpg',
     tags: ['Wordpress', 'PHP', 'API Integration'],
     url: 'https://kobametropool.be/',
   },

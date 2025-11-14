@@ -12,7 +12,7 @@ export default function Portfolio() {
         </h1>
 
         {/* Toegevoegde tekst */}
-        <p className="text-gray-300 mb-16 max-w-3xl">
+        <p className="text-gray-300 mb-16 max-w-4xl sm:max-w-none lg:max-w-5xl">
           De projecten die je hier ziet vormen een <strong>selectie</strong> uit het werk 
           dat ik door de jaren heen heb gedaan. Het zijn de projecten waar ik het meest 
           trots op ben, omdat ze vaak de meeste functionaliteiten bevatten of het best 

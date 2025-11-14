@@ -61,9 +61,10 @@ export default function PortfolioDetailLeChic() {
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/Images/LeChic/lechic-homepage.jpg" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/LeChic/lechic-webshop.jpg" alt="Webshop screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/LeChic/lechic-producten.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
+            <img src="\images\LeChic\Portfolio-Wout-lechic-home.webp" alt="Homepage screenshot" className="rounded-lg shadow" />
+            <img src="\Images\LeChic\Portfolio-Wout-lechic-tussen-pagina.jpg" alt="Webshop screenshot" className="rounded-lg shadow" />
+            <img src="\Images\LeChic\Portfolio-Wout-lechic-professionals-pagina.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
+            <img src="\Images\LeChic\Portfolio-Wout-lechic-webshop.jpg" alt="Producten screenshot" className="rounded-lg shadow" />
           </div>
         </div>
       </div>

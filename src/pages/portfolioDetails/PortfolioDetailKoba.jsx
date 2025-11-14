@@ -24,7 +24,7 @@ export default function PortfolioDetailKoba() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
             <img
-              src="/images/Images/Template-portfolio-item.jpg"
+              src="\Images\Koba\Portfolio-wout-Biaform-overzichtfoto.jpg"
               alt="KOBA Metropool overzicht"
               className="w-full h-48 md:h-[400px] object-cover rounded-xl shadow"
             />

@@ -51,7 +51,7 @@ export default function AboutSection() {
             <img
               src="/images/Images/Portfolio-profielfoto.webp"
               alt="profielfoto"
-              className="w-40 sm:w-56 md:w-[440px] h-auto rounded-2xl object-cover shadow-lg"
+              className="w-[440px] h-auto rounded-2xl object-cover shadow-lg"
             />
         </div>
 

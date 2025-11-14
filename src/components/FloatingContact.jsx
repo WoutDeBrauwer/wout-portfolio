@@ -34,16 +34,16 @@ export default function FloatingContact() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Animate text hide/show
+  // Animate text hide/show: show by default and hide only when user scrolls
   useEffect(() => {
-    if (textRef.current) {
-      if (scrolled || !open) {
-        gsap.to(textRef.current, { opacity: 0, x: 10, duration: 0.3, display: "none" });
-      } else {
-        gsap.to(textRef.current, { opacity: 1, x: 0, duration: 0.3, display: "inline" });
-      }
+    if (!textRef.current) return;
+
+    if (scrolled) {
+      gsap.to(textRef.current, { opacity: 0, x: 10, duration: 0.3, display: "none" });
+    } else {
+      gsap.to(textRef.current, { opacity: 1, x: 0, duration: 0.3, display: "inline" });
     }
-  }, [scrolled, open]);
+  }, [scrolled]);
 
   // Open / close contact opties animatie
   useEffect(() => {

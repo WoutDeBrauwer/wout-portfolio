@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { PhotoProvider, PhotoView } from 'react-photo-view';
-import 'react-photo-view/dist/react-photo-view.css';
-
+// gallery rendered as static full-height images (no zoom/lightbox)
 const screenshots = [
   '/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.png',
   '/images/Images/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png',
@@ -96,17 +94,13 @@ export default function PortfolioDetailOkra() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <PhotoProvider>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {screenshots.map((src, i) => (
-                <PhotoView key={i} src={src}>
-                  <div className="overflow-hidden rounded-xl shadow-lg group cursor-pointer">
-                    <img src={src} alt={`Screenshot ${i + 1}`} className="w-full h-auto object-contain transform group-hover:scale-[1.02] transition duration-300" />
-                  </div>
-                </PhotoView>
+                <div key={i} className="overflow-hidden rounded-xl shadow-lg">
+                  <img src={src} alt={`Screenshot ${i + 1}`} className="w-full h-48 md:h-[400px] object-cover" />
+                </div>
               ))}
             </div>
-          </PhotoProvider>
         </div>
       </div>
     </div>

@@ -1,5 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Gallery from '../../components/Gallery';
+
+const screenshots = [
+  '/images/Images/Hidromek/Portfolio-Wout-hidromek-Home.webp',
+  '/images/Images/Hidromek/Portfolio-Wout-hidromek-machine-detail.webp',
+  '/images/Images/Hidromek/Portfolio-Wout-hidromek-machines-pagina.webp',
+];
 
 export default function PortfolioDetailHidromek() {
   return (
@@ -65,11 +72,7 @@ export default function PortfolioDetailHidromek() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-Home.webp" alt="Homepage screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-machine-detail.webp" alt="Productcatalogus screenshot" className="rounded-lg shadow" />
-            <img src="/images/Images/Hidromek/Portfolio-Wout-hidromek-machines-pagina.webp" alt="Contact screenshot" className="rounded-lg shadow" />
-          </div>
+          <Gallery images={screenshots} />
         </div>
       </div>
     </div>

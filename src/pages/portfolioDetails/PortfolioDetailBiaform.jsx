@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Gallery from '../../components/Gallery';
 // gallery rendered as static full-height images (no zoom/lightbox)
 const screenshots = [
   '/images/Images/Biaform/Portfolio-Wout-Biafrom-home.webp',
@@ -66,13 +67,7 @@ export default function PortfolioDetailBiaform() {
         {/* Screenshots gallery */}
         <div>
           <h2 className="text-2xl font-bold mb-6">Screenshots</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {screenshots.map((src, i) => (
-                <div key={i} className="overflow-hidden rounded-xl shadow-lg">
-                  <img src={src} alt={`Screenshot ${i + 1}`} className="w-full h-48 md:h-[400px] object-cover" />
-                </div>
-              ))}
-            </div>
+          <Gallery images={screenshots} />
         </div>
       </div>
     </div>

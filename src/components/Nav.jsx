@@ -20,10 +20,15 @@ export default function Nav() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const isActive = (path) =>
-    location.pathname === path
-      ? "text-primary after:w-[12px]"
-      : "text-white after:w-0";
+  const isActive = (path) => {
+    // Make the portfolio nav item active for both the list and any detail slug routes
+    if (path === "/portfolio") {
+      return location.pathname === "/portfolio" || location.pathname.startsWith("/portfolio/")
+        ? "text-primary after:w-[12px]"
+        : "text-white after:w-0";
+    }
+    return location.pathname === path ? "text-primary after:w-[12px]" : "text-white after:w-0";
+  };
 
   const navLinks = [
     { path: "/", label: "HOME" },

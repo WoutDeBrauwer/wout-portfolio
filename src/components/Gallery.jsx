@@ -47,7 +47,7 @@ export default function Gallery({ images = [] }) {
               <img
                 src={src}
                 alt={`Screenshot ${i + 1}`}
-                className="w-full h-[70vh] md:h-[80vh] object-contain"
+                className="w-full h-[70vh] md:h-[80vh] object-cover"
                 loading="eager"
               />
             </button>

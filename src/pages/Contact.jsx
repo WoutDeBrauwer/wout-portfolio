@@ -16,7 +16,7 @@ export default function Contact() {
 
           {/* LEFT: header / intro op dark background (bovenaan uitgelijnd) */}
           <div className="w-full lg:w-1/2 flex items-start">
-            <div className="w-full max-w-[980px]">
+            <div className="w-full max-w-[980px] mb-8 sm:mt-0">
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight md:leading-[0.95] lg:leading-[0.9]">
                 CONTACT ME
               </h1>
@@ -24,7 +24,7 @@ export default function Contact() {
           </div>
 
           {/* RIGHT: contact content (verticaal gecentreerd) */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 px-4 md:px-8 h-full">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 px-0 md:px-8 h-full">
             <div className="max-w-[920px]">
               <p className="text-sm md:text-base lg:text-lg leading-relaxed">
                 Op zoek naar een enthousiaste junior developer die met frisse energie en nieuwsgierigheid jouw team kan versterken? Ik ben gepassioneerd door programmeren en het oplossen van technische uitdagingen, en ik wil graag mijn vaardigheden verder ontwikkelen in een dynamische omgeving.

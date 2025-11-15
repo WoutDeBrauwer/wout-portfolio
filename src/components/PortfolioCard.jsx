@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function PortfolioCard({ title, image, tags, link }) {
   return (
-    <div className="relative bg-black rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+    <div className="relative bg-black rounded-2xl overflow-hidden  transition-all duration-300 group">
       
       {/* Achtergrondafbeelding */}
       <div className="relative h-56 md:h-80 w-full">

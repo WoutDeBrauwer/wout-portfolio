@@ -160,20 +160,21 @@ export default function Home() {
       </div>
 
       {/* Portfolio Section */}
-      <div className="bg-dark text-light py-12">
+      <div className="bg-dark text-light py-12 pb-20">
         <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <h2 className="portfolio-title text-4xl font-bold flex items-center gap-4">
-            MY WORK
-            <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
-          </h2>
+          <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <h2 className="portfolio-title text-4xl font-bold flex items-center gap-4">
+              MY WORK
+              <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
+            </h2>
 
-          <Link
-            to="/portfolio"
-            className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
-            Bekijk alle portfolio items
-          </Link>
-        </div>
+            <Link
+              to="/portfolio"
+              className="inline-block self-start border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition"
+            >
+              Bekijk alle portfolio items
+            </Link>
+          </div>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {featured.slice(0, 3).map((item) => (
                 <Link key={item.id} to={`/portfolio/${item.slug}`}>

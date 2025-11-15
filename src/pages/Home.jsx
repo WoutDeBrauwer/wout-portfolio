@@ -41,7 +41,7 @@ export default function Home() {
                 MY NAME IS
               </p>
 
-              <h1 className="text-5xl sm:text-6xl md:text-[5.2rem] lg:text-[6.2rem] font-extrabold leading-tight mb-6 sm:mb-2">
+              <h1 className="text-5xl sm:text-6xl md:text-[5.2rem] lg:text-[6.2rem] font-extrabold leading-tight">
                 <Typewriter text="WOUT" speed={120} />
               </h1>
 
@@ -53,7 +53,7 @@ export default function Home() {
                 JUNIOR WEBDEVELOPER
               </div>
 
-              <p className="text-lg text-white/80 mt-6 mb-4 max-w-lg">
+              <p className="text-lg text-white/80 mt-6 mb-4 max-w-xl">
                 Ik ben 24 jaar oud en een gepassioneerde junior webdeveloper.
               </p>
 
@@ -106,11 +106,12 @@ export default function Home() {
       </header>
 
       {/* About Section */}
-      <div className="bg-dark text-black py-10 pt-16">
+      <div className="bg-dark text-white py-10 pt-20">
         <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
           <AboutMe />
         </div>
       </div>
+
 
       {/* Skills Section */}
         <div className="bg-dark text-light py-16">

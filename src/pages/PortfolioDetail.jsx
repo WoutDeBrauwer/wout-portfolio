@@ -29,28 +29,5 @@ export default function PortfolioDetail() {
     );
   }
 
-  // Fallback: standaard template
-  return (
-    <div className="p-10">
-      <div className="max-w-md mx-auto">
-        <div className="mb-6">
-          <img
-            src={item.image}
-            alt={item.title}
-               onError={e => { e.currentTarget.src = '/images/Images/Template-portfolio-item.jpg' }}
-            className="w-full h-48 md:h-64 object-cover rounded-xl mb-4"
-          />
-          <h1 className="text-3xl font-bold mb-2">{item.title}</h1>
-          <div className="flex flex-wrap gap-2 mb-2">
-            {item.tags?.map((tag, i) => (
-              <span key={i} className="px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">
-                {tag}
-              </span>
-            ))}
-          </div>
-          <p className="text-base text-white/80">{item.description}</p>
-        </div>
-      </div>
-    </div>
-  );
+
 }

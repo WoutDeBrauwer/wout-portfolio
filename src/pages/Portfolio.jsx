@@ -15,11 +15,11 @@ export default function Portfolio() {
         <p className="text-gray-300 mb-16 max-w-4xl sm:max-w-none lg:max-w-5xl">
           De projecten die je hier ziet vormen een <strong>selectie</strong> uit het werk 
           dat ik door de jaren heen heb gedaan. Het zijn de projecten waar ik het meest 
-          trots op ben, omdat ze vaak de meeste functionaliteiten bevatten of het best 
-          tonen wat ik kan. Naast deze selectie heb ik ook aan veel andere projecten 
-          gewerkt — zoals aanpassingen aan bestaande pagina’s en bijdragen aan websites 
+          trots op ben. Dit omdat ze vaak de meeste functionaliteiten bevatten. 
+          Naast deze selectie heb ik ook aan veel andere projecten 
+          gewerkt, zoals aanpassingen aan bestaande pagina’s en bijdragen aan websites 
           die ik niet volledig zelf heb gebouwd, evenals projecten die (nog) niet publiek 
-          online staan.
+          online staan. Hierdoor staan deze hier niet vermeld.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

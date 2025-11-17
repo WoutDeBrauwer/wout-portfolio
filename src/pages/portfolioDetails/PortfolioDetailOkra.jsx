@@ -38,9 +38,9 @@ export default function PortfolioDetailOkra() {
             </div>
             <p className="text-lg mb-12 text-white">
               Voor OKRA Reizen ontwikkelde ik een gebruiksvriendelijke en overzichtelijke website in WordPress,
-              speciaal gericht op actieve senioren. De site bevat een uitgebreide reiszoeker, digitale brochure
+              speciaal gericht senioren die graag reizen. De site bevat een uitgebreide reiszoeker, digitale brochure
               en informatieve pagina’s. Dankzij Advanced Custom Fields (ACF) kunnen beheerders eenvoudig alle reisgegevens
-              invullen — zoals vertrekdata, prijs per persoon, begeleiders, en het niveau van de reis.
+              invullen — zoals vertrekdata, prijs per persoon, begeleiders, en het niveau van de reis en nog meer.
             </p>
             <a
               href="https://okra-reizen.be/"
@@ -58,14 +58,14 @@ export default function PortfolioDetailOkra() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Technieken & Features</h2>
             <p className="text-base text-white mb-4">
-              De website is gebouwd op <strong>WordPress</strong> met een volledig <strong>custom thema</strong>.
+              De website is gebouwd op <strong>WordPress</strong> met het thema <strong>Betheme</strong>.
               De reizen worden beheerd via een <strong>Custom Post Type</strong> dat gekoppeld is aan
-              categorieën voor filtering. Met behulp van <strong>ACF fields</strong> kan de klant eenvoudig
+              categorieën voor filtering die custom is gebouwd in php met bijhorende shortcodes. Met behulp van <strong>ACF fields</strong> kan de klant eenvoudig
               reisdetails ingeven, zoals reisdata, prijs, begeleider en moeilijkheidsgraad.
             </p>
             <p className="text-base text-white mb-4">
               De filterfunctionaliteit is volledig op maat ontwikkeld in <strong>PHP</strong>,
-              zodat bezoekers vakanties kunnen filteren op bestemming, type en periode. Dit zorgt voor
+              zodat bezoekers vakanties kunnen filteren op type reis, type vervoer en periode. Dit zorgt voor
               een intuïtieve en snelle gebruikerservaring.
             </p>
             <p className="text-base text-white mb-4">

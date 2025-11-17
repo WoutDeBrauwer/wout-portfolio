@@ -79,7 +79,7 @@ export default function PortfolioDetailKoba() {
               De website draait op WordPress met geavanceerde PHP-logica en of
               plugins voor verschillende functionaliteiten. De functionaliteiten
               zijn onderandere de api voor de vacatures vanuit de VDAB, search
-              en filter pro voor studiekiezer en als laatste de wp go maps voor
+              and filter pro voor studiekiezer en als laatste de wp go maps voor
               de kaarten met locaties van de scholen.
             </p>
             <p className="text-base text-white mb-4">

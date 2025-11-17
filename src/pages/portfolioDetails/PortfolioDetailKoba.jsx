@@ -32,27 +32,40 @@ export default function PortfolioDetailKoba() {
           <div>
             <h1 className="text-4xl font-bold mb-6">KOBA Metropool</h1>
             <div className="flex flex-wrap gap-2 mb-8">
-              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">WordPress</span>
-              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">PHP</span>
-              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">API integration</span>
-              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">Search and Filter Pro</span>
-              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">WP Go Maps</span>
+              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">
+                WordPress
+              </span>
+              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">
+                PHP
+              </span>
+              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">
+                API integration
+              </span>
+              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">
+                Search and Filter Pro
+              </span>
+              <span className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20">
+                WP Go Maps
+              </span>
             </div>
 
             <p className="text-lg mb-12 text-white">
-              KOBA Metropool is het onderwijsnetwerk van zestien scholen in de Antwerpse regio. 
-              De organisatie bundelt krachten van kleuter-, lagere, secundaire en post-secundaire instellingen 
-              om inspirerend en kwaliteitsvol onderwijs aan te bieden. De website vormt de digitale spil van dit netwerk 
-              en werd gebouwd met WordPress en maatwerk in PHP. De structuur, vormgeving en functionaliteit zijn volledig afgestemd 
-              op de missie van KOBA: transparante communicatie, gebruiksvriendelijkheid en verbondenheid tussen scholen, ouders en leerlingen.
+              KOBA Metropool is het onderwijsnetwerk van zestien scholen in de
+              Antwerpse regio. De organisatie bundelt krachten van kleuter-,
+              lagere, secundaire en post-secundaire instellingen om inspirerend
+              en kwaliteitsvol onderwijs aan te bieden. De website vormt de
+              digitale spil van dit netwerk en werd gebouwd met WordPress en
+              maatwerk in PHP. De structuur, vormgeving en functionaliteit zijn
+              volledig afgestemd op de missie van KOBA: transparante
+              communicatie, gebruiksvriendelijkheid en verbondenheid tussen
+              scholen, ouders en leerlingen.
             </p>
 
             <a
               href="https://kobametropool.be/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-2 rounded-lg bg-white text-black font-semibold shadow hover:bg-gray-200 transition mt-2"
-            >
+              className="inline-block px-6 py-2 rounded-lg bg-white text-black font-semibold shadow hover:bg-gray-200 transition mt-2">
               Bezoek website
             </a>
           </div>
@@ -63,43 +76,58 @@ export default function PortfolioDetailKoba() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Technieken & Features</h2>
             <p className="text-base text-white mb-4">
-              De website draait op een op maat ingerichte WordPress-installatie met geavanceerde PHP-logica. 
-              Verschillende krachtige tools en API’s zijn geïntegreerd om bezoekers een interactieve en toegankelijke ervaring te bieden.
+              De website draait op WordPress met geavanceerde PHP-logica en of
+              plugins voor verschillende functionaliteiten. De functionaliteiten
+              zijn onderandere de api voor de vacatures vanuit de VDAB, search
+              en filter pro voor studiekiezer en als laatste de wp go maps voor
+              de kaarten met locaties van de scholen.
             </p>
             <p className="text-base text-white mb-4">
-              Een van de kernfunctionaliteiten is de interactieve **schoolkaart**, gebouwd met <strong>WP Go Maps</strong>. 
-              Alle aangesloten scholen worden overzichtelijk weergegeven en kunnen gefilterd worden op onderwijsniveau of locatie. 
-              Elke school leidt naar een detailpagina met praktische informatie, foto’s en contactgegevens.
+              Een van de kernfunctionaliteiten is de interactieve schoolkaarten,
+              gebouwd met <strong>WP Go Maps</strong>. Alle aangesloten scholen
+              worden overzichtelijk weergegeven op de bijhorende kaart. Elke school is aan klikbaar en
+              toont de contactgegevens.
             </p>
             <p className="text-base text-white mb-4">
-              Voor de **studiekiezer** is gebruikgemaakt van <strong>Search & Filter Pro</strong>. 
-              Hiermee kunnen leerlingen en ouders opleidingen selecteren op basis van interessegebied, onderwijsniveau of specifieke kenmerken. 
-              De module haalt real-time gegevens uit de onderliggende database, zodat resultaten altijd up-to-date zijn.
+              Voor de studiekiezer is gebruikgemaakt van{" "}
+              <strong>Search & Filter Pro</strong> dat gekoppeld word aan een custom post type. Hiermee kunnen leerlingen en
+              ouders opleidingen selecteren op basis van interessegebied,
+              onderwijsniveau of specifieke kenmerken.
             </p>
             <p className="text-base text-white mb-4">
-              Daarnaast is er een **vacaturemodule** ontwikkeld met een op maat gemaakte PHP-API. 
-              Deze koppelt de website aan de VDAB-databank en haalt actuele vacatures op. 
-              Bezoekers kunnen eenvoudig filteren op locatie of functietype en doorklikken naar VDAB voor sollicitaties. 
-              De automatisering zorgt ervoor dat het vacatureoverzicht altijd actueel blijft zonder handmatig onderhoud.
+              Daarnaast is er een vacaturemodule ontwikkeld met een op maat
+              gemaakte PHP-API. Deze koppelt de website aan de VDAB-databank en
+              haalt actuele vacatures op. Bezoekers kunnen eenvoudig filteren op
+              locatie of functietype en doorklikken naar VDAB voor
+              sollicitaties. De automatisering zorgt ervoor dat het
+              vacatureoverzicht altijd actueel blijft zonder handmatig
+              onderhoud.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-4">Over de website</h2>
             <p className="text-base text-white mb-4">
-              Het platform is ontworpen als een toekomstbestendige digitale hub voor het volledige KOBA-netwerk. 
-              Ouders, leerlingen en medewerkers vinden er informatie, nieuws en interactieve tools die echte meerwaarde bieden. 
-              Door maatwerk in PHP en integratie van WordPress-tools worden contentbeheer, functionaliteit en gebruiksvriendelijkheid perfect gecombineerd.
+              Het platform is ontworpen als een toekomstbestendige digitale hub
+              voor het volledige KOBA-netwerk. Ouders, leerlingen en medewerkers
+              vinden er informatie, nieuws en interactieve tools die echte
+              meerwaarde bieden. Door maatwerk in PHP en integratie van
+              WordPress-tools worden contentbeheer, functionaliteit en
+              gebruiksvriendelijkheid perfect gecombineerd.
             </p>
             <p className="text-base text-white mb-4">
-              De combinatie van WP Go Maps, Search & Filter Pro en de VDAB-vacature-API maakt de site uniek. 
-              Alle modules zijn geïntegreerd in één coherent systeem dat schaalbaar is en eenvoudig kan worden uitgebreid 
-              met nieuwe functionaliteiten of scholen.
+              De combinatie van WP Go Maps, Search & Filter Pro en de
+              VDAB-vacature-API maakt de site uniek. Alle modules zijn
+              geïntegreerd in één coherent systeem dat schaalbaar is en
+              eenvoudig kan worden uitgebreid met nieuwe functionaliteiten of
+              scholen.
             </p>
             <p className="text-base text-white mb-4">
-              Redacteuren kunnen zelfstandig content beheren via WordPress. Zo blijft het platform actueel, gebruiksvriendelijk en volledig afgestemd op de missie van KOBA Metropool.
+              Redacteuren kunnen zelfstandig content beheren via WordPress. Zo
+              blijft het platform actueel, gebruiksvriendelijk en volledig
+              afgestemd op de missie van KOBA Metropool.
             </p>
-          </div> 
+          </div>
         </div>
 
         {/* Screenshots gallery */}

@@ -147,11 +147,11 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-2xl font-bold mb-6 text-white/90">Tools</h3>
+              <SkillBar name="WordPress" level={5} />
               <SkillBar name="Adobe XD" level={5} />
-              <SkillBar name="WordPress" level={4} />
               <SkillBar name="Photoshop" level={3} />
-              <SkillBar name="Illustrator" level={3} />
               <SkillBar name="Git" level={3} />
+              <SkillBar name="Illustrator" level={2} />
               <SkillBar name="Premiere Pro" level={2} />
               <SkillBar name="Blender" level={2} />
             </div>

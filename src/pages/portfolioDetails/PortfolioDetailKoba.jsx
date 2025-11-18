@@ -51,7 +51,7 @@ export default function PortfolioDetailKoba() {
 
             <p className="text-lg mb-12 text-white">
               KOBA Metropool is het onderwijsnetwerk van zestien scholen in de
-              Antwerpse regio. De organisatie bundelt krachten van kleuter-,
+              regio Antwerpse. De organisatie bundelt krachten van kleuter-,
               lagere, secundaire en post-secundaire instellingen om inspirerend
               en kwaliteitsvol onderwijs aan te bieden. De website vormt de
               digitale spil van dit netwerk en werd gebouwd met WordPress en

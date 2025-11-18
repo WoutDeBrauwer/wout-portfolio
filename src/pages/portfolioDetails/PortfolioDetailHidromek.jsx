@@ -89,8 +89,8 @@ return (
           <p className="text-base text-white mb-4">
             Contactformulieren en offerteaanvragen zijn gemaakt met de plugin Contact7.
             Deze plugin maakt het eenvoudig om te koppelen aan een flamingo voor het bijhouden van inkomende berichten.
-            Ook kan je invullen wat de beheerder in zen inbox krijgt van informatie via het formulier. Bij offerteaanvragen gevonden
-            we dan ook de link van de pagina mee zo is duidelijk welke machine de klant interesse in heeft.
+            Ook kan je invullen wat de beheerder in z'n inbox krijgt van informatie via het formulier. Bij offerteaanvragen gaven
+            we de link van de pagina mee zo is duidelijk welke machine de klant interesse in heeft.
           </p>
 
           <p className="text-base text-white mb-4">

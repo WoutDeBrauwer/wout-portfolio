@@ -96,7 +96,7 @@ export default function PortfolioDetailLeChic() {
             </p>
             <p className="text-base text-white mb-4">
               De integratie van <strong>WooCommerce</strong> zorgt voor een
-              complete webshop-ervaring, inclusief productbeheer, bestellingen,
+              complete webshop-ervaring inclusief: productbeheer, bestellingen ....,
               klantcommunicatie en kortingsacties. Custom code maakt het
               mogelijk om unieke productbundels en loyaliteitsprogramma's aan te
               bieden.

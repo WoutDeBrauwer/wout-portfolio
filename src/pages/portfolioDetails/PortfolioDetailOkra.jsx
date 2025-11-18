@@ -38,7 +38,7 @@ export default function PortfolioDetailOkra() {
             </div>
             <p className="text-lg mb-12 text-white">
               Voor OKRA Reizen ontwikkelde ik een gebruiksvriendelijke en overzichtelijke website in WordPress,
-              speciaal gericht senioren die graag reizen. De site bevat een uitgebreide reiszoeker, digitale brochure
+              speciaal gericht op senioren die graag reizen. De site bevat een uitgebreide reiszoeker, digitale brochure
               en informatieve pagina’s. Dankzij Advanced Custom Fields (ACF) kunnen beheerders eenvoudig alle reisgegevens
               invullen — zoals vertrekdata, prijs per persoon, begeleiders, en het niveau van de reis en nog meer.
             </p>
@@ -81,7 +81,7 @@ export default function PortfolioDetailOkra() {
               De opbouw zorgt ervoor dat de klant zelf nieuwe reizen kan toevoegen of aanpassen zonder technische kennis.
             </p>
             <p className="text-base text-white mb-4">
-              Elk reisdetail, zoals begeleider, periode, foto’s en niveau, wordt dynamisch weergegeven
+              Elk reisdetail, zoals: begeleider periode, foto’s en niveau wordt dynamisch weergegeven
               op basis van de ingevulde velden. De moeilijkheidsgraad wordt bijvoorbeeld automatisch weergegeven
               in de vorm van bolletjes.
             </p>

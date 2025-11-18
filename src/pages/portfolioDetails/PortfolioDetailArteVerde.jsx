@@ -85,7 +85,7 @@ export default function PortfolioDetailArteVerde() {
             <h2 className="text-2xl font-bold mb-4">Over de website</h2>
             <p className="text-base text-white mb-4">
               Arte-Verde presenteert projecten en biozwembaden in een visueel
-              aantrekkelijke en informatieve layout. Het portfolio is dynamisch
+              aantrekkelijke en informatieve lay-out. Het portfolio is dynamisch
               opgebouwd en eenvoudig uit te breiden dankzij custom post types.
               De website is volledig responsive en geoptimaliseerd voor alle
               apparaten.

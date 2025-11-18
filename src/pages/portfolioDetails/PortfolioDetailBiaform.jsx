@@ -79,7 +79,7 @@ export default function PortfolioDetailBiaform() {
             <h2 className="text-2xl font-bold mb-4">Over de website</h2>
             <p className="text-base text-white mb-4">
               De website presenteert producten en recepten in een heldere
-              layout. Alles is responsive en eenvoudig te beheren via WordPress
+              lay-out. Alles is responsive en eenvoudig te beheren via WordPress
               en de WP Bakery pagebuilder.
             </p>
             <p className="text-base text-white mb-4">

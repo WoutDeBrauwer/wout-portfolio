@@ -79,10 +79,9 @@ export default function AboutSection() {
           </p>
 
           <p className="text-gray-300 mb-4">
-            Als persoon ben ik{" "}, nieuwsgierig en ambitieus. Ik wil graag nieuwe technologieën 
-            ontdekken en mezelf verder ontwikkelen, en ik wil werken op een plek waar ik kan groeien 
-            en ondersteuning kan krijgen. Mijn doel is om websites te bouwen die impact maken, snel, 
-            functioneel en afgestemd op de noden van de gebruiker.
+            Als persoon ben ik{" "} nieuwsgierig en ambitieus. Ik wil graag nieuwe technologieën 
+            ontdekken en mezelf verder ontwikkelen op een plek waar ik kan groeien 
+            en ondersteuning kan krijgen. Mijn doel is om websites te maken, die snel en functioneel zijn en daarbovenop nog eens afgestemd zijn aan de noden van de gebruiker.
           </p>
 
           {/* Contact Call-to-Action */}

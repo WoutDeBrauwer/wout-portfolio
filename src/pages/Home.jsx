@@ -1,18 +1,17 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
-import { getRandomPortfolioItems } from '../data/portfolioItems'
+import { projects } from '../data/projects'
 import PortfolioCard from '../components/PortfolioCard'
 import SkillBar from '../components/SkillBar'
 import AboutMe from '../components/AboutMe'
 import Typewriter from '../components/Typewriter'
 
 export default function Home() {
-  // Initialize scroll animations
-  useScrollAnimation()
-
-  // show a few random items on the home page
-  const featured = getRandomPortfolioItems(3)
+  // Eén keer per bezoek 3 willekeurige projecten kiezen (niet bij elke render)
+  const featured = useMemo(
+    () => [...projects].sort(() => 0.5 - Math.random()).slice(0, 3),
+    []
+  )
 
   return (
     <div className="min-h-screen bg-dark text-light">
@@ -176,8 +175,8 @@ export default function Home() {
             </Link>
           </div>
             <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {featured.slice(0, 3).map((item) => (
-                <Link key={item.id} to={`/portfolio/${item.slug}`}>
+              {featured.map((item) => (
+                <Link key={item.slug} to={`/portfolio/${item.slug}`}>
                   <PortfolioCard {...item} />
                 </Link>
               ))}

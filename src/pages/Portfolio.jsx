@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import PortfolioCard from '../components/PortfolioCard'
-import { portfolioItems } from '../data/portfolioItems'
+import { projects } from '../data/projects'
 
 export default function Portfolio() {
   return (
@@ -23,9 +23,9 @@ export default function Portfolio() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {portfolioItems.map(item => (
-            <Link key={item.id} to={`/portfolio/${item.slug}`}>
-              <PortfolioCard {...item} />
+          {projects.map((project) => (
+            <Link key={project.slug} to={`/portfolio/${project.slug}`}>
+              <PortfolioCard {...project} />
             </Link>
           ))}
         </div>

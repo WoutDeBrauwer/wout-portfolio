@@ -1,0 +1,14 @@
+# Netlify bouwt de site bij elke push naar GitHub.
+# SPA-redirects staan in public/_redirects.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Afbeeldingen en gebouwde assets lang cachen
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

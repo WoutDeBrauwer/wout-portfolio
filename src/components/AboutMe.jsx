@@ -1,5 +1,5 @@
-"use client";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -90,11 +90,11 @@ export default function AboutSection() {
               Sta je open voor een gemotiveerde junior developer? Ik hoor graag
               van je!
             </p>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-block bg-white text-black px-6 py-3 rounded-xl font-semibold shadow-md hover:opacity-90 transition-all">
               Neem contact op
-            </a>
+            </Link>
           </div>
         </div>
       </div>

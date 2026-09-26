@@ -53,7 +53,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-white/80 mt-6 mb-4 max-w-xl">
-                Ik ben een gepassioneerde junior webdeveloper van 24 jaar.
+                Ik ben een gepassioneerde junior webdeveloper van 25 jaar.
               </p>
 
               <div className="flex flex-wrap gap-4">

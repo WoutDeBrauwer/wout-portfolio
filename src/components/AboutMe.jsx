@@ -50,12 +50,18 @@ export default function AboutMe() {
               <div className="sm:col-span-2 sm:w-4/5">
                 <SkillCard {...featured} />
               </div>
-              {rest.map((group) => (
-                <SkillCard key={group.title} {...group} />
+              {rest.map((group, i) => (
+                // Bij een oneven aantal pakt de laatste kaart de volle breedte
+                <div
+                  key={group.title}
+                  className={rest.length % 2 && i === rest.length - 1 ? "sm:col-span-2" : ""}
+                >
+                  <SkillCard {...group} />
+                </div>
               ))}
             </div>
             <p className="mt-6 text-xs text-white/50 max-w-xs">
-              Enkele van de <em>technologieën, tools en plugins</em> waarmee ik
+              Enkele van de <em>technologieën en tools</em> waarmee ik
               dagelijks werk.
             </p>
           </Reveal>

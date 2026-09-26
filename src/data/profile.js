@@ -18,7 +18,7 @@ export const skillGroups = [
   {
     title: 'WordPress',
     featured: true,
-    items: ['Gutenberg', 'Custom blocks', 'ACF (blocks)', 'theme.json', 'Custom post types', 'WooCommerce', 'WPML', 'Betheme', 'Elementor'],
+    items: ['Gutenberg', 'Custom blocks', 'theme.json', 'Custom post types', 'Betheme', 'Elementor'],
   },
   {
     title: 'Front-end',
@@ -30,11 +30,7 @@ export const skillGroups = [
   },
   {
     title: 'Workflow',
-    items: ['Figma', 'Figma MCP', 'Claude Code', 'Git', 'Adobe XD', 'Photoshop'],
-  },
-  {
-    title: 'Plugins',
-    items: ['Search & Filter Pro', 'Slider Revolution', 'Contact Form 7', 'WP Go Maps', 'Iubenda'],
+    items: ['Claude', 'Claude Code', 'Figma', 'Figma MCP', 'Git', 'Adobe XD', 'Photoshop'],
   },
 ]
 

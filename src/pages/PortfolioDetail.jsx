@@ -2,12 +2,13 @@ import { useParams } from 'react-router-dom'
 import { agencies, getProject } from '../data/projects'
 import Gallery from '../components/Gallery'
 import RichText from '../components/RichText'
-import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, SlashList } from '../components/ui'
+import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
 import NotFound from './NotFound'
 
 export default function PortfolioDetail() {
   const { slug } = useParams()
   const project = getProject(slug)
+  usePageMeta(project?.title, project && plainText(project.intro).slice(0, 155))
   if (!project) return <NotFound />
 
   const agency = agencies[project.agency]
@@ -30,6 +31,12 @@ export default function PortfolioDetail() {
                 <a href={agency.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white">
                   {agency.name}
                 </a>
+                {project.devOnly && (
+                  <>
+                    <br />
+                    Mijn rol: development · design door {agency.name}
+                  </>
+                )}
               </p>
             )}
             <h1 className="font-mono font-medium tracking-tight leading-[1.05] text-4xl md:text-5xl lg:text-6xl mb-6">

@@ -1,6 +1,8 @@
-import { Container, Pill, SectionLabel } from '../components/ui'
+import { Container, Pill, SectionLabel, usePageMeta } from '../components/ui'
 
 export default function NotFound() {
+  usePageMeta('Niet gevonden')
+
   return (
     <div className="min-h-[60vh] flex items-center">
       <Container className="py-20">

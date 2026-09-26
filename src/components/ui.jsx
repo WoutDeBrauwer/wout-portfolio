@@ -1,4 +1,5 @@
 // Gedeelde bouwstenen voor de monochrome stijl: labels, pill-knoppen en ronde pijlknoppen.
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
@@ -125,3 +126,15 @@ export function SlashList({ items, className = '' }) {
 
 // Verwijdert **vet**-markering voor korte previews
 export const plainText = (text = '') => text.replace(/\*\*/g, '')
+
+// Titel en meta-description per pagina (SPA: anders deelt elke pagina dezelfde titel)
+export function usePageMeta(title, description) {
+  useEffect(() => {
+    document.title = title ? `${title} | Wout De Brauwer` : 'Wout De Brauwer | Junior webdeveloper'
+    const meta = document.querySelector('meta[name="description"]')
+    if (!meta || !description) return
+    const previous = meta.content
+    meta.content = description
+    return () => { meta.content = previous }
+  }, [title, description])
+}

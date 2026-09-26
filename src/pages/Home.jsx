@@ -3,7 +3,8 @@ import { experience, socials, contact } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
-import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, TableRow } from '../components/ui'
+import Workflow from '../components/Workflow'
+import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
 
 const titleClass =
   'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
@@ -111,10 +112,13 @@ function Experience() {
 }
 
 export default function Home() {
+  usePageMeta()
+
   return (
     <>
       <Hero />
       <AboutMe />
+      <Workflow />
       <Experience />
     </>
   )

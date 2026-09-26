@@ -34,10 +34,30 @@ export const skillGroups = [
   },
 ]
 
-// Vul `period` aan met jaartallen (bv. '2025 - nu') zodra je ze wil tonen.
+// Stappen voor "Zo werk ik" op de home
+export const workflow = [
+  {
+    title: 'Figma-design',
+    text: 'Ik start vanuit het ontwerp van de designer: componenten, spacing, varianten en hoe het zich gedraagt op mobiel.',
+  },
+  {
+    title: 'Plan met Claude Code',
+    text: 'Via Figma MCP leest Claude Code het design uit. Samen maken we een plan: welke blocks, welke velden en wat er in theme.json komt.',
+  },
+  {
+    title: 'Review & bouwen',
+    text: 'Ik review het plan en de code kritisch: past het in het thema, is het toegankelijk en snel? Claude is ook mijn sparringpartner bij bugs die niet in de logs staan.',
+  },
+  {
+    title: 'Blocks voor redacteurs',
+    text: 'Het resultaat: custom Gutenberg-blocks die de klant zelf vult, zonder dat de lay-out breekt.',
+  },
+]
+
+// Atelier64 heeft nog geen jaartallen: vul `period` aan zodra je ze wil tonen.
 export const experience = [
   {
-    period: 'Nu',
+    period: '2026 – nu',
     company: 'Conversal',
     place: 'Affligem',
     url: 'https://www.conversal.be/',

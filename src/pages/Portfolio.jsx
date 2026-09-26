@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import PortfolioCard from '../components/PortfolioCard'
 import { projects } from '../data/projects'
-import { Circle, Container, Reveal, SectionLabel } from '../components/ui'
+import { Circle, Container, Reveal, SectionLabel, usePageMeta } from '../components/ui'
 
 export default function Portfolio() {
+  usePageMeta('Projecten', 'WordPress-projecten van Wout De Brauwer, gebouwd bij Conversal en Atelier64: van custom Gutenberg-blocks tot API-koppelingen.')
+
   return (
     <div className="relative overflow-hidden pt-16 md:pt-24 pb-24">
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
@@ -16,11 +18,12 @@ export default function Portfolio() {
             Projecten
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
-            Een <em>selectie</em> van de projecten waar ik het meest trots op
-            ben, meestal omdat ze de meeste functionaliteit bevatten. Daarnaast
-            werkte ik aan heel wat andere sites: aanpassingen aan bestaande
-            pagina’s, bijdragen aan grotere projecten en sites die (nog) niet
-            publiek online staan.
+            Een <em>selectie</em> van mijn werk. De recentste projecten bouwde
+            ik bij <em>Conversal</em> met Gutenberg; daar deed ik de
+            development, het design kwam van het Conversal-team. Daarvoor
+            werkte ik bij <em>Atelier64</em>. Daarnaast werkte ik aan heel wat
+            andere sites: aanpassingen, bijdragen aan grotere projecten en
+            sites die (nog) niet publiek online staan.
           </p>
         </div>
 

@@ -1,9 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
-import { agencies } from "../data/projects";
+import { agencyLabel } from "../data/projects";
 import { SlashList } from "./ui";
 
-export default function PortfolioCard({ title, cover, tags, agency }) {
-  const agencyName = agencies[agency]?.name;
+export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
+  const agencyName = agencyLabel({ agency, devOnly });
 
   return (
     <article className="group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-colors hover:border-white/40">

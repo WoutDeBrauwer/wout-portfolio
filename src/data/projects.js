@@ -1,14 +1,152 @@
 // Eén bron voor alle projecten. Een nieuw project toevoegen = één object toevoegen.
 // Tekst in `intro` en `sections[].paragraphs` ondersteunt **vet** als markering.
+// `devOnly: true` = ik deed enkel de development, het design kwam van het bureau.
 
 export const agencies = {
   atelier64: { name: 'Atelier64', url: 'https://atelier64.eu/' },
   conversal: { name: 'Conversal', url: 'https://www.conversal.be/' },
 }
 
+// Korte regel voor kaarten, bv. "Conversal · enkel development"
+export const agencyLabel = ({ agency, devOnly }) => {
+  const name = agencies[agency]?.name
+  return name && devOnly ? `${name} · enkel development` : name
+}
+
 const IMG = '/images/Images'
 
 export const projects = [
+  {
+    slug: 'mv-events',
+    title: 'M&V Events',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://mv-events.be/',
+    cover: `${IMG}/MvEvents/Portfolio-wout-mvevents-home.webp`,
+    tags: ['WordPress', 'Gutenberg', 'WooCommerce', 'Rentman', 'SwiperJS'],
+    intro:
+      'M&V Events verhuurt tenten en eventmateriaal en organiseert zelf events, sportdagen, teambuildings en kampen. Het is de grootste van mijn Conversal-sites: een uitgebreid verhuuraanbod, eigen events en een offertemodule, allemaal in één WordPress-site met Gutenberg.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'Het verhuuraanbod draait op **WooCommerce**, gekoppeld aan **Rentman**, de planningssoftware van M&V. Bezoekers zoeken en filteren in categorieën zoals tenten, meubilair, tafel- en keukenmateriaal en stellen zo hun offerteaanvraag samen.',
+          'Custom **Gutenberg-blocks** voor onder meer een realisatieslider, een reviewslider en een ticker met nieuws en events bovenaan de pagina. De sliders werken met **SwiperJS**.',
+          'Een menu met meerdere niveaus en een zoekfunctie houden het grote aanbod overzichtelijk.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Naast verhuur toont de site de eigen events van M&V, zoals JOENK Festival en Aperobeats, en het aanbod aan sportdagen, teambuildings, kampen en zwemlessen.',
+          'Brochures zijn te downloaden en de medewerkers beheren producten, events en realisaties zelf in WordPress.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/MvEvents/Portfolio-wout-mvevents-stretchtenten.webp`,
+      `${IMG}/MvEvents/Portfolio-wout-mvevents-realisaties.webp`,
+      `${IMG}/MvEvents/Portfolio-wout-mvevents-sportdagen.webp`,
+    ],
+  },
+  {
+    slug: 'erfgoedklassen-brussels',
+    title: 'Erfgoedklassen.brussels',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://www.erfgoedklassen.brussels/',
+    cover: `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-home.webp`,
+    tags: ['WordPress', 'Gutenberg', 'WPML', 'Custom post types'],
+    intro:
+      'Erfgoedklassen.brussels biedt gratis erfgoedactiviteiten aan voor leerlingen uit het Brussels Hoofdstedelijk Gewest, georganiseerd door vzw Paleis van Keizer Karel. Leerkrachten vinden er activiteiten, lesmaterialen en erfgoedkoffers. De site is tweetalig: Nederlands en Frans.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'Gebouwd op **WordPress** met **Gutenberg** en **WPML** voor de Nederlandse en Franse versie.',
+          'Activiteiten en lesmaterialen zijn **custom post types** uit een eigen plugin. Ze verschijnen via query-blocks en zijn ingedeeld per onderwijsniveau: basisonderwijs, secundair onderwijs en toekomstige leerkrachten.',
+          'Inschrijven voor een activiteit gebeurt via een formulier op maat.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'De doelgroep is breed: leerkrachten uit het basis- en secundair onderwijs, toekomstige leerkrachten en de leerlingen zelf, die op “Leerlingen vertellen” hun ervaringen delen.',
+          'Het team beheert activiteiten, lesmaterialen en verhalen zelf, in beide talen.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-klasactiviteiten.webp`,
+      `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-lesmaterialen.webp`,
+      `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-leerlingen-vertellen.webp`,
+    ],
+  },
+  {
+    slug: 'amitude',
+    title: 'Amitude',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://amitude.be/',
+    cover: `${IMG}/Amitude/Portfolio-wout-amitude-home.webp`,
+    tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS'],
+    intro:
+      'Amitude is een cateraar uit Torhout die kookt voor bedrijfsfeesten, huwelijken en events op locatie. De website heeft één duidelijk doel: bezoekers overtuigen om een offerte aan te vragen.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'Gebouwd op **WordPress** en **Gutenberg**, met **custom blocks** zoals een logoslider voor klanten en partners en een blok met Google-reviews en sterren.',
+          'Op de referentiepagina filteren bezoekers de beelden op type moment of locatie (bedrijf, huwelijk, buitenlocatie, privé) en openen ze een foto groter.',
+          'De sliders werken met **SwiperJS**. Veelgestelde vragen over allergieën, aantallen en prijzen staan in uitklapbare blocks.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Het aanbod is opgesplitst in bedrijfsevents, privéfeesten en evenementen op locatie, elk met een eigen landingspagina.',
+          'Op elke pagina staat een duidelijke oproep om een offerte aan te vragen, samen met cijfers en reviews die vertrouwen wekken.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/Amitude/Portfolio-wout-amitude-bedrijfsfeest.webp`,
+      `${IMG}/Amitude/Portfolio-wout-amitude-referenties.webp`,
+      `${IMG}/Amitude/Portfolio-wout-amitude-faq.webp`,
+    ],
+  },
+  {
+    slug: 'algarvista',
+    title: 'Algarvista',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://algarvistaguide.com/',
+    cover: `${IMG}/Algarvista/Portfolio-wout-algarvista-home.webp`,
+    tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS', 'WPForms'],
+    intro:
+      'Algarvista is de reisgids van Elisa, half Portugees en half Belg, opgegroeid in Carvoeiro. De site bundelt haar tips over stranden, stadjes, restaurants en accommodaties in de Algarve, aangevuld met een blog met uitgebreide gidsen.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'De site draait op **WordPress** en is volledig opgebouwd met **Gutenberg-blocks**: core-blocks aangevuld met custom blocks in de huisstijl.',
+          'Getuigenissen draaien in een **SwiperJS**-carousel, veelgestelde vragen staan in uitklapbare blocks en de nieuwsbrief- en contactformulieren lopen via **WPForms**.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Bezoekers vinden snel wat ze zoeken via de indeling in plannen, bezoeken en eten & drinken, met een aparte pagina per thema zoals stranden, stadjes of restaurants.',
+          'Elisa schrijft nieuwe gidsen en blogartikels zelf in de blokeditor, met dezelfde blocks, zonder dat de lay-out breekt.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/Algarvista/Portfolio-wout-algarvista-beaches.webp`,
+      `${IMG}/Algarvista/Portfolio-wout-algarvista-blog.webp`,
+      `${IMG}/Algarvista/Portfolio-wout-algarvista-faq.webp`,
+    ],
+  },
   {
     slug: 'koba-metropool',
     title: 'KOBA Metropool',
@@ -38,9 +176,9 @@ export const projects = [
       },
     ],
     screenshots: [
-      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-map-page.png`,
-      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-vacature.png`,
-      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-studiekiezer-selectedItem.png`,
+      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-map-page.webp`,
+      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-vacature.webp`,
+      `${IMG}/Koba/Portfolio-wout-Koba-screenshot-studiekiezer-selectedItem.webp`,
     ],
   },
   {
@@ -71,9 +209,9 @@ export const projects = [
       },
     ],
     screenshots: [
-      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.png`,
-      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.png`,
-      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen.png`,
+      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reis-detailpagina.webp`,
+      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen-home.webp`,
+      `${IMG}/Okra/Portfolio-wout-okra-reizen-screenshot-okra-reizen.webp`,
     ],
   },
   {
@@ -110,73 +248,6 @@ export const projects = [
     ],
   },
   {
-    slug: 'le-chic-hairboetiek',
-    title: 'Le Chic Hairboetiek',
-    agency: 'atelier64',
-    url: 'https://www.lechichairboetiek.be/',
-    cover: `${IMG}/LeChic/Portfolio-wout-lechic-overzichtsfoto.jpg`,
-    tags: ['WordPress', 'WooCommerce', 'Ultimate Member'],
-    intro:
-      'Le Chic Hairboetiek is een modern kapsalon met een webshop voor consumenten en professionals. De website is gebouwd op WordPress met WooCommerce en is geoptimaliseerd voor conversie en gebruiksgemak, met duidelijke navigatie naar diensten, producten en openingsuren.',
-    sections: [
-      {
-        title: 'Technieken & features',
-        paragraphs: [
-          'De webshop draait op **WooCommerce**, uitgebreid met **Search & Filter Pro** voor productfilters. Er is een aparte omgeving voor consumenten en professionals.',
-          'Er zijn plugins geïntegreerd voor betalingsverwerking, filtering, SEO en het contactformulier.',
-          'SEO, caching en beveiliging zijn geoptimaliseerd met plugins en custom scripts.',
-        ],
-      },
-      {
-        title: 'Over de website',
-        paragraphs: [
-          'Het platform is volledig responsive en eenvoudig te beheren via het WordPress-dashboard.',
-          '**WooCommerce** zorgt voor een complete webshopervaring: productbeheer, bestellingen, klantcommunicatie en kortingsacties. Custom code maakt unieke productbundels en loyaliteitsprogramma’s mogelijk.',
-          'De site is voorbereid op toekomstige uitbreidingen, zoals koppelingen met externe systemen en marketingtools.',
-        ],
-      },
-    ],
-    screenshots: [
-      `${IMG}/LeChic/Portfolio-Wout-lechic-home.webp`,
-      `${IMG}/LeChic/Portfolio-Wout-lechic-tussen-pagina.jpg`,
-      `${IMG}/LeChic/Portfolio-Wout-lechic-professionals-pagina.jpg`,
-      `${IMG}/LeChic/Portfolio-Wout-lechic-webshop.jpg`,
-    ],
-  },
-  {
-    slug: 'hidromek',
-    title: 'Hidromek',
-    agency: 'atelier64',
-    url: 'https://hidromek.be/',
-    cover: `${IMG}/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg`,
-    tags: ['WordPress', 'PHP', 'ACF', 'WPML'],
-    intro:
-      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP. WPML is geïntegreerd zodat de site in meerdere talen beschikbaar kan worden. De site heeft een duidelijke productcatalogus en is geoptimaliseerd voor zoekmachines.',
-    sections: [
-      {
-        title: 'Technieken & features',
-        paragraphs: [
-          'De website draait op WordPress met custom PHP-logica. **WPML** is voorbereid voor Nederlands, Frans en Engels. De productcatalogus is dynamisch opgebouwd met custom post types en taxonomieën.',
-          'SEO-optimalisatie gebeurde met onder meer Yoast SEO. Een filtermodule helpt bezoekers snel het juiste product te vinden op categorie of specificatie.',
-          'Contactformulieren en offerteaanvragen zijn gemaakt met **Contact Form 7**, gekoppeld aan Flamingo om inkomende berichten bij te houden. Bij een offerteaanvraag wordt de link van de pagina meegestuurd, zodat meteen duidelijk is in welke machine de klant interesse heeft.',
-        ],
-      },
-      {
-        title: 'Over de website',
-        paragraphs: [
-          'Het platform is de centrale plek voor klanten in België, met productinfo, technische fiches, nieuws en serviceaanvragen.',
-          'De productcatalogus vormt de kern: elk product heeft een eigen detailpagina met foto’s, specificaties en downloads.',
-          'Nieuwe producten, talen en functies kunnen worden toegevoegd zonder dat de structuur wijzigt.',
-        ],
-      },
-    ],
-    screenshots: [
-      `${IMG}/Hidromek/Portfolio-Wout-hidromek-Home.webp`,
-      `${IMG}/Hidromek/Portfolio-Wout-hidromek-machine-detail.webp`,
-      `${IMG}/Hidromek/Portfolio-Wout-hidromek-machines-pagina.webp`,
-    ],
-  },
-  {
     slug: 'biaform-provital',
     title: 'Biaform Provital',
     agency: 'atelier64',
@@ -207,34 +278,6 @@ export const projects = [
       `${IMG}/Biaform/Portfolio-Wout-Biafrom-product-detail.webp`,
       `${IMG}/Biaform/Portfolio-Wout-Biafrom-producten-overzicht.jpg`,
     ],
-  },
-  {
-    slug: 'variable-paginas',
-    title: 'Variabele pagina’s',
-    agency: 'atelier64',
-    url: '',
-    cover: `${IMG}/Template-portfolio-item.jpg`,
-    tags: ['WordPress', 'PHP', 'Spreadsheet-integratie'],
-    intro:
-      'Gepersonaliseerde pagina’s op basis van een spreadsheet. De URL eindigt met een slug die ook in de spreadsheet staat; die slug bepaalt welke rij wordt opgehaald. De waarden uit die rij verschijnen via shortcodes op de pagina. De klant past alleen de spreadsheet aan en kan de link per persoon delen, zonder dat er per persoon een aparte pagina nodig is.',
-    sections: [
-      {
-        title: 'Technieken & features',
-        paragraphs: [
-          'In de spreadsheet staat per item een slug, titel, tekst, URL en afbeeldingspad. De shortcodes lezen de juiste kolom uit en tonen die op de juiste plek.',
-          'De shortcodes worden in WPBakery geplaatst en kunnen meerdere keren op dezelfde pagina gebruikt worden.',
-          'Bulkaanpassingen gebeuren in de spreadsheet. Nieuwe items zijn meteen bereikbaar via de bijbehorende URL.',
-        ],
-      },
-      {
-        title: 'Over het systeem',
-        paragraphs: [
-          'De backend bevat **PHP**-code die de spreadsheet inleest, de slug uit de URL haalt en de juiste rij selecteert. Die waarden worden vertaald naar shortcodes die WPBakery rendert.',
-          'Dezelfde template is herbruikbaar: voor een ander publiek koppel je een andere sheet of voeg je extra velden toe.',
-        ],
-      },
-    ],
-    screenshots: [],
   },
 ]
 

@@ -1,5 +1,5 @@
 import { contact } from "../data/profile";
-import { Circle, Container, SectionLabel, TableRow } from "../components/ui";
+import { Circle, Container, SectionLabel, TableRow, usePageMeta } from "../components/ui";
 
 const rows = [
   { label: "E-mail", value: contact.email, href: `mailto:${contact.email}` },
@@ -8,6 +8,8 @@ const rows = [
 ];
 
 export default function Contact() {
+  usePageMeta("Contact", "Contacteer Wout De Brauwer, junior webdeveloper: via e-mail, telefoon of LinkedIn.");
+
   return (
     <section className="relative overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
@@ -21,12 +23,12 @@ export default function Contact() {
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>
-              Op zoek naar een <em>enthousiaste junior developer</em> die met
-              frisse energie en nieuwsgierigheid je team versterkt? Ik los graag
-              technische uitdagingen op en wil me verder ontwikkelen in een
-              dynamische omgeving.
+              Een vraag over een project, zin om <em>ervaringen uit te
+              wisselen</em> over Gutenberg of AI in je workflow, of gewoon
+              kennismaken? Ik los graag technische uitdagingen op en leer
+              graag bij.
             </p>
-            <p>Ik hoor graag meer over je bedrijf en hoe ik kan bijdragen.</p>
+            <p>Stuur me gerust een berichtje, ik antwoord snel.</p>
           </div>
         </div>
       </Container>

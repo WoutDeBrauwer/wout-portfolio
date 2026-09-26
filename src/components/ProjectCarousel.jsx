@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { A11y, Keyboard } from 'swiper/modules'
 import 'swiper/css'
-import { agencies } from '../data/projects'
+import { agencyLabel } from '../data/projects'
 import { ArrowButton, Pill, plainText } from './ui'
 
 function ProjectSlide({ project, active }) {
@@ -20,7 +20,7 @@ function ProjectSlide({ project, active }) {
       />
       <div className="flex flex-col p-6 md:p-7">
         <p className="font-mono text-xs text-white/50 mb-2">
-          {agencies[project.agency]?.name}
+          {agencyLabel(project)}
         </p>
         <h3 className="font-mono text-xl font-medium leading-snug mb-3">{project.title}</h3>
         <p className="text-sm text-white/70 line-clamp-3 mb-6">{plainText(project.intro)}</p>

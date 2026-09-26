@@ -6,7 +6,7 @@ import ProjectCarousel from '../components/ProjectCarousel'
 import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, TableRow } from '../components/ui'
 
 const titleClass =
-  'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,10vw,8rem)]'
+  'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
 
 function ProjectsButton({ className = '' }) {
   return (
@@ -23,24 +23,25 @@ function Hero() {
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
       <Container>
-        <SectionLabel className="mb-10">Junior webdeveloper</SectionLabel>
+        <SectionLabel className="mb-10">Wout De Brauwer</SectionLabel>
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
-            WordPress
-            <span className="sr-only"> developer</span>
+            Junior
+            <span className="sr-only"> webdeveloper</span>
           </h1>
           <ProjectsButton className="hidden lg:flex" />
         </div>
 
-        <div className="flex flex-col-reverse lg:flex-row lg:items-end lg:justify-between gap-8 mt-4 lg:mt-2">
+        {/* Zin en titel pas vanaf xl naast elkaar: "Webdeveloper" is breed */}
+        <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <p className="max-w-sm text-white/70">
-            Mijn doel is om <em>snelle, functionele websites</em> te bouwen, van{' '}
-            <em>Figma-design</em> tot <em>custom Gutenberg-blocks</em> die
-            afgestemd zijn op de gebruiker.
+            Ik vertaal <em>Figma-ontwerpen</em> naar{' '}
+            <em>snelle, gebruiksvriendelijke WordPress-websites</em> die klanten
+            zelf eenvoudig kunnen beheren.
           </p>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="Developer" speed={110} delay={300} cursor />
+            <Typewriter text="Webdeveloper" speed={100} delay={300} cursor />
           </p>
         </div>
 

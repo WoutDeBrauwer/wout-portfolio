@@ -36,9 +36,9 @@ export default function Gallery({ images = [] }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-start">
         {images.map((src, i) => (
-          <div key={i} className="overflow-hidden rounded-xl shadow-lg">
+          <div key={i} className="overflow-hidden rounded-2xl border border-line">
             <button
               onClick={() => openAt(i)}
               aria-label={`Open image ${i + 1}`}
@@ -48,7 +48,7 @@ export default function Gallery({ images = [] }) {
                 src={src}
                 alt={`Screenshot ${i + 1}`}
                 className="w-full h-auto object-contain block"
-                loading="eager"
+                loading="lazy"
               />
             </button>
           </div>
@@ -59,7 +59,7 @@ export default function Gallery({ images = [] }) {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85"
+          className="fixed inset-0 z-[11000] flex items-center justify-center bg-black/85"
           onClick={close}
         >
           <button

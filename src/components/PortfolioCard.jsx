@@ -1,43 +1,39 @@
+import { ArrowUpRight } from "lucide-react";
 import { agencies } from "../data/projects";
+import { SlashList } from "./ui";
 
 export default function PortfolioCard({ title, cover, tags, agency }) {
   const agencyName = agencies[agency]?.name;
 
   return (
-    <div className="relative bg-black rounded-2xl overflow-hidden transition-all duration-300 group">
-      <div className="relative h-56 md:h-80 w-full">
+    <article className="group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-colors hover:border-white/40">
+      <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={cover}
-          alt={title}
+          alt=""
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src = "/images/Images/Template-portfolio-item.jpg";
           }}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover grayscale-[60%] group-hover:grayscale-0 group-hover:scale-[1.03] transition duration-700 ease-out"
         />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
-
-        <div className="absolute bottom-6 left-6 right-6 text-white z-10">
-          {agencyName && (
-            <p className="text-xs uppercase tracking-widest text-white/60 mb-1">
-              {agencyName}
-            </p>
-          )}
-          <h2 className="text-lg font-semibold leading-tight mb-3">{title}</h2>
-
-          <div className="flex flex-wrap gap-2">
-            {tags?.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-full backdrop-blur-sm border border-white/20"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
-    </div>
+
+      <div className="flex items-start justify-between gap-4 p-6">
+        <div>
+          {agencyName && (
+            <p className="font-mono text-xs text-white/50 mb-1">{agencyName}</p>
+          )}
+          <h2 className="font-mono text-lg font-medium leading-snug mb-3">{title}</h2>
+          <SlashList items={tags} className="text-white/60" />
+        </div>
+        <span
+          aria-hidden="true"
+          className="inline-flex shrink-0 items-center justify-center w-10 h-10 rounded-full border border-white/70 group-hover:bg-white group-hover:text-dark transition-colors"
+        >
+          <ArrowUpRight size={16} strokeWidth={1.75} />
+        </span>
+      </div>
+    </article>
   );
 }

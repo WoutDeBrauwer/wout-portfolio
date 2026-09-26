@@ -1,188 +1,120 @@
-import React, { useMemo } from 'react'
-import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
-import PortfolioCard from '../components/PortfolioCard'
-import SkillBar from '../components/SkillBar'
+import { experience, socials, contact } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Typewriter from '../components/Typewriter'
+import ProjectCarousel from '../components/ProjectCarousel'
+import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, TableRow } from '../components/ui'
+
+const titleClass =
+  'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,10vw,8rem)]'
+
+function ProjectsButton({ className = '' }) {
+  return (
+    <div className={`items-center gap-2 lg:w-[320px] ${className}`}>
+      <Pill to="/portfolio" className="flex-1">Projecten</Pill>
+      <ArrowButton to="/portfolio" label="Naar projecten" tabIndex={-1} />
+    </div>
+  )
+}
+
+function Hero() {
+  return (
+    <header className="relative overflow-hidden pt-16 md:pt-24 pb-20">
+      <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+
+      <Container>
+        <SectionLabel className="mb-10">Junior webdeveloper</SectionLabel>
+
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <h1 className={titleClass}>
+            WordPress
+            <span className="sr-only"> developer</span>
+          </h1>
+          <ProjectsButton className="hidden lg:flex" />
+        </div>
+
+        <div className="flex flex-col-reverse lg:flex-row lg:items-end lg:justify-between gap-8 mt-4 lg:mt-2">
+          <p className="max-w-sm text-white/70">
+            Mijn doel is om <em>snelle, functionele websites</em> te bouwen, van{' '}
+            <em>Figma-design</em> tot <em>custom Gutenberg-blocks</em> die
+            afgestemd zijn op de gebruiker.
+          </p>
+          <p className={`${titleClass} lg:text-right`} aria-hidden="true">
+            <Typewriter text="Developer" speed={110} delay={300} cursor />
+          </p>
+        </div>
+
+        <ProjectsButton className="flex lg:hidden mt-8" />
+
+        <ul className="flex flex-wrap gap-3 mt-10 lg:mt-14">
+          {socials.map((s) => (
+            <li key={s.label}>
+              <Pill variant="outline" href={s.href} className="!px-5 !py-1.5 text-xs">
+                {s.label}
+              </Pill>
+            </li>
+          ))}
+        </ul>
+      </Container>
+
+      <div className="mt-16 px-5 sm:px-10 lg:px-0">
+        <ProjectCarousel projects={projects} />
+      </div>
+    </header>
+  )
+}
+
+function Experience() {
+  return (
+    <section className="pb-24 md:pb-32">
+      <Container>
+        <Reveal>
+          <h2 className={`${titleClass} text-right mb-10`}>Ervaring</h2>
+        </Reveal>
+      </Container>
+
+      <div className="max-w-[1400px] mx-auto border-t border-line">
+        {experience.map((job) => (
+          <TableRow
+            key={job.company}
+            href={job.url}
+            className="grid-cols-1 sm:grid-cols-[140px_1fr_1.4fr] items-baseline"
+            cells={
+              <>
+                <span className="text-sm">{job.period}</span>
+                <span>
+                  {job.company}
+                  <span className="text-xs opacity-60"> · {job.place}</span>
+                </span>
+                <span className="font-mono text-sm">
+                  {job.role} <span className="opacity-50">|</span> {job.stack}
+                </span>
+              </>
+            }
+          />
+        ))}
+      </div>
+
+      <Container className="mt-6 text-right">
+        <a
+          href={contact.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm italic text-white/70 hover:text-white transition-colors"
+        >
+          Volledig traject op LinkedIn ↗
+        </a>
+      </Container>
+    </section>
+  )
+}
 
 export default function Home() {
-  // Eén keer per bezoek 3 willekeurige projecten kiezen (niet bij elke render)
-  const featured = useMemo(
-    () => [...projects].sort(() => 0.5 - Math.random()).slice(0, 3),
-    []
-  )
-
   return (
-    <div className="min-h-screen bg-dark text-light">
-      <header
-        className="relative flex items-center overflow-hidden"
-        style={{height: "calc(100vh - 5rem)"}}
-        aria-label="Hero">
-        {/* VIDEO rechts (hidden on small screens for performance) */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          src="/images/Images/Portfolio-wout-video-header.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Sterke zwarte overlay links -> transparant rechts */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
-
-        {/* Content links met max-width en uitlijning */}
-        <div className="relative z-20 h-full flex items-center w-full">
-          <div className="max-w-[1600px] w-full mx-auto px-6 sm:px-10 lg:px-16 flex items-center">
-            <div className="w-full md:w-1/2 lg:w-2/5 text-left text-white flex flex-col">
-              <p className="text-sm uppercase tracking-widest text-white/60 mb-4">
-                MY NAME IS
-              </p>
-
-              <h1 className="text-5xl sm:text-6xl md:text-[5.2rem] lg:text-[6.2rem] font-extrabold leading-tight">
-                <Typewriter text="WOUT" speed={120} />
-              </h1>
-
-              <div className="text-4xl sm:text-5xl md:text-[3.8rem] lg:text-[4.5rem] font-semibold tracking-widest uppercase text-white/90 mb-9 inline-block whitespace-nowrap">
-                <Typewriter text="DE BRAUWER" speed={120} />
-              </div>
-
-              <div className="w-fit bg-primary text-[#111111] px-6 py-3 rounded-sm font-semibold mb-2 text-base tracking-wide">
-                JUNIOR WEBDEVELOPER
-              </div>
-
-              <p className="text-lg text-white/80 mt-6 mb-4 max-w-xl">
-                Ik ben een gepassioneerde junior webdeveloper van 24 jaar.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/contact"
-                  className="inline-block bg-white text-[#111111] px-6 py-3 rounded-md font-semibold shadow hover:opacity-90 transition">
-                  Contact
-                </Link>
-                <Link
-                  to="/portfolio"
-                  className="inline-block border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition">
-                  Portfolio
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Down arrow indicator */}
-        <a
-          href="#about"
-          className="absolute left-1/2 -translate-x-1/2 bottom-12 z-30"
-          aria-label="Scroll to about">
-          <div className="flex flex-col items-center -space-y-4">
-            <svg
-              className="w-8 h-8 text-white arrow-bounce mb-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden>
-              <path d="M19 12l-7 7-7-7"></path>
-            </svg>
-            <svg
-              className="w-8 h-8 text-white arrow-bounce opacity-90 -mt-1"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden>
-              <path d="M19 12l-7 7-7-7"></path>
-            </svg>
-          </div>
-        </a>
-      </header>
-
-      {/* About Section */}
-      <div className="bg-dark text-white py-10 pt-20">
-        <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-          <AboutMe />
-        </div>
-      </div>
-
-
-      {/* Skills Section */}
-        <div className="bg-dark text-light py-16">
-          <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-          <h2 className="text-4xl font-bold mb-16 flex items-center gap-4">
-            SKILLS
-            <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white/90">
-                Coding and Themes
-              </h3>
-              <SkillBar name="HTML & CSS" level={5} />
-              <SkillBar name="Betheme/ Elementor" level={5} />
-              <SkillBar name="JavaScript" level={3} />
-              <SkillBar name="GSAP" level={3} />
-              <SkillBar name="API Integration" level={3} />
-              <SkillBar name="React" level={2} />
-              <SkillBar name="PHP" level={2} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white/90">
-                Plugins Wordpress
-              </h3>
-              <SkillBar name="ACF" level={5} />
-              <SkillBar name="WooCommerce" level={5} />
-              <SkillBar name="Slider revolution" level={5} />
-              <SkillBar name="Contact 7" level={5} />
-              <SkillBar name="WPML" level={4} />
-              <SkillBar name="Search en filter" level={4} />
-              <SkillBar name="Iubenda" level={3} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-white/90">Tools</h3>
-              <SkillBar name="WordPress" level={5} />
-              <SkillBar name="Adobe XD" level={5} />
-              <SkillBar name="Photoshop" level={3} />
-              <SkillBar name="Git" level={3} />
-              <SkillBar name="Illustrator" level={2} />
-              <SkillBar name="Premiere Pro" level={2} />
-              <SkillBar name="Blender" level={2} />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Portfolio Section */}
-      <div className="bg-dark text-light py-12 pb-20">
-        <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <h2 className="portfolio-title text-4xl font-bold flex items-center gap-4">
-              MY WORK
-              <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
-            </h2>
-
-            <Link
-              to="/portfolio"
-              className="inline-block self-start border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-[#111111] transition"
-            >
-              Bekijk alle portfolio items
-            </Link>
-          </div>
-            <div className="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {featured.map((item) => (
-                <Link key={item.slug} to={`/portfolio/${item.slug}`}>
-                  <PortfolioCard {...item} />
-                </Link>
-              ))}
-            </div>
-        </div>
-      </div>
-    </div>
-  );
+    <>
+      <Hero />
+      <AboutMe />
+      <Experience />
+    </>
+  )
 }

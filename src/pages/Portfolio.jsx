@@ -1,35 +1,42 @@
 import { Link } from 'react-router-dom'
 import PortfolioCard from '../components/PortfolioCard'
 import { projects } from '../data/projects'
+import { Circle, Container, Reveal, SectionLabel } from '../components/ui'
 
 export default function Portfolio() {
   return (
-    <div className="bg-dark py-16">
-      <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16">
-        <h1 className="text-4xl font-bold text-white mb-4 flex items-center gap-4">
-          MY WORK
-          <span className="inline-block w-3 h-3 rounded-full bg-primary"></span>
-        </h1>
+    <div className="relative overflow-hidden pt-16 md:pt-24 pb-24">
+      <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
-        {/* Toegevoegde tekst */}
-        <p className="text-gray-300 mb-16 max-w-4xl sm:max-w-none lg:max-w-5xl">
-          De projecten die je hier ziet vormen een <strong>selectie</strong> uit het werk 
-          dat ik door de jaren heen heb gedaan. Het zijn de projecten waar ik het meest 
-          trots op ben. Dit omdat ze vaak de meeste functionaliteiten bevatten. 
-          Naast deze selectie heb ik ook aan veel andere projecten 
-          gewerkt, zoals aanpassingen aan bestaande pagina’s en bijdragen aan websites 
-          die ik niet volledig zelf heb gebouwd, evenals projecten die (nog) niet publiek 
-          online staan. Hierdoor staan deze hier niet vermeld.
-        </p>
+      <Container>
+        <SectionLabel className="mb-10">Projecten</SectionLabel>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <Link key={project.slug} to={`/portfolio/${project.slug}`}>
-              <PortfolioCard {...project} />
-            </Link>
+        <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-20 items-end">
+          <h1 className="md:col-span-6 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,8vw,6.5rem)]">
+            Projecten
+          </h1>
+          <p className="md:col-span-6 text-white/70 max-w-xl">
+            Een <em>selectie</em> van de projecten waar ik het meest trots op
+            ben, meestal omdat ze de meeste functionaliteit bevatten. Daarnaast
+            werkte ik aan heel wat andere sites: aanpassingen aan bestaande
+            pagina’s, bijdragen aan grotere projecten en sites die (nog) niet
+            publiek online staan.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {projects.map((project, i) => (
+            <Reveal key={project.slug} delay={(i % 3) * 0.08}>
+              <Link
+                to={`/portfolio/${project.slug}`}
+                className="block h-full rounded-3xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              >
+                <PortfolioCard {...project} />
+              </Link>
+            </Reveal>
           ))}
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

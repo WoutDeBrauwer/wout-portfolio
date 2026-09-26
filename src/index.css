@@ -7,53 +7,43 @@ html {
 }
 
 body {
-  @apply bg-gray-50 text-gray-900 font-sans;
+  @apply bg-dark text-white font-sans antialiased;
 }
 
-/* Defensive styles to prevent unexpected horizontal overflow on mobile devices */
+::selection {
+  @apply bg-white text-dark;
+}
+
+/* Voorkom horizontaal scrollen op mobiel */
 html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-/* Ensure media does not overflow their containers */
+/* Media nooit breder dan de container */
 img, video, iframe {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* While mobile menu is open, hide floating contact button to avoid it
-   covering or intercepting taps on the menu on small devices */
-.menu-open .floating-contact {
-  display: none !important;
+/* Cursieve accenten in lopende tekst (zoals in "snelle, functionele websites") */
+em {
+  @apply text-white;
 }
 
 @layer utilities {
-  .arrow-bounce {
-    animation: arrowBounce 2.4s ease-in-out infinite;
-  }
-  .arrow-bounce-delay {
-    animation-delay: 0.15s;
+  .cursor-blink {
+    animation: cursorBlink 1s steps(1) infinite;
   }
 
-  @keyframes arrowBounce {
-    0%   { transform: translateY(0); opacity: 0.95; }
-    30%  { transform: translateY(8px); opacity: 1; }
-    60%  { transform: translateY(0); opacity: 0.95; }
-    85%  { transform: translateY(4px); opacity: 1; }
-    100% { transform: translateY(0); opacity: 0.95; }
+  @keyframes cursorBlink {
+    50% { opacity: 0; }
   }
 }
 
-/* Ensure the photo-view lightbox appears above fixed nav and overlays */
-.react-photo-view, .react-photo-view-mask, .react-photo-view-wrapper {
-  z-index: 11000 !important;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cursor-blink { animation: none; }
 }
-
-/* Allow touch gestures inside the photo viewer on mobile */
-.react-photo-view-image {
-  touch-action: pinch-zoom; /* enable pinch gestures where supported */
-}
-

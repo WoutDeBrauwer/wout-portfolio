@@ -1,43 +1,54 @@
+import { useLocation } from "react-router-dom";
+import { contact, socials } from "../data/profile";
+import { ArrowButton, Circle, Container, Pill, SectionLabel } from "./ui";
+
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const { pathname } = useLocation();
+  const year = new Date().getFullYear();
 
   return (
-  <footer className="bg-[#111111] mt-auto border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <h3 className="text-white text-lg font-medium mb-6">Contact</h3>
-            <div className="space-y-1 text-white">
-              <p>Wout De Brauwer</p>
-              <p>Front-end Developer</p>
+    <footer className="mt-auto">
+      {/* Contact-CTA; niet nodig op de contactpagina zelf */}
+      {pathname !== "/contact" && (
+        <section className="relative overflow-hidden border-t border-line py-24 md:py-32">
+          <Circle className="w-[420px] h-[420px] -left-40 -bottom-56" />
+          <Container className="grid md:grid-cols-12 gap-10">
+            <SectionLabel className="md:col-span-5">Contact</SectionLabel>
+            <div className="md:col-span-7">
+              <p className="font-mono text-3xl sm:text-5xl tracking-tight leading-tight mb-6">
+                Zin om samen te werken?
+              </p>
+              <p className="text-white/70 mb-10 max-w-lg">
+                Op zoek naar een <em>gemotiveerde junior developer</em> voor je
+                team? Ik hoor graag van je.
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                <Pill href={`mailto:${contact.email}`}>{contact.email}</Pill>
+                <ArrowButton to="/contact" label="Naar contactpagina" />
+              </div>
             </div>
-          </div>
-          
-        <div>
-          <h3 className="text-white text-lg font-medium mb-6">Contact Info</h3>
-          <div className="space-y-3 text-white">
-            <p> Email:{" "}
-              <a href="mailto:woutdebrauwer@outlook.com" className="underline hover:text-gray-300 transition">woutdebrauwer@outlook.com</a>
-            </p>
-            <p>
-              Tel:{" "}
-              <a href="tel:+32498154845" className="underline hover:text-gray-300 transition">+32 498 15 48 45</a>
-            </p>
-            <p>
-              <a href="https://www.linkedin.com/in/wout-de-brauwer-881b73247" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300 transition">LinkedIn</a>
-            </p>
-          </div>
-</div>
+          </Container>
+        </section>
+      )}
 
-          <div>
-            <h3 className="text-white text-lg font-medium mb-6">Let&apos;s Connect</h3>
-            <div className="space-y-3 text-white">
-              <p>Open voor nieuwe uitdagingen</p>
-              <p className="mt-8">© {currentYear} All rights reserved</p>
-            </div>
-          </div>
-        </div>
+      <div className="border-t border-line">
+        <Container className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between py-8 text-xs text-white/50">
+          <p>© {year} Wout De Brauwer</p>
+          <ul className="flex gap-6">
+            {socials.map((s) => (
+              <li key={s.label}>
+                <a
+                  href={s.href}
+                  {...(s.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                  className="hover:text-white transition-colors"
+                >
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Container>
       </div>
     </footer>
-  )
+  );
 }

@@ -30,10 +30,12 @@ function Portrait() {
     <div className="relative w-full max-w-[380px]">
       <div className="rounded-[1.75rem] p-[2px] bg-brand">
         <img
-          src="/images/Images/Portfolio-profielfoto.webp"
+          src="/images/Images/Portfolio-profielfoto-linkedin.jpg"
           alt="Wout De Brauwer"
+          width="400"
+          height="400"
           loading="lazy"
-          className="w-full aspect-[4/5] object-cover rounded-3xl grayscale hover:grayscale-0 transition duration-700"
+          className="w-full aspect-square object-cover rounded-3xl bg-white grayscale hover:grayscale-0 transition duration-700"
         />
       </div>
 

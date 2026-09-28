@@ -58,22 +58,43 @@ export const workflow = [
   },
 ]
 
-// Atelier64 heeft nog geen jaartallen: vul `period` aan zodra je ze wil tonen.
 export const experience = [
   {
     period: '2026 – nu',
     company: 'Conversal',
     place: 'Affligem',
     url: 'https://www.conversal.be/',
-    role: 'Junior webdeveloper',
-    stack: 'Native Gutenberg-blocks, PHP & SCSS',
+    role: 'WordPress expert',
   },
   {
-    period: 'Eerder',
+    period: 'jun 2024 – dec 2025',
     company: 'Atelier64',
     place: 'Zottegem',
     url: 'https://atelier64.eu/',
     role: 'Junior webdeveloper',
-    stack: 'Betheme, Elementor & ACF',
+  },
+]
+
+export const education = [
+  {
+    period: '2022 – 2024',
+    school: 'Howest',
+    place: 'Kortrijk',
+    course: 'Graduaat webdevelopment en design & 3D AR',
+  },
+  {
+    period: '2020 – 2022',
+    school: 'Artevelde',
+    course: 'Bachelor grafische en digitale media',
+  },
+  {
+    period: '2019 – 2020',
+    school: 'Odisee',
+    course: 'Bachelor ontwerp- en productietechnologie',
+  },
+  {
+    period: '2013 – 2019',
+    school: 'Middelbare school',
+    course: 'TSO mechanische vormgevingstechnieken',
   },
 ]

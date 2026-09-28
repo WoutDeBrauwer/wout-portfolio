@@ -1,5 +1,5 @@
 import { projects } from '../data/projects'
-import { experience, socials, contact } from '../data/profile'
+import { experience, education, socials, contact } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
@@ -66,35 +66,52 @@ function Hero() {
   )
 }
 
-function Experience() {
+// Tabel met periode | naam · plaats | omschrijving
+function Timeline({ title, rows }) {
   return (
-    <section className="pb-24 md:pb-32">
+    <>
       <Container>
         <Reveal>
-          <h2 className={`${titleClass} text-right mb-10`}>Ervaring</h2>
+          <h2 className={`${titleClass} text-right mb-10`}>{title}</h2>
         </Reveal>
       </Container>
 
       <div className="max-w-[1400px] mx-auto border-t border-line">
-        {experience.map((job) => (
+        {rows.map((row) => (
           <TableRow
-            key={job.company}
-            href={job.url}
-            className="grid-cols-1 sm:grid-cols-[140px_1fr_1.4fr] items-baseline"
+            key={row.name}
+            href={row.url}
+            className="grid-cols-1 sm:grid-cols-[170px_1fr_1.4fr] items-baseline"
             cells={
               <>
-                <span className="text-sm">{job.period}</span>
+                <span className="text-sm">{row.period}</span>
                 <span>
-                  {job.company}
-                  <span className="text-xs opacity-60"> · {job.place}</span>
+                  {row.name}
+                  {row.place && <span className="text-xs opacity-60"> · {row.place}</span>}
                 </span>
-                <span className="font-mono text-sm">
-                  {job.role} <span className="opacity-50">|</span> {job.stack}
-                </span>
+                <span className="font-mono text-sm">{row.text}</span>
               </>
             }
           />
         ))}
+      </div>
+    </>
+  )
+}
+
+function Experience() {
+  return (
+    <section className="pb-24 md:pb-32">
+      <Timeline
+        title="Ervaring"
+        rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}
+      />
+
+      <div className="mt-24 md:mt-32">
+        <Timeline
+          title="Opleiding"
+          rows={education.map((edu) => ({ ...edu, name: edu.school, text: edu.course }))}
+        />
       </div>
 
       <Container className="mt-6 text-right">

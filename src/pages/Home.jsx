@@ -140,7 +140,7 @@ function Hero() {
           <li>
             <Magnetic strength={0.25}>
               <Pill variant="outline" href={cvUrl} download className="!px-5 !py-1.5 text-xs">
-                Cv (pdf)
+                Curriculum vitae
               </Pill>
             </Magnetic>
           </li>

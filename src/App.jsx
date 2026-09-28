@@ -8,6 +8,7 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import { ScrollProgress } from './components/ui'
 
 // Bij navigatie naar een andere pagina bovenaan starten
 function ScrollToTop() {
@@ -23,6 +24,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <Router>
         <ScrollToTop />
+        <ScrollProgress />
         <div className="min-h-screen flex flex-col">
           <Nav />
           {/* top padding zodat de vaste nav de content niet overlapt */}

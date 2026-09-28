@@ -1,10 +1,10 @@
 import { projects } from '../data/projects'
-import { experience, socials, contact } from '../data/profile'
+import { experience, socials, contact, skillGroups } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
-import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
+import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
 
 const titleClass =
   'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
@@ -18,13 +18,59 @@ function ProjectsButton({ className = '' }) {
   )
 }
 
+// Waar ik nu werk, met een "live"-bolletje
+function NowBadge() {
+  const [current] = experience
+  return (
+    <a
+      href={current.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[0.04] backdrop-blur px-4 py-1.5 text-xs text-white/80 hover:border-mint/60 hover:text-white transition-colors"
+    >
+      <span className="pulse-dot relative w-2 h-2 rounded-full bg-mint" aria-hidden="true" />
+      Nu <span className="hidden sm:inline">{current.role.toLowerCase()} </span>bij <span className="font-semibold text-white">{current.company}</span>
+    </a>
+  )
+}
+
+// Band met skills die traag doorschuift (dubbele lijst voor een naadloze lus)
+function SkillMarquee() {
+  const items = skillGroups.flatMap((g) => g.items)
+  const colors = ['text-iris', 'text-rose', 'text-coral', 'text-mint']
+  const row = (hidden) => (
+    <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
+      {items.map((item, i) => (
+        <li key={item} className="flex items-center font-mono text-sm sm:text-base whitespace-nowrap text-white/75">
+          <span className={`mx-5 sm:mx-7 ${colors[i % colors.length]}`} aria-hidden="true">✦</span>
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+
+  return (
+    <div className="marquee relative mt-16 border-y border-line py-4 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+      <p className="sr-only">Skills: {items.join(', ')}</p>
+      <div className="marquee-track flex w-max" aria-hidden="true">
+        {row(false)}
+        {row(true)}
+      </div>
+    </div>
+  )
+}
+
 function Hero() {
   return (
-    <header className="relative overflow-hidden pt-16 md:pt-24 pb-20">
+    <header className="relative isolate overflow-hidden pt-16 md:pt-24 pb-20">
+      <Aurora />
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
       <Container>
-        <SectionLabel className="mb-10">Wout De Brauwer</SectionLabel>
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-10">
+          <SectionLabel>Wout De Brauwer</SectionLabel>
+          <NowBadge />
+        </div>
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
@@ -42,7 +88,7 @@ function Hero() {
             zelf eenvoudig kunnen beheren.
           </p>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="Webdeveloper" speed={100} delay={300} cursor />
+            <Typewriter text="Webdeveloper" speed={100} delay={300} cursor textClassName="text-gradient" />
           </p>
         </div>
 
@@ -62,6 +108,8 @@ function Hero() {
       <div className="mt-16 px-5 sm:px-10 lg:px-0">
         <ProjectCarousel projects={projects} />
       </div>
+
+      <SkillMarquee />
     </header>
   )
 }
@@ -71,19 +119,27 @@ function Experience() {
     <section className="pb-24 md:pb-32">
       <Container>
         <Reveal>
-          <h2 className={`${titleClass} text-right mb-10`}>Ervaring</h2>
+          <h2 className={`${titleClass} text-right mb-10`}>
+            Ervaring<span className="text-coral">.</span>
+          </h2>
         </Reveal>
       </Container>
 
       <div className="max-w-[1400px] mx-auto border-t border-line">
-        {experience.map((job) => (
+        {experience.map((job, i) => (
           <TableRow
             key={job.company}
             href={job.url}
             className="grid-cols-1 sm:grid-cols-[140px_1fr_1.4fr] items-baseline"
             cells={
               <>
-                <span className="text-sm">{job.period}</span>
+                <span className="flex items-center gap-3 text-sm">
+                  <span
+                    aria-hidden="true"
+                    className={`relative w-2 h-2 rounded-full group-hover:bg-dark ${i === 0 ? 'pulse-dot bg-mint' : 'bg-coral'}`}
+                  />
+                  {job.period}
+                </span>
                 <span>
                   {job.company}
                   <span className="text-xs opacity-60"> · {job.place}</span>
@@ -102,7 +158,7 @@ function Experience() {
           href={contact.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm italic text-white/70 hover:text-white transition-colors"
+          className="text-sm italic text-white/70 hover:text-iris transition-colors"
         >
           Volledig traject op LinkedIn ↗
         </a>

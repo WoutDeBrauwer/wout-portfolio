@@ -3,8 +3,9 @@
 // `devOnly: true` = ik deed enkel de development, het design kwam van het bureau.
 
 export const agencies = {
-  atelier64: { name: 'Atelier64', url: 'https://atelier64.eu/' },
-  conversal: { name: 'Conversal', url: 'https://www.conversal.be/' },
+  // `color` = Tailwind-tekstkleur waarmee het bureau op kaarten verschijnt
+  atelier64: { name: 'Atelier64', url: 'https://atelier64.eu/', color: 'text-coral' },
+  conversal: { name: 'Conversal', url: 'https://www.conversal.be/', color: 'text-iris' },
 }
 
 const IMG = '/images/Images'

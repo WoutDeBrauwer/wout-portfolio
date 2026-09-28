@@ -1,5 +1,5 @@
 import { contact } from "../data/profile";
-import { Circle, Container, SectionLabel, TableRow, usePageMeta } from "../components/ui";
+import { Aurora, Circle, Container, SectionLabel, TableRow, usePageMeta } from "../components/ui";
 
 const rows = [
   { label: "E-mail", value: contact.email, href: `mailto:${contact.email}` },
@@ -11,7 +11,8 @@ export default function Contact() {
   usePageMeta("Contact", "Contacteer Wout De Brauwer, junior webdeveloper: via e-mail, telefoon of LinkedIn.");
 
   return (
-    <section className="relative overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
+    <section className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
+      <Aurora className="opacity-70" />
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
       <Container>
@@ -19,7 +20,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-20 items-end">
           <h1 className="md:col-span-6 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,8vw,6.5rem)]">
-            Contact
+            Contact<span className="text-coral">.</span>
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>

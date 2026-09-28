@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>CV Wout De Brauwer</title>
-<!-- Eén A4-pagina. PDF maken: open in Chrome > Afdrukken > Opslaan als PDF, marges "Geen", zonder kop- en voetteksten. -->
+<!-- Mooie versie (mails en gesprekken), één A4-pagina. Voor online formulieren: cv-ats.html.
+     PDF maken: open in Chrome > Afdrukken > Opslaan als PDF, marges "Geen", zonder kop- en voetteksten. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -26,6 +27,8 @@
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
     position: relative;
   }
+  a { color: inherit; text-decoration: none; }
+  a.u { text-decoration: underline; text-decoration-color: #b9bfcc; text-underline-offset: 0.6mm; }
   .bar { height: 3mm; background: var(--brand); }
   .page { display: grid; grid-template-columns: 1fr 64mm; gap: 10mm; padding: 11mm 13mm 0; }
   .mono { font-family: 'Fira Code', ui-monospace, monospace; }
@@ -35,10 +38,10 @@
   h1 span { display: block; font-weight: 400; font-size: 26pt; letter-spacing: -0.02em; margin-top: 1.5mm; }
   .role { display: inline-flex; align-items: center; gap: 2mm; margin-top: 4mm; border: 1px solid var(--ink); border-radius: 999px; padding: 1mm 4mm; font-style: italic; font-size: 9pt; }
   .role i { width: 1.8mm; height: 1.8mm; border-radius: 50%; background: var(--mint); }
-  .photo { width: 100%; aspect-ratio: 5 / 4; object-position: 50% 30%; object-fit: cover; border-radius: 5mm; display: block; }
+  .photo { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 30%; border-radius: 5mm; display: block; }
 
   /* Secties */
-  section { margin-top: 5.5mm; }
+  section { margin-top: 6mm; }
   h2 { font-family: 'Fira Code', monospace; font-weight: 600; font-size: 11pt; letter-spacing: -0.01em; margin-bottom: 2.5mm; display: flex; align-items: center; gap: 2mm; }
   h2::before { content: ''; width: 2mm; height: 2mm; border-radius: 50%; background: var(--dot, var(--iris)); }
   p + p { margin-top: 1.8mm; }
@@ -52,25 +55,19 @@
   ul.dots { list-style: none; margin-top: 1.2mm; }
   ul.dots li { padding-left: 3.5mm; position: relative; }
   ul.dots li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 1.2mm; height: 1.2mm; border-radius: 50%; background: var(--ink); opacity: 0.55; }
-
   .projects b { font-weight: 600; }
 
   /* Rechterkolom */
+  .contact { font-size: 8.2pt; }
   .contact div { display: flex; gap: 2.5mm; align-items: baseline; }
   .contact div + div { margin-top: 1mm; }
   .contact .mono { font-size: 7pt; color: var(--muted); width: 12mm; flex-shrink: 0; }
-  .contact { font-size: 8.2pt; }
-  .group + .group { margin-top: 2.6mm; }
-  .group h3 { font-family: 'Fira Code', monospace; font-size: 7.4pt; font-weight: 500; color: var(--muted); margin-bottom: 0.8mm; }
-  .skill { display: flex; justify-content: space-between; align-items: center; padding: 0.35mm 0; }
-  .lvl { display: flex; gap: 1mm; }
-  .lvl i { width: 1.9mm; height: 1.9mm; border-radius: 50%; border: 0.25mm solid var(--ink); }
-  .lvl i.on { background: var(--ink); }
-  .legend { font-size: 6.8pt; color: var(--muted); margin-top: 1.5mm; }
-  .pills { display: flex; flex-wrap: wrap; gap: 1.4mm; }
-  .pills span { border: 1px solid var(--line); border-radius: 999px; padding: 0.4mm 2.6mm; font-style: italic; }
+  .contact .long { font-size: 6.6pt; white-space: nowrap; letter-spacing: -0.01em; }
+  .group + .group { margin-top: 3mm; }
+  .group h3 { font-family: 'Fira Code', monospace; font-size: 7.4pt; font-weight: 500; color: var(--muted); margin-bottom: 1.2mm; }
+  .pills { display: flex; flex-wrap: wrap; gap: 1.3mm; }
+  .pills span { border: 1px solid var(--line); border-radius: 999px; padding: 0.3mm 2.4mm; }
 
-  a { color: inherit; text-decoration: none; }
   footer { position: absolute; left: 13mm; right: 13mm; bottom: 8mm; display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 2.5mm; font-size: 7.4pt; color: var(--muted); }
 </style>
 </head>
@@ -81,25 +78,25 @@
     <!-- Linkerkolom -->
     <main>
       <h1>WOUT<span>De Brauwer</span></h1>
-      <div class="role"><i></i>Junior webdeveloper</div>
+      <div class="role"><i></i>WordPress-developer</div>
 
       <section>
         <h2>Over mij</h2>
         <p>
           Ik bouw WordPress-sites vanuit een Figma-design, met custom Gutenberg-blocks die klanten zelf kunnen vullen.
           Sinds januari 2026 werk ik als WordPress-expert bij Conversal in Affligem. Daarvoor werkte ik anderhalf jaar
-          bij Atelier64 in Zottegem.
+          als junior webdeveloper bij Atelier64 in Zottegem.
         </p>
         <p>
-          Naast nieuwe sites help ik klanten met support, onderhoud, bugfixing en kleine aanpassingen. Bij het bouwen
-          gebruik ik Claude Code en Figma MCP om een plan te maken. De code review ik zelf.
+          Naast nieuwe sites help ik klanten met support, onderhoud, bugfixing en kleine aanpassingen.
+          Ik gebruik Claude Code en Figma MCP om sneller te plannen en te bouwen, en ik review en test alle code zelf.
         </p>
       </section>
 
       <section style="--dot: var(--mint)">
         <h2>Werkervaring</h2>
         <div class="job">
-          <div class="head"><b>Conversal <span class="muted" style="font-weight:400">· Affligem</span></b><span class="mono">2026 – nu</span></div>
+          <div class="head"><b>Conversal <span class="muted" style="font-weight:400">· Affligem</span></b><span class="mono">jan 2026 – nu</span></div>
           <p class="sub">WordPress-expert</p>
           <ul class="dots">
             <li>Nieuwe WordPress-sites bouwen vanuit Figma, met native Gutenberg-blocks in PHP en SCSS</li>
@@ -113,8 +110,8 @@
           <p class="sub">Junior webdeveloper</p>
           <ul class="dots">
             <li>WordPress-websites ontwikkelen en onderhouden met Betheme, Elementor en ACF</li>
+            <li>Webshops bouwen met WooCommerce</li>
             <li>Laadtijden en SEO-structuur optimaliseren</li>
-            <li>Samenwerken met designers voor een consistente UX/UI</li>
             <li>API’s integreren en PHP-functionaliteit op maat schrijven, zoals de VDAB-vacatures voor KOBA</li>
           </ul>
         </div>
@@ -127,31 +124,30 @@
           <p class="sub">Graduaat webdevelopment en design &amp; 3D AR</p>
         </div>
         <div class="edu">
-          <div class="head"><b>Artevelde</b><span class="mono">2020 – 2022</span></div>
-          <p class="sub">Bachelor grafische en digitale media</p>
-        </div>
-        <div class="edu">
-          <div class="head"><b>Odisee</b><span class="mono">2019 – 2020</span></div>
-          <p class="sub">Bachelor ontwerp- en productietechnologie</p>
-        </div>
-        <div class="edu">
-          <div class="head"><b>Middelbare school</b><span class="mono">2013 – 2019</span></div>
-          <p class="sub">TSO mechanische vormgevingstechnieken</p>
+          <div class="head"><b>Odisee en Artevelde</b><span class="mono">2019 – 2022</span></div>
+          <p class="sub">Ontwerp- en productietechnologie, daarna grafische en digitale media</p>
+          <p class="muted" style="margin-top:0.8mm">Via deze opleidingen kwam ik bij webdesign terecht en koos ik voor het praktijkgerichte graduaat bij Howest.</p>
         </div>
       </section>
 
       <section style="--dot: var(--azure)">
         <h2>Projecten (selectie)</h2>
         <p class="projects">
-          <b>M&amp;V Events</b>, <b>Erfgoedklassen.brussels</b>, <b>Amitude</b> en <b>Algarvista</b> bij Conversal;
-          <b>KOBA Metropool</b>, <b>OKRA Reizen</b> en <b>Arte-Verde</b> bij Atelier64.
-          <span class="muted">Screenshots en uitleg per project op mijn portfolio.</span>
+          Bij Conversal: <a class="u" href="https://mv-events.be/"><b>M&amp;V Events</b></a>,
+          <a class="u" href="https://www.erfgoedklassen.brussels/"><b>Erfgoedklassen.brussels</b></a>,
+          <a class="u" href="https://amitude.be/"><b>Amitude</b></a> en
+          <a class="u" href="https://algarvistaguide.com/"><b>Algarvista</b></a>.
+          Bij Atelier64: <a class="u" href="https://kobametropool.be/"><b>KOBA Metropool</b></a>,
+          <a class="u" href="https://okra-reizen.be/"><b>OKRA Reizen</b></a> en
+          <a class="u" href="https://arte-verde.be/"><b>Arte-Verde</b></a>.
+          <span class="muted">Uitleg en screenshots per project op mijn portfolio.</span>
         </p>
       </section>
     </main>
 
     <!-- Rechterkolom -->
     <aside>
+      <!-- Foto: zelfde bestand als op de website -->
       <img class="photo" src="../public/images/Images/Portfolio-profielfoto.webp" alt="Wout De Brauwer">
 
       <section>
@@ -160,24 +156,19 @@
           <div><span class="mono">tel</span><a href="tel:+32498154845">04 98 15 48 45</a></div>
           <div><span class="mono">e-mail</span><a href="mailto:woutdebrauwer@outlook.com">woutdebrauwer@outlook.com</a></div>
           <div><span class="mono">woont</span>Sint-Lievens-Houtem</div>
-          <div><span class="mono">linkedin</span><a href="https://www.linkedin.com/in/wout-de-brauwer-881b73247">Wout De Brauwer</a></div>
           <div><span class="mono">talen</span>Nederlands, Engels</div>
+          <div><span class="mono">linkedin</span><a class="u long" href="https://www.linkedin.com/in/wout-de-brauwer-881b73247">linkedin.com/in/wout-de-brauwer-881b73247</a></div>
+          <div><span class="mono">portfolio</span><a class="u long" href="https://portfolio-woutdebrauwer.netlify.app/">portfolio-woutdebrauwer.netlify.app</a></div>
         </div>
       </section>
 
       <section style="--dot: var(--azure)">
-        <h2>Tools &amp; ervaring</h2>
-        <div id="skills"></div>
-        <p class="legend">● ● ● ● ● = expert · ● = basis</p>
+        <h2>Tools</h2>
+        <div class="group"><h3>WordPress</h3><div class="pills"><span>Gutenberg-blocks</span><span>theme.json</span><span>ACF</span><span>WooCommerce</span><span>Betheme</span><span>Elementor</span><span>WPML</span></div></div>
+        <div class="group"><h3>Code</h3><div class="pills"><span>PHP</span><span>HTML &amp; CSS</span><span>SCSS</span><span>JavaScript</span><span>API-integraties</span><span>Git</span></div></div>
+        <div class="group"><h3>Design</h3><div class="pills"><span>Figma</span><span>Adobe XD</span><span>Photoshop</span></div></div>
+        <div class="group"><h3>Workflow &amp; beheer</h3><div class="pills"><span>Claude Code</span><span>Figma MCP</span><span>VS Code</span><span>DNS</span><span>Cloudflare</span></div></div>
       </section>
-
-      <section style="--dot: var(--mint)">
-        <h2>Als persoon</h2>
-        <div class="pills">
-          <span>Teamspeler</span><span>Leergierig</span><span>Nieuwsgierig</span><span>Gedreven</span><span>Resultaatgericht</span>
-        </div>
-      </section>
-
     </aside>
   </div>
 
@@ -185,21 +176,5 @@
     <span class="mono">Wout De Brauwer · cv 2026</span>
     <span>Portfolio: <a href="https://portfolio-woutdebrauwer.netlify.app/">portfolio-woutdebrauwer.netlify.app</a></span>
   </footer>
-
-  <script>
-    // Zelfde lijst en niveaus als op de website (src/data/profile.js)
-    const groups = [
-      ['WordPress', [['Betheme', 5], ['Elementor', 5], ['Gutenberg-blocks', 4], ['theme.json', 4]]],
-      ['Code', [['HTML & CSS', 5], ['SCSS', 4], ['JavaScript', 3], ['PHP', 3], ['API-integraties', 3]]],
-      ["Programma's", [['Visual Studio Code', 4], ['Adobe XD', 5], ['Figma', 4], ['Photoshop', 3]]],
-      ['Workflow & beheer', [['Claude Code', 4], ['Figma MCP', 3], ['Git', 3], ['DNS & Cloudflare', 3]]],
-    ]
-    document.getElementById('skills').innerHTML = groups.map(([title, items]) =>
-      `<div class="group"><h3>${title}</h3>${items.map(([name, level]) =>
-        `<div class="skill"><span>${name.replace('&', '&amp;')}</span><span class="lvl">${
-          [1, 2, 3, 4, 5].map((n) => `<i class="${n <= level ? 'on' : ''}"></i>`).join('')
-        }</span></div>`).join('')}</div>`
-    ).join('')
-  </script>
 </body>
 </html>

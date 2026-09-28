@@ -2,13 +2,31 @@ import { ArrowUpRight } from "lucide-react";
 import { agencies } from "../data/projects";
 import { RoleTag, SlashList, onSpotlight } from "./ui";
 
+// Kantelt de kaart licht richting de muis (max. ±6°)
+function onTilt(e) {
+  onSpotlight(e);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const r = e.currentTarget.getBoundingClientRect();
+  const px = (e.clientX - r.left) / r.width - 0.5;
+  const py = (e.clientY - r.top) / r.height - 0.5;
+  e.currentTarget.style.setProperty("--ry", `${px * 12}deg`);
+  e.currentTarget.style.setProperty("--rx", `${py * -12}deg`);
+}
+
+function resetTilt(e) {
+  e.currentTarget.style.setProperty("--ry", "0deg");
+  e.currentTarget.style.setProperty("--rx", "0deg");
+}
+
 export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
   const { name: agencyName, color: agencyColor = "text-white/50" } = agencies[agency] ?? {};
 
   return (
     <article
-      onMouseMove={onSpotlight}
-      className="spotlight group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-[border-color,transform,box-shadow] duration-500 hover:border-iris/50 hover:-translate-y-1 hover:shadow-[0_24px_60px_-30px_rgba(154,134,255,0.6)]"
+      onMouseMove={onTilt}
+      onMouseLeave={resetTilt}
+      style={{ transform: "perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))" }}
+      className="spotlight group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-[border-color,transform,box-shadow] duration-300 ease-out hover:border-iris/50 hover:shadow-[0_24px_60px_-30px_rgba(154,134,255,0.6)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img

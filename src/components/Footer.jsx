@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { contact, socials } from "../data/profile";
+import { Magnetic } from "./effects";
 import { ArrowButton, Aurora, Circle, Container, Pill, SectionLabel } from "./ui";
 
 export default function Footer() {
@@ -25,7 +26,9 @@ export default function Footer() {
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Pill href={`mailto:${contact.email}`}>{contact.email}</Pill>
-                <ArrowButton to="/contact" label="Naar contactpagina" />
+                <Magnetic strength={0.4}>
+                  <ArrowButton to="/contact" label="Naar contactpagina" />
+                </Magnetic>
               </div>
             </div>
           </Container>
@@ -49,6 +52,13 @@ export default function Footer() {
             ))}
           </ul>
         </Container>
+
+        {/* Grote naam als afsluiter; kleurt in bij hover */}
+        <div aria-hidden="true" className="group overflow-hidden select-none">
+          <p className="text-outline group-hover:text-gradient group-hover:[-webkit-text-stroke:0] text-center font-mono font-semibold tracking-tighter leading-[0.8] text-[26vw] translate-y-[8%] transition-all duration-700">
+            Wout<span className="text-coral [-webkit-text-stroke:0]">.</span>
+          </p>
+        </div>
       </div>
     </footer>
   );

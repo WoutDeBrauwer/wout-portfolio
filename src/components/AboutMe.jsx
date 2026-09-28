@@ -1,6 +1,12 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { skillGroups } from "../data/profile";
 import { Circle, Container, Reveal, SectionLabel, SlashList, onSpotlight } from "./ui";
+import { ScrollText } from "./effects";
+
+// Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
+const introWords = "Hallo! Ik ben Wout, een junior webdeveloper die het samenspel tussen design en techniek het leukste vindt."
+  .split(" ")
+  .map((text) => ({ text, accent: ["junior", "webdeveloper", "design", "techniek"].includes(text) }));
 
 // Accentkleur per skill-kaart (de eerste kaart krijgt het volle verloop)
 const cardAccents = [
@@ -73,7 +79,7 @@ function Portrait() {
           <defs>
             <path id="portrait-circle" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" />
           </defs>
-          <text className="fill-white/80 font-mono" fontSize="8.4" letterSpacing="0.6">
+          <text className="fill-white/80 font-mono" fontSize="7.3" letterSpacing="0.5">
             <textPath href="#portrait-circle">{label}</textPath>
           </text>
         </svg>
@@ -94,14 +100,13 @@ export default function AboutMe() {
         <div className="grid md:grid-cols-12 gap-6 mb-16 md:mb-20">
           <SectionLabel className="md:col-span-5">Over mij</SectionLabel>
           <Reveal className="md:col-span-7 space-y-5 text-white/70 max-w-2xl">
-            <p className="text-2xl md:text-3xl text-white/90 leading-snug">
-              Hallo! Ik ben Wout, een <Highlight>junior webdeveloper</Highlight>{" "}
-              die het samenspel tussen <Highlight delay={0.3}>design en techniek</Highlight>{" "}
-              het leukste vindt.
-            </p>
-            <p>
-              Bij Conversal bouw ik WordPress-sites met <em>custom
-              Gutenberg-blocks</em>: van Figma-design, via een plan met Claude
+            <ScrollText
+              words={introWords}
+              className="text-2xl md:text-4xl text-white leading-snug tracking-tight"
+            />
+            <p className="!mt-8">
+              Bij Conversal bouw ik WordPress-sites met <Highlight>custom
+              Gutenberg-blocks</Highlight>: van Figma-design, via een plan met Claude
               Code en Figma MCP, naar blocks die redacteurs zelf kunnen vullen.
               Die blocks bouw ik native, met PHP en SCSS. Daarnaast zorg ik
               voor het technische rond een site: <em>DNS-records</em>{" "}
@@ -113,7 +118,7 @@ export default function AboutMe() {
             <p>
               Ik ben nieuwsgierig en ambitieus, en wil groeien op een plek waar
               ik nieuwe technologieën kan ontdekken. Mijn doel: websites die{" "}
-              <em>snel en functioneel</em> zijn, afgestemd op wie ze gebruikt.
+              <Highlight delay={0.2}>snel en functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
             </p>
           </Reveal>
         </div>

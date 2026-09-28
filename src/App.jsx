@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import { ScrollProgress } from './components/ui'
+import { CustomCursor, Grain, PageCurtain } from './components/effects'
 
 // Bij navigatie naar een andere pagina bovenaan starten
 function ScrollToTop() {
@@ -25,6 +26,9 @@ export default function App() {
       <Router>
         <ScrollToTop />
         <ScrollProgress />
+        <PageCurtain />
+        <CustomCursor />
+        <Grain />
         <div className="min-h-screen flex flex-col">
           <Nav />
           {/* top padding zodat de vaste nav de content niet overlapt */}

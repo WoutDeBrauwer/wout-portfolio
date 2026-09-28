@@ -14,11 +14,12 @@ body {
   @apply bg-rose text-dark;
 }
 
-/* Voorkom horizontaal scrollen op mobiel */
+/* Voorkom horizontaal scrollen op mobiel. `clip` i.p.v. `hidden`:
+   hidden maakt van body een scroll-container en breekt position: sticky. */
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Media nooit breder dan de container */
@@ -54,6 +55,12 @@ em {
 
   @keyframes gradientShift {
     to { background-position: 100% 0; }
+  }
+
+  /* Alleen de omtrek van de letters */
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.55);
   }
 
   /* Rand met verloop (op een element met rounded-*) */

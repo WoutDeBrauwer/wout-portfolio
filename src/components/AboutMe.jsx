@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
-import { facts } from "../data/profile";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
 const introWords = "Hallo! Ik ben Wout, een WordPress-developer die het samenspel tussen design en techniek het leukste vindt."
@@ -60,23 +59,6 @@ function Portrait() {
   );
 }
 
-// Korte feiten onder de tekst ("In het kort")
-function FactList() {
-  return (
-    <div className="!mt-12 rounded-3xl border border-line p-6 sm:p-8">
-      <h3 className="font-mono text-xs text-white/50 mb-5">In het kort</h3>
-      <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
-        {facts.map((fact) => (
-          <div key={fact.label}>
-            <dt className="font-mono text-xs text-iris mb-1">{fact.label}</dt>
-            <dd className="text-white">{fact.value}</dd>
-          </div>
-        ))}
-      </dl>
-    </div>
-  );
-}
-
 export default function AboutMe() {
   return (
     <section id="about" className="relative overflow-hidden py-32 md:py-48 scroll-mt-20">
@@ -93,6 +75,9 @@ export default function AboutMe() {
           </div>
 
           <Reveal className="md:col-span-7 space-y-5 text-white/70 max-w-2xl">
+            <h2 className="font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,6vw,5rem)] text-white !mb-10">
+              Wie is <span className="text-gradient">Wout?</span>
+            </h2>
             <ScrollText
               words={introWords}
               className="text-2xl md:text-4xl text-white leading-snug tracking-tight"
@@ -120,8 +105,6 @@ export default function AboutMe() {
               doel: websites die <Highlight delay={0.2}>snel en functioneel</Highlight> zijn,
               afgestemd op wie ze gebruikt.
             </p>
-
-            <FactList />
           </Reveal>
         </div>
       </Container>

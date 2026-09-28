@@ -33,6 +33,10 @@ export default function AboutMe() {
               Bij Conversal bouw ik WordPress-sites met <em>custom
               Gutenberg-blocks</em>: van Figma-design, via een plan met Claude
               Code en Figma MCP, naar blocks die redacteurs zelf kunnen vullen.
+              Die blocks bouw ik native, met PHP en SCSS. Daarnaast zorg ik
+              voor het technische rond een site: <em>DNS-records</em>{" "}
+              instellen, domeinen naar Cloudflare transfereren en werken met
+              Google Workspace.
               Daarvoor bouwde ik bij Atelier64 sites met Betheme, Elementor en
               ACF.
             </p>

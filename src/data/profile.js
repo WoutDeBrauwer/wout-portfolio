@@ -18,19 +18,23 @@ export const skillGroups = [
   {
     title: 'WordPress',
     featured: true,
-    items: ['Gutenberg', 'Custom blocks', 'theme.json', 'Custom post types', 'Betheme', 'Elementor'],
+    items: ['Gutenberg', 'Native custom blocks', 'theme.json', 'Custom post types', 'Betheme', 'Elementor'],
   },
   {
     title: 'Front-end',
-    items: ['HTML', 'CSS / SCSS', 'Tailwind', 'JavaScript', 'GSAP', 'SwiperJS', 'React'],
+    items: ['HTML', 'CSS', 'SCSS', 'Tailwind', 'JavaScript', 'GSAP', 'SwiperJS', 'React'],
   },
   {
     title: 'Back-end',
-    items: ['PHP', 'API-integraties', 'Shortcodes'],
+    items: ['PHP', 'block.json & render.php', 'API-integraties', 'Shortcodes'],
   },
   {
     title: 'Workflow',
-    items: ['Claude', 'Claude Code', 'Figma', 'Figma MCP', 'Git', 'Adobe XD', 'Photoshop'],
+    items: ['Figma', 'Figma MCP', 'Claude', 'Claude Code', 'Git', 'Adobe XD', 'Photoshop'],
+  },
+  {
+    title: 'Domeinen & beheer',
+    items: ['DNS-zones & records', 'Domeintransfers', 'Cloudflare', 'Google Workspace'],
   },
 ]
 
@@ -62,7 +66,7 @@ export const experience = [
     place: 'Affligem',
     url: 'https://www.conversal.be/',
     role: 'Junior webdeveloper',
-    stack: 'Gutenberg & ACF-blocks',
+    stack: 'Native Gutenberg-blocks, PHP & SCSS',
   },
   {
     period: 'Eerder',

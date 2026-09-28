@@ -13,28 +13,73 @@ export const socials = [
   { label: 'Bellen', href: contact.phoneHref },
 ]
 
-// `featured` krijgt de witte kaart (zoals "Front-end" in de inspiratie)
+// Niveau 1–5, zoals op de oude site. Woorden die erbij getoond worden:
+export const skillLevels = ['Basis', 'Redelijk', 'Goed', 'Zeer goed', 'Expert']
+
+// `featured` krijgt de kaart met verlooprand
 export const skillGroups = [
   {
     title: 'WordPress',
     featured: true,
-    items: ['Gutenberg', 'Native custom blocks', 'theme.json', 'Custom post types', 'Betheme', 'Elementor'],
+    items: [
+      { name: 'Betheme', level: 5 },
+      { name: 'Elementor', level: 5 },
+      { name: 'Gutenberg', level: 4 },
+      { name: 'Native custom blocks', level: 4 },
+      { name: 'theme.json', level: 4 },
+      { name: 'Custom post types', level: 4 },
+    ],
   },
   {
     title: 'Front-end',
-    items: ['HTML', 'CSS', 'SCSS', 'Tailwind', 'JavaScript', 'GSAP', 'SwiperJS', 'React'],
+    items: [
+      { name: 'HTML', level: 5 },
+      { name: 'CSS', level: 5 },
+      { name: 'SCSS', level: 4 },
+      { name: 'SwiperJS', level: 4 },
+      { name: 'Tailwind', level: 3 },
+      { name: 'JavaScript', level: 3 },
+      { name: 'GSAP', level: 3 },
+      { name: 'React', level: 2 },
+    ],
   },
   {
     title: 'Back-end',
-    items: ['PHP', 'block.json & render.php', 'API-integraties', 'Shortcodes'],
+    items: [
+      { name: 'block.json & render.php', level: 4 },
+      { name: 'PHP', level: 3 },
+      { name: 'API-integraties', level: 3 },
+      { name: 'Shortcodes', level: 3 },
+    ],
   },
   {
-    title: 'Workflow',
-    items: ['Figma', 'Figma MCP', 'Claude', 'Claude Code', 'Git', 'Adobe XD', 'Photoshop'],
+    title: "Programma's",
+    items: [
+      { name: 'Adobe XD', level: 5 },
+      { name: 'Figma', level: 4 },
+      { name: 'Photoshop', level: 3 },
+      { name: 'Illustrator', level: 2 },
+      { name: 'Premiere Pro', level: 2 },
+      { name: 'Blender', level: 2 },
+    ],
+  },
+  {
+    title: 'AI & workflow',
+    items: [
+      { name: 'Claude', level: 4 },
+      { name: 'Claude Code', level: 4 },
+      { name: 'Figma MCP', level: 3 },
+      { name: 'Git', level: 3 },
+    ],
   },
   {
     title: 'Domeinen & beheer',
-    items: ['DNS-zones & records', 'Domeintransfers', 'Cloudflare', 'Google Workspace'],
+    items: [
+      { name: 'DNS-zones & records', level: 3 },
+      { name: 'Domeintransfers', level: 3 },
+      { name: 'Cloudflare', level: 3 },
+      { name: 'Google Workspace', level: 3 },
+    ],
   },
 ]
 

@@ -3,6 +3,7 @@ import { projects } from '../data/projects'
 import { experience, education, socials, contact, skillGroups } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Story from '../components/Story'
+import Skills from '../components/Skills'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
@@ -62,7 +63,7 @@ function SplitReveal({ text, delay = 0 }) {
 
 // Band met skills die traag doorschuift (dubbele lijst voor een naadloze lus)
 function SkillMarquee() {
-  const items = skillGroups.flatMap((g) => g.items)
+  const items = skillGroups.flatMap((g) => g.items.map((item) => item.name))
   const colors = ['text-iris', 'text-rose', 'text-coral', 'text-mint']
   const row = (hidden) => (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
@@ -235,6 +236,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutMe />
+      <Skills />
       <Story />
       <div className="border-y border-line mb-24 md:mb-32">
         <VelocityMarquee items={['WordPress', 'Gutenberg', 'Figma', 'Claude Code', 'PHP', 'SCSS']} />

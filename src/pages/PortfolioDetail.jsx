@@ -5,7 +5,7 @@ import RichText from '../components/RichText'
 import { ArrowButton, Circle, Container, Pill, Reveal, RoleTag, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
 import NotFound from './NotFound'
 
-const sectionDots = ['bg-iris', 'bg-azure', 'bg-coral', 'bg-mint']
+const sectionDots = ['bg-iris', 'bg-azure', 'bg-violet', 'bg-teal']
 
 export default function PortfolioDetail() {
   const { slug } = useParams()

@@ -6,11 +6,11 @@ import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
 // Accentkleur per kaart
 const accents = [
   { dot: "bg-iris", fill: "bg-brand", glow: "rgba(124, 140, 255, 0.18)" },
-  { dot: "bg-mint", fill: "bg-mint", glow: "rgba(72, 227, 182, 0.14)" },
+  { dot: "bg-teal", fill: "bg-teal", glow: "rgba(45, 212, 191, 0.14)" },
   { dot: "bg-iris", fill: "bg-iris", glow: "rgba(124, 140, 255, 0.18)" },
   { dot: "bg-azure", fill: "bg-azure", glow: "rgba(56, 189, 248, 0.16)" },
-  { dot: "bg-coral", fill: "bg-coral", glow: "rgba(255, 138, 76, 0.16)" },
-  { dot: "bg-mint", fill: "bg-mint", glow: "rgba(72, 227, 182, 0.14)" },
+  { dot: "bg-violet", fill: "bg-violet", glow: "rgba(176, 124, 255, 0.16)" },
+  { dot: "bg-teal", fill: "bg-teal", glow: "rgba(45, 212, 191, 0.14)" },
 ];
 
 // 5 segmentjes die tot het niveau inkleuren. `show` komt van de kaart:

@@ -32,9 +32,9 @@ function NowBadge() {
       href={current.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[0.04] backdrop-blur px-4 py-1.5 text-xs text-white/80 hover:border-mint/60 hover:text-white transition-colors"
+      className="inline-flex items-center gap-2.5 rounded-full border border-line bg-white/[0.04] backdrop-blur px-4 py-1.5 text-xs text-white/80 hover:border-teal/60 hover:text-white transition-colors"
     >
-      <span className="pulse-dot relative w-2 h-2 rounded-full bg-mint" aria-hidden="true" />
+      <span className="pulse-dot relative w-2 h-2 rounded-full bg-teal" aria-hidden="true" />
       Nu <span className="hidden sm:inline">{current.role} </span>bij <span className="font-semibold text-white">{current.company}</span>
     </a>
   )
@@ -64,7 +64,7 @@ function SplitReveal({ text, delay = 0 }) {
 // Band met skills die traag doorschuift (dubbele lijst voor een naadloze lus)
 function SkillMarquee() {
   const items = skillGroups.flatMap((g) => g.items.map((item) => item.name))
-  const colors = ['text-iris', 'text-azure', 'text-coral', 'text-mint']
+  const colors = ['text-iris', 'text-azure', 'text-violet', 'text-teal']
   const row = (hidden) => (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {items.map((item, i) => (
@@ -152,7 +152,7 @@ function Timeline({ title, rows, dot }) {
       <Container>
         <Reveal>
           <h2 className={`${titleClass} text-right mb-10`}>
-            {title}<span className="text-coral">.</span>
+            {title}<span className="text-violet">.</span>
           </h2>
         </Reveal>
       </Container>
@@ -189,7 +189,7 @@ function Experience() {
       <Timeline
         title="Ervaring"
         rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}
-        dot={(i) => (i === 0 ? 'pulse-dot bg-mint' : 'bg-coral')}
+        dot={(i) => (i === 0 ? 'pulse-dot bg-teal' : 'bg-violet')}
       />
 
       <div className="mt-24 md:mt-32">

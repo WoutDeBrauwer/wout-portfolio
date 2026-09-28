@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Grote naam als afsluiter; kleurt in bij hover */}
         <div aria-hidden="true" className="group overflow-hidden select-none">
           <p className="text-outline group-hover:text-gradient group-hover:[-webkit-text-stroke:0] text-center font-mono font-semibold tracking-tighter leading-[0.8] text-[26vw] translate-y-[8%] transition-all duration-700">
-            Wout<span className="text-coral [-webkit-text-stroke:0]">.</span>
+            Wout<span className="text-violet [-webkit-text-stroke:0]">.</span>
           </p>
         </div>
       </div>

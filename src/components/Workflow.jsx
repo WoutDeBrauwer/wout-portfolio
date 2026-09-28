@@ -7,8 +7,8 @@ import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
 const serviceColors = [
   { text: "text-iris", glow: "rgba(124, 140, 255, 0.2)" },
   { text: "text-azure", glow: "rgba(56, 189, 248, 0.18)" },
-  { text: "text-mint", glow: "rgba(72, 227, 182, 0.16)" },
-  { text: "text-coral", glow: "rgba(255, 138, 76, 0.18)" },
+  { text: "text-teal", glow: "rgba(45, 212, 191, 0.16)" },
+  { text: "text-violet", glow: "rgba(176, 124, 255, 0.18)" },
 ];
 
 // "Wat ik doe": nieuwe sites bouwen en klanten daarna verder helpen

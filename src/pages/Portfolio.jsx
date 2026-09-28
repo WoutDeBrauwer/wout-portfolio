@@ -16,7 +16,7 @@ export default function Portfolio() {
 
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-20 items-end">
           <h1 className="md:col-span-6 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,8vw,6.5rem)]">
-            Projecten<span className="text-coral">.</span>
+            Projecten<span className="text-violet">.</span>
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
             Een <em>selectie</em> van mijn werk: nu bij <em>Conversal</em>{' '}

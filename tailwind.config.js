@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Accenten: indigo → blauw → mint als verloop, oranje als los accent
+        // Accenten: paars → blauw → teal (appelblauwzeegroen) als verloop, iris als indigo tussentint
         iris: '#7C8CFF',
         azure: '#38BDF8',
-        coral: '#FF8A4C',
-        mint: '#48E3B6',
+        violet: '#B07CFF',
+        teal: '#2DD4BF',
         dark: '#0F1115',    // Pagina-achtergrond (licht blauw getint zwart)
         panel: '#171A21',   // Kaarten en vlakken
         line: 'rgba(255, 255, 255, 0.14)', // Dunne randen en lijnen
@@ -19,7 +19,7 @@ module.exports = {
         mono: ['"Fira Code"', 'ui-monospace', 'monospace'],
       },
       backgroundImage: {
-        brand: 'linear-gradient(100deg, #7C8CFF 0%, #38BDF8 50%, #48E3B6 100%)',
+        brand: 'linear-gradient(100deg, #B07CFF 0%, #38BDF8 50%, #2DD4BF 100%)',
       },
     },
   },

@@ -20,7 +20,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-20 items-end">
           <h1 className="md:col-span-6 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,8vw,6.5rem)]">
-            Contact<span className="text-coral">.</span>
+            Contact<span className="text-violet">.</span>
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>

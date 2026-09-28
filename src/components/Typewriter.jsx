@@ -27,7 +27,7 @@ export default function Typewriter({ text, speed = 70, delay = 0, cursor = false
       <span className="invisible">{text}{cursor && '_'}</span>
       <span aria-hidden="true" className="absolute inset-0 whitespace-nowrap">
         <span className={textClassName}>{displayed}</span>
-        {cursor && <span className="cursor-blink text-coral">_</span>}
+        {cursor && <span className="cursor-blink text-violet">_</span>}
       </span>
       <span className="sr-only">{text}</span>
     </span>

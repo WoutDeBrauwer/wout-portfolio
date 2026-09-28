@@ -71,7 +71,7 @@ export function CustomCursor() {
         aria-hidden="true"
         style={{ x, y }}
         animate={{ opacity: visible && !hover ? 1 : 0 }}
-        className="pointer-events-none fixed left-0 top-0 z-[10003] -ml-[3px] -mt-[3px] w-1.5 h-1.5 rounded-full bg-coral"
+        className="pointer-events-none fixed left-0 top-0 z-[10003] -ml-[3px] -mt-[3px] w-1.5 h-1.5 rounded-full bg-violet"
       />
     </>
   )

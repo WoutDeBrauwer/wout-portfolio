@@ -14,7 +14,7 @@ const navLinks = [
 function Logo() {
   return (
     <Link to="/" className="group text-sm leading-tight text-white">
-      Wout<span className="text-coral">.</span>
+      Wout<span className="text-violet">.</span>
       <br />
       <span className="group-hover:text-gradient">De Brauwer</span>
     </Link>

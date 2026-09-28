@@ -41,7 +41,7 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
         {/* Zachte kleurwaas die verdwijnt bij hover */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-tr from-iris/25 via-transparent to-coral/20 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0"
+          className="absolute inset-0 bg-gradient-to-tr from-iris/25 via-transparent to-violet/20 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0"
         />
       </div>
 

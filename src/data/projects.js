@@ -4,7 +4,7 @@
 
 export const agencies = {
   // `color` = Tailwind-tekstkleur waarmee het bureau op kaarten verschijnt
-  atelier64: { name: 'Atelier64', url: 'https://atelier64.eu/', color: 'text-coral' },
+  atelier64: { name: 'Atelier64', url: 'https://atelier64.eu/', color: 'text-violet' },
   conversal: { name: 'Conversal', url: 'https://www.conversal.be/', color: 'text-iris' },
 }
 

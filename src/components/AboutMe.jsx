@@ -12,7 +12,7 @@ function Highlight({ children, delay = 0 }) {
   const reduce = useReducedMotion();
   return (
     <motion.em
-      className="not-italic text-white bg-no-repeat [background-image:linear-gradient(100deg,rgba(124,140,255,0.45),rgba(56,189,248,0.4),rgba(72,227,182,0.4))] [background-position:0_88%] rounded-sm px-0.5 -mx-0.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
+      className="not-italic text-white bg-no-repeat [background-image:linear-gradient(100deg,rgba(176,124,255,0.45),rgba(56,189,248,0.4),rgba(45,212,191,0.4))] [background-position:0_88%] rounded-sm px-0.5 -mx-0.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
       initial={{ backgroundSize: reduce ? "100% 40%" : "0% 40%" }}
       whileInView={{ backgroundSize: "100% 40%" }}
       viewport={{ once: true, margin: "-80px" }}
@@ -29,7 +29,7 @@ function Portrait() {
   return (
     <div className="relative w-full max-w-[380px]">
       <div className="rounded-[1.75rem] p-[2px] bg-brand">
-        <div className="rounded-3xl overflow-hidden bg-panel bg-[radial-gradient(circle_at_30%_20%,rgba(124,140,255,0.45),transparent_60%),radial-gradient(circle_at_80%_75%,rgba(72,227,182,0.3),transparent_55%)]">
+        <div className="rounded-3xl overflow-hidden bg-panel bg-[radial-gradient(circle_at_30%_20%,rgba(176,124,255,0.45),transparent_60%),radial-gradient(circle_at_80%_75%,rgba(45,212,191,0.3),transparent_55%)]">
           <img
             src="/images/Images/Portfolio-profielfoto-vrijstaand.webp"
             alt="Wout De Brauwer"

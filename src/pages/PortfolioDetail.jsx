@@ -5,7 +5,7 @@ import RichText from '../components/RichText'
 import { ArrowButton, Circle, Container, Pill, Reveal, RoleTag, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
 import NotFound from './NotFound'
 
-const sectionDots = ['bg-iris', 'bg-rose', 'bg-coral', 'bg-mint']
+const sectionDots = ['bg-iris', 'bg-azure', 'bg-coral', 'bg-mint']
 
 export default function PortfolioDetail() {
   const { slug } = useParams()
@@ -63,7 +63,7 @@ export default function PortfolioDetail() {
           <img
             src={project.cover}
             alt={`${project.title} overzicht`}
-            className="md:col-span-6 w-full aspect-[4/3] object-cover rounded-3xl border border-line shadow-[0_30px_80px_-40px_rgba(154,134,255,0.6)]"
+            className="md:col-span-6 w-full aspect-[4/3] object-cover rounded-3xl border border-line shadow-[0_30px_80px_-40px_rgba(124,140,255,0.6)]"
           />
         </div>
 

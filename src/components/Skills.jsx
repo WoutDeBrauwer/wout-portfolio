@@ -5,11 +5,11 @@ import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
 
 // Accentkleur per kaart
 const accents = [
-  { dot: "bg-iris", fill: "bg-brand", glow: "rgba(154, 134, 255, 0.18)" },
+  { dot: "bg-iris", fill: "bg-brand", glow: "rgba(124, 140, 255, 0.18)" },
   { dot: "bg-mint", fill: "bg-mint", glow: "rgba(72, 227, 182, 0.14)" },
-  { dot: "bg-iris", fill: "bg-iris", glow: "rgba(154, 134, 255, 0.18)" },
-  { dot: "bg-rose", fill: "bg-rose", glow: "rgba(255, 111, 177, 0.16)" },
-  { dot: "bg-coral", fill: "bg-coral", glow: "rgba(255, 132, 102, 0.16)" },
+  { dot: "bg-iris", fill: "bg-iris", glow: "rgba(124, 140, 255, 0.18)" },
+  { dot: "bg-azure", fill: "bg-azure", glow: "rgba(56, 189, 248, 0.16)" },
+  { dot: "bg-coral", fill: "bg-coral", glow: "rgba(255, 138, 76, 0.16)" },
   { dot: "bg-mint", fill: "bg-mint", glow: "rgba(72, 227, 182, 0.14)" },
 ];
 
@@ -46,7 +46,7 @@ function SkillGroup({ title, items, featured, accent, focus }) {
       onMouseMove={onSpotlight}
       style={{ "--glow": accent.glow }}
       className={`spotlight h-full rounded-3xl p-6 transition-colors ${
-        featured ? "border-gradient shadow-[0_20px_60px_-30px_rgba(255,111,177,0.6)]" : "border border-line hover:border-white/30"
+        featured ? "border-gradient shadow-[0_20px_60px_-30px_rgba(56,189,248,0.6)]" : "border border-line hover:border-white/30"
       }`}
     >
       <h3 className="flex items-center gap-2.5 mb-5">
@@ -118,7 +118,7 @@ export default function Skills() {
                   >
                     <span className="flex gap-0.5" aria-hidden="true">
                       {Array.from({ length: 5 }, (_, j) => (
-                        <span key={j} className={`w-1 h-1 rounded-full ${j < level ? (on ? "bg-dark" : "bg-rose") : on ? "bg-dark/25" : "bg-white/20"}`} />
+                        <span key={j} className={`w-1 h-1 rounded-full ${j < level ? (on ? "bg-dark" : "bg-azure") : on ? "bg-dark/25" : "bg-white/20"}`} />
                       ))}
                     </span>
                     {label}
@@ -140,7 +140,7 @@ export default function Skills() {
         <Reveal className="mt-4">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl border border-line px-6 py-5">
             <h3 className="flex items-center gap-2.5 shrink-0">
-              <span className="w-1.5 h-1.5 rounded-full bg-rose" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-azure" aria-hidden="true" />
               Als collega
             </h3>
             <ul className="flex flex-wrap gap-2">

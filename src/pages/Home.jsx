@@ -1,4 +1,4 @@
-import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { projects } from '../data/projects'
 import { experience, education, socials, contact, skillGroups } from '../data/profile'
 import AboutMe from '../components/AboutMe'
@@ -64,7 +64,7 @@ function SplitReveal({ text, delay = 0 }) {
 // Band met skills die traag doorschuift (dubbele lijst voor een naadloze lus)
 function SkillMarquee() {
   const items = skillGroups.flatMap((g) => g.items.map((item) => item.name))
-  const colors = ['text-iris', 'text-rose', 'text-coral', 'text-mint']
+  const colors = ['text-iris', 'text-azure', 'text-coral', 'text-mint']
   const row = (hidden) => (
     <ul className="flex shrink-0 items-center" aria-hidden={hidden || undefined}>
       {items.map((item, i) => (
@@ -88,24 +88,9 @@ function SkillMarquee() {
 }
 
 function Hero() {
-  // Lichtvlek die de muis volgt over de hero
-  const mx = useMotionValue(-1000)
-  const my = useMotionValue(-1000)
-  const x = useSpring(mx, { stiffness: 120, damping: 20 })
-  const y = useSpring(my, { stiffness: 120, damping: 20 })
-  const glow = useMotionTemplate`radial-gradient(520px circle at ${x}px ${y}px, rgba(255,111,177,0.16), transparent 70%)`
-
-  const onMove = (e) => {
-    if (e.pointerType !== 'mouse') return
-    const r = e.currentTarget.getBoundingClientRect()
-    mx.set(e.clientX - r.left)
-    my.set(e.clientY - r.top)
-  }
-
   return (
-    <header onPointerMove={onMove} className="relative isolate overflow-hidden pt-16 md:pt-24 pb-20">
+    <header className="relative isolate overflow-hidden pt-16 md:pt-24 pb-20">
       <Aurora />
-      <motion.div aria-hidden="true" style={{ background: glow }} className="pointer-events-none absolute inset-0 -z-10" />
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
       <Container>

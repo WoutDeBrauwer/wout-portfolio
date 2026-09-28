@@ -9,7 +9,7 @@ const icons = { wrench: Wrench, pen: PenTool, code: Code2, rocket: Rocket, spark
 // Kleur per hoofdstuk: loopt van violet naar mint ("nu")
 const accents = [
   { text: "text-iris", bg: "bg-iris", ring: "border-iris/50" },
-  { text: "text-rose", bg: "bg-rose", ring: "border-rose/50" },
+  { text: "text-azure", bg: "bg-azure", ring: "border-azure/50" },
   { text: "text-coral", bg: "bg-coral", ring: "border-coral/50" },
   { text: "text-iris", bg: "bg-iris", ring: "border-iris/50" },
   { text: "text-mint", bg: "bg-mint", ring: "border-mint/50" },
@@ -136,7 +136,7 @@ export default function Story() {
           <div className="lg:col-span-7 relative">
             {/* Tijdlijn op mobiel/tablet */}
             <div aria-hidden="true" className="md:hidden absolute left-[5px] top-2 bottom-2 w-px bg-line overflow-hidden">
-              <motion.div style={{ scaleY: progress }} className="absolute inset-0 origin-top bg-gradient-to-b from-iris via-rose to-mint" />
+              <motion.div style={{ scaleY: progress }} className="absolute inset-0 origin-top bg-gradient-to-b from-iris via-azure to-mint" />
             </div>
             <ol ref={listRef} className="space-y-16 md:space-y-20 lg:space-y-0">
               {story.map((chapter, i) => (

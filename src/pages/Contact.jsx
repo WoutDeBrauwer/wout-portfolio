@@ -8,7 +8,7 @@ const rows = [
 ];
 
 export default function Contact() {
-  usePageMeta("Contact", "Contacteer Wout De Brauwer, junior webdeveloper: via e-mail, telefoon of LinkedIn.");
+  usePageMeta("Contact", "Neem contact op met Wout De Brauwer, junior webdeveloper, via e-mail, telefoon of LinkedIn.");
 
   return (
     <section className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
@@ -27,7 +27,7 @@ export default function Contact() {
               Een vraag over een project, zin om <em>ervaringen uit te
               wisselen</em> over Gutenberg of AI in je workflow, of gewoon
               kennismaken? Ik los graag technische uitdagingen op en leer
-              graag bij.
+              elke dag bij.
             </p>
             <p>Stuur me gerust een berichtje, ik antwoord snel.</p>
           </div>

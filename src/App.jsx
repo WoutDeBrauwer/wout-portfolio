@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import { ScrollProgress } from './components/ui'
-import { CustomCursor, Grain, PageCurtain } from './components/effects'
+import { CursorGlow, CustomCursor, Grain, PageCurtain } from './components/effects'
 
 // Bij navigatie naar een andere pagina bovenaan starten
 function ScrollToTop() {
@@ -27,6 +27,7 @@ export default function App() {
         <ScrollToTop />
         <ScrollProgress />
         <PageCurtain />
+        <CursorGlow />
         <CustomCursor />
         <Grain />
         <div className="min-h-screen flex flex-col">

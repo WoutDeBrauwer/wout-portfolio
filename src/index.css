@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  @apply bg-rose text-dark;
+  @apply bg-azure text-dark;
 }
 
 /* Voorkom horizontaal scrollen op mobiel. `clip` i.p.v. `hidden`:
@@ -45,7 +45,7 @@ em {
 
   /* Tekst in het merkverloop, schuift traag heen en weer */
   .text-gradient {
-    background-image: linear-gradient(100deg, #9A86FF, #FF6FB1, #FF8466, #FF6FB1, #9A86FF);
+    background-image: linear-gradient(100deg, #7C8CFF, #38BDF8, #48E3B6, #38BDF8, #7C8CFF);
     background-size: 300% 100%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -68,7 +68,7 @@ em {
     border: 1px solid transparent;
     background:
       linear-gradient(theme('colors.panel'), theme('colors.panel')) padding-box,
-      linear-gradient(135deg, rgba(154, 134, 255, 0.75), rgba(255, 111, 177, 0.3), rgba(255, 132, 102, 0.75)) border-box;
+      linear-gradient(135deg, rgba(124, 140, 255, 0.75), rgba(56, 189, 248, 0.3), rgba(72, 227, 182, 0.7)) border-box;
   }
 
   /* Drijvende kleurvlekken achter hero en CTA */
@@ -89,7 +89,7 @@ em {
 
   /* Oneindige band met skills; pauzeert bij hover */
   .marquee-track {
-    animation: marquee 45s linear infinite;
+    animation: marquee 80s linear infinite;
   }
 
   .marquee:hover .marquee-track {
@@ -136,7 +136,7 @@ em {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(360px circle at var(--x, 50%) var(--y, 50%), var(--glow, rgba(154, 134, 255, 0.18)), transparent 65%);
+  background: radial-gradient(360px circle at var(--x, 50%) var(--y, 50%), var(--glow, rgba(124, 140, 255, 0.18)), transparent 65%);
   opacity: 0;
   transition: opacity 0.4s;
   pointer-events: none;

@@ -5,9 +5,9 @@ import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
 
 // Kleur per stap: van violet (design) naar koraal (resultaat)
 const stepColors = [
-  { text: "text-iris", glow: "rgba(154, 134, 255, 0.2)" },
-  { text: "text-rose", glow: "rgba(255, 111, 177, 0.18)" },
-  { text: "text-coral", glow: "rgba(255, 132, 102, 0.18)" },
+  { text: "text-iris", glow: "rgba(124, 140, 255, 0.2)" },
+  { text: "text-azure", glow: "rgba(56, 189, 248, 0.18)" },
+  { text: "text-coral", glow: "rgba(255, 138, 76, 0.18)" },
 ];
 
 // "Zo werk ik": van Figma-design tot block dat een redacteur zelf vult
@@ -51,7 +51,7 @@ export default function Workflow() {
                       style={last ? undefined : { "--glow": color.glow }}
                       className={`h-full rounded-3xl px-6 py-6 transition-transform duration-300 hover:-translate-y-1 ${
                         last
-                          ? "bg-brand text-dark shadow-[0_20px_60px_-25px_rgba(255,111,177,0.7)]"
+                          ? "bg-brand text-dark shadow-[0_20px_60px_-25px_rgba(56,189,248,0.7)]"
                           : "spotlight border border-line hover:border-white/30"
                       }`}
                     >

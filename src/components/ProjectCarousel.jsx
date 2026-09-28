@@ -10,7 +10,7 @@ function ProjectSlide({ project, active }) {
   const tab = active ? undefined : -1
 
   return (
-    <article className={`grid md:grid-cols-2 overflow-hidden rounded-3xl h-full transition-shadow duration-500 ${active ? 'border-gradient shadow-[0_30px_80px_-40px_rgba(255,111,177,0.55)]' : 'border border-line bg-panel'}`}>
+    <article className={`grid md:grid-cols-2 overflow-hidden rounded-3xl h-full transition-shadow duration-500 ${active ? 'border-gradient shadow-[0_30px_80px_-40px_rgba(56,189,248,0.55)]' : 'border border-line bg-panel'}`}>
       <img
         src={project.cover}
         alt={project.title}

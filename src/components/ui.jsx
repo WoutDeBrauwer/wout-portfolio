@@ -26,7 +26,7 @@ export function Aurora({ className = '' }) {
   return (
     <div aria-hidden="true" className={`pointer-events-none absolute inset-0 -z-10 ${className}`}>
       <div className="aurora-blob bg-iris w-[46vw] h-[46vw] max-w-[620px] max-h-[620px] -top-[12%] right-[-8%]" />
-      <div className="aurora-blob bg-rose w-[34vw] h-[34vw] max-w-[460px] max-h-[460px] top-[30%] right-[22%] [animation-delay:-6s]" />
+      <div className="aurora-blob bg-azure w-[34vw] h-[34vw] max-w-[460px] max-h-[460px] top-[30%] right-[22%] [animation-delay:-6s]" />
       <div className="aurora-blob bg-coral w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] top-[5%] -left-[10%] opacity-20 [animation-delay:-12s]" />
     </div>
   )
@@ -72,7 +72,7 @@ function Clickable({ to, href, className, children, ...rest }) {
 }
 
 const pillStyles = {
-  solid: 'bg-white text-dark hover:bg-brand hover:shadow-[0_0_32px_-6px_rgba(255,111,177,0.6)]',
+  solid: 'bg-white text-dark hover:bg-brand hover:shadow-[0_0_32px_-6px_rgba(56,189,248,0.6)]',
   outline: 'border border-line text-white/80 hover:border-iris hover:text-white hover:bg-iris/10',
 }
 

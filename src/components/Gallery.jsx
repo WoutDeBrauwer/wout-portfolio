@@ -41,7 +41,7 @@ export default function Gallery({ images = [] }) {
           <div key={i} className="overflow-hidden rounded-2xl border border-line">
             <button
               onClick={() => openAt(i)}
-              aria-label={`Open image ${i + 1}`}
+              aria-label={`Afbeelding ${i + 1} openen`}
               className="w-full p-0 bg-transparent text-left"
             >
               <img
@@ -64,7 +64,7 @@ export default function Gallery({ images = [] }) {
         >
           <button
             onClick={(e) => prev(e)}
-            aria-label="Previous image"
+            aria-label="Vorige afbeelding"
             className="absolute left-4 text-white text-3xl p-3"
           >
             ‹
@@ -79,7 +79,7 @@ export default function Gallery({ images = [] }) {
 
           <button
             onClick={(e) => next(e)}
-            aria-label="Next image"
+            aria-label="Volgende afbeelding"
             className="absolute right-4 text-white text-3xl p-3"
           >
             ›
@@ -87,7 +87,7 @@ export default function Gallery({ images = [] }) {
 
           <button
             onClick={(e) => { e.stopPropagation(); close(); }}
-            aria-label="Close viewer"
+            aria-label="Sluiten"
             className="absolute top-4 right-4 text-white text-xl p-2"
           >
             ✕

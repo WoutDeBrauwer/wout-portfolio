@@ -88,21 +88,21 @@ export const story = [
     years: '2013 – 2019',
     kicker: 'Middelbaar',
     title: 'Mechanische vormgeving',
-    text: 'In het middelbaar zat ik in het TSO, richting mechanische vormgevingstechnieken. Veel technisch tekenen en werken op de millimeter.',
+    text: 'In het middelbaar volgde ik TSO, de richting mechanische vormgevingstechnieken. Veel technisch tekenen en werken op de millimeter.',
     icon: 'wrench',
   },
   {
     years: '2019 – 2022',
     kicker: 'Odisee & Artevelde',
     title: 'Zoeken naar mijn richting',
-    text: 'Ik begon aan Odisee met ontwerp- en productietechnologie. Na een jaar ben ik overgestapt naar grafische en digitale media aan Artevelde.',
+    text: 'Ik begon aan Odisee met de bachelor ontwerp- en productietechnologie. Na een jaar ben ik overgestapt naar grafische en digitale media aan Artevelde.',
     icon: 'pen',
   },
   {
     years: '2022 – 2024',
     kicker: 'Howest',
     title: 'Webdevelopment',
-    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar ben ik websites beginnen bouwen.',
+    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar begon ik met het bouwen van websites.',
     icon: 'code',
   },
   {
@@ -115,8 +115,8 @@ export const story = [
   {
     years: '2026 – nu',
     kicker: 'Conversal',
-    title: 'WordPress expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks. Het Figma-design zet ik eerst om in een plan met Claude Code en Figma MCP, de code review ik zelf.',
+    title: 'WordPress-expert',
+    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks. Het Figma-design zet ik eerst om in een plan met Claude Code en Figma MCP. De code review ik zelf.',
     icon: 'sparkles',
   },
 ]
@@ -127,7 +127,7 @@ export const experience = [
     company: 'Conversal',
     place: 'Affligem',
     url: 'https://www.conversal.be/',
-    role: 'WordPress expert',
+    role: 'WordPress-expert',
   },
   {
     period: 'jun 2024 – dec 2025',

@@ -12,7 +12,7 @@ function Highlight({ children, delay = 0 }) {
   const reduce = useReducedMotion();
   return (
     <motion.em
-      className="not-italic text-white bg-no-repeat [background-image:linear-gradient(100deg,rgba(154,134,255,0.45),rgba(255,111,177,0.4),rgba(255,132,102,0.45))] [background-position:0_88%] rounded-sm px-0.5 -mx-0.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
+      className="not-italic text-white bg-no-repeat [background-image:linear-gradient(100deg,rgba(124,140,255,0.45),rgba(56,189,248,0.4),rgba(72,227,182,0.4))] [background-position:0_88%] rounded-sm px-0.5 -mx-0.5 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]"
       initial={{ backgroundSize: reduce ? "100% 40%" : "0% 40%" }}
       whileInView={{ backgroundSize: "100% 40%" }}
       viewport={{ once: true, margin: "-80px" }}
@@ -80,7 +80,7 @@ export default function AboutMe() {
               Code en Figma MCP, naar blocks die redacteurs zelf kunnen vullen.
               Die blocks bouw ik native, met PHP en SCSS. Daarnaast zorg ik
               voor het technische rond een site: <em>DNS-records</em>{" "}
-              instellen, domeinen naar Cloudflare transfereren en werken met
+              instellen, domeinen overzetten naar Cloudflare en werken met
               Google Workspace.
               Daarvoor bouwde ik bij Atelier64 sites met Betheme, Elementor en
               ACF.

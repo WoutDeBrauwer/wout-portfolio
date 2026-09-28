@@ -26,7 +26,7 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
       onMouseMove={onTilt}
       onMouseLeave={resetTilt}
       style={{ transform: "perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg))" }}
-      className="spotlight group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-[border-color,transform,box-shadow] duration-300 ease-out hover:border-iris/50 hover:shadow-[0_24px_60px_-30px_rgba(154,134,255,0.6)]"
+      className="spotlight group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-[border-color,transform,box-shadow] duration-300 ease-out hover:border-iris/50 hover:shadow-[0_24px_60px_-30px_rgba(124,140,255,0.6)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img

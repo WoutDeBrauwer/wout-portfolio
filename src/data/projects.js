@@ -26,7 +26,7 @@ export const projects = [
         title: 'Technieken & features',
         paragraphs: [
           'Het verhuuraanbod draait op **WooCommerce**, gekoppeld aan **Rentman**, de planningssoftware van M&V. Bezoekers zoeken en filteren in categorieën zoals tenten, meubilair, tafel- en keukenmateriaal en stellen zo hun offerteaanvraag samen.',
-          'Custom **Gutenberg-blocks** voor onder meer een realisatieslider, een reviewslider en een ticker met nieuws en events bovenaan de pagina. De sliders werken met **SwiperJS**.',
+          'Met custom **Gutenberg-blocks** kwamen er onder meer een realisatieslider, een reviewslider en een ticker met nieuws en events bovenaan de pagina. De sliders werken met **SwiperJS**.',
           'Een menu met meerdere niveaus en een zoekfunctie houden het grote aanbod overzichtelijk.',
         ],
       },
@@ -94,7 +94,7 @@ export const projects = [
         title: 'Technieken & features',
         paragraphs: [
           'Gebouwd op **WordPress** en **Gutenberg**, met **custom blocks** zoals een logoslider voor klanten en partners en een blok met Google-reviews en sterren.',
-          'Op de referentiepagina filteren bezoekers de beelden op type moment of locatie (bedrijf, huwelijk, buitenlocatie, privé) en openen ze een foto groter.',
+          'Op de referentiepagina filteren bezoekers de foto’s op gelegenheid of locatie (bedrijf, huwelijk, buitenlocatie, privé) en openen ze een foto groter.',
           'De sliders werken met **SwiperJS**. Veelgestelde vragen over allergieën, aantallen en prijzen staan in uitklapbare blocks.',
         ],
       },
@@ -128,7 +128,7 @@ export const projects = [
         title: 'Technieken & features',
         paragraphs: [
           'De site draait op **WordPress** en is volledig opgebouwd met **Gutenberg-blocks**: core-blocks aangevuld met custom blocks in de huisstijl.',
-          'Getuigenissen draaien in een **SwiperJS**-carousel, veelgestelde vragen staan in uitklapbare blocks en de nieuwsbrief- en contactformulieren lopen via **WPForms**.',
+          'Getuigenissen draaien in een **SwiperJS**-carrousel, veelgestelde vragen staan in uitklapbare blocks en de nieuwsbrief- en contactformulieren lopen via **WPForms**.',
         ],
       },
       {
@@ -155,13 +155,13 @@ export const projects = [
     cover: `${IMG}/Koba/Portfolio-wout-koba-overzichtsfoto.jpg`,
     tags: ['WordPress', 'PHP', 'API-integratie', 'Search & Filter Pro', 'WP Go Maps'],
     intro:
-      'KOBA Metropool is het onderwijsnetwerk van zestien scholen in de regio Antwerpen. De organisatie bundelt de krachten van kleuter-, lagere, secundaire en post-secundaire instellingen. De website vormt de digitale spil van dit netwerk en werd gebouwd met WordPress en maatwerk in PHP, volledig afgestemd op de missie van KOBA: transparante communicatie, gebruiksvriendelijkheid en verbondenheid tussen scholen, ouders en leerlingen.',
+      'KOBA Metropool is het onderwijsnetwerk van zestien scholen in de regio Antwerpen. De organisatie bundelt de krachten van kleuter-, lagere, secundaire en postsecundaire instellingen. De website vormt de digitale spil van dit netwerk en werd gebouwd met WordPress en maatwerk in PHP, volledig afgestemd op de missie van KOBA: transparante communicatie, gebruiksvriendelijkheid en verbondenheid tussen scholen, ouders en leerlingen.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
           'De website draait op WordPress met PHP-logica en plugins voor de verschillende functionaliteiten: een API-koppeling voor vacatures vanuit de VDAB, Search & Filter Pro voor de studiekiezer en WP Go Maps voor de kaarten met de locaties van de scholen.',
-          'Een van de kernfunctionaliteiten is de interactieve schoolkaart, gebouwd met **WP Go Maps**. Alle aangesloten scholen worden overzichtelijk weergegeven; elke school is aanklikbaar en toont de contactgegevens.',
+          'Een van de belangrijkste onderdelen is de interactieve schoolkaart, gebouwd met **WP Go Maps**. Alle aangesloten scholen worden overzichtelijk weergegeven; elke school is aanklikbaar en toont de contactgegevens.',
           'Voor de studiekiezer is **Search & Filter Pro** gekoppeld aan een custom post type. Leerlingen en ouders selecteren opleidingen op basis van interessegebied, onderwijsniveau of specifieke kenmerken.',
           'De vacaturemodule gebruikt een op maat gemaakte **PHP-API** die de website koppelt aan de VDAB-databank. Bezoekers filteren op locatie of functietype en klikken door naar de VDAB om te solliciteren. Het overzicht blijft zo altijd actueel zonder handmatig onderhoud.',
         ],
@@ -195,8 +195,8 @@ export const projects = [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De website is gebouwd op **WordPress** met het thema **Betheme**. De reizen worden beheerd via een **custom post type**, gekoppeld aan categorieën voor filtering die op maat in PHP is gebouwd met bijhorende shortcodes. Met **ACF-velden** geeft de klant eenvoudig reisdetails in.',
-          'De filterfunctionaliteit is volledig op maat ontwikkeld in **PHP**, zodat bezoekers reizen filteren op type reis, type vervoer en periode.',
+          'De website is gebouwd op **WordPress** met het thema **Betheme**. De reizen zitten in een **custom post type** met eigen categorieën. Met **ACF-velden** vult de klant zelf de reisdetails in.',
+          'De filter is volledig op maat gebouwd in **PHP**, met bijbehorende shortcodes. Bezoekers filteren zo op soort reis, vervoer en periode.',
           'Daarnaast is een **digitale brochure** geïntegreerd die online te bekijken en te downloaden is. SEO, caching en beveiliging zijn geoptimaliseerd voor snelheid en stabiliteit.',
         ],
       },
@@ -239,7 +239,7 @@ export const projects = [
         paragraphs: [
           'Arte-Verde presenteert projecten en biozwembaden in een visueel aantrekkelijke lay-out. Het portfolio is dynamisch opgebouwd en eenvoudig uit te breiden dankzij custom post types.',
           'De **GSAP**-animaties zorgen voor een moderne uitstraling. Content is eenvoudig te beheren via het WordPress-dashboard.',
-          'De site is beveiligd met plugins en custom scripts tegen spam en ongewenste bots.',
+          'Plugins en eigen scripts beschermen de site tegen spam en ongewenste bots.',
         ],
       },
     ],
@@ -326,13 +326,13 @@ export const projects = [
     cover: `${IMG}/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg`,
     tags: ['WordPress', 'PHP', 'ACF', 'WPML'],
     intro:
-      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP. WPML is geïntegreerd zodat de site in meerdere talen beschikbaar kan worden. De site heeft een duidelijke productcatalogus en is geoptimaliseerd voor zoekmachines.',
+      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP. WPML is geïntegreerd zodat de site later in meerdere talen beschikbaar kan zijn. De site heeft een duidelijke productcatalogus en is geoptimaliseerd voor zoekmachines.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
           'De website draait op WordPress met custom PHP-logica. **WPML** is voorbereid voor Nederlands, Frans en Engels. De productcatalogus is dynamisch opgebouwd met custom post types en taxonomieën.',
-          'SEO-optimalisatie gebeurde met onder meer Yoast SEO. Een filtermodule helpt bezoekers snel het juiste product te vinden op categorie of specificatie.',
+          'Voor SEO is onder meer Yoast SEO ingezet. Een filtermodule helpt bezoekers snel het juiste product te vinden op categorie of specificatie.',
           'Contactformulieren en offerteaanvragen zijn gemaakt met **Contact Form 7**, gekoppeld aan Flamingo om inkomende berichten bij te houden. Bij een offerteaanvraag wordt de link van de pagina meegestuurd, zodat meteen duidelijk is in welke machine de klant interesse heeft.',
         ],
       },

@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 import {
   motion,
   useAnimationFrame,
+  useMotionTemplate,
   useMotionValue,
   useReducedMotion,
   useScroll,
@@ -64,7 +65,7 @@ export function CustomCursor() {
         style={{ x: ringX, y: ringY }}
         animate={{ scale: hover ? 1.8 : 1, opacity: visible ? 1 : 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className="pointer-events-none fixed left-0 top-0 z-[10003] -ml-5 -mt-5 w-10 h-10 rounded-full border border-rose/70 mix-blend-screen"
+        className="pointer-events-none fixed left-0 top-0 z-[10003] -ml-5 -mt-5 w-10 h-10 rounded-full border border-azure/70 mix-blend-screen"
       />
       <motion.div
         aria-hidden="true"
@@ -74,6 +75,31 @@ export function CustomCursor() {
       />
     </>
   )
+}
+
+// Zachte lichtvlek die de muis volgt over de hele pagina (achter de inhoud)
+export function CursorGlow() {
+  const fine = useFinePointer()
+  const reduce = useReducedMotion()
+  const mx = useMotionValue(-1000)
+  const my = useMotionValue(-1000)
+  const x = useSpring(mx, { stiffness: 120, damping: 20 })
+  const y = useSpring(my, { stiffness: 120, damping: 20 })
+  const glow = useMotionTemplate`radial-gradient(560px circle at ${x}px ${y}px, rgba(56,189,248,0.11), rgba(124,140,255,0.05) 40%, transparent 70%)`
+
+  useEffect(() => {
+    if (!fine || reduce) return
+    const move = (e) => {
+      mx.set(e.clientX)
+      my.set(e.clientY)
+    }
+    window.addEventListener('pointermove', move)
+    return () => window.removeEventListener('pointermove', move)
+  }, [fine, reduce, mx, my])
+
+  if (!fine || reduce) return null
+
+  return <motion.div aria-hidden="true" style={{ background: glow }} className="pointer-events-none fixed inset-0 -z-10" />
 }
 
 // Trekt het kind een beetje naar de muis toe
@@ -179,12 +205,12 @@ function Word({ progress, range, accent, still, children }) {
 }
 
 // Grote tekstband die sneller loopt (en omdraait) als je scrolt
-export function VelocityMarquee({ items, baseVelocity = -2.5 }) {
+export function VelocityMarquee({ items, baseVelocity = -1.2 }) {
   const reduce = useReducedMotion()
   const baseX = useMotionValue(0)
   const { scrollY } = useScroll()
   const velocity = useSpring(useVelocity(scrollY), { damping: 50, stiffness: 400 })
-  const factor = useTransform(velocity, [-1500, 0, 1500], [-4, 0, 4], { clamp: false })
+  const factor = useTransform(velocity, [-1500, 0, 1500], [-2, 0, 2])
   const direction = useRef(1)
   // Twee identieke helften: bij -50% springen we naadloos terug
   const x = useTransform(baseX, (v) => `${((((v % 50) + 50) % 50) - 50).toFixed(3)}%`)
@@ -204,7 +230,7 @@ export function VelocityMarquee({ items, baseVelocity = -2.5 }) {
       {items.map((item, i) => (
         <span key={i} className="flex items-center">
           <span className={i % 2 ? 'text-gradient' : 'text-outline'}>{item}</span>
-          <span className="mx-6 md:mx-10 text-[0.5em] text-rose" aria-hidden="true">✦</span>
+          <span className="mx-6 md:mx-10 text-[0.5em] text-azure" aria-hidden="true">✦</span>
         </span>
       ))}
     </span>

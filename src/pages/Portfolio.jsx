@@ -19,7 +19,7 @@ export default function Portfolio() {
             Projecten<span className="text-coral">.</span>
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
-            Een <em>selectie</em> van mijn werk: eerst bij <em>Conversal</em>{' '}
+            Een <em>selectie</em> van mijn werk: nu bij <em>Conversal</em>{' '}
             met Gutenberg, daarvoor bij <em>Atelier64</em>. Bij al deze
             projecten deed ik de <em>development</em>; het design kwam van de
             designers van het bureau. Daarnaast werkte ik aan heel wat

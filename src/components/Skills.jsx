@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { skillGroups, skillLevels } from "../data/profile";
+import { skillGroups, skillLevels, traits } from "../data/profile";
 import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
 
 // Accentkleur per kaart
@@ -136,6 +136,22 @@ export default function Skills() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl border border-line px-6 py-5">
+            <h3 className="flex items-center gap-2.5 shrink-0">
+              <span className="w-1.5 h-1.5 rounded-full bg-rose" aria-hidden="true" />
+              Als collega
+            </h3>
+            <ul className="flex flex-wrap gap-2">
+              {traits.map((trait) => (
+                <li key={trait} className="rounded-full border border-line px-3.5 py-1.5 text-xs text-white/80">
+                  {trait}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

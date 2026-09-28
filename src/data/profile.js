@@ -39,8 +39,9 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Design',
+    title: "Programma's",
     items: [
+      { name: 'Visual Studio Code', level: 4 },
       { name: 'Adobe XD', level: 5 },
       { name: 'Figma', level: 4 },
       { name: 'Photoshop', level: 3 },
@@ -56,6 +57,9 @@ export const skillGroups = [
     ],
   },
 ]
+
+// Eigenschappen onder de tools, zonder niveau (uit mijn cv)
+export const traits = ['Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
 
 // Stappen voor "Zo werk ik" op de home
 export const workflow = [

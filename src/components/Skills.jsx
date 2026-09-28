@@ -141,7 +141,7 @@ export default function Skills() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 rounded-3xl border border-line px-6 py-5">
             <h3 className="flex items-center gap-2.5 shrink-0">
               <span className="w-1.5 h-1.5 rounded-full bg-azure" aria-hidden="true" />
-              Als collega
+              Als persoon
             </h3>
             <ul className="flex flex-wrap gap-2">
               {traits.map((trait) => (

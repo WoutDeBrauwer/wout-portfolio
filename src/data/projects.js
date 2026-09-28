@@ -279,6 +279,73 @@ export const projects = [
       `${IMG}/Biaform/Portfolio-Wout-Biafrom-producten-overzicht.jpg`,
     ],
   },
+  {
+    slug: 'le-chic-hairboetiek',
+    title: 'Le Chic Hairboetiek',
+    agency: 'atelier64',
+    url: 'https://www.lechichairboetiek.be/',
+    cover: `${IMG}/LeChic/Portfolio-wout-lechic-overzichtsfoto.jpg`,
+    tags: ['WordPress', 'WooCommerce', 'Ultimate Member'],
+    intro:
+      'Le Chic Hairboetiek is een modern kapsalon met een webshop voor consumenten en professionals. De website is gebouwd op WordPress met WooCommerce en is geoptimaliseerd voor conversie en gebruiksgemak, met duidelijke navigatie naar diensten, producten en openingsuren.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'De webshop draait op **WooCommerce**, uitgebreid met **Search & Filter Pro** voor productfilters. Er is een aparte omgeving voor consumenten en professionals.',
+          'Er zijn plugins geïntegreerd voor betalingsverwerking, filtering, SEO en het contactformulier.',
+          'SEO, caching en beveiliging zijn geoptimaliseerd met plugins en custom scripts.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Het platform is volledig responsive en eenvoudig te beheren via het WordPress-dashboard.',
+          '**WooCommerce** zorgt voor een complete webshopervaring: productbeheer, bestellingen, klantcommunicatie en kortingsacties. Custom code maakt unieke productbundels en loyaliteitsprogramma’s mogelijk.',
+          'De site is voorbereid op toekomstige uitbreidingen, zoals koppelingen met externe systemen en marketingtools.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/LeChic/Portfolio-Wout-lechic-home.webp`,
+      `${IMG}/LeChic/Portfolio-Wout-lechic-tussen-pagina.jpg`,
+      `${IMG}/LeChic/Portfolio-Wout-lechic-professionals-pagina.jpg`,
+      `${IMG}/LeChic/Portfolio-Wout-lechic-webshop.jpg`,
+    ],
+  },
+  {
+    slug: 'hidromek',
+    title: 'Hidromek',
+    agency: 'atelier64',
+    url: 'https://hidromek.be/',
+    cover: `${IMG}/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg`,
+    tags: ['WordPress', 'PHP', 'ACF', 'WPML'],
+    intro:
+      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP. WPML is geïntegreerd zodat de site in meerdere talen beschikbaar kan worden. De site heeft een duidelijke productcatalogus en is geoptimaliseerd voor zoekmachines.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'De website draait op WordPress met custom PHP-logica. **WPML** is voorbereid voor Nederlands, Frans en Engels. De productcatalogus is dynamisch opgebouwd met custom post types en taxonomieën.',
+          'SEO-optimalisatie gebeurde met onder meer Yoast SEO. Een filtermodule helpt bezoekers snel het juiste product te vinden op categorie of specificatie.',
+          'Contactformulieren en offerteaanvragen zijn gemaakt met **Contact Form 7**, gekoppeld aan Flamingo om inkomende berichten bij te houden. Bij een offerteaanvraag wordt de link van de pagina meegestuurd, zodat meteen duidelijk is in welke machine de klant interesse heeft.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Het platform is de centrale plek voor klanten in België, met productinfo, technische fiches, nieuws en serviceaanvragen.',
+          'De productcatalogus vormt de kern: elk product heeft een eigen detailpagina met foto’s, specificaties en downloads.',
+          'Nieuwe producten, talen en functies kunnen worden toegevoegd zonder dat de structuur wijzigt.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/Hidromek/Portfolio-Wout-hidromek-Home.webp`,
+      `${IMG}/Hidromek/Portfolio-Wout-hidromek-machine-detail.webp`,
+      `${IMG}/Hidromek/Portfolio-Wout-hidromek-machines-pagina.webp`,
+    ],
+  },
 ]
 
 export const getProject = (slug) => projects.find((p) => p.slug === slug)

@@ -18,10 +18,10 @@ export default function Portfolio() {
             Projecten
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
-            Een <em>selectie</em> van mijn werk. De recentste projecten bouwde
-            ik bij <em>Conversal</em> met Gutenberg; daar deed ik de
-            development, het design kwam van het Conversal-team. Daarvoor
-            werkte ik bij <em>Atelier64</em>. Daarnaast werkte ik aan heel wat
+            Een <em>selectie</em> van mijn werk: eerst bij <em>Conversal</em>{' '}
+            met Gutenberg, daarvoor bij <em>Atelier64</em>. Bij al deze
+            projecten deed ik de <em>development</em>; het design kwam van de
+            designers van het bureau. Daarnaast werkte ik aan heel wat
             andere sites: aanpassingen, bijdragen aan grotere projecten en
             sites die (nog) niet publiek online staan.
           </p>

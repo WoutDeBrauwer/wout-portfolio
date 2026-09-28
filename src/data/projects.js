@@ -7,12 +7,6 @@ export const agencies = {
   conversal: { name: 'Conversal', url: 'https://www.conversal.be/' },
 }
 
-// Korte regel voor kaarten, bv. "Conversal · enkel development"
-export const agencyLabel = ({ agency, devOnly }) => {
-  const name = agencies[agency]?.name
-  return name && devOnly ? `${name} · enkel development` : name
-}
-
 const IMG = '/images/Images'
 
 export const projects = [
@@ -22,7 +16,7 @@ export const projects = [
     agency: 'conversal',
     devOnly: true,
     url: 'https://mv-events.be/',
-    cover: `${IMG}/MvEvents/Portfolio-wout-mvevents-home.webp`,
+    cover: `${IMG}/MvEvents/Portfolio-wout-mvevents-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'WooCommerce', 'Rentman', 'SwiperJS'],
     intro:
       'M&V Events verhuurt tenten en eventmateriaal en organiseert zelf events, sportdagen, teambuildings en kampen. Het is de grootste van mijn Conversal-sites: een uitgebreid verhuuraanbod, eigen events en een offertemodule, allemaal in één WordPress-site met Gutenberg.',
@@ -44,6 +38,7 @@ export const projects = [
       },
     ],
     screenshots: [
+      `${IMG}/MvEvents/Portfolio-wout-mvevents-home.webp`,
       `${IMG}/MvEvents/Portfolio-wout-mvevents-stretchtenten.webp`,
       `${IMG}/MvEvents/Portfolio-wout-mvevents-realisaties.webp`,
       `${IMG}/MvEvents/Portfolio-wout-mvevents-sportdagen.webp`,
@@ -55,7 +50,7 @@ export const projects = [
     agency: 'conversal',
     devOnly: true,
     url: 'https://www.erfgoedklassen.brussels/',
-    cover: `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-home.webp`,
+    cover: `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'WPML', 'Custom post types'],
     intro:
       'Erfgoedklassen.brussels biedt gratis erfgoedactiviteiten aan voor leerlingen uit het Brussels Hoofdstedelijk Gewest, georganiseerd door vzw Paleis van Keizer Karel. Leerkrachten vinden er activiteiten, lesmaterialen en erfgoedkoffers. De site is tweetalig: Nederlands en Frans.',
@@ -77,6 +72,7 @@ export const projects = [
       },
     ],
     screenshots: [
+      `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-home.webp`,
       `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-klasactiviteiten.webp`,
       `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-lesmaterialen.webp`,
       `${IMG}/Erfgoedklassen/Portfolio-wout-erfgoedklassen-leerlingen-vertellen.webp`,
@@ -88,7 +84,7 @@ export const projects = [
     agency: 'conversal',
     devOnly: true,
     url: 'https://amitude.be/',
-    cover: `${IMG}/Amitude/Portfolio-wout-amitude-home.webp`,
+    cover: `${IMG}/Amitude/Portfolio-wout-amitude-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS'],
     intro:
       'Amitude is een cateraar uit Torhout die kookt voor bedrijfsfeesten, huwelijken en events op locatie. De website heeft één duidelijk doel: bezoekers overtuigen om een offerte aan te vragen.',
@@ -110,6 +106,7 @@ export const projects = [
       },
     ],
     screenshots: [
+      `${IMG}/Amitude/Portfolio-wout-amitude-home.webp`,
       `${IMG}/Amitude/Portfolio-wout-amitude-bedrijfsfeest.webp`,
       `${IMG}/Amitude/Portfolio-wout-amitude-referenties.webp`,
       `${IMG}/Amitude/Portfolio-wout-amitude-faq.webp`,
@@ -121,7 +118,7 @@ export const projects = [
     agency: 'conversal',
     devOnly: true,
     url: 'https://algarvistaguide.com/',
-    cover: `${IMG}/Algarvista/Portfolio-wout-algarvista-home.webp`,
+    cover: `${IMG}/Algarvista/Portfolio-wout-algarvista-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS', 'WPForms'],
     intro:
       'Algarvista is de reisgids van Elisa, half Portugees en half Belg, opgegroeid in Carvoeiro. De site bundelt haar tips over stranden, stadjes, restaurants en accommodaties in de Algarve, aangevuld met een blog met uitgebreide gidsen.',
@@ -142,6 +139,7 @@ export const projects = [
       },
     ],
     screenshots: [
+      `${IMG}/Algarvista/Portfolio-wout-algarvista-home.webp`,
       `${IMG}/Algarvista/Portfolio-wout-algarvista-beaches.webp`,
       `${IMG}/Algarvista/Portfolio-wout-algarvista-blog.webp`,
       `${IMG}/Algarvista/Portfolio-wout-algarvista-faq.webp`,
@@ -151,6 +149,7 @@ export const projects = [
     slug: 'koba-metropool',
     title: 'KOBA Metropool',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://kobametropool.be/',
     cover: `${IMG}/Koba/Portfolio-wout-koba-overzichtsfoto.jpg`,
     tags: ['WordPress', 'PHP', 'API-integratie', 'Search & Filter Pro', 'WP Go Maps'],
@@ -185,6 +184,7 @@ export const projects = [
     slug: 'okra-reizen',
     title: 'OKRA Reizen',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://okra-reizen.be/',
     cover: `${IMG}/Okra/Portfolio-wout-Okra-reizen-overzichtsfoto.jpg`,
     tags: ['WordPress', 'ACF', 'PHP', 'Custom post types'],
@@ -218,6 +218,7 @@ export const projects = [
     slug: 'arte-verde',
     title: 'Arte-Verde',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://arte-verde.be/',
     cover: `${IMG}/ArteVerde/Arte-verde-tuin.jpg`,
     tags: ['WordPress', 'PHP', 'GSAP', 'ACF'],
@@ -251,6 +252,7 @@ export const projects = [
     slug: 'biaform-provital',
     title: 'Biaform Provital',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://biaform-provital.com/',
     cover: `${IMG}/Biaform/Portfolio-wout-Biaform-overzichtfoto.jpg`,
     tags: ['WordPress', 'PHP', 'WPML', 'Search & Filter Pro'],
@@ -283,6 +285,7 @@ export const projects = [
     slug: 'le-chic-hairboetiek',
     title: 'Le Chic Hairboetiek',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://www.lechichairboetiek.be/',
     cover: `${IMG}/LeChic/Portfolio-wout-lechic-overzichtsfoto.jpg`,
     tags: ['WordPress', 'WooCommerce', 'Ultimate Member'],
@@ -317,6 +320,7 @@ export const projects = [
     slug: 'hidromek',
     title: 'Hidromek',
     agency: 'atelier64',
+    devOnly: true,
     url: 'https://hidromek.be/',
     cover: `${IMG}/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg`,
     tags: ['WordPress', 'PHP', 'ACF', 'WPML'],

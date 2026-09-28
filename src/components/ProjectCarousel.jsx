@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { A11y, Keyboard } from 'swiper/modules'
 import 'swiper/css'
-import { agencyLabel } from '../data/projects'
-import { ArrowButton, Pill, plainText } from './ui'
+import { agencies } from '../data/projects'
+import { ArrowButton, Pill, RoleTag, plainText } from './ui'
 
 function ProjectSlide({ project, active }) {
   // Links alleen focusbaar op de actieve slide
@@ -19,9 +19,10 @@ function ProjectSlide({ project, active }) {
         className="w-full h-52 md:h-full object-cover"
       />
       <div className="flex flex-col p-6 md:p-7">
-        <p className="font-mono text-xs text-white/50 mb-2">
-          {agencyLabel(project)}
-        </p>
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          <p className="font-mono text-xs text-white/50">{agencies[project.agency]?.name}</p>
+          {project.devOnly && <RoleTag />}
+        </div>
         <h3 className="font-mono text-xl font-medium leading-snug mb-3">{project.title}</h3>
         <p className="text-sm text-white/70 line-clamp-3 mb-6">{plainText(project.intro)}</p>
         <div className="mt-auto flex items-center gap-2">

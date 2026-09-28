@@ -115,6 +115,15 @@ export function TableRow({ href, to, cells, className = '' }) {
   )
 }
 
+// Kleine pill die mijn rol op een project aangeeft (niet klikbaar)
+export function RoleTag({ children = 'Development', className = '' }) {
+  return (
+    <span className={`inline-flex items-center rounded-full border border-white/40 px-3 py-0.5 text-[11px] italic text-white/80 ${className}`}>
+      {children}
+    </span>
+  )
+}
+
 // Tags als "WordPress / PHP / ACF"
 export function SlashList({ items, className = '' }) {
   return (

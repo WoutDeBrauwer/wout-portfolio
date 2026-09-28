@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { agencies, getProject } from '../data/projects'
 import Gallery from '../components/Gallery'
 import RichText from '../components/RichText'
-import { ArrowButton, Circle, Container, Pill, Reveal, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
+import { ArrowButton, Circle, Container, Pill, Reveal, RoleTag, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
 import NotFound from './NotFound'
 
 export default function PortfolioDetail() {
@@ -26,18 +26,22 @@ export default function PortfolioDetail() {
         <div className="grid md:grid-cols-12 gap-10 lg:gap-16 mb-20 items-start">
           <div className="md:col-span-6 md:order-last">
             {agency && (
-              <p className="font-mono text-xs text-white/50 mb-4">
-                In opdracht van{' '}
-                <a href={agency.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white">
-                  {agency.name}
-                </a>
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-5">
+                <p className="font-mono text-xs text-white/50">
+                  In opdracht van{' '}
+                  <a href={agency.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white">
+                    {agency.name}
+                  </a>
+                </p>
                 {project.devOnly && (
                   <>
-                    <br />
-                    Mijn rol: development · design door {agency.name}
+                    <RoleTag />
+                    <p className="font-mono text-xs text-white/50 basis-full">
+                      Design door {agency.name}, development door mij.
+                    </p>
                   </>
                 )}
-              </p>
+              </div>
             )}
             <h1 className="font-mono font-medium tracking-tight leading-[1.05] text-4xl md:text-5xl lg:text-6xl mb-6">
               {project.title}

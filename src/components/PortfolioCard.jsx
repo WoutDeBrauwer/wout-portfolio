@@ -1,9 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
-import { agencyLabel } from "../data/projects";
-import { SlashList } from "./ui";
+import { agencies } from "../data/projects";
+import { RoleTag, SlashList } from "./ui";
 
 export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
-  const agencyName = agencyLabel({ agency, devOnly });
+  const agencyName = agencies[agency]?.name;
 
   return (
     <article className="group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-colors hover:border-white/40">
@@ -21,8 +21,11 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
 
       <div className="flex items-start justify-between gap-4 p-6">
         <div>
-          {agencyName && (
-            <p className="font-mono text-xs text-white/50 mb-1">{agencyName}</p>
+          {(agencyName || devOnly) && (
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              {agencyName && <p className="font-mono text-xs text-white/50">{agencyName}</p>}
+              {devOnly && <RoleTag />}
+            </div>
           )}
           <h2 className="font-mono text-lg font-medium leading-snug mb-3">{title}</h2>
           <SlashList items={tags} className="text-white/60" />

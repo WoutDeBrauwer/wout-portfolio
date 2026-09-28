@@ -16,6 +16,14 @@ export const socials = [
   { label: 'Bellen', href: contact.phoneHref },
 ]
 
+// "In het kort" onder de tekst bij Over mij
+export const facts = [
+  { label: 'Woont in', value: 'Sint-Lievens-Houtem' },
+  { label: 'Werkt bij', value: 'Conversal, Affligem' },
+  { label: 'Bouwt websites sinds', value: '2022 (Howest)' },
+  { label: 'Talen', value: 'Nederlands, Engels' },
+]
+
 // Niveau 1–5, zoals op de oude site. Woorden die erbij getoond worden:
 export const skillLevels = ['Basis', 'Redelijk', 'Goed', 'Zeer goed', 'Expert']
 

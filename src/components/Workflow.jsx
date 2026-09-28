@@ -19,7 +19,7 @@ export default function Workflow() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section className="pb-24 md:pb-32">
+    <section className="pb-32 md:pb-48">
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Wat ik doe</SectionLabel>

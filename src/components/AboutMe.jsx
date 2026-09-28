@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
+import { facts } from "../data/profile";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
 const introWords = "Hallo! Ik ben Wout, een WordPress-developer die het samenspel tussen design en techniek het leukste vindt."
@@ -59,16 +60,34 @@ function Portrait() {
   );
 }
 
+// Korte feiten onder de tekst ("In het kort")
+function FactList() {
+  return (
+    <div className="!mt-12 rounded-3xl border border-line p-6 sm:p-8">
+      <h3 className="font-mono text-xs text-white/50 mb-5">In het kort</h3>
+      <dl className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
+        {facts.map((fact) => (
+          <div key={fact.label}>
+            <dt className="font-mono text-xs text-iris mb-1">{fact.label}</dt>
+            <dd className="text-white">{fact.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
 export default function AboutMe() {
   return (
-    <section id="about" className="relative overflow-hidden py-24 md:py-32 scroll-mt-20">
+    <section id="about" className="relative overflow-hidden py-32 md:py-48 scroll-mt-20">
       <Circle className="w-[520px] h-[520px] -right-40 top-40 hidden md:block" />
 
       <Container>
         <div className="grid md:grid-cols-12 gap-6">
           <div className="md:col-span-5">
             <SectionLabel>Over mij</SectionLabel>
-            <Reveal delay={0.15} className="hidden md:block mt-12 pl-10 pr-10 lg:pr-20">
+            {/* Mobiel: foto meteen onder het label, zodat je eerst een gezicht ziet */}
+            <Reveal delay={0.15} className="mt-10 md:mt-12 pl-8 pr-4 sm:pl-10 sm:pr-10 lg:pr-20 mb-12 md:mb-0 max-w-[420px] md:max-w-none">
               <Portrait />
             </Reveal>
           </div>
@@ -78,26 +97,31 @@ export default function AboutMe() {
               words={introWords}
               className="text-2xl md:text-4xl text-white leading-snug tracking-tight"
             />
-            <p className="!mt-8">
-              Bij Conversal bouw ik WordPress-sites met <Highlight>custom
+            <p className="!mt-10">
+              Sinds januari 2026 werk ik als WordPress-expert bij Conversal in
+              Affligem. Ik bouw er WordPress-sites met <Highlight>custom
               Gutenberg-blocks</Highlight>: van Figma-design, via een plan met Claude
               Code en Figma MCP, naar blocks die redacteurs zelf kunnen vullen.
               Die blocks bouw ik native, met PHP en SCSS. Daarnaast zorg ik
               voor het technische rond een site: <em>DNS-records</em>{" "}
               instellen, domeinen overzetten naar Cloudflare en werken met
               Google Workspace.
-              Daarvoor bouwde ik bij Atelier64 sites met Betheme, Elementor en
-              ACF.
             </p>
             <p>
-              Ik ben nieuwsgierig en ambitieus, en wil groeien op een plek waar
-              ik nieuwe technologieën kan ontdekken. Mijn doel: websites die{" "}
-              <Highlight delay={0.2}>snel en functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
+              Daarvoor werkte ik anderhalf jaar bij Atelier64 in Zottegem. Daar
+              bouwde ik sites met Betheme, Elementor en ACF, en leerde ik hoe je
+              samenwerkt met designers en met klanten die hun site zelf willen
+              beheren.
             </p>
-          </Reveal>
+            <p>
+              Voor mij is een site pas af als de klant er zelf mee overweg kan.
+              Ik werk graag samen met de designer tot het ontwerp klopt op elk
+              scherm, en code die ik met AI schrijf, review en test ik zelf. Mijn
+              doel: websites die <Highlight delay={0.2}>snel en functioneel</Highlight> zijn,
+              afgestemd op wie ze gebruikt.
+            </p>
 
-          <Reveal className="md:hidden mt-10 pl-8 sm:pl-10">
-            <Portrait />
+            <FactList />
           </Reveal>
         </div>
       </Container>

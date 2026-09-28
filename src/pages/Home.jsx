@@ -155,7 +155,7 @@ function Hero() {
 // Uitgelichte projecten: pas na het verhaal, als bewijs van wat ik doe
 function FeaturedProjects() {
   return (
-    <section id="projecten" className="pb-24 md:pb-32 scroll-mt-28">
+    <section id="projecten" className="pb-32 md:pb-48 scroll-mt-28">
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Projecten</SectionLabel>
@@ -225,14 +225,14 @@ function Timeline({ title, rows, dot }) {
 
 function Experience() {
   return (
-    <section id="ervaring" className="pb-24 md:pb-32 scroll-mt-28">
+    <section id="ervaring" className="pb-32 md:pb-48 scroll-mt-28">
       <Timeline
         title="Ervaring"
         rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}
         dot={(i) => (i === 0 ? 'pulse-dot bg-teal' : 'bg-violet')}
       />
 
-      <div className="mt-24 md:mt-32">
+      <div className="mt-28 md:mt-40">
         <Timeline
           title="Opleiding"
           rows={education.map((edu) => ({ ...edu, name: edu.school, text: edu.course }))}
@@ -265,7 +265,7 @@ export default function Home() {
       <AboutMe />
       <Workflow />
       <Story />
-      <div className="border-y border-line mb-24 md:mb-32">
+      <div className="border-y border-line mb-32 md:mb-48">
         <VelocityMarquee items={['WordPress', 'Gutenberg', 'Figma', 'Claude Code', 'PHP', 'SCSS']} />
       </div>
       <FeaturedProjects />

@@ -119,7 +119,7 @@ export default function Story() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section className="relative pb-24 md:pb-32">
+    <section className="relative pb-32 md:pb-48">
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 lg:mb-0">
           <SectionLabel className="md:col-span-5">Mijn verhaal</SectionLabel>

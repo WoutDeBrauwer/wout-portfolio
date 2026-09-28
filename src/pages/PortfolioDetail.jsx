@@ -5,6 +5,8 @@ import RichText from '../components/RichText'
 import { ArrowButton, Circle, Container, Pill, Reveal, RoleTag, SectionLabel, SlashList, plainText, usePageMeta } from '../components/ui'
 import NotFound from './NotFound'
 
+const sectionDots = ['bg-iris', 'bg-rose', 'bg-coral', 'bg-mint']
+
 export default function PortfolioDetail() {
   const { slug } = useParams()
   const project = getProject(slug)
@@ -29,7 +31,7 @@ export default function PortfolioDetail() {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-5">
                 <p className="font-mono text-xs text-white/50">
                   In opdracht van{' '}
-                  <a href={agency.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white">
+                  <a href={agency.url} target="_blank" rel="noopener noreferrer" className={`underline underline-offset-4 hover:text-white ${agency.color ?? ''}`}>
                     {agency.name}
                   </a>
                 </p>
@@ -61,14 +63,17 @@ export default function PortfolioDetail() {
           <img
             src={project.cover}
             alt={`${project.title} overzicht`}
-            className="md:col-span-6 w-full aspect-[4/3] object-cover rounded-3xl border border-line"
+            className="md:col-span-6 w-full aspect-[4/3] object-cover rounded-3xl border border-line shadow-[0_30px_80px_-40px_rgba(154,134,255,0.6)]"
           />
         </div>
 
         <div className="grid md:grid-cols-2 gap-5 mb-20">
           {project.sections.map((section, i) => (
-            <Reveal key={section.title} delay={i * 0.08} className="rounded-3xl border border-line p-6 md:p-8">
-              <h2 className="font-mono text-xl font-medium mb-5">{section.title}</h2>
+            <Reveal key={section.title} delay={i * 0.08} className="rounded-3xl border border-line p-6 md:p-8 hover:border-white/30 transition-colors">
+              <h2 className="font-mono text-xl font-medium mb-5 flex items-center gap-3">
+                <span className={`w-1.5 h-1.5 rounded-full ${sectionDots[i % sectionDots.length]}`} aria-hidden="true" />
+                {section.title}
+              </h2>
               <div className="space-y-4 text-white/70 [&_strong]:text-white [&_strong]:font-semibold">
                 {section.paragraphs.map((paragraph, j) => (
                   <p key={j}>

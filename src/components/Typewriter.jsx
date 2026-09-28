@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // Typt `text` letter per letter. De volledige tekst staat onzichtbaar klaar,
 // zodat de layout niet verspringt, en schermlezers krijgen meteen de hele tekst.
-export default function Typewriter({ text, speed = 70, delay = 0, cursor = false, className = '' }) {
+export default function Typewriter({ text, speed = 70, delay = 0, cursor = false, className = '', textClassName = '' }) {
   const [displayed, setDisplayed] = useState('');
 
   useEffect(() => {
@@ -26,8 +26,8 @@ export default function Typewriter({ text, speed = 70, delay = 0, cursor = false
     <span className={`relative inline-block ${className}`}>
       <span className="invisible">{text}{cursor && '_'}</span>
       <span aria-hidden="true" className="absolute inset-0 whitespace-nowrap">
-        {displayed}
-        {cursor && <span className="cursor-blink">_</span>}
+        <span className={textClassName}>{displayed}</span>
+        {cursor && <span className="cursor-blink text-coral">_</span>}
       </span>
       <span className="sr-only">{text}</span>
     </span>

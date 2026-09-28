@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom'
 import PortfolioCard from '../components/PortfolioCard'
 import { projects } from '../data/projects'
-import { Circle, Container, Reveal, SectionLabel, usePageMeta } from '../components/ui'
+import { Aurora, Circle, Container, Reveal, SectionLabel, usePageMeta } from '../components/ui'
 
 export default function Portfolio() {
   usePageMeta('Projecten', 'WordPress-projecten van Wout De Brauwer, gebouwd bij Conversal en Atelier64: van custom Gutenberg-blocks tot API-koppelingen.')
 
   return (
-    <div className="relative overflow-hidden pt-16 md:pt-24 pb-24">
+    <div className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24">
+      <Aurora className="opacity-60 h-[700px]" />
       <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
 
       <Container>
@@ -15,7 +16,7 @@ export default function Portfolio() {
 
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-20 items-end">
           <h1 className="md:col-span-6 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.9rem,8vw,6.5rem)]">
-            Projecten
+            Projecten<span className="text-coral">.</span>
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
             Een <em>selectie</em> van mijn werk: eerst bij <em>Conversal</em>{' '}

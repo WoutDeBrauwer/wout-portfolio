@@ -13,10 +13,10 @@ const navLinks = [
 
 function Logo() {
   return (
-    <Link to="/" className="text-sm leading-tight text-white hover:text-white/70 transition-colors">
-      Wout
+    <Link to="/" className="group text-sm leading-tight text-white">
+      Wout<span className="text-coral">.</span>
       <br />
-      De Brauwer
+      <span className="group-hover:text-gradient">De Brauwer</span>
     </Link>
   );
 }
@@ -41,8 +41,11 @@ export default function Nav() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // Actieve link krijgt een streepje in het merkverloop; bij hover schuift het in
   const linkClass = ({ isActive }) =>
-    `text-sm transition-colors ${isActive ? "text-white" : "text-white/55 hover:text-white"}`;
+    `relative py-1 text-sm transition-colors after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-brand after:origin-left after:transition-transform after:duration-300 ${
+      isActive ? "text-white after:scale-x-100" : "text-white/55 hover:text-white after:scale-x-0 hover:after:scale-x-100"
+    }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[10000] bg-dark/80 backdrop-blur-md border-b border-line">
@@ -108,6 +111,7 @@ export default function Nav() {
                       `block font-mono text-4xl py-4 border-b border-line ${isActive ? "text-white" : "text-white/50"}`
                     }
                   >
+                    <span className="text-iris text-base align-middle mr-4">0{i + 1}</span>
                     {link.label}
                   </NavLink>
                 </motion.div>

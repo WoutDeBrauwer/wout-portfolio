@@ -10,7 +10,7 @@ function ProjectSlide({ project, active }) {
   const tab = active ? undefined : -1
 
   return (
-    <article className="grid md:grid-cols-2 overflow-hidden rounded-3xl border border-line bg-panel h-full">
+    <article className={`grid md:grid-cols-2 overflow-hidden rounded-3xl h-full transition-shadow duration-500 ${active ? 'border-gradient shadow-[0_30px_80px_-40px_rgba(255,111,177,0.55)]' : 'border border-line bg-panel'}`}>
       <img
         src={project.cover}
         alt={project.title}
@@ -20,7 +20,7 @@ function ProjectSlide({ project, active }) {
       />
       <div className="flex flex-col p-6 md:p-7">
         <div className="flex flex-wrap items-center gap-2 mb-2">
-          <p className="font-mono text-xs text-white/50">{agencies[project.agency]?.name}</p>
+          <p className={`font-mono text-xs ${agencies[project.agency]?.color ?? 'text-white/50'}`}>{agencies[project.agency]?.name}</p>
           {project.devOnly && <RoleTag />}
         </div>
         <h3 className="font-mono text-xl font-medium leading-snug mb-3">{project.title}</h3>

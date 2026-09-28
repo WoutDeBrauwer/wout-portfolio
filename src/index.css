@@ -11,7 +11,7 @@ body {
 }
 
 ::selection {
-  @apply bg-white text-dark;
+  @apply bg-rose text-dark;
 }
 
 /* Voorkom horizontaal scrollen op mobiel */
@@ -41,9 +41,111 @@ em {
   @keyframes cursorBlink {
     50% { opacity: 0; }
   }
+
+  /* Tekst in het merkverloop, schuift traag heen en weer */
+  .text-gradient {
+    background-image: linear-gradient(100deg, #9A86FF, #FF6FB1, #FF8466, #FF6FB1, #9A86FF);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes gradientShift {
+    to { background-position: 100% 0; }
+  }
+
+  /* Rand met verloop (op een element met rounded-*) */
+  .border-gradient {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(theme('colors.panel'), theme('colors.panel')) padding-box,
+      linear-gradient(135deg, rgba(154, 134, 255, 0.75), rgba(255, 111, 177, 0.3), rgba(255, 132, 102, 0.75)) border-box;
+  }
+
+  /* Drijvende kleurvlekken achter hero en CTA */
+  .aurora-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.32;
+    animation: auroraFloat 18s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  @keyframes auroraFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(6%, 8%) scale(1.12); }
+    100% { transform: translate(-6%, -4%) scale(0.95); }
+  }
+
+  /* Oneindige band met skills; pauzeert bij hover */
+  .marquee-track {
+    animation: marquee 45s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+
+  /* Draaiende tekst rond de profielfoto */
+  .spin-slow {
+    animation: spinSlow 24s linear infinite;
+  }
+
+  @keyframes spinSlow {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Pulserend "nu"-bolletje */
+  .pulse-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: inherit;
+    animation: pulseRing 2s ease-out infinite;
+  }
+
+  @keyframes pulseRing {
+    from { transform: scale(1); opacity: 0.7; }
+    to { transform: scale(2.8); opacity: 0; }
+  }
+}
+
+/* Lichtvlek die de muis volgt op kaarten (--x / --y komen uit onSpotlight) */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--x, 50%) var(--y, 50%), var(--glow, rgba(154, 134, 255, 0.18)), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.spotlight:hover::before {
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .cursor-blink { animation: none; }
+  .cursor-blink,
+  .text-gradient,
+  .aurora-blob,
+  .marquee-track,
+  .spin-slow,
+  .pulse-dot::after { animation: none; }
 }

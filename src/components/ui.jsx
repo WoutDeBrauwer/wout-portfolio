@@ -1,7 +1,7 @@
 // Gedeelde bouwstenen voor de monochrome stijl: labels, pill-knoppen en ronde pijlknoppen.
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 
 export function Container({ className = '', children }) {
@@ -16,8 +16,39 @@ export function Container({ className = '', children }) {
 export function SectionLabel({ children, className = '' }) {
   return (
     <p className={`font-mono text-xs text-white/70 ${className}`}>
-      …/{children}…
+      <span className="text-iris">…/</span>{children}<span className="text-coral">…</span>
     </p>
+  )
+}
+
+// Drijvende kleurvlekken als achtergrond (parent moet `relative overflow-hidden` zijn)
+export function Aurora({ className = '' }) {
+  return (
+    <div aria-hidden="true" className={`pointer-events-none absolute inset-0 -z-10 ${className}`}>
+      <div className="aurora-blob bg-iris w-[46vw] h-[46vw] max-w-[620px] max-h-[620px] -top-[12%] right-[-8%]" />
+      <div className="aurora-blob bg-rose w-[34vw] h-[34vw] max-w-[460px] max-h-[460px] top-[30%] right-[22%] [animation-delay:-6s]" />
+      <div className="aurora-blob bg-coral w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] top-[5%] -left-[10%] opacity-20 [animation-delay:-12s]" />
+    </div>
+  )
+}
+
+// Zet de muispositie als CSS-variabelen voor het .spotlight-effect
+export function onSpotlight(e) {
+  const rect = e.currentTarget.getBoundingClientRect()
+  e.currentTarget.style.setProperty('--x', `${e.clientX - rect.left}px`)
+  e.currentTarget.style.setProperty('--y', `${e.clientY - rect.top}px`)
+}
+
+// Dunne balk bovenaan die toont hoe ver je gescrold bent
+export function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, { stiffness: 200, damping: 40, restDelta: 0.001 })
+  return (
+    <motion.div
+      aria-hidden="true"
+      style={{ scaleX }}
+      className="fixed top-0 left-0 right-0 h-[2px] origin-left bg-brand z-[10002]"
+    />
   )
 }
 
@@ -41,14 +72,14 @@ function Clickable({ to, href, className, children, ...rest }) {
 }
 
 const pillStyles = {
-  solid: 'bg-white text-dark hover:bg-white/85',
-  outline: 'border border-line text-white/80 hover:border-white hover:text-white',
+  solid: 'bg-white text-dark hover:bg-brand hover:shadow-[0_0_32px_-6px_rgba(255,111,177,0.6)]',
+  outline: 'border border-line text-white/80 hover:border-iris hover:text-white hover:bg-iris/10',
 }
 
 export function Pill({ variant = 'solid', className = '', children, ...props }) {
   return (
     <Clickable
-      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm italic transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${pillStyles[variant]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm italic transition-[color,background-color,border-color,box-shadow] duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${pillStyles[variant]} ${className}`}
       {...props}
     >
       {children}
@@ -62,7 +93,7 @@ export function ArrowButton({ diagonal = false, direction = 'right', label, clas
   return (
     <Clickable
       aria-label={label}
-      className={`inline-flex shrink-0 items-center justify-center w-11 h-11 rounded-full border border-white/70 text-white hover:bg-white hover:text-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center w-11 h-11 rounded-full border border-white/70 text-white hover:border-transparent hover:bg-brand hover:text-dark transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${className}`}
       {...props}
     >
       <Icon size={18} strokeWidth={1.75} className={direction === 'left' ? 'rotate-180' : ''} />
@@ -75,7 +106,7 @@ export function Circle({ className = '' }) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute rounded-full border border-white/10 ${className}`}
+      className={`pointer-events-none absolute rounded-full border border-iris/25 ${className}`}
     />
   )
 }
@@ -102,7 +133,7 @@ export function Reveal({ delay = 0, className = '', children }) {
 export function TableRow({ href, to, cells, className = '' }) {
   const content = (
     <div
-      className={`grid gap-1 sm:gap-6 py-5 px-5 sm:px-10 lg:px-16 transition-colors group-hover:bg-white group-hover:text-dark ${className}`}
+      className={`grid gap-1 sm:gap-6 py-5 px-5 sm:px-10 lg:px-16 transition-colors group-hover:bg-brand group-hover:text-dark ${className}`}
     >
       {cells}
     </div>
@@ -118,7 +149,7 @@ export function TableRow({ href, to, cells, className = '' }) {
 // Kleine pill die mijn rol op een project aangeeft (niet klikbaar)
 export function RoleTag({ children = 'Development', className = '' }) {
   return (
-    <span className={`inline-flex items-center rounded-full border border-white/40 px-3 py-0.5 text-[11px] italic text-white/80 ${className}`}>
+    <span className={`inline-flex items-center rounded-full border border-mint/40 bg-mint/10 px-3 py-0.5 text-[11px] italic text-mint ${className}`}>
       {children}
     </span>
   )

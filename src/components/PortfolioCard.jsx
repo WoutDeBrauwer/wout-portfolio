@@ -1,12 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 import { agencies } from "../data/projects";
-import { RoleTag, SlashList } from "./ui";
+import { RoleTag, SlashList, onSpotlight } from "./ui";
 
 export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
-  const agencyName = agencies[agency]?.name;
+  const { name: agencyName, color: agencyColor = "text-white/50" } = agencies[agency] ?? {};
 
   return (
-    <article className="group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-colors hover:border-white/40">
+    <article
+      onMouseMove={onSpotlight}
+      className="spotlight group h-full flex flex-col rounded-3xl border border-line bg-panel overflow-hidden transition-[border-color,transform,box-shadow] duration-500 hover:border-iris/50 hover:-translate-y-1 hover:shadow-[0_24px_60px_-30px_rgba(154,134,255,0.6)]"
+    >
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={cover}
@@ -15,7 +18,12 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
           onError={(e) => {
             e.currentTarget.src = "/images/Images/Template-portfolio-item.jpg";
           }}
-          className="w-full h-full object-cover grayscale-[60%] group-hover:grayscale-0 group-hover:scale-[1.03] transition duration-700 ease-out"
+          className="w-full h-full object-cover grayscale-[60%] group-hover:grayscale-0 group-hover:scale-[1.04] transition duration-700 ease-out"
+        />
+        {/* Zachte kleurwaas die verdwijnt bij hover */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-tr from-iris/25 via-transparent to-coral/20 mix-blend-overlay transition-opacity duration-700 group-hover:opacity-0"
         />
       </div>
 
@@ -23,7 +31,7 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
         <div>
           {(agencyName || devOnly) && (
             <div className="flex flex-wrap items-center gap-2 mb-2">
-              {agencyName && <p className="font-mono text-xs text-white/50">{agencyName}</p>}
+              {agencyName && <p className={`font-mono text-xs ${agencyColor}`}>{agencyName}</p>}
               {devOnly && <RoleTag />}
             </div>
           )}
@@ -32,7 +40,7 @@ export default function PortfolioCard({ title, cover, tags, agency, devOnly }) {
         </div>
         <span
           aria-hidden="true"
-          className="inline-flex shrink-0 items-center justify-center w-10 h-10 rounded-full border border-white/70 group-hover:bg-white group-hover:text-dark transition-colors"
+          className="inline-flex shrink-0 items-center justify-center w-10 h-10 rounded-full border border-white/70 group-hover:border-transparent group-hover:bg-brand group-hover:text-dark group-hover:rotate-45 transition duration-300"
         >
           <ArrowUpRight size={16} strokeWidth={1.75} />
         </span>

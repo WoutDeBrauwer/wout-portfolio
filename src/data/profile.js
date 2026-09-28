@@ -61,43 +61,23 @@ export const skillGroups = [
 // Eigenschappen onder de tools, zonder niveau (uit mijn cv)
 export const traits = ['Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
 
-// "Wat ik doe" op de home: stappen voor een nieuwe site…
-export const workflow = [
+// "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
+export const services = [
   {
-    title: 'Figma-design',
-    text: 'Ik start vanuit het ontwerp van de designer: componenten, spacing, varianten en hoe het zich gedraagt op mobiel.',
+    title: 'Nieuwe websites',
+    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP maak ik eerst een plan. De code review ik zelf.',
   },
   {
-    title: 'Plan met Claude Code',
-    text: 'Via Figma MCP leest Claude Code het design uit. Samen maken we een plan: welke blocks, welke velden en wat er in theme.json komt.',
+    title: 'Support voor klanten',
+    text: 'Klanten met een bestaande site help ik met hun vragen: een pagina aanpassen, een nieuwe pagina opzetten of uitleggen hoe iets werkt. Bij grotere vragen maak ik eerst een inschatting.',
   },
-  {
-    title: 'Review & bouwen',
-    text: 'Ik review het plan en de code kritisch: past het in het thema, is het toegankelijk en snel?',
-  },
-  {
-    title: 'Blocks voor redacteurs',
-    text: 'Het resultaat: custom Gutenberg-blocks die de klant zelf vult, zonder dat de lay-out breekt.',
-  },
-]
-
-// …en het werk aan bestaande sites van klanten
-export const maintenance = [
   {
     title: 'Onderhoud',
     text: 'Updates van WordPress, het thema en de plugins, en nakijken of alles daarna nog werkt. Ook DNS-records en domeinen regel ik.',
   },
   {
-    title: 'Kleine aanpassingen',
-    text: 'Een extra blok, een nieuwe pagina of een andere lay-out. Zulke vragen van klanten pak ik snel op.',
-  },
-  {
-    title: 'Bugfixing',
-    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Claude Code helpt me bij bugs die niet in de logs staan.',
-  },
-  {
-    title: 'Inschattingen',
-    text: 'Bij een nieuwe vraag schat ik in hoeveel werk het is en hoe ik het zou aanpakken, zodat de klant vooraf weet wat het kost en hoe lang het duurt.',
+    title: 'Bugfixing & aanpassingen',
+    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Kleine aanpassingen, zoals een extra blok of een andere lay-out, pak ik snel op.',
   },
 ]
 

@@ -61,7 +61,7 @@ export const skillGroups = [
 // Eigenschappen onder de tools, zonder niveau (uit mijn cv)
 export const traits = ['Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
 
-// Stappen voor "Zo werk ik" op de home
+// "Wat ik doe" op de home: stappen voor een nieuwe site…
 export const workflow = [
   {
     title: 'Figma-design',
@@ -73,11 +73,31 @@ export const workflow = [
   },
   {
     title: 'Review & bouwen',
-    text: 'Ik review het plan en de code kritisch: past het in het thema, is het toegankelijk en snel? Claude is ook mijn sparringpartner bij bugs die niet in de logs staan.',
+    text: 'Ik review het plan en de code kritisch: past het in het thema, is het toegankelijk en snel?',
   },
   {
     title: 'Blocks voor redacteurs',
     text: 'Het resultaat: custom Gutenberg-blocks die de klant zelf vult, zonder dat de lay-out breekt.',
+  },
+]
+
+// …en het werk aan bestaande sites van klanten
+export const maintenance = [
+  {
+    title: 'Onderhoud',
+    text: 'Updates van WordPress, het thema en de plugins, en nakijken of alles daarna nog werkt. Ook DNS-records en domeinen regel ik.',
+  },
+  {
+    title: 'Kleine aanpassingen',
+    text: 'Een extra blok, een nieuwe pagina of een andere lay-out. Zulke vragen van klanten pak ik snel op.',
+  },
+  {
+    title: 'Bugfixing',
+    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Claude Code helpt me bij bugs die niet in de logs staan.',
+  },
+  {
+    title: 'Inschattingen',
+    text: 'Bij een nieuwe vraag schat ik in hoeveel werk het is en hoe ik het zou aanpakken, zodat de klant vooraf weet wat het kost en hoe lang het duurt.',
   },
 ]
 

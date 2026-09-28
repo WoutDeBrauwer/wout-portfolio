@@ -24,61 +24,35 @@ export const skillGroups = [
     items: [
       { name: 'Betheme', level: 5 },
       { name: 'Elementor', level: 5 },
-      { name: 'Gutenberg', level: 4 },
-      { name: 'Native custom blocks', level: 4 },
+      { name: 'Gutenberg-blocks', level: 4 },
       { name: 'theme.json', level: 4 },
-      { name: 'Custom post types', level: 4 },
     ],
   },
   {
-    title: 'Front-end',
+    title: 'Code',
     items: [
-      { name: 'HTML', level: 5 },
-      { name: 'CSS', level: 5 },
+      { name: 'HTML & CSS', level: 5 },
       { name: 'SCSS', level: 4 },
-      { name: 'SwiperJS', level: 4 },
-      { name: 'Tailwind', level: 3 },
       { name: 'JavaScript', level: 3 },
-      { name: 'GSAP', level: 3 },
-      { name: 'React', level: 2 },
-    ],
-  },
-  {
-    title: 'Back-end',
-    items: [
-      { name: 'block.json & render.php', level: 4 },
       { name: 'PHP', level: 3 },
       { name: 'API-integraties', level: 3 },
-      { name: 'Shortcodes', level: 3 },
     ],
   },
   {
-    title: "Programma's",
+    title: 'Design',
     items: [
       { name: 'Adobe XD', level: 5 },
       { name: 'Figma', level: 4 },
       { name: 'Photoshop', level: 3 },
-      { name: 'Illustrator', level: 2 },
-      { name: 'Premiere Pro', level: 2 },
-      { name: 'Blender', level: 2 },
     ],
   },
   {
-    title: 'AI & workflow',
+    title: 'Workflow & beheer',
     items: [
-      { name: 'Claude', level: 4 },
       { name: 'Claude Code', level: 4 },
       { name: 'Figma MCP', level: 3 },
       { name: 'Git', level: 3 },
-    ],
-  },
-  {
-    title: 'Domeinen & beheer',
-    items: [
-      { name: 'DNS-zones & records', level: 3 },
-      { name: 'Domeintransfers', level: 3 },
-      { name: 'Cloudflare', level: 3 },
-      { name: 'Google Workspace', level: 3 },
+      { name: 'DNS & Cloudflare', level: 3 },
     ],
   },
 ]

@@ -129,7 +129,7 @@ export default function Skills() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {skillGroups.map((group, i) => (
             <Reveal key={group.title} delay={(i % 3) * 0.08} className="h-full">
               <SkillGroup {...group} accent={accents[i % accents.length]} focus={active} />

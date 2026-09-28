@@ -23,20 +23,22 @@ function Highlight({ children, delay = 0 }) {
   );
 }
 
-// Profielfoto met verloop-kader en draaiende tekst-sticker
+// Vrijstaande profielfoto op een gloed in de merkkleuren, met verloop-kader en draaiende tekst-sticker
 function Portrait() {
   const label = "Wout De Brauwer ✦ webdeveloper ✦ Gutenberg ✦ ";
   return (
     <div className="relative w-full max-w-[380px]">
       <div className="rounded-[1.75rem] p-[2px] bg-brand">
-        <img
-          src="/images/Images/Portfolio-profielfoto-linkedin.jpg"
-          alt="Wout De Brauwer"
-          width="400"
-          height="400"
-          loading="lazy"
-          className="w-full aspect-square object-cover rounded-3xl bg-white grayscale hover:grayscale-0 transition duration-700"
-        />
+        <div className="rounded-3xl overflow-hidden bg-panel bg-[radial-gradient(circle_at_30%_20%,rgba(124,140,255,0.45),transparent_60%),radial-gradient(circle_at_80%_75%,rgba(72,227,182,0.3),transparent_55%)]">
+          <img
+            src="/images/Images/Portfolio-profielfoto-vrijstaand.webp"
+            alt="Wout De Brauwer"
+            width="400"
+            height="400"
+            loading="lazy"
+            className="w-full aspect-square object-cover"
+          />
+        </div>
       </div>
 
       <div

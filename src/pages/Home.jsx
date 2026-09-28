@@ -1,6 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { projects } from '../data/projects'
-import { experience, education, socials, contact, skillGroups } from '../data/profile'
+import { experience, education, socials, contact, skillGroups, cvUrl } from '../data/profile'
 import AboutMe from '../components/AboutMe'
 import Story from '../components/Story'
 import Skills from '../components/Skills'
@@ -13,13 +13,17 @@ import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, Tab
 const titleClass =
   'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
 
-function ProjectsButton({ className = '' }) {
+// Eerst kennismaken: de hoofdknop scrollt naar "Over mij", projecten zijn de tweede keuze
+function HeroButtons({ className = '' }) {
   return (
-    <div className={`items-center gap-2 lg:w-[320px] ${className}`}>
-      <Pill to="/portfolio" className="flex-1">Projecten</Pill>
-      <Magnetic strength={0.4}>
-        <ArrowButton to="/portfolio" label="Naar projecten" tabIndex={-1} />
-      </Magnetic>
+    <div className={`flex-col gap-3 lg:w-[320px] ${className}`}>
+      <div className="flex items-center gap-2">
+        <Pill href="#about" className="flex-1">Leer me kennen</Pill>
+        <Magnetic strength={0.4}>
+          <ArrowButton href="#about" label="Naar Over mij" tabIndex={-1} className="rotate-90" />
+        </Magnetic>
+      </div>
+      <Pill variant="outline" to="/portfolio" className="w-full">Bekijk projecten</Pill>
     </div>
   )
 }
@@ -101,13 +105,13 @@ function Hero() {
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
-            <span className="sr-only">Junior webdeveloper</span>
-            <SplitReveal text="Junior" delay={0.1} />
+            <span className="sr-only">WordPress-developer</span>
+            <SplitReveal text="WordPress" delay={0.1} />
           </h1>
-          <ProjectsButton className="hidden lg:flex" />
+          <HeroButtons className="hidden lg:flex" />
         </div>
 
-        {/* Zin en titel pas vanaf xl naast elkaar: "Webdeveloper" is breed */}
+        {/* Zin en titel pas vanaf xl naast elkaar: "developer" is breed */}
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
@@ -117,11 +121,11 @@ function Hero() {
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="Webdeveloper" speed={90} delay={600} cursor textClassName="text-gradient" />
+            <Typewriter text="developer" speed={90} delay={700} cursor textClassName="text-gradient" />
           </p>
         </div>
 
-        <ProjectsButton className="flex lg:hidden mt-8" />
+        <HeroButtons className="flex lg:hidden mt-8" />
 
         <ul className="flex flex-wrap gap-3 mt-10 lg:mt-14">
           {socials.map((s) => (
@@ -133,15 +137,51 @@ function Hero() {
               </Magnetic>
             </li>
           ))}
+          <li>
+            <Magnetic strength={0.25}>
+              <Pill variant="outline" href={cvUrl} download className="!px-5 !py-1.5 text-xs">
+                Cv (pdf)
+              </Pill>
+            </Magnetic>
+          </li>
         </ul>
       </Container>
 
-      <div className="mt-16 px-5 sm:px-10 lg:px-0">
-        <ProjectCarousel projects={projects} />
-      </div>
-
       <SkillMarquee />
     </header>
+  )
+}
+
+// Uitgelichte projecten: pas na het verhaal, als bewijs van wat ik doe
+function FeaturedProjects() {
+  return (
+    <section id="projecten" className="pb-24 md:pb-32 scroll-mt-28">
+      <Container>
+        <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
+          <SectionLabel className="md:col-span-5">Projecten</SectionLabel>
+          <Reveal className="md:col-span-7">
+            <h2 className="font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,6vw,5rem)] mb-6">
+              Waar ik aan <span className="text-gradient">werkte</span>
+            </h2>
+            <p className="text-white/70 max-w-xl mb-8">
+              Een selectie van sites waar ik de development deed, bij Conversal en
+              daarvoor bij Atelier64. Per project lees je wat ik bouwde en met welke
+              technieken.
+            </p>
+            <div className="flex items-center gap-2">
+              <Pill to="/portfolio">Alle projecten</Pill>
+              <Magnetic strength={0.4}>
+                <ArrowButton to="/portfolio" label="Naar alle projecten" tabIndex={-1} />
+              </Magnetic>
+            </div>
+          </Reveal>
+        </div>
+      </Container>
+
+      <div className="px-5 sm:px-10 lg:px-0">
+        <ProjectCarousel projects={projects} />
+      </div>
+    </section>
   )
 }
 
@@ -185,7 +225,7 @@ function Timeline({ title, rows, dot }) {
 
 function Experience() {
   return (
-    <section className="pb-24 md:pb-32">
+    <section id="ervaring" className="pb-24 md:pb-32 scroll-mt-28">
       <Timeline
         title="Ervaring"
         rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}
@@ -200,7 +240,7 @@ function Experience() {
         />
       </div>
 
-      <Container className="mt-6 text-right">
+      <Container className="mt-8 flex flex-wrap items-center justify-end gap-x-6 gap-y-4">
         <a
           href={contact.linkedin}
           target="_blank"
@@ -209,6 +249,7 @@ function Experience() {
         >
           Volledig traject op LinkedIn ↗
         </a>
+        <Pill href={cvUrl} download>Download cv</Pill>
       </Container>
     </section>
   )
@@ -217,16 +258,18 @@ function Experience() {
 export default function Home() {
   usePageMeta()
 
+  // Volgorde als verhaal: wie ik ben → wat ik doe → hoe ik hier kwam → bewijs → details
   return (
     <>
       <Hero />
       <AboutMe />
-      <Skills />
+      <Workflow />
       <Story />
       <div className="border-y border-line mb-24 md:mb-32">
         <VelocityMarquee items={['WordPress', 'Gutenberg', 'Figma', 'Claude Code', 'PHP', 'SCSS']} />
       </div>
-      <Workflow />
+      <FeaturedProjects />
+      <Skills />
       <Experience />
     </>
   )

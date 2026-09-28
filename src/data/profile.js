@@ -7,6 +7,9 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/wout-de-brauwer-881b73247',
 }
 
+// Pdf in public/cv (export van cv/cv.html)
+export const cvUrl = '/cv/CV-Wout-De-Brauwer.pdf'
+
 export const socials = [
   { label: 'LinkedIn', href: contact.linkedin },
   { label: 'E-mail', href: `mailto:${contact.email}` },
@@ -123,7 +126,7 @@ export const story = [
 
 export const experience = [
   {
-    period: '2026 – nu',
+    period: 'jan 2026 – nu',
     company: 'Conversal',
     place: 'Affligem',
     url: 'https://www.conversal.be/',

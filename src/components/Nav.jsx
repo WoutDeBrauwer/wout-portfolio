@@ -5,8 +5,10 @@ import { Menu, X } from "lucide-react";
 import { contact } from "../data/profile";
 import { Pill } from "./ui";
 
+// `hash`: springt naar een blok op de home (nooit "actief", de home is dat al)
 const navLinks = [
   { path: "/", label: "Home", end: true },
+  { path: "/#about", label: "Over mij", hash: true },
   { path: "/portfolio", label: "Projecten" },
   { path: "/contact", label: "Contact" },
 ];
@@ -27,6 +29,14 @@ export default function Nav() {
 
   // Menu sluiten bij navigatie
   useEffect(() => setMenuOpen(false), [pathname]);
+
+  // Op de home zelf scrollen: als de hash al #about is, doet de router niets
+  const scrollToHash = (link) => {
+    setMenuOpen(false);
+    if (link.hash && pathname === "/") {
+      document.getElementById(link.path.split("#")[1])?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   // Niet scrollen achter het open menu
   useEffect(() => {
@@ -53,11 +63,17 @@ export default function Nav() {
         <Logo />
 
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <NavLink key={link.path} to={link.path} end={link.end} className={linkClass}>
-              {link.label}
-            </NavLink>
-          ))}
+          {navLinks.map((link) =>
+            link.hash ? (
+              <Link key={link.path} to={link.path} onClick={() => scrollToHash(link)} className={linkClass({ isActive: false })}>
+                {link.label}
+              </Link>
+            ) : (
+              <NavLink key={link.path} to={link.path} end={link.end} className={linkClass}>
+                {link.label}
+              </NavLink>
+            )
+          )}
         </div>
 
         <div className="col-start-3 flex justify-end">
@@ -107,8 +123,9 @@ export default function Nav() {
                   <NavLink
                     to={link.path}
                     end={link.end}
+                    onClick={() => scrollToHash(link)}
                     className={({ isActive }) =>
-                      `block font-mono text-4xl py-4 border-b border-line ${isActive ? "text-white" : "text-white/50"}`
+                      `block font-mono text-4xl py-4 border-b border-line ${isActive && !link.hash ? "text-white" : "text-white/50"}`
                     }
                   >
                     <span className="text-iris text-base align-middle mr-4">0{i + 1}</span>

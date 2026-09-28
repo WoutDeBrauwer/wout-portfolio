@@ -11,12 +11,18 @@ import Footer from './components/Footer'
 import { ScrollProgress } from './components/ui'
 import { CursorGlow, CustomCursor, Grain, PageCurtain } from './components/effects'
 
-// Bij navigatie naar een andere pagina bovenaan starten
+// Bij navigatie bovenaan starten, of naar het blok uit de hash (bv. /#about) scrollen
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    if (!hash) {
+      window.scrollTo(0, 0)
+      return
+    }
+    // Even wachten tot de pagina gerenderd is
+    const id = setTimeout(() => document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' }), 50)
+    return () => clearTimeout(id)
+  }, [pathname, hash])
   return null
 }
 

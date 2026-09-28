@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een junior webdeveloper die het samenspel tussen design en techniek het leukste vindt."
+const introWords = "Hallo! Ik ben Wout, een WordPress-developer die het samenspel tussen design en techniek het leukste vindt."
   .split(" ")
-  .map((text) => ({ text, accent: ["junior", "webdeveloper", "design", "techniek"].includes(text) }));
+  .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek"].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -61,7 +61,7 @@ function Portrait() {
 
 export default function AboutMe() {
   return (
-    <section id="about" className="relative overflow-hidden py-24 md:py-32">
+    <section id="about" className="relative overflow-hidden py-24 md:py-32 scroll-mt-20">
       <Circle className="w-[520px] h-[520px] -right-40 top-40 hidden md:block" />
 
       <Container>

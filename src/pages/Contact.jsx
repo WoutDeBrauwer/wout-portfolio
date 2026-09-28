@@ -8,7 +8,7 @@ const rows = [
 ];
 
 export default function Contact() {
-  usePageMeta("Contact", "Neem contact op met Wout De Brauwer, junior webdeveloper, via e-mail, telefoon of LinkedIn.");
+  usePageMeta("Contact", "Neem contact op met Wout De Brauwer, WordPress-developer, via e-mail, telefoon of LinkedIn.");
 
   return (
     <section className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">

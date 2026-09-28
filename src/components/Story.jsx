@@ -124,7 +124,7 @@ export default function Story() {
         <div className="grid md:grid-cols-12 gap-6 mb-12 lg:mb-0">
           <SectionLabel className="md:col-span-5">Mijn verhaal</SectionLabel>
           <h2 className="md:col-span-7 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,6vw,5rem)]">
-            Van mechanisch tekenen naar <span className="text-gradient">custom blocks</span>
+            Hoe ik <span className="text-gradient">webdeveloper</span> werd
           </h2>
         </div>
 

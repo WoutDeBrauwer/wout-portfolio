@@ -17,7 +17,7 @@ export const socials = [
 ]
 
 // Niveau 1–5, zoals op de oude site. Woorden die erbij getoond worden:
-export const skillLevels = ['Basis', 'Redelijk', 'Goed', 'Zeer goed', 'Expert']
+export const skillLevels = ['Basis', 'Learning', 'Goed', 'Zeer goed', 'Expert']
 
 // `featured` krijgt de kaart met verlooprand
 export const skillGroups = [
@@ -37,8 +37,8 @@ export const skillGroups = [
       { name: 'HTML & CSS', level: 5 },
       { name: 'SCSS', level: 4 },
       { name: 'JavaScript', level: 3 },
-      { name: 'PHP', level: 3 },
-      { name: 'API-integraties', level: 3 },
+      { name: 'PHP', level: 2 },
+      { name: 'API-integraties', level: 2 },
     ],
   },
   {
@@ -47,7 +47,7 @@ export const skillGroups = [
       { name: 'Visual Studio Code', level: 4 },
       { name: 'Adobe XD', level: 5 },
       { name: 'Figma', level: 4 },
-      { name: 'Photoshop', level: 3 },
+      { name: 'Photoshop', level: 2 },
     ],
   },
   {
@@ -55,7 +55,7 @@ export const skillGroups = [
     items: [
       { name: 'Claude Code', level: 4 },
       { name: 'Figma MCP', level: 3 },
-      { name: 'Git', level: 3 },
+      { name: 'Git', level: 2 },
       { name: 'DNS & Cloudflare', level: 3 },
     ],
   },
@@ -97,7 +97,7 @@ export const story = [
   {
     years: '2019 – 2022',
     kicker: 'Odisee & Artevelde',
-    title: 'Zoeken naar mijn richting',
+    title: 'Ontwerp en digitale media',
     text: 'Ik begon aan Odisee met de bachelor ontwerp- en productietechnologie. Na een jaar ben ik overgestapt naar grafische en digitale media aan Artevelde.',
     icon: 'pen',
   },
@@ -111,7 +111,7 @@ export const story = [
   {
     years: '2024 – 2025',
     kicker: 'Atelier64',
-    title: 'Mijn eerste job',
+    title: 'Mijn eerste werkervaring',
     text: 'Junior webdeveloper bij Atelier64 in Zottegem. Ik bouwde er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF.',
     icon: 'rocket',
   },

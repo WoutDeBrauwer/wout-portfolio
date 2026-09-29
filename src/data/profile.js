@@ -53,7 +53,7 @@ export const skillGroups = [
   {
     title: 'Workflow & beheer',
     items: [
-      { name: 'Claude Code', level: 4 },
+      { name: 'Claude Code', level: 3 },
       { name: 'Figma MCP', level: 3 },
       { name: 'Git', level: 2 },
       { name: 'DNS & Cloudflare', level: 3 },

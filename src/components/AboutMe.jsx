@@ -98,14 +98,8 @@ export default function AboutMe() {
             </p>
             <p>
               Ik werk elke dag met <Highlight delay={0.1}>AI</Highlight>, naast
-              mijn eigen kennis. Zo werk ik sneller, en de keuzes maak ik nog
-              altijd zelf.
-            </p>
-            <p>
-              Ik vind het belangrijk dat een klant zijn site zelf kan beheren.
-              Samen met de designer kijk ik na of het ontwerp op elk scherm
-              klopt. En ik hou een site graag <Highlight delay={0.2}>snel en
-              eenvoudig</Highlight>.
+              mijn eigen kennis. Verderop lees je hoe ik dat
+              precies doe.
             </p>
             <p>
               Ik heb ruim twee jaar ervaring en wil nog veel bijleren, ook buiten

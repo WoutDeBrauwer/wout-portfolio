@@ -96,19 +96,27 @@ export const services = [
 export const aiWork = [
   {
     title: 'Claude Code',
-    text: 'Dit gebruik ik elke dag bij het bouwen. Ik zet er een design mee om in een plan en in code, en zoek er lastige bugs mee uit.',
+    text: 'Mijn vaste tool bij het bouwen. Ik geef de taken, Claude Code voert ze uit en ik stuur bij waar nodig. Zo bouw ik custom blocks, sliders en templates een stuk sneller.',
   },
   {
     title: 'Figma MCP',
-    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit. Zo werk ik met de echte maten, kleuren en teksten uit het ontwerp.',
+    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit, met de echte maten, kleuren en teksten. Eerst maak ik er een plan mee en dat kijk ik zelf na. Daarna bouw ik de blocks.',
+  },
+  {
+    title: 'Sparringpartner',
+    text: 'Ik overleg met Claude over de beste aanpak. Omdat ik de code en de site ken, kan ik zijn voorstellen beoordelen, in vraag stellen en bijsturen.',
+  },
+  {
+    title: 'Bugs opsporen',
+    text: 'Sommige problemen zie je niet in de logs. Met Claude analyseer ik de code en het gedrag van een site sneller, tot ik de oorzaak vind.',
   },
   {
     title: 'Nieuwe tools uitproberen',
-    text: 'Ik hou bij wat er nieuw is in AI en test het uit in eigen projecten, zoals deze portfolio.',
+    text: 'Ik hou bij wat er nieuw is in AI en test het uit in eigen projecten, zoals deze portfolio. Wat werkt, neem ik mee naar mijn werk.',
   },
   {
     title: 'Zelf nakijken',
-    text: 'De keuzes maak ik zelf. Ik review en test alle code voor ze live gaat.',
+    text: 'AI maakt me sneller, maar de keuzes maak ik zelf. Ik review en test alle code voor ze live gaat.',
   },
 ]
 

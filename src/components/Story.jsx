@@ -66,7 +66,8 @@ function StickyPanel({ active, progress }) {
   const Icon = icons[chapter.icon] ?? Sparkles;
 
   return (
-    <div className="hidden lg:flex sticky top-28 h-[calc(100vh-9rem)] flex-col justify-center">
+    // Precies schermhoog: het midden valt samen met het midden van het actieve hoofdstuk
+    <div className="hidden lg:flex sticky top-0 h-screen flex-col justify-center">
       <div className="relative w-40 h-40 mb-10">
         <div aria-hidden="true" className="absolute inset-0 rounded-full bg-brand opacity-25 blur-2xl" />
         <AnimatePresence mode="wait">
@@ -138,7 +139,8 @@ export default function Story() {
             <div aria-hidden="true" className="md:hidden absolute left-[5px] top-2 bottom-2 w-px bg-line overflow-hidden">
               <motion.div style={{ scaleY: progress }} className="absolute inset-0 origin-top bg-gradient-to-b from-iris via-azure to-teal" />
             </div>
-            <ol ref={listRef} className="space-y-16 md:space-y-20 lg:space-y-0">
+            {/* lg:py-[24vh] + halve hoofdstukhoogte (26vh) = 50vh: eerste en laatste hoofdstuk lijnen uit met het paneel */}
+            <ol ref={listRef} className="space-y-16 md:space-y-20 lg:space-y-0 lg:py-[24vh]">
               {story.map((chapter, i) => (
                 <Chapter key={chapter.title} chapter={chapter} index={i} onActive={setActive} />
               ))}

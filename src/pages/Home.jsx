@@ -94,9 +94,12 @@ function SkillMarquee() {
 
 function Hero() {
   return (
-    <header className="relative isolate overflow-hidden pt-16 md:pt-24 pb-20">
+    // Alleen horizontaal clippen: zo loopt de glow zacht door in "Over mij" i.p.v. hard af te snijden
+    <header className="relative isolate overflow-x-clip pt-16 md:pt-24 pb-20">
       <Aurora />
-      <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      </div>
 
       <Container>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-10">

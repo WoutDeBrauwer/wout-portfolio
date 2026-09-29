@@ -8,6 +8,7 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import CallButton from './components/CallButton'
 import { ScrollProgress } from './components/ui'
 import { CursorGlow, CustomCursor, Grain, PageCurtain } from './components/effects'
 
@@ -49,6 +50,7 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+          <CallButton />
         </div>
       </Router>
     </MotionConfig>

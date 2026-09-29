@@ -99,28 +99,28 @@ export const services = [
   },
 ]
 
-// "Mijn verhaal" op de home. Bewust kort en feitelijk gehouden.
-// `icon` = naam van een lucide-icoon (zie Story.jsx)
+// "Mijn verhaal" op de home, in mijn eigen woorden.
+// `icon` = naam van een lucide-icoon (zie Story.jsx), `cta` = optionele knop onder de tekst
 export const story = [
   {
     years: '2013 – 2019',
     kicker: 'Middelbaar',
     title: 'Mechanische vormgeving',
-    text: 'In het middelbaar volgde ik TSO, de richting mechanische vormgevingstechnieken. Ik leerde er technisch tekenen, met de hand en op de computer, en alles moest op de millimeter kloppen. Daar is mijn interesse in ontwerpen en techniek begonnen.',
+    text: 'In het middelbaar volgde ik TSO, de richting mechanische vormgevingstechnieken. Ik was er veel bezig met het programmeren van CNC-machines. Door die mix van theorie en praktijk ontdekte ik dat ik het best leer door iets echt te doen.',
     icon: 'wrench',
   },
   {
     years: '2019 – 2022',
     kicker: 'Odisee & Artevelde',
     title: 'Ontwerp en digitale media',
-    text: 'Na het middelbaar begon ik aan Odisee met de bachelor ontwerp- en productietechnologie. Na een jaar ben ik overgestapt naar grafische en digitale media aan Artevelde. Daar ging het minder over machines en meer over design en digitale media, met programma’s als Photoshop en Adobe XD.',
+    text: 'Aan Odisee begon ik aan de bachelor ontwerp- en productietechnologie, om verder te gaan in mechanica. Daar groeide mijn interesse in computers en coderen, dus stapte ik over naar grafische en digitale media aan Artevelde. Ik leerde er veel bij, maar ik wou een opleiding die meer op de praktijk gericht was.',
     icon: 'pen',
   },
   {
     years: '2022 – 2024',
     kicker: 'Howest',
     title: 'Webdevelopment',
-    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar schreef ik mijn eerste echte code, in HTML, CSS, JavaScript en PHP, en bouwde ik mijn eerste websites. Ik wist vrij snel dat ik dit wou blijven doen.',
+    text: 'Daarom koos ik voor het graduaat webdevelopment en design & 3D AR aan Howest in Kortrijk. Daar leerde ik HTML, CSS, JavaScript en PHP en bouwde ik mijn eerste websites. Ik wist vrij snel dat ik dit wou blijven doen.',
     icon: 'code',
   },
   {
@@ -134,8 +134,16 @@ export const story = [
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'In januari 2026 stapte ik over naar Conversal in Affligem, een bureau dat net als ik veel met AI werkt. Ik bouw er sites met native Gutenberg-blocks en werk elke dag met Claude Code en Figma MCP. Naast nieuwe sites help ik klanten met support, onderhoud en bugfixing. Nu ben ik klaar voor een volgende stap.',
+    text: 'In januari 2026 stapte ik over naar Conversal in Affligem, een bureau dat net als ik veel met AI werkt. Ik bouw er sites met native Gutenberg-blocks en werk elke dag met Claude Code en Figma MCP. Naast nieuwe sites help ik klanten met support, onderhoud en bugfixing.',
     icon: 'sparkles',
+  },
+  {
+    years: 'Wat nu?',
+    kicker: 'Volgende stap',
+    title: 'Mijn volgende uitdaging',
+    text: 'Ik ben op zoek naar een nieuwe uitdaging, bij een team waar ik verder kan groeien als developer. Ben je geïnteresseerd, of wil je eerst eens kennismaken? Neem gerust contact met me op.',
+    icon: 'compass',
+    cta: { label: 'Neem contact op', to: '/contact' },
   },
 ]
 

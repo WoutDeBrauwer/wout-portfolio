@@ -1,18 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useScroll, useSpring } from "framer-motion";
-import { Code2, PenTool, Rocket, Sparkles, Wrench } from "lucide-react";
+import { Code2, Compass, PenTool, Rocket, Sparkles, Wrench } from "lucide-react";
 import { story } from "../data/profile";
-import { Container, SectionLabel } from "./ui";
+import { Container, Pill, SectionLabel } from "./ui";
 
-const icons = { wrench: Wrench, pen: PenTool, code: Code2, rocket: Rocket, sparkles: Sparkles };
+const icons = { wrench: Wrench, pen: PenTool, code: Code2, rocket: Rocket, sparkles: Sparkles, compass: Compass };
 
-// Kleur per hoofdstuk: loopt van paars naar teal ("nu")
+// Kleur per hoofdstuk: loopt van paars naar teal ("nu"), de volgende stap in violet
 const accents = [
   { text: "text-iris", bg: "bg-iris", ring: "border-iris/50" },
   { text: "text-azure", bg: "bg-azure", ring: "border-azure/50" },
   { text: "text-violet", bg: "bg-violet", ring: "border-violet/50" },
   { text: "text-iris", bg: "bg-iris", ring: "border-iris/50" },
   { text: "text-teal", bg: "bg-teal", ring: "border-teal/50" },
+  { text: "text-violet", bg: "bg-violet", ring: "border-violet/50" },
 ];
 
 function Chapter({ chapter, index, onActive }) {
@@ -54,6 +55,11 @@ function Chapter({ chapter, index, onActive }) {
           {chapter.title}
         </h3>
         <p className="text-white/70 md:text-lg leading-relaxed">{chapter.text}</p>
+        {chapter.cta && (
+          <div className="mt-8">
+            <Pill to={chapter.cta.to}>{chapter.cta.label}</Pill>
+          </div>
+        )}
       </div>
     </motion.li>
   );

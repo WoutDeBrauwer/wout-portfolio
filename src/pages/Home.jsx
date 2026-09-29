@@ -115,7 +115,7 @@ function Hero() {
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              Met een <em>passie voor WordPress</em> bouw ik websites die{' '}
+              Met een <em>passie voor websites</em> bouw ik sites die{' '}
               <em>er goed uitzien, vlot werken</em> en eenvoudig te beheren
               zijn. Ik leer elke dag bij.
             </p>

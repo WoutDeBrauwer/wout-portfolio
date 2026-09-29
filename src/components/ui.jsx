@@ -102,11 +102,17 @@ export function ArrowButton({ diagonal = false, direction = 'right', label, clas
 }
 
 // Dunne decoratieve cirkel (parent moet `relative overflow-hidden` zijn)
-export function Circle({ className = '' }) {
+const circleTones = {
+  iris: 'border-iris/25',
+  teal: 'border-teal/20',
+  violet: 'border-violet/20',
+}
+
+export function Circle({ tone = 'iris', className = '' }) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute rounded-full border border-iris/25 ${className}`}
+      className={`pointer-events-none absolute rounded-full border ${circleTones[tone]} ${className}`}
     />
   )
 }

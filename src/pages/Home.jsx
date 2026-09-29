@@ -227,7 +227,8 @@ function Timeline({ title, rows, dot }) {
 
 function Experience() {
   return (
-    <section id="ervaring" className="pb-32 md:pb-48 scroll-mt-28">
+    <section id="ervaring" className="relative isolate overflow-hidden pb-32 md:pb-48 scroll-mt-28">
+      <Circle tone="violet" className="-z-10 w-[380px] h-[380px] -right-52 top-[42%] hidden md:block" />
       <Timeline
         title="Ervaring"
         rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}

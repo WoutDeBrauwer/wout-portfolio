@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useInView, useScroll, useSpring } from "framer-motion";
 import { Code2, Compass, PenTool, Rocket, Sparkles, Wrench } from "lucide-react";
 import { story } from "../data/profile";
-import { Container, Pill, SectionLabel } from "./ui";
+import { Circle, Container, Pill, SectionLabel } from "./ui";
 
 const icons = { wrench: Wrench, pen: PenTool, code: Code2, rocket: Rocket, sparkles: Sparkles, compass: Compass };
 
@@ -126,7 +126,11 @@ export default function Story() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section className="relative pb-32 md:pb-48">
+    <section className="relative isolate pb-32 md:pb-48">
+      {/* Eigen clip-laag: overflow-hidden op de section zou het sticky paneel breken */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <Circle tone="teal" className="w-[480px] h-[480px] -left-72 top-[35%] hidden lg:block" />
+      </div>
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 lg:mb-16">
           <SectionLabel className="md:col-span-5">Mijn verhaal</SectionLabel>

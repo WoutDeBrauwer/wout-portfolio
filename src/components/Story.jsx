@@ -66,8 +66,8 @@ function StickyPanel({ active, progress }) {
   const Icon = icons[chapter.icon] ?? Sparkles;
 
   return (
-    // Precies schermhoog: het midden valt samen met het midden van het actieve hoofdstuk
-    <div className="hidden lg:flex sticky top-0 h-screen flex-col justify-center">
+    // Paneel is ~24rem hoog: top 50vh - 12rem legt het midden op het midden van het scherm (= actief hoofdstuk)
+    <div className="hidden lg:flex sticky top-[calc(50vh-12rem)] flex-col">
       <div className="relative w-40 h-40 mb-10">
         <div aria-hidden="true" className="absolute inset-0 rounded-full bg-brand opacity-25 blur-2xl" />
         <AnimatePresence mode="wait">
@@ -122,7 +122,7 @@ export default function Story() {
   return (
     <section className="relative pb-32 md:pb-48">
       <Container>
-        <div className="grid md:grid-cols-12 gap-6 mb-12 lg:mb-0">
+        <div className="grid md:grid-cols-12 gap-6 mb-12 lg:mb-16">
           <SectionLabel className="md:col-span-5">Mijn verhaal</SectionLabel>
           <h2 className="md:col-span-7 font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,6vw,5rem)]">
             Hoe ik <span className="text-gradient">webdeveloper</span> werd
@@ -139,8 +139,8 @@ export default function Story() {
             <div aria-hidden="true" className="md:hidden absolute left-[5px] top-2 bottom-2 w-px bg-line overflow-hidden">
               <motion.div style={{ scaleY: progress }} className="absolute inset-0 origin-top bg-gradient-to-b from-iris via-azure to-teal" />
             </div>
-            {/* lg:py-[24vh] + halve hoofdstukhoogte (26vh) = 50vh: eerste en laatste hoofdstuk lijnen uit met het paneel */}
-            <ol ref={listRef} className="space-y-16 md:space-y-20 lg:space-y-0 lg:py-[24vh]">
+            {/* Midden eerste hoofdstuk (26vh) op midden paneel (12rem); pb 24vh laat het laatste hoofdstuk nog tot het midden scrollen */}
+            <ol ref={listRef} className="space-y-16 md:space-y-20 lg:space-y-0 lg:mt-[calc(12rem-26vh)] lg:pb-[24vh]">
               {story.map((chapter, i) => (
                 <Chapter key={chapter.title} chapter={chapter} index={i} onActive={setActive} />
               ))}

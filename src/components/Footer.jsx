@@ -1,7 +1,14 @@
 import { useLocation } from "react-router-dom";
-import { contact, socials } from "../data/profile";
-import { Magnetic } from "./effects";
-import { ArrowButton, Aurora, Circle, Container, Pill, SectionLabel } from "./ui";
+import { ArrowUpRight, Linkedin, Mail, Phone } from "lucide-react";
+import { contact, cvUrl, socials } from "../data/profile";
+import { Aurora, Circle, Container, Pill, SectionLabel, onSpotlight } from "./ui";
+
+// Drie manieren om me te bereiken, als grote klikbare kaarten
+const contactCards = [
+  { label: "Mail me", value: contact.email, href: `mailto:${contact.email}`, Icon: Mail, color: "text-iris", glow: "rgba(124, 140, 255, 0.2)" },
+  { label: "Bel me", value: contact.phone, href: contact.phoneHref, Icon: Phone, color: "text-azure", glow: "rgba(56, 189, 248, 0.18)" },
+  { label: "LinkedIn", value: "Wout De Brauwer", href: contact.linkedin, Icon: Linkedin, color: "text-teal", glow: "rgba(45, 212, 191, 0.16)" },
+];
 
 export default function Footer() {
   const { pathname } = useLocation();
@@ -20,16 +27,42 @@ export default function Footer() {
               <p className="font-mono text-3xl sm:text-5xl tracking-tight leading-tight mb-6">
                 Op zoek naar een <span className="text-gradient">developer?</span>
               </p>
-              <p className="text-white/70 mb-10 max-w-lg">
+              <p className="text-white/70 max-w-lg">
                 Ik sta open voor een nieuwe uitdaging. Mail of bel me gerust, ook
                 als je gewoon een vraag hebt.
               </p>
-              <div className="flex flex-wrap items-center gap-3">
-                <Pill href={`mailto:${contact.email}`}>{contact.email}</Pill>
-                <Magnetic strength={0.4}>
-                  <ArrowButton to="/contact" label="Naar contactpagina" />
-                </Magnetic>
-              </div>
+            </div>
+
+            <ul className="md:col-span-12 grid sm:grid-cols-3 gap-4 mt-4">
+              {contactCards.map(({ label, value, href, Icon, glow, color }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                    onMouseMove={onSpotlight}
+                    style={{ "--glow": glow }}
+                    className="spotlight group flex h-full flex-col rounded-3xl border border-line bg-dark/40 backdrop-blur p-6 transition-[transform,border-color] duration-300 hover:-translate-y-1 hover:border-white/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  >
+                    <span className="flex items-center justify-between mb-8">
+                      <span className={`grid place-items-center w-12 h-12 rounded-full border border-line ${color}`}>
+                        <Icon size={20} strokeWidth={1.75} />
+                      </span>
+                      <ArrowUpRight
+                        size={22}
+                        className="text-white/40 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+                        aria-hidden="true"
+                      />
+                    </span>
+                    <span className="text-white/60">{label}</span>
+                    <span className="font-mono text-lg sm:text-base lg:text-lg text-white break-all mt-1">{value}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="md:col-span-12 flex flex-wrap items-center gap-3">
+              <Pill href={cvUrl} download>Download mijn cv</Pill>
+              <Pill variant="outline" to="/contact">Naar de contactpagina</Pill>
             </div>
           </Container>
         </section>

@@ -73,14 +73,15 @@ export const growing = [
 ]
 
 // "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
+// AI zit in het werk zelf, daarom staat het hier en niet in een aparte sectie.
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. De klant vult de inhoud daarna zelf. Claude Code en Figma MCP helpen me om dat sneller te doen.',
+    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Via Figma MCP leest Claude Code het design uit. Ik maak er eerst een plan mee, kijk het na en laat daarna de blocks bouwen. Zo gaat een nieuwe site een stuk sneller.',
   },
   {
     title: 'Support voor klanten',
-    text: 'Klanten met een bestaande site kunnen bij mij terecht met vragen. Ik pas pagina’s aan, zet nieuwe pagina’s op of leg uit hoe iets werkt. Voor grotere vragen maak ik eerst een inschatting.',
+    text: 'Klanten met een bestaande site kunnen bij mij terecht met vragen. Ik pas pagina’s aan, zet nieuwe pagina’s op of leg uit hoe iets werkt. Bij grotere vragen overleg ik met Claude over de beste aanpak en maak ik een inschatting.',
   },
   {
     title: 'Onderhoud',
@@ -88,35 +89,7 @@ export const services = [
   },
   {
     title: 'Bugfixing & aanpassingen',
-    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Bij lastige bugs gebruik ik Claude als sparringpartner. Ik leg het probleem voor, we lopen samen de code door en ik kies zelf welke oplossing erin komt. Kleine aanpassingen pak ik snel op.',
-  },
-]
-
-// "Werken met AI" op de home: hoe AI in mijn werk zit, naast WordPress
-export const aiWork = [
-  {
-    title: 'Claude Code',
-    text: 'Mijn vaste tool bij het bouwen. Ik geef de taken, Claude Code voert ze uit en ik stuur bij waar nodig. Zo bouw ik custom blocks, sliders en templates een stuk sneller.',
-  },
-  {
-    title: 'Figma MCP',
-    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit, met de echte maten, kleuren en teksten. Eerst maak ik er een plan mee en dat kijk ik zelf na. Daarna bouw ik de blocks.',
-  },
-  {
-    title: 'Sparringpartner',
-    text: 'Ik overleg met Claude over de beste aanpak. Omdat ik de code en de site ken, kan ik zijn voorstellen beoordelen, in vraag stellen en bijsturen.',
-  },
-  {
-    title: 'Bugs opsporen',
-    text: 'Sommige problemen zie je niet in de logs. Met Claude analyseer ik de code en het gedrag van een site sneller, tot ik de oorzaak vind.',
-  },
-  {
-    title: 'Nieuwe tools uitproberen',
-    text: 'Ik hou bij wat er nieuw is in AI en test het uit in eigen projecten, zoals deze portfolio. Wat werkt, neem ik mee naar mijn werk.',
-  },
-  {
-    title: 'Zelf nakijken',
-    text: 'AI maakt me sneller, maar de keuzes maak ik zelf. Ik review en test alle code voor ze live gaat.',
+    text: 'Sommige bugs zie je niet in de logs. Dan analyseer ik de code samen met Claude tot ik de oorzaak vind. Welke oplossing erin komt, kies ik zelf. Kleine aanpassingen pak ik snel op.',
   },
 ]
 

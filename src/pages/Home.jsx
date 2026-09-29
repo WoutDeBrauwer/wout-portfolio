@@ -7,7 +7,6 @@ import Skills from '../components/Skills'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
-import AiWork from '../components/AiWork'
 import { Magnetic, VelocityMarquee } from '../components/effects'
 import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
 
@@ -261,13 +260,12 @@ function Experience() {
 export default function Home() {
   usePageMeta()
 
-  // Volgorde als verhaal: wie ik ben → wat ik doe → hoe ik met AI werk → hoe ik hier kwam → bewijs → details
+  // Volgorde als verhaal: wie ik ben → wat ik doe (met AI) → hoe ik hier kwam → bewijs → details
   return (
     <>
       <Hero />
       <AboutMe />
       <Workflow />
-      <AiWork />
       <Story />
       <div className="border-y border-line mb-32 md:mb-48">
         <VelocityMarquee items={['WordPress', 'Gutenberg', 'AI', 'Claude Code', 'Figma', 'PHP', 'SCSS']} />

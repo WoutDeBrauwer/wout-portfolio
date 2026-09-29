@@ -90,11 +90,6 @@ export default function AboutMe() {
               <em>DNS-records</em>, domeinen en Google Workspace voor klanten.
             </p>
             <p>
-              <Highlight delay={0.1}>AI</Highlight> gebruik ik elke dag, als
-              extra hulp naast wat ik zelf ken. Hoe dat in de praktijk gaat,
-              lees je hieronder.
-            </p>
-            <p>
               Ik heb ruim twee jaar ervaring en kijk graag verder dan
               WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
               Vite, Tailwind en Framer Motion.

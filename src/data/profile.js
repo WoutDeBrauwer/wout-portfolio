@@ -83,7 +83,7 @@ export const growing = [
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Claude Code leest het design uit via Figma MCP en stelt een plan op. Dat plan kijk ik eerst zelf na. Daarna bouwen we de blocks, en ik test en werk ze af.',
+    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Claude Code leest het design uit via Figma MCP en stelt een plan op. Dat plan kijk ik eerst zelf na. Daarna bouw ik de blocks met Claude Code, en test en werk ik ze zelf af.',
   },
   {
     title: 'Support voor klanten',
@@ -95,7 +95,7 @@ export const services = [
   },
   {
     title: 'Bugfixing & aanpassingen',
-    text: 'Sommige bugs zie je niet in de logs. Dan analyseer ik de code samen met Claude tot ik de oorzaak vind. Welke oplossing erin komt, kies ik zelf. Kleine aanpassingen pak ik snel op.',
+    text: 'Sommige bugs zie je niet in de logs. Dan zoek ik samen met Claude in de code tot ik de oorzaak vind. Kleine aanpassingen pak ik snel op.',
   },
 ]
 
@@ -127,7 +127,7 @@ export const story = [
     years: '2024 – 2025',
     kicker: 'Atelier64',
     title: 'Mijn eerste werkervaring',
-    text: 'Na Howest kon ik meteen aan de slag als junior webdeveloper bij Atelier64 in Zottegem. Anderhalf jaar bouwde ik er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF. Ik leerde er werken met deadlines, samenwerken met designers en luisteren naar wat een klant echt nodig heeft.',
+    text: 'Na Howest kon ik meteen aan de slag als junior webdeveloper bij Atelier64 in Zottegem. Anderhalf jaar bouwde ik er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF. Ik leerde er werken met deadlines en samenwerken met designers en klanten.',
     icon: 'rocket',
   },
   {

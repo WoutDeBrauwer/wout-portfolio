@@ -170,7 +170,7 @@ export const plainText = (text = '') => text.replace(/\*\*/g, '')
 // Titel en meta-description per pagina (SPA: anders deelt elke pagina dezelfde titel)
 export function usePageMeta(title, description) {
   useEffect(() => {
-    document.title = title ? `${title} | Wout De Brauwer` : 'Wout De Brauwer | WordPress-developer'
+    document.title = title ? `${title} | Wout De Brauwer` : 'Wout De Brauwer | Junior webdeveloper'
     const meta = document.querySelector('meta[name="description"]')
     if (!meta || !description) return
     const previous = meta.content

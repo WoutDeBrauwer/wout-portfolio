@@ -18,11 +18,11 @@ export default function Footer() {
             <SectionLabel className="md:col-span-5">Contact</SectionLabel>
             <div className="md:col-span-7">
               <p className="font-mono text-3xl sm:text-5xl tracking-tight leading-tight mb-6">
-                Zin om te <span className="text-gradient">praten?</span>
+                Even <span className="text-gradient">kennismaken?</span>
               </p>
               <p className="text-white/70 mb-10 max-w-lg">
-                Een vraag over een project, of zin om eens te babbelen over{" "}
-                <em>WordPress of AI</em>? Ik hoor graag van je.
+                Zoek je een <em>developer</em> voor je team, of heb je gewoon een
+                vraag? Stuur me een berichtje of bel even.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Pill href={`mailto:${contact.email}`}>{contact.email}</Pill>

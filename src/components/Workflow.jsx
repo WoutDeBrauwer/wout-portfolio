@@ -30,8 +30,8 @@ export default function Workflow() {
             <p className="text-white/70 max-w-xl">
               Ik bouw nieuwe WordPress-sites vanuit een Figma-design. Ook na
               de lancering help ik klanten verder met support, onderhoud en
-              aanpassingen. AI helpt me om dat allemaal sneller te doen, maar
-              ik kijk alles zelf na.
+              aanpassingen. Bij al dat werk gebruik ik AI, zo gaat het een pak
+              sneller.
             </p>
           </Reveal>
         </div>

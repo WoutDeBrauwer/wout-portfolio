@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer én als persoon, en ben helemaal mee met AI."
+const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer én als persoon."
   .split(" ")
-  .map((text) => ({ text, accent: ["uitdaging.", "AI."].includes(text) }));
+  .map((text) => ({ text, accent: ["uitdaging.", "persoon."].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {

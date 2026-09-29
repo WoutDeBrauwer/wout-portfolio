@@ -164,7 +164,7 @@ export default function Skills() {
               {growing.map((item) => (
                 <li key={item.name}>
                   <span className="font-mono text-sm text-white/85">{item.name}</span>
-                  <p className="text-sm text-white/55 mt-1">{item.text}</p>
+                  <p className="text-lg text-white/55 mt-1">{item.text}</p>
                 </li>
               ))}
             </ul>

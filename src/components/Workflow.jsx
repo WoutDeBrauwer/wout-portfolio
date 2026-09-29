@@ -60,8 +60,8 @@ export default function Workflow() {
                       <p className={`font-mono text-3xl font-medium mb-8 ${main ? "text-dark/70" : color.text}`}>
                         {String(i + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="font-mono text-lg font-medium mb-3">{service.title}</h3>
-                      <p className={`text-sm ${main ? "text-dark/80" : "text-white/70"}`}>
+                      <h3 className="font-mono text-xl font-medium mb-3">{service.title}</h3>
+                      <p className={`text-lg ${main ? "text-dark/80" : "text-white/70"}`}>
                         {service.text}
                       </p>
                     </div>

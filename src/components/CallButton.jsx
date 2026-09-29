@@ -24,13 +24,13 @@ export default function CallButton() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.6, y: 20 }}
           transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-          className="group fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-[10000] flex items-center gap-3 rounded-full bg-brand p-4 text-dark shadow-[0_8px_30px_rgba(56,189,248,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark"
+          className="group fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-[10000] flex items-center justify-center rounded-full bg-brand p-4 text-dark shadow-[0_8px_30px_rgba(56,189,248,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-dark"
         >
           {/* Zachte puls rond de knop */}
           <span aria-hidden="true" className="absolute inset-0 -z-10 rounded-full bg-azure/40 animate-ping [animation-duration:2.5s]" />
           <Phone className="w-5 h-5 shrink-0" strokeWidth={2.25} />
-          {/* Label schuift open bij hover (desktop) */}
-          <span className="hidden sm:block max-w-0 overflow-hidden whitespace-nowrap font-mono text-sm font-medium transition-[max-width] duration-300 group-hover:max-w-[12rem] group-focus-visible:max-w-[12rem]">
+          {/* Label schuift open bij hover (desktop); marge pas bij hover, zodat de knop dicht een cirkel is */}
+          <span className="hidden sm:block max-w-0 overflow-hidden whitespace-nowrap font-mono text-sm font-medium transition-[max-width,margin] duration-300 group-hover:max-w-[12rem] group-hover:ml-3 group-focus-visible:max-w-[12rem] group-focus-visible:ml-3">
             {contact.phone}
           </span>
         </motion.a>

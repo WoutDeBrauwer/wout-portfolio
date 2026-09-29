@@ -24,7 +24,7 @@ function ProjectSlide({ project, active }) {
           {project.devOnly && <RoleTag />}
         </div>
         <h3 className="font-mono text-xl font-medium leading-snug mb-3">{project.title}</h3>
-        <p className="text-sm text-white/70 line-clamp-3 mb-6">{plainText(project.intro)}</p>
+        <p className="text-lg text-white/70 line-clamp-3 mb-6">{plainText(project.intro)}</p>
         <div className="mt-auto flex items-center gap-2">
           <Pill to={`/portfolio/${project.slug}`} tabIndex={tab} className="!px-5 !py-2">Bekijk project</Pill>
           <ArrowButton to={`/portfolio/${project.slug}`} label={`Bekijk ${project.title}`} tabIndex={-1} className="!w-9 !h-9" />

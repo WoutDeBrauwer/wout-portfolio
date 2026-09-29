@@ -15,7 +15,7 @@ export function Container({ className = '', children }) {
 // Klein monospace label zoals "…/Over mij…"
 export function SectionLabel({ children, className = '' }) {
   return (
-    <p className={`font-mono text-xs text-white/70 ${className}`}>
+    <p className={`font-mono text-lg text-white/70 ${className}`}>
       <span className="text-iris">…/</span>{children}<span className="text-violet">…</span>
     </p>
   )

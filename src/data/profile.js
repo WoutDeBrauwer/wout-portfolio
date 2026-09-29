@@ -88,7 +88,7 @@ export const services = [
   },
   {
     title: 'Bugfixing & aanpassingen',
-    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Kleine aanpassingen, zoals een extra blok of een andere lay-out, pak ik snel op.',
+    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Bij lastige bugs gebruik ik Claude als sparringpartner. Ik leg het probleem voor, we lopen samen de code door en ik kies zelf welke oplossing erin komt. Kleine aanpassingen pak ik snel op.',
   },
 ]
 

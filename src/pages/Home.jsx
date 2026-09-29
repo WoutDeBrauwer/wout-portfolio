@@ -100,19 +100,19 @@ function Hero() {
 
       <Container>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-10">
-          <SectionLabel>Junior webdeveloper</SectionLabel>
+          <SectionLabel>Wout De Brauwer</SectionLabel>
           <NowBadge />
         </div>
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
             <span className="sr-only">Wout De Brauwer, junior webdeveloper</span>
-            <SplitReveal text="Wout" delay={0.1} />
+            <SplitReveal text="Junior" delay={0.1} />
           </h1>
           <HeroButtons className="hidden lg:flex" />
         </div>
 
-        {/* Zin en titel pas vanaf xl naast elkaar: "De Brauwer" is breed */}
+        {/* Zin en titel pas vanaf xl naast elkaar: "webdeveloper" is breed */}
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
@@ -122,7 +122,7 @@ function Hero() {
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="De Brauwer" speed={90} delay={700} cursor textClassName="text-gradient" />
+            <Typewriter text="webdeveloper" speed={90} delay={700} cursor textClassName="text-gradient" />
           </p>
         </div>
 

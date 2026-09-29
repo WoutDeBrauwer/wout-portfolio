@@ -46,6 +46,41 @@ export const projects = [
     ],
   },
   {
+    slug: 'fixsus',
+    title: 'Fixsus',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://fixsus.be/',
+    cover: `${IMG}/Fixsus/Portfolio-wout-fixsus-overzichtsfoto.webp`,
+    tags: ['WordPress', 'Gutenberg', 'ACF', 'WPML', 'SwiperJS'],
+    intro:
+      'Fixsus uit Evergem is gespecialiseerd in gebouwautomatisatie. Met hun eigen gebouwbeheersysteem TIBA3 en zelf ontwikkelde hardware sturen ze HVAC, verlichting, zonwering en energiebeheer centraal aan in kantoren, zorgcentra, publieke gebouwen en retail. De website legt dat technische verhaal helder uit en toont het aan de hand van echte realisaties.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'Gebouwd op **WordPress** met **Gutenberg**, aangevuld met **ACF-blocks** voor onderdelen zoals de downloadknoppen. De site is tweetalig, Nederlands en Engels, via **WPML**.',
+          'De hardware, zoals de Room Controller, het TP10-paneel en de PIR-sensor, heeft elk een eigen productpagina met beschrijving en technische info.',
+          'De realisaties verschijnen via **query-blocks** en zijn met filterknoppen te sorteren per sector: publiek vastgoed, gezondheidszorg, toerisme en recreatie, kantoorgebouwen en retail & warehouse.',
+          'Sliders werken met **SwiperJS** en de contactformulieren lopen via **WPForms**.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'De site is opgebouwd rond wat Fixsus levert: het gebouwbeheersysteem, de hardware en Total Care, hun langdurige service na oplevering.',
+          'Daarnaast zijn er pagina’s voor nieuws, downloads, een FAQ en vacatures. Het team van Fixsus beheert projecten, producten en nieuws zelf in WordPress.',
+        ],
+      },
+    ],
+    screenshots: [
+      `${IMG}/Fixsus/Portfolio-wout-fixsus-home.webp`,
+      `${IMG}/Fixsus/Portfolio-wout-fixsus-projecten.webp`,
+      `${IMG}/Fixsus/Portfolio-wout-fixsus-room-controller.webp`,
+      `${IMG}/Fixsus/Portfolio-wout-fixsus-total-care.webp`,
+    ],
+  },
+  {
     slug: 'erfgoedklassen-brussels',
     title: 'Erfgoedklassen.brussels',
     agency: 'conversal',

@@ -3,7 +3,7 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design en techniek samenbrengt, met AI als extra versnelling."
+const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design en techniek samenbrengt en volop met AI werkt."
   .split(" ")
   .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek", "AI"].includes(text) }));
 
@@ -101,10 +101,7 @@ export default function AboutMe() {
             <p>
               Ik ben mee met de wereld van AI en zet het elke dag bewust in. Niet
               om mezelf te vervangen, maar om <Highlight delay={0.1}>mijn kennis te
-              combineren met AI</Highlight>. Claude Code helpt me een design sneller
-              om te zetten in een plan en in code, en is mijn sparringpartner bij
-              lastige bugs. De keuzes maak ik zelf, en elke regel code review en
-              test ik voor hij live gaat. Zo lever ik sneller op, zonder in te
+              combineren met AI</Highlight>. Zo lever ik sneller op, zonder in te
               boeten op kwaliteit.
             </p>
             <p>

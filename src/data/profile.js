@@ -92,6 +92,26 @@ export const services = [
   },
 ]
 
+// "Werken met AI" op de home: hoe AI in mijn werk zit, naast WordPress
+export const aiWork = [
+  {
+    title: 'Claude Code',
+    text: 'Mijn vaste AI-tool bij het bouwen. Ik zet er een design mee om in een plan en in code, en gebruik het als sparringpartner bij lastige bugs.',
+  },
+  {
+    title: 'Figma MCP',
+    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit. Zo vertrek ik van het echte ontwerp, met de juiste maten, kleuren en teksten.',
+  },
+  {
+    title: 'Nieuwe tools uitproberen',
+    text: 'Ik volg op wat er nieuw is in AI en test het uit in eigen projecten. Deze portfolio bouwde ik in React, samen met Claude Code.',
+  },
+  {
+    title: 'Zelf nakijken',
+    text: 'AI maakt me sneller, niet minder kritisch. De keuzes maak ik zelf, en elke regel code review en test ik voor hij live gaat.',
+  },
+]
+
 // "Mijn verhaal" op de home. Bewust kort en feitelijk gehouden.
 // `icon` = naam van een lucide-icoon (zie Story.jsx)
 export const story = [

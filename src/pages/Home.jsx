@@ -7,6 +7,7 @@ import Skills from '../components/Skills'
 import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
+import AiWork from '../components/AiWork'
 import { Magnetic, VelocityMarquee } from '../components/effects'
 import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
 
@@ -115,7 +116,7 @@ function Hero() {
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              Met een <em>passie voor websites</em> bouw ik sites die{' '}
+              Met een <em>passie voor websites en AI</em> bouw ik sites die{' '}
               <em>er goed uitzien, vlot werken</em> en eenvoudig te beheren
               zijn. Ik leer elke dag bij.
             </p>
@@ -258,15 +259,16 @@ function Experience() {
 export default function Home() {
   usePageMeta()
 
-  // Volgorde als verhaal: wie ik ben → wat ik doe → hoe ik hier kwam → bewijs → details
+  // Volgorde als verhaal: wie ik ben → wat ik doe → hoe ik met AI werk → hoe ik hier kwam → bewijs → details
   return (
     <>
       <Hero />
       <AboutMe />
       <Workflow />
+      <AiWork />
       <Story />
       <div className="border-y border-line mb-32 md:mb-48">
-        <VelocityMarquee items={['WordPress', 'Gutenberg', 'Figma', 'Claude Code', 'PHP', 'SCSS']} />
+        <VelocityMarquee items={['WordPress', 'Gutenberg', 'AI', 'Claude Code', 'Figma', 'PHP', 'SCSS']} />
       </div>
       <FeaturedProjects />
       <Skills />

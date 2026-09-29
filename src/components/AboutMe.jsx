@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, webdeveloper en groot fan van AI."
+const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik leer graag bij, en AI helpt me daar elke dag bij."
   .split(" ")
-  .map((text) => ({ text, accent: ["webdeveloper", "AI."].includes(text) }));
+  .map((text) => ({ text, accent: ["uitdaging.", "AI"].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -101,7 +101,7 @@ export default function AboutMe() {
               lees je hieronder.
             </p>
             <p>
-              Ik heb ruim twee jaar ervaring en wil nog veel bijleren, ook buiten
+              Ik heb ruim twee jaar ervaring en kijk graag verder dan
               WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
               Vite, Tailwind en Framer Motion.
             </p>

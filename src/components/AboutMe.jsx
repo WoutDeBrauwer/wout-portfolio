@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een WordPress-developer die het samenspel tussen design en techniek het leukste vindt."
+const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design en techniek samenbrengt, met AI als extra versnelling."
   .split(" ")
-  .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek"].includes(text) }));
+  .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek", "AI"].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -94,16 +94,24 @@ export default function AboutMe() {
             </p>
             <p>
               Daarvoor werkte ik anderhalf jaar bij Atelier64 in Zottegem. Daar
-              bouwde ik sites met Betheme, Elementor en ACF, en leerde ik hoe je
-              samenwerkt met designers en met klanten die hun site zelf willen
-              beheren.
+              bouwde ik sites voor klanten zoals KOBA, OKRA en Arte-Verde, met
+              Betheme, Elementor en ACF. Ik leerde er samenwerken met designers
+              en met klanten die hun site zelf willen beheren.
+            </p>
+            <p>
+              Ik ben mee met de wereld van AI en zet het elke dag bewust in. Niet
+              om mezelf te vervangen, maar om <Highlight delay={0.1}>mijn kennis te
+              combineren met AI</Highlight>. Claude Code helpt me een design sneller
+              om te zetten in een plan en in code, en is mijn sparringpartner bij
+              lastige bugs. De keuzes maak ik zelf, en elke regel code review en
+              test ik voor hij live gaat. Zo lever ik sneller op, zonder in te
+              boeten op kwaliteit.
             </p>
             <p>
               Voor mij is een site pas af als de klant er zelf mee overweg kan.
               Ik werk graag samen met de designer tot het ontwerp klopt op elk
-              scherm, en code die ik met AI schrijf, review en test ik zelf. Mijn
-              doel: websites die <Highlight delay={0.2}>snel en functioneel</Highlight> zijn,
-              afgestemd op wie ze gebruikt.
+              scherm. Mijn doel: websites die <Highlight delay={0.2}>snel en
+              functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
             </p>
           </Reveal>
         </div>

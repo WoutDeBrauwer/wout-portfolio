@@ -117,7 +117,8 @@ function Hero() {
             <p className="text-white/70">
               Ik vertaal <em>Figma-ontwerpen</em> naar{' '}
               <em>snelle, gebruiksvriendelijke WordPress-websites</em> die klanten
-              zelf eenvoudig kunnen beheren.
+              zelf eenvoudig kunnen beheren. Met <em>AI als vaste tool</em> in
+              mijn workflow werk ik sneller en kom ik tot betere resultaten.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">

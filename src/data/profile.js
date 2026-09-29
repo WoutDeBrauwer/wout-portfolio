@@ -62,13 +62,13 @@ export const skillGroups = [
 ]
 
 // Eigenschappen onder de tools, zonder niveau (uit mijn cv)
-export const traits = ['Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
+export const traits = ['AI-driven', 'Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
 
 // "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP maak ik eerst een plan. De code review ik zelf.',
+    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP zet ik het design snel om in een plan en code. Zo heb je sneller resultaat, en ik review elke regel zelf.',
   },
   {
     title: 'Support voor klanten',
@@ -111,7 +111,7 @@ export const story = [
   {
     years: '2024 – 2025',
     kicker: 'Atelier64',
-    title: 'Mijn eerste werkervaring',
+    title: 'Mijn eerste ervaring',
     text: 'Junior webdeveloper bij Atelier64 in Zottegem. Ik bouwde er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF.',
     icon: 'rocket',
   },
@@ -119,7 +119,7 @@ export const story = [
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks. Het Figma-design zet ik eerst om in een plan met Claude Code en Figma MCP. De code review ik zelf.',
+    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks en maakte AI een vast deel van mijn workflow: met Claude Code en Figma MCP gaat een Figma-design sneller naar een plan en werkende blocks. De keuzes en de review doe ik zelf.',
     icon: 'sparkles',
   },
 ]

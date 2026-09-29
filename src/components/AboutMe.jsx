@@ -85,9 +85,9 @@ export default function AboutMe() {
             <p className="!mt-10">
               Sinds januari 2026 werk ik als WordPress-expert bij Conversal in
               Affligem. Ik bouw er WordPress-sites met <Highlight>custom
-              Gutenberg-blocks</Highlight>: van Figma-design, via een plan met Claude
-              Code en Figma MCP, naar blocks die redacteurs zelf kunnen vullen.
-              Die blocks bouw ik native, met PHP en SCSS. Daarnaast zorg ik
+              Gutenberg-blocks</Highlight>: van Figma-design naar blocks die
+              redacteurs zelf kunnen vullen. Die blocks bouw ik native, met PHP
+              en SCSS. Daarnaast zorg ik
               voor het technische rond een site: <em>DNS-records</em>{" "}
               instellen, domeinen overzetten naar Cloudflare en werken met
               Google Workspace.
@@ -112,6 +112,11 @@ export default function AboutMe() {
               Ik werk graag samen met de designer tot het ontwerp klopt op elk
               scherm. Mijn doel: websites die <Highlight delay={0.2}>snel en
               functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
+            </p>
+            <p>
+              Met ruim twee jaar ervaring wil ik nog veel bijleren, ook buiten
+              WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
+              Vite, Tailwind en Framer Motion.
             </p>
           </Reveal>
         </div>

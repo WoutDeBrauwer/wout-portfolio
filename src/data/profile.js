@@ -25,10 +25,10 @@ export const skillGroups = [
     title: 'WordPress',
     featured: true,
     items: [
-      { name: 'Betheme', level: 5 },
-      { name: 'Elementor', level: 5 },
       { name: 'Gutenberg-blocks', level: 4 },
       { name: 'theme.json', level: 4 },
+      { name: 'Elementor', level: 4 },
+      { name: 'Betheme', level: 4 },
     ],
   },
   {
@@ -45,8 +45,8 @@ export const skillGroups = [
     title: "Programma's",
     items: [
       { name: 'Visual Studio Code', level: 4 },
-      { name: 'Adobe XD', level: 5 },
       { name: 'Figma', level: 4 },
+      { name: 'Adobe XD', level: 3 },
       { name: 'Photoshop', level: 2 },
     ],
   },
@@ -64,11 +64,19 @@ export const skillGroups = [
 // Eigenschappen onder de tools, zonder niveau (uit mijn cv)
 export const traits = ['AI-driven', 'Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
 
+// "Waar ik nu in groei" onder de tools: wat ik op dit moment bijleer
+export const growing = [
+  { name: 'PHP', text: 'Meer logica in mijn blocks en eigen plugins.' },
+  { name: 'API-koppelingen', text: 'Data van externe diensten in WordPress tonen.' },
+  { name: 'Git', text: 'Werken met branches en reviews in een team.' },
+  { name: 'React', text: 'Deze portfolio bouwde ik zelf in React.' },
+]
+
 // "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP zet ik het design snel om in een plan en code. Zo heb je sneller resultaat, en ik review elke regel zelf.',
+    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP gaat dat sneller.',
   },
   {
     title: 'Support voor klanten',
@@ -119,7 +127,7 @@ export const story = [
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks en maakte AI een vast deel van mijn workflow: met Claude Code en Figma MCP gaat een Figma-design sneller naar een plan en werkende blocks. De keuzes en de review doe ik zelf.',
+    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks, met AI als vast deel van mijn workflow.',
     icon: 'sparkles',
   },
 ]

@@ -141,7 +141,7 @@ export const story = [
     years: 'Wat nu?',
     kicker: 'Volgende stap',
     title: 'Mijn volgende uitdaging',
-    text: 'Ik ben op zoek naar een nieuwe uitdaging, bij een team waar ik verder kan groeien als developer. Ben je geïnteresseerd, of wil je eerst eens kennismaken? Neem gerust contact met me op.',
+    text: 'Ik ben op zoek naar een nieuwe uitdaging, bij een team waar ik verder kan groeien als developer. Heb je een plek voor mij in je team? Stuur me een berichtje of bel me, dan vertel ik je graag meer.',
     icon: 'compass',
     cta: { label: 'Neem contact op', to: '/contact' },
   },

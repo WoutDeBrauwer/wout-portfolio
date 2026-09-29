@@ -24,13 +24,11 @@ export default function Contact() {
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>
-              Heb je een vraag over een project, wil je eens{' '}
-              <em>praten over Gutenberg</em> of AI, of gewoon kennismaken?
+              Ik sta open voor een <em>nieuwe uitdaging</em>. Heb je een
+              vacature, een vraag over een project of wil je eens praten over
+              WordPress of AI?
             </p>
-            <p>
-              Ik sta open voor een nieuwe uitdaging, dus ook vacatures zijn
-              welkom. Stuur me gerust een berichtje.
-            </p>
+            <p>Mail of bel me gerust, ik antwoord zo snel mogelijk.</p>
           </div>
         </div>
       </Container>

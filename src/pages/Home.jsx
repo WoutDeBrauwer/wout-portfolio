@@ -118,8 +118,9 @@ function Hero() {
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              Ik bouw <em>websites</em>, vooral in WordPress. Daarbij gebruik
-              ik elke dag <em>AI</em>, zoals Claude Code.
+              Gedreven developer, op zoek naar een <em>nieuwe uitdaging</em>.
+              Ik bouw vooral WordPress-sites. Met <em>AI</em>, zoals Claude
+              Code, werk ik elke dag sneller, maar de keuzes maak ik zelf.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">

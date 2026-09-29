@@ -27,7 +27,10 @@ export default function Contact() {
               Heb je een vraag over een project, wil je eens{' '}
               <em>praten over Gutenberg</em> of AI, of gewoon kennismaken?
             </p>
-            <p>Stuur me gerust een berichtje.</p>
+            <p>
+              Ik sta open voor een nieuwe uitdaging, dus ook vacatures zijn
+              welkom. Stuur me gerust een berichtje.
+            </p>
           </div>
         </div>
       </Container>

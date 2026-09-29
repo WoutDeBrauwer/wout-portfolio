@@ -61,8 +61,14 @@ export const skillGroups = [
   },
 ]
 
-// Eigenschappen onder de tools, zonder niveau (uit mijn cv)
-export const traits = ['AI-driven', 'Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
+// Eigenschappen onder de tools, zonder niveau: concreet i.p.v. cv-woorden
+export const traits = [
+  'Probeert nieuwe AI-tools als eerste uit',
+  'Zoekt een bug uit tot hij weg is',
+  'Kijkt zijn eigen werk altijd na',
+  'Vraagt liever één keer te veel',
+  'Leert graag van feedback',
+]
 
 // "Waar ik nu in groei" onder de tools: wat ik op dit moment bijleer
 export const growing = [

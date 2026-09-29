@@ -96,7 +96,7 @@ export default function Skills() {
             </h2>
             <p className="text-white/70 max-w-xl mb-8">
               De talen en programma's die ik gebruik, en hoe goed ik ze ken.
-              Klik op een niveau om te filteren.
+              Eerlijk ingeschat. Klik op een niveau om te filteren.
             </p>
 
             {/* Legende die ook filtert */}

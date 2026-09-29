@@ -22,9 +22,9 @@ export default function Portfolio() {
             Een <em>selectie</em> van mijn werk bij <em>Conversal</em> en
             daarvoor bij <em>Atelier64</em>. Bij al deze projecten deed ik de{' '}
             <em>development</em>. Het design kwam van de designers van het
-            bureau. Daarnaast werkte ik aan veel andere sites, zoals kleine
-            aanpassingen, delen van grotere projecten en sites die nog niet
-            online staan.
+            bureau. Daarnaast deed ik nog veel werk dat hier niet staat, zoals
+            kleine aanpassingen, delen van grotere projecten en sites die nog
+            niet online zijn.
           </p>
         </div>
 

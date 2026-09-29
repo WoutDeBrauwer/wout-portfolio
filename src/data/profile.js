@@ -77,7 +77,7 @@ export const growing = [
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Via Figma MCP leest Claude Code het design uit. Ik maak er eerst een plan mee, kijk het na en laat daarna de blocks bouwen. Zo gaat een nieuwe site een stuk sneller.',
+    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Claude Code leest het design uit via Figma MCP en stelt een plan op. Dat plan kijk ik eerst zelf na. Daarna bouwen we de blocks, en ik test en werk ze af.',
   },
   {
     title: 'Support voor klanten',
@@ -114,21 +114,21 @@ export const story = [
     years: '2022 – 2024',
     kicker: 'Howest',
     title: 'Webdevelopment',
-    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar bouwde ik mijn eerste websites en ontdekte ik hoe graag ik dat doe. Een website die goed werkt en goed in elkaar zit, daar haal ik voldoening uit.',
+    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar bouwde ik mijn eerste websites, en ik wist vrij snel dat ik dit wou blijven doen.',
     icon: 'code',
   },
   {
     years: '2024 – 2025',
     kicker: 'Atelier64',
-    title: 'Mijn eerste ervaring',
-    text: 'Junior webdeveloper bij Atelier64 in Zottegem. Ik bouwde er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF.',
+    title: 'Mijn eerste werkervaring',
+    text: 'Na Howest kon ik meteen aan de slag als junior webdeveloper bij Atelier64 in Zottegem. Anderhalf jaar lang werkte ik er aan sites voor echte klanten, met echte deadlines.',
     icon: 'rocket',
   },
   {
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er WordPress-sites met native Gutenberg-blocks.',
+    text: 'In januari 2026 stapte ik over naar Conversal in Affligem, een bureau dat net als ik veel met AI werkt. Ik bouw er sites met native Gutenberg-blocks.',
     icon: 'sparkles',
   },
 ]

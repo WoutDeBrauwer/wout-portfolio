@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout. Ik bouw WordPress-sites en gebruik AI om sneller te werken."
+const introWords = "Hallo! Ik ben Wout. Ik maak websites die goed werken en ook achter de schermen goed in elkaar zitten."
   .split(" ")
-  .map((text) => ({ text, accent: ["WordPress-sites", "AI"].includes(text) }));
+  .map((text) => ({ text, accent: ["websites", "schermen"].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -83,23 +83,22 @@ export default function AboutMe() {
               className="text-2xl md:text-4xl text-white leading-snug tracking-tight"
             />
             <p className="!mt-10">
-              Sinds januari 2026 werk ik als WordPress-expert bij Conversal in
-              Affligem. Ik zet er Figma-designs om in WordPress-sites met{" "}
-              <Highlight>custom Gutenberg-blocks</Highlight>. Die blocks bouw ik
-              native, met PHP en SCSS, en redacteurs vullen ze daarna zelf. Ik
-              stel ook <em>DNS-records</em> in, zet domeinen over naar Cloudflare
-              en help met Google Workspace.
+              Als WordPress-expert bij Conversal bouw ik vooral{" "}
+              <Highlight>custom Gutenberg-blocks</Highlight>, native met PHP en
+              SCSS. Het leukste vind ik als een redacteur daarna zelf een pagina
+              vult en alles gewoon klopt. Daarnaast regel ik ook{" "}
+              <em>DNS-records</em>, domeinen en Google Workspace voor klanten.
             </p>
             <p>
-              Daarvoor werkte ik anderhalf jaar bij Atelier64 in Zottegem. Daar
-              bouwde ik sites voor klanten zoals KOBA, OKRA en Arte-Verde, met
-              Betheme, Elementor en ACF. Ik leerde er samenwerken met designers
-              en met klanten die hun site zelf beheren.
+              Bij Atelier64 bouwde ik sites voor onder meer KOBA, OKRA en
+              Arte-Verde, met Betheme, Elementor en ACF. Daar leerde ik
+              samenwerken met designers en met klanten die hun site zelf
+              beheren.
             </p>
             <p>
-              Ik werk elke dag met <Highlight delay={0.1}>AI</Highlight>, naast
-              mijn eigen kennis. Verderop lees je hoe ik dat
-              precies doe.
+              <Highlight delay={0.1}>AI</Highlight> gebruik ik elke dag, als
+              extra hulp naast wat ik zelf ken. Hoe dat in de praktijk gaat,
+              lees je hieronder.
             </p>
             <p>
               Ik heb ruim twee jaar ervaring en wil nog veel bijleren, ook buiten

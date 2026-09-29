@@ -21,8 +21,8 @@ export default function Footer() {
                 Zin om te <span className="text-gradient">praten?</span>
               </p>
               <p className="text-white/70 mb-10 max-w-lg">
-                Een vraag over een project of over <em>WordPress, Gutenberg of
-                AI in je workflow</em>? Ik hoor graag van je.
+                Een vraag over een project, of zin om eens te babbelen over{" "}
+                <em>WordPress of AI</em>? Ik hoor graag van je.
               </p>
               <div className="flex flex-wrap items-center gap-3">
                 <Pill href={`mailto:${contact.email}`}>{contact.email}</Pill>

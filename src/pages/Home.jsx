@@ -119,8 +119,8 @@ function Hero() {
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
               Gedreven developer, op zoek naar een <em>nieuwe uitdaging</em>.
-              Ik bouw vooral WordPress-sites. Met <em>AI</em>, zoals Claude
-              Code, werk ik elke dag sneller, maar de keuzes maak ik zelf.
+              Ik omarm <em>AI</em> en gebruik het elke dag om sneller en beter
+              te werken. De keuzes maak ik zelf.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">

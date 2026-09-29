@@ -141,7 +141,7 @@ export const story = [
     years: '2022 – 2024',
     kicker: 'Howest',
     title: 'Webdevelopment',
-    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar begon ik met het bouwen van websites.',
+    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar bouwde ik mijn eerste websites en ontdekte ik hoe graag ik dat doe. Een website die goed werkt en goed in elkaar zit, daar haal ik voldoening uit.',
     icon: 'code',
   },
   {

@@ -17,9 +17,6 @@ export default function AiWork() {
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Werken met AI</SectionLabel>
           <Reveal className="md:col-span-7">
-            <h2 className="font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,6vw,5rem)] mb-6">
-              Meer dan <span className="text-gradient">WordPress</span>
-            </h2>
             <p className="text-white/70 max-w-xl">
               Naast WordPress ben ik elke dag met AI bezig. Ik gebruik het samen
               met mijn eigen kennis van code en WordPress. Zo werk ik sneller en

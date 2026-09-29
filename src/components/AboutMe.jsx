@@ -105,6 +105,10 @@ export default function AboutMe() {
               WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
               Vite, Tailwind en Framer Motion.
             </p>
+            <p>
+              Buiten het werk game ik graag, ga ik naar de fitness en trek ik
+              er met mijn <em>koersfiets</em> op uit.
+            </p>
           </Reveal>
         </div>
       </Container>

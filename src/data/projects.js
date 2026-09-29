@@ -54,22 +54,22 @@ export const projects = [
     cover: `${IMG}/Fixsus/Portfolio-wout-fixsus-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'ACF', 'WPML', 'SwiperJS'],
     intro:
-      'Fixsus uit Evergem is gespecialiseerd in gebouwautomatisatie. Met hun eigen gebouwbeheersysteem TIBA3 en zelf ontwikkelde hardware sturen ze HVAC, verlichting, zonwering en energiebeheer centraal aan in kantoren, zorgcentra, publieke gebouwen en retail. De website legt dat technische verhaal helder uit en toont het aan de hand van echte realisaties.',
+      'Fixsus uit Evergem doet gebouwautomatisatie. Met hun eigen gebouwbeheersysteem TIBA3 en zelf ontwikkelde hardware sturen ze verwarming, ventilatie, verlichting en zonwering centraal aan, in kantoren, zorgcentra en publieke gebouwen.',
     sections: [
       {
-        title: 'Technieken & features',
+        title: 'Wat ik bouwde',
         paragraphs: [
-          'Gebouwd op **WordPress** met **Gutenberg**, aangevuld met **ACF-blocks** voor onderdelen zoals de downloadknoppen. De site is tweetalig, Nederlands en Engels, via **WPML**.',
-          'De hardware, zoals de Room Controller, het TP10-paneel en de PIR-sensor, heeft elk een eigen productpagina met beschrijving en technische info.',
-          'De realisaties verschijnen via **query-blocks** en zijn met filterknoppen te sorteren per sector: publiek vastgoed, gezondheidszorg, toerisme en recreatie, kantoorgebouwen en retail & warehouse.',
-          'Sliders werken met **SwiperJS** en de contactformulieren lopen via **WPForms**.',
+          'Ik bouwde de site in **WordPress** en **Gutenberg**, met **ACF-blocks** voor onder meer de downloads. Via **WPML** is er een Nederlandse en een Engelse versie.',
+          'Elk toestel, zoals de Room Controller of de PIR-sensor, heeft een eigen productpagina.',
+          'De realisaties verschijnen via query-blocks. Bezoekers filteren ze per sector, zoals gezondheidszorg of kantoorgebouwen.',
+          'De sliders werken met **SwiperJS** en de formulieren met **WPForms**.',
         ],
       },
       {
-        title: 'Over de website',
+        title: 'Over de site',
         paragraphs: [
-          'De site is opgebouwd rond wat Fixsus levert: het gebouwbeheersysteem, de hardware en Total Care, hun langdurige service na oplevering.',
-          'Daarnaast zijn er pagina’s voor nieuws, downloads, een FAQ en vacatures. Het team van Fixsus beheert projecten, producten en nieuws zelf in WordPress.',
+          'De site toont het gebouwbeheersysteem, de hardware en Total Care, de service van Fixsus na de oplevering.',
+          'Er zijn ook pagina’s voor nieuws, downloads, een FAQ en vacatures. Het team van Fixsus beheert projecten, producten en nieuws zelf.',
         ],
       },
     ],

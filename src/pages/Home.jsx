@@ -105,23 +105,23 @@ function Hero() {
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
-            <span className="sr-only">WordPress-developer</span>
-            <SplitReveal text="WordPress" delay={0.1} />
+            <span className="sr-only">Junior webdeveloper</span>
+            <SplitReveal text="Junior" delay={0.1} />
           </h1>
           <HeroButtons className="hidden lg:flex" />
         </div>
 
-        {/* Zin en titel pas vanaf xl naast elkaar: "developer" is breed */}
+        {/* Zin en titel pas vanaf xl naast elkaar: "webdeveloper" is breed */}
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              <em>Junior webdeveloper</em> met een passie voor WordPress. Ik bouw
-              websites die <em>er goed uitzien, vlot werken</em> en eenvoudig te
-              beheren zijn, en ik leer elke dag bij.
+              Met een <em>passie voor WordPress</em> bouw ik websites die{' '}
+              <em>er goed uitzien, vlot werken</em> en eenvoudig te beheren
+              zijn. Ik leer elke dag bij.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="developer" speed={90} delay={700} cursor textClassName="text-gradient" />
+            <Typewriter text="webdeveloper" speed={90} delay={700} cursor textClassName="text-gradient" />
           </p>
         </div>
 

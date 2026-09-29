@@ -21,9 +21,8 @@ export default function AiWork() {
               Meer dan <span className="text-gradient">WordPress</span>
             </h2>
             <p className="text-white/70 max-w-xl">
-              WordPress is mijn vak, AI is waar ik elke dag mee bezig ben. Ik volg
-              nieuwe tools op, probeer ze uit en gebruik wat werkt in mijn
-              workflow. Zo werk ik vandaag met AI:
+              Naast WordPress ben ik elke dag met AI bezig. Ik probeer nieuwe
+              tools uit en hou wat werkt. Dit gebruik ik nu:
             </p>
           </Reveal>
         </div>

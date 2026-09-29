@@ -24,12 +24,10 @@ export default function Contact() {
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>
-              Een vraag over een project, zin om <em>ervaringen uit te
-              wisselen</em> over Gutenberg of AI in je workflow, of gewoon
-              kennismaken? Ik los graag technische uitdagingen op en leer
-              elke dag bij.
+              Heb je een vraag over een project, wil je eens{' '}
+              <em>praten over Gutenberg</em> of AI, of gewoon kennismaken?
             </p>
-            <p>Stuur me gerust een berichtje, ik antwoord snel.</p>
+            <p>Stuur me gerust een berichtje.</p>
           </div>
         </div>
       </Container>

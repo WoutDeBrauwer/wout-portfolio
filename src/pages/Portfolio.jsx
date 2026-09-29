@@ -4,7 +4,7 @@ import { projects } from '../data/projects'
 import { Aurora, Circle, Container, Reveal, SectionLabel, usePageMeta } from '../components/ui'
 
 export default function Portfolio() {
-  usePageMeta('Projecten', 'WordPress-projecten van Wout De Brauwer, gebouwd bij Conversal en Atelier64: van custom Gutenberg-blocks tot API-koppelingen.')
+  usePageMeta('Projecten', 'WordPress-projecten van Wout De Brauwer bij Conversal en Atelier64, met custom Gutenberg-blocks, filters en API-koppelingen.')
 
   return (
     <div className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24">
@@ -19,12 +19,12 @@ export default function Portfolio() {
             Projecten<span className="text-violet">.</span>
           </h1>
           <p className="md:col-span-6 text-white/70 max-w-xl">
-            Een <em>selectie</em> van mijn werk: nu bij <em>Conversal</em>{' '}
-            met Gutenberg, daarvoor bij <em>Atelier64</em>. Bij al deze
-            projecten deed ik de <em>development</em>; het design kwam van de
-            designers van het bureau. Daarnaast werkte ik aan heel wat
-            andere sites: aanpassingen, bijdragen aan grotere projecten en
-            sites die (nog) niet publiek online staan.
+            Een <em>selectie</em> van mijn werk bij <em>Conversal</em> en
+            daarvoor bij <em>Atelier64</em>. Bij al deze projecten deed ik de{' '}
+            <em>development</em>. Het design kwam van de designers van het
+            bureau. Daarnaast werkte ik aan veel andere sites, zoals kleine
+            aanpassingen, delen van grotere projecten en sites die nog niet
+            online staan.
           </p>
         </div>
 

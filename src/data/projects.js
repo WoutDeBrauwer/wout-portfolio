@@ -20,14 +20,14 @@ export const projects = [
     cover: `${IMG}/MvEvents/Portfolio-wout-mvevents-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'WooCommerce', 'Rentman', 'SwiperJS'],
     intro:
-      'M&V Events verhuurt tenten en eventmateriaal en organiseert zelf events, sportdagen, teambuildings en kampen. Het is de grootste van mijn Conversal-sites: een uitgebreid verhuuraanbod, eigen events en een offertemodule, allemaal in één WordPress-site met Gutenberg.',
+      'M&V Events verhuurt tenten en eventmateriaal en organiseert zelf events, sportdagen, teambuildings en kampen. Het is de grootste site die ik bij Conversal bouwde, met een uitgebreid verhuuraanbod, eigen events en een offertemodule.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
           'Het verhuuraanbod draait op **WooCommerce**, gekoppeld aan **Rentman**, de planningssoftware van M&V. Bezoekers zoeken en filteren in categorieën zoals tenten, meubilair, tafel- en keukenmateriaal en stellen zo hun offerteaanvraag samen.',
           'Met custom **Gutenberg-blocks** kwamen er onder meer een realisatieslider, een reviewslider en een ticker met nieuws en events bovenaan de pagina. De sliders werken met **SwiperJS**.',
-          'Een menu met meerdere niveaus en een zoekfunctie houden het grote aanbod overzichtelijk.',
+          'Door het grote aanbod kreeg de site een menu met meerdere niveaus en een zoekfunctie.',
         ],
       },
       {
@@ -67,7 +67,7 @@ export const projects = [
       {
         title: 'Over de website',
         paragraphs: [
-          'De doelgroep is breed: leerkrachten uit het basis- en secundair onderwijs, toekomstige leerkrachten en de leerlingen zelf, die op “Leerlingen vertellen” hun ervaringen delen.',
+          'De site is er voor leerkrachten uit het basis- en secundair onderwijs, toekomstige leerkrachten en de leerlingen zelf. Leerlingen delen hun ervaringen op “Leerlingen vertellen”.',
           'Het team beheert activiteiten, lesmaterialen en verhalen zelf, in beide talen.',
         ],
       },
@@ -88,7 +88,7 @@ export const projects = [
     cover: `${IMG}/Amitude/Portfolio-wout-amitude-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS'],
     intro:
-      'Amitude is een cateraar uit Torhout die kookt voor bedrijfsfeesten, huwelijken en events op locatie. De website heeft één duidelijk doel: bezoekers overtuigen om een offerte aan te vragen.',
+      'Amitude is een cateraar uit Torhout die kookt voor bedrijfsfeesten, huwelijken en events op locatie. De website moet vooral offerteaanvragen opleveren.',
     sections: [
       {
         title: 'Technieken & features',
@@ -102,7 +102,7 @@ export const projects = [
         title: 'Over de website',
         paragraphs: [
           'Het aanbod is opgesplitst in bedrijfsevents, privéfeesten en evenementen op locatie, elk met een eigen landingspagina.',
-          'Op elke pagina staat een duidelijke oproep om een offerte aan te vragen, samen met cijfers en reviews die vertrouwen wekken.',
+          'Op elke pagina staat een knop om een offerte aan te vragen, met cijfers en reviews erbij.',
         ],
       },
     ],
@@ -122,7 +122,7 @@ export const projects = [
     cover: `${IMG}/Algarvista/Portfolio-wout-algarvista-overzichtsfoto.webp`,
     tags: ['WordPress', 'Gutenberg', 'Custom blocks', 'SwiperJS', 'WPForms'],
     intro:
-      'Algarvista is de reisgids van Elisa, half Portugees en half Belg, opgegroeid in Carvoeiro. De site bundelt haar tips over stranden, stadjes, restaurants en accommodaties in de Algarve, aangevuld met een blog met uitgebreide gidsen.',
+      'Algarvista is de reisgids van Elisa, half Portugees en half Belg, opgegroeid in Carvoeiro. Op de site deelt ze tips over stranden, stadjes, restaurants en accommodaties in de Algarve, en schrijft ze uitgebreide gidsen op de blog.',
     sections: [
       {
         title: 'Technieken & features',
@@ -134,8 +134,8 @@ export const projects = [
       {
         title: 'Over de website',
         paragraphs: [
-          'Bezoekers vinden snel wat ze zoeken via de indeling in plannen, bezoeken en eten & drinken, met een aparte pagina per thema zoals stranden, stadjes of restaurants.',
-          'Elisa schrijft nieuwe gidsen en blogartikels zelf in de blokeditor, met dezelfde blocks, zonder dat de lay-out breekt.',
+          'De site is ingedeeld in plannen, bezoeken en eten & drinken, met een aparte pagina per thema zoals stranden, stadjes of restaurants.',
+          'Elisa schrijft nieuwe gidsen en blogartikels zelf in de blokeditor. Ze gebruikt dezelfde blocks, dus de lay-out blijft kloppen.',
         ],
       },
     ],
@@ -155,23 +155,22 @@ export const projects = [
     cover: `${IMG}/Koba/Portfolio-wout-koba-overzichtsfoto.jpg`,
     tags: ['WordPress', 'PHP', 'API-integratie', 'Search & Filter Pro', 'WP Go Maps'],
     intro:
-      'KOBA Metropool is het onderwijsnetwerk van zestien scholen in de regio Antwerpen. De organisatie bundelt de krachten van kleuter-, lagere, secundaire en postsecundaire instellingen. De website vormt de digitale spil van dit netwerk en werd gebouwd met WordPress en maatwerk in PHP, volledig afgestemd op de missie van KOBA: transparante communicatie, gebruiksvriendelijkheid en verbondenheid tussen scholen, ouders en leerlingen.',
+      'KOBA Metropool is een onderwijsnetwerk van zestien scholen in de regio Antwerpen, van kleuter- tot postsecundair onderwijs. De website is gebouwd in WordPress, met maatwerk in PHP voor de schoolkaart, de studiekiezer en de vacatures.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De website draait op WordPress met PHP-logica en plugins voor de verschillende functionaliteiten: een API-koppeling voor vacatures vanuit de VDAB, Search & Filter Pro voor de studiekiezer en WP Go Maps voor de kaarten met de locaties van de scholen.',
-          'Een van de belangrijkste onderdelen is de interactieve schoolkaart, gebouwd met **WP Go Maps**. Alle aangesloten scholen worden overzichtelijk weergegeven; elke school is aanklikbaar en toont de contactgegevens.',
-          'Voor de studiekiezer is **Search & Filter Pro** gekoppeld aan een custom post type. Leerlingen en ouders selecteren opleidingen op basis van interessegebied, onderwijsniveau of specifieke kenmerken.',
-          'De vacaturemodule gebruikt een op maat gemaakte **PHP-API** die de website koppelt aan de VDAB-databank. Bezoekers filteren op locatie of functietype en klikken door naar de VDAB om te solliciteren. Het overzicht blijft zo altijd actueel zonder handmatig onderhoud.',
+          'De site draait op WordPress, met eigen PHP-code en een paar plugins. WP Go Maps zorgt voor de schoolkaart, Search & Filter Pro voor de studiekiezer en een API-koppeling met de VDAB voor de vacatures.',
+          'Op de schoolkaart, gemaakt met **WP Go Maps**, staan alle scholen van het netwerk. Klik je op een school, dan zie je de contactgegevens.',
+          'De studiekiezer gebruikt **Search & Filter Pro** op een custom post type. Leerlingen en ouders filteren opleidingen op interessegebied, onderwijsniveau en andere kenmerken.',
+          'De vacatures komen binnen via een **PHP-koppeling** met de databank van de VDAB. Bezoekers filteren op locatie of functie en solliciteren via de VDAB. Nieuwe vacatures verschijnen vanzelf, niemand moet ze met de hand toevoegen.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'Het platform is ontworpen als toekomstbestendige digitale hub voor het volledige KOBA-netwerk. Ouders, leerlingen en medewerkers vinden er informatie, nieuws en interactieve tools.',
-          'Alle modules zijn geïntegreerd in één coherent systeem dat schaalbaar is en eenvoudig uit te breiden met nieuwe functionaliteiten of scholen.',
-          'Redacteurs beheren zelfstandig de content via WordPress, zodat het platform actueel blijft.',
+          'De site is er voor ouders, leerlingen en medewerkers van alle KOBA-scholen. Ze vinden er informatie, nieuws, de schoolkaart en de studiekiezer.',
+          'Redacteurs beheren de inhoud zelf in WordPress.',
         ],
       },
     ],
@@ -190,22 +189,22 @@ export const projects = [
     cover: `${IMG}/Okra/Portfolio-wout-Okra-reizen-overzichtsfoto.jpg`,
     tags: ['WordPress', 'ACF', 'PHP', 'Custom post types'],
     intro:
-      'Voor OKRA Reizen ontwikkelde ik een gebruiksvriendelijke, overzichtelijke website in WordPress, gericht op senioren die graag reizen. De site bevat een uitgebreide reiszoeker, een digitale brochure en informatieve pagina’s. Dankzij Advanced Custom Fields (ACF) vullen beheerders eenvoudig alle reisgegevens in, zoals vertrekdata, prijs per persoon, begeleiders en het niveau van de reis.',
+      'OKRA Reizen organiseert reizen voor senioren. Ik bouwde hun website in WordPress, met een reiszoeker, een digitale brochure en infopagina’s. Met Advanced Custom Fields (ACF) vullen de beheerders zelf alle reisgegevens in, zoals vertrekdata, prijs per persoon, begeleiders en het niveau van de reis.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
           'De website is gebouwd op **WordPress** met het thema **Betheme**. De reizen zitten in een **custom post type** met eigen categorieën. Met **ACF-velden** vult de klant zelf de reisdetails in.',
-          'De filter is volledig op maat gebouwd in **PHP**, met bijbehorende shortcodes. Bezoekers filteren zo op soort reis, vervoer en periode.',
-          'Daarnaast is een **digitale brochure** geïntegreerd die online te bekijken en te downloaden is. SEO, caching en beveiliging zijn geoptimaliseerd voor snelheid en stabiliteit.',
+          'De reisfilter is maatwerk in **PHP**, met eigen shortcodes. Bezoekers filteren op soort reis, vervoer en periode.',
+          'De **digitale brochure** kun je online bekijken of downloaden. Voor SEO, caching en beveiliging zijn plugins ingesteld.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'Dankzij de structuur met custom post types en ACF is het beheer van reizen overzichtelijk en schaalbaar. De klant voegt zelf nieuwe reizen toe of past ze aan zonder technische kennis.',
-          'Elk reisdetail, zoals begeleider, periode, foto’s en niveau, wordt dynamisch weergegeven op basis van de ingevulde velden. De moeilijkheidsgraad verschijnt bijvoorbeeld automatisch als bolletjes.',
-          'De site is volledig **responsive**. Dankzij de warme uitstraling en duidelijke structuur spreekt ze de doelgroep van actieve senioren aan.',
+          'Omdat elke reis een custom post type met ACF-velden is, voegt de klant zelf reizen toe of past ze aan, zonder technische kennis.',
+          'De detailpagina toont wat in de velden staat, zoals begeleider, periode, foto’s en niveau. Het niveau verschijnt automatisch als bolletjes.',
+          'De site is **responsive** en werkt op gsm, tablet en desktop.',
         ],
       },
     ],
@@ -224,22 +223,21 @@ export const projects = [
     cover: `${IMG}/ArteVerde/Arte-verde-tuin.jpg`,
     tags: ['WordPress', 'PHP', 'GSAP', 'ACF'],
     intro:
-      'Arte-Verde ontwerpt leeftuinen en biozwembaden met een focus op natuurlijke elegantie en maatwerk. De website is gebouwd op WordPress met custom animaties in GSAP en CSS. Het design is afgestemd op de huisstijl van de klant en bevat interactieve secties.',
+      'Arte-Verde ontwerpt leeftuinen en biozwembaden op maat. De website is gebouwd op WordPress, met animaties in GSAP en CSS.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De website is gebouwd op **WordPress** met het thema Betheme. Voor de animaties is **GSAP** geïntegreerd, waarmee dynamische overgangen en interactieve secties zijn gerealiseerd, zoals de animatie op de projectitems.',
-          '**PHP** wordt ingezet voor custom code en shortcodes. Er zijn custom post types en taxonomieën ontwikkeld om projecten en biozwembaden overzichtelijk te presenteren en eenvoudig te beheren.',
-          'Plugins voor SEO, caching en beveiliging zijn zorgvuldig geselecteerd en geconfigureerd voor optimale prestaties.',
+          'De site is gebouwd op **WordPress** met het thema Betheme. De animaties en overgangen zijn gemaakt met **GSAP**, bijvoorbeeld op de projectitems.',
+          'Met **PHP** kwamen er custom code en shortcodes bij. Projecten en biozwembaden zijn custom post types met eigen taxonomieën, zodat de klant ze makkelijk beheert.',
+          'Voor SEO, caching en beveiliging zijn plugins ingesteld.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'Arte-Verde presenteert projecten en biozwembaden in een visueel aantrekkelijke lay-out. Het portfolio is dynamisch opgebouwd en eenvoudig uit te breiden dankzij custom post types.',
-          'De **GSAP**-animaties zorgen voor een moderne uitstraling. Content is eenvoudig te beheren via het WordPress-dashboard.',
-          'Plugins en eigen scripts beschermen de site tegen spam en ongewenste bots.',
+          'Het overzicht van projecten en biozwembaden vult zich vanzelf vanuit de custom post types. De klant voegt nieuwe projecten toe via het WordPress-dashboard.',
+          'Plugins en eigen scripts houden spam en bots tegen.',
         ],
       },
     ],
@@ -258,21 +256,20 @@ export const projects = [
     cover: `${IMG}/Biaform/Portfolio-wout-Biaform-overzichtfoto.jpg`,
     tags: ['WordPress', 'PHP', 'WPML', 'Search & Filter Pro'],
     intro:
-      'Biaform Provital is een merk van eiwitrijke broden en wraps. De website draait op WordPress en bevat een productcatalogus, recepten en content over voeding, gericht op sporters en gezondheidsbewuste consumenten.',
+      'Biaform Provital maakt eiwitrijke broden en wraps. De website draait op WordPress en heeft een productcatalogus, recepten en info over voeding, voor sporters en mensen die gezond willen eten.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De website is gebouwd op **WordPress** met Betheme en custom post types voor producten en recepten. Met **Search & Filter Pro** vinden bezoekers snel producten of recepten op basis van categorieën en andere eigenschappen.',
-          'De productcatalogus werkt dynamisch met aangepaste taxonomieën. De filters zijn volledig geïntegreerd in het ontwerp.',
-          'SEO, caching en beveiliging zijn geoptimaliseerd met plugins en maatwerk.',
+          'De site is gebouwd op **WordPress** met Betheme en custom post types voor producten en recepten. Met **Search & Filter Pro** zoeken bezoekers producten of recepten op categorie en andere eigenschappen.',
+          'De productcatalogus werkt met eigen taxonomieën, en de filters passen in het ontwerp van de site.',
+          'Voor SEO, caching en beveiliging zijn plugins ingesteld, met wat maatwerk erbij.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'De website presenteert producten en recepten in een heldere lay-out, responsive en eenvoudig te beheren via WordPress en WPBakery.',
-          'Door recepten en producten te combineren vinden bezoekers snel inspiratie.',
+          'De site is responsive. De klant beheert producten en recepten zelf via WordPress en WPBakery.',
         ],
       },
     ],
@@ -291,22 +288,20 @@ export const projects = [
     cover: `${IMG}/LeChic/Portfolio-wout-lechic-overzichtsfoto.jpg`,
     tags: ['WordPress', 'WooCommerce', 'Ultimate Member'],
     intro:
-      'Le Chic Hairboetiek is een modern kapsalon met een webshop voor consumenten en professionals. De website is gebouwd op WordPress met WooCommerce en is geoptimaliseerd voor conversie en gebruiksgemak, met duidelijke navigatie naar diensten, producten en openingsuren.',
+      'Le Chic Hairboetiek is een kapsalon met een webshop voor particulieren en professionals. De website is gebouwd op WordPress met WooCommerce. Bezoekers vinden er de diensten, producten en openingsuren.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De webshop draait op **WooCommerce**, uitgebreid met **Search & Filter Pro** voor productfilters. Er is een aparte omgeving voor consumenten en professionals.',
-          'Er zijn plugins geïntegreerd voor betalingsverwerking, filtering, SEO en het contactformulier.',
-          'SEO, caching en beveiliging zijn geoptimaliseerd met plugins en custom scripts.',
+          'De webshop draait op **WooCommerce**, met **Search & Filter Pro** voor de productfilters. Particulieren en professionals hebben elk een eigen omgeving.',
+          'Plugins regelen de betalingen, SEO, caching, beveiliging en het contactformulier, met eigen scripts erbij.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'Het platform is volledig responsive en eenvoudig te beheren via het WordPress-dashboard.',
-          '**WooCommerce** zorgt voor een complete webshopervaring: productbeheer, bestellingen, klantcommunicatie en kortingsacties. Custom code maakt unieke productbundels en loyaliteitsprogramma’s mogelijk.',
-          'De site is voorbereid op toekomstige uitbreidingen, zoals koppelingen met externe systemen en marketingtools.',
+          'De site is responsive en de klant beheert alles zelf via het WordPress-dashboard.',
+          'In **WooCommerce** beheert de klant producten, bestellingen en kortingsacties. Met custom code kwamen er productbundels en een loyaliteitsprogramma bij.',
         ],
       },
     ],
@@ -326,22 +321,21 @@ export const projects = [
     cover: `${IMG}/Hidromek/Portfolio-Wout-hidromek-overzichtfoto.jpg`,
     tags: ['WordPress', 'PHP', 'ACF', 'WPML'],
     intro:
-      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP. WPML is geïntegreerd zodat de site later in meerdere talen beschikbaar kan zijn. De site heeft een duidelijke productcatalogus en is geoptimaliseerd voor zoekmachines.',
+      'Hidromek België is de officiële verdeler van Hidromek-machines en -onderdelen. De website is gebouwd in WordPress met maatwerk in PHP en heeft een catalogus met alle machines. WPML staat klaar om de site later in meerdere talen aan te bieden.',
     sections: [
       {
         title: 'Technieken & features',
         paragraphs: [
-          'De website draait op WordPress met custom PHP-logica. **WPML** is voorbereid voor Nederlands, Frans en Engels. De productcatalogus is dynamisch opgebouwd met custom post types en taxonomieën.',
-          'Voor SEO is onder meer Yoast SEO ingezet. Een filtermodule helpt bezoekers snel het juiste product te vinden op categorie of specificatie.',
-          'Contactformulieren en offerteaanvragen zijn gemaakt met **Contact Form 7**, gekoppeld aan Flamingo om inkomende berichten bij te houden. Bij een offerteaanvraag wordt de link van de pagina meegestuurd, zodat meteen duidelijk is in welke machine de klant interesse heeft.',
+          'De site draait op WordPress met eigen PHP-code. **WPML** staat klaar voor Nederlands, Frans en Engels. De catalogus is opgebouwd met custom post types en taxonomieën.',
+          'Voor SEO gebruikt de site onder meer Yoast SEO. Met een filter zoeken bezoekers machines op categorie of specificatie.',
+          'De contact- en offerteformulieren zijn gemaakt met **Contact Form 7**, met Flamingo om de berichten bij te houden. Bij een offerteaanvraag gaat de link van de pagina mee, zodat Hidromek meteen ziet over welke machine het gaat.',
         ],
       },
       {
         title: 'Over de website',
         paragraphs: [
-          'Het platform is de centrale plek voor klanten in België, met productinfo, technische fiches, nieuws en serviceaanvragen.',
-          'De productcatalogus vormt de kern: elk product heeft een eigen detailpagina met foto’s, specificaties en downloads.',
-          'Nieuwe producten, talen en functies kunnen worden toegevoegd zonder dat de structuur wijzigt.',
+          'Klanten vinden er productinfo, technische fiches, nieuws en een formulier voor serviceaanvragen.',
+          'Elke machine heeft een eigen pagina met foto’s, specificaties en downloads.',
         ],
       },
     ],

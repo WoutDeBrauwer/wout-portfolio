@@ -116,9 +116,9 @@ function Hero() {
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              Met een <em>passie voor websites en AI</em> bouw ik sites die{' '}
-              <em>er goed uitzien, vlot werken</em> en eenvoudig te beheren
-              zijn. Ik leer elke dag bij.
+              Ik bouw <em>graag websites</em> en werk elke dag met{' '}
+              <em>AI</em>. Mijn sites moeten er goed uitzien, vlot werken en
+              eenvoudig te beheren zijn.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">

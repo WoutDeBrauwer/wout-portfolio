@@ -69,22 +69,22 @@ export const growing = [
   { name: 'PHP', text: 'Meer logica in mijn blocks en eigen plugins.' },
   { name: 'API-koppelingen', text: 'Data van externe diensten in WordPress tonen.' },
   { name: 'Git', text: 'Werken met branches en reviews in een team.' },
-  { name: 'React', text: 'Deze portfolio bouwde ik zelf in React.' },
+  { name: 'React', text: 'Ook buiten WordPress bouwen, zoals deze portfolio.' },
 ]
 
 // "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP gaat dat sneller.',
+    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. De klant vult de inhoud daarna zelf. Claude Code en Figma MCP helpen me om dat sneller te doen.',
   },
   {
     title: 'Support voor klanten',
-    text: 'Klanten met een bestaande site help ik met hun vragen: een pagina aanpassen, een nieuwe pagina opzetten of uitleggen hoe iets werkt. Bij grotere vragen maak ik eerst een inschatting.',
+    text: 'Klanten met een bestaande site kunnen bij mij terecht met vragen. Ik pas pagina’s aan, zet nieuwe pagina’s op of leg uit hoe iets werkt. Voor grotere vragen maak ik eerst een inschatting.',
   },
   {
     title: 'Onderhoud',
-    text: 'Updates van WordPress, het thema en de plugins, en nakijken of alles daarna nog werkt. Ook DNS-records en domeinen regel ik.',
+    text: 'Ik update WordPress, het thema en de plugins, en kijk daarna na of alles nog werkt. Ook DNS-records en domeinen regel ik.',
   },
   {
     title: 'Bugfixing & aanpassingen',
@@ -96,19 +96,19 @@ export const services = [
 export const aiWork = [
   {
     title: 'Claude Code',
-    text: 'Mijn vaste AI-tool bij het bouwen. Ik zet er een design mee om in een plan en in code, en gebruik het als sparringpartner bij lastige bugs.',
+    text: 'Dit gebruik ik elke dag bij het bouwen. Ik zet er een design mee om in een plan en in code, en zoek er lastige bugs mee uit.',
   },
   {
     title: 'Figma MCP',
-    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit. Zo vertrek ik van het echte ontwerp, met de juiste maten, kleuren en teksten.',
+    text: 'Via MCP leest Claude Code een Figma-design rechtstreeks uit. Zo werk ik met de echte maten, kleuren en teksten uit het ontwerp.',
   },
   {
     title: 'Nieuwe tools uitproberen',
-    text: 'Ik volg op wat er nieuw is in AI en test het uit in eigen projecten. Deze portfolio bouwde ik in React, samen met Claude Code.',
+    text: 'Ik hou bij wat er nieuw is in AI en test het uit in eigen projecten, zoals deze portfolio.',
   },
   {
     title: 'Zelf nakijken',
-    text: 'AI maakt me sneller, niet minder kritisch. De keuzes maak ik zelf, en elke regel code review en test ik voor hij live gaat.',
+    text: 'De keuzes maak ik zelf. Ik review en test alle code voor ze live gaat.',
   },
 ]
 
@@ -147,7 +147,7 @@ export const story = [
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks, met AI als vast deel van mijn workflow.',
+    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er WordPress-sites met native Gutenberg-blocks.',
     icon: 'sparkles',
   },
 ]

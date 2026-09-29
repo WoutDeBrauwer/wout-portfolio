@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design en techniek samenbrengt en volop met AI werkt."
+const introWords = "Hallo! Ik ben Wout. Ik bouw WordPress-sites en gebruik AI om sneller te werken."
   .split(" ")
-  .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek", "AI"].includes(text) }));
+  .map((text) => ({ text, accent: ["WordPress-sites", "AI"].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -84,34 +84,31 @@ export default function AboutMe() {
             />
             <p className="!mt-10">
               Sinds januari 2026 werk ik als WordPress-expert bij Conversal in
-              Affligem. Ik bouw er WordPress-sites met <Highlight>custom
-              Gutenberg-blocks</Highlight>: van Figma-design naar blocks die
-              redacteurs zelf kunnen vullen. Die blocks bouw ik native, met PHP
-              en SCSS. Daarnaast zorg ik
-              voor het technische rond een site: <em>DNS-records</em>{" "}
-              instellen, domeinen overzetten naar Cloudflare en werken met
-              Google Workspace.
+              Affligem. Ik zet er Figma-designs om in WordPress-sites met{" "}
+              <Highlight>custom Gutenberg-blocks</Highlight>. Die blocks bouw ik
+              native, met PHP en SCSS, en redacteurs vullen ze daarna zelf. Ik
+              stel ook <em>DNS-records</em> in, zet domeinen over naar Cloudflare
+              en help met Google Workspace.
             </p>
             <p>
               Daarvoor werkte ik anderhalf jaar bij Atelier64 in Zottegem. Daar
               bouwde ik sites voor klanten zoals KOBA, OKRA en Arte-Verde, met
               Betheme, Elementor en ACF. Ik leerde er samenwerken met designers
-              en met klanten die hun site zelf willen beheren.
+              en met klanten die hun site zelf beheren.
             </p>
             <p>
-              Ik ben mee met de wereld van AI en zet het elke dag bewust in. Niet
-              om mezelf te vervangen, maar om <Highlight delay={0.1}>mijn kennis te
-              combineren met AI</Highlight>. Zo lever ik sneller op, zonder in te
-              boeten op kwaliteit.
+              Ik werk elke dag met <Highlight delay={0.1}>AI</Highlight>, naast
+              mijn eigen kennis. Zo werk ik sneller, en de keuzes maak ik nog
+              altijd zelf.
             </p>
             <p>
-              Voor mij is een site pas af als de klant er zelf mee overweg kan.
-              Ik werk graag samen met de designer tot het ontwerp klopt op elk
-              scherm. Mijn doel: websites die <Highlight delay={0.2}>snel en
-              functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
+              Ik vind het belangrijk dat een klant zijn site zelf kan beheren.
+              Samen met de designer kijk ik na of het ontwerp op elk scherm
+              klopt. En ik hou een site graag <Highlight delay={0.2}>snel en
+              eenvoudig</Highlight>.
             </p>
             <p>
-              Met ruim twee jaar ervaring wil ik nog veel bijleren, ook buiten
+              Ik heb ruim twee jaar ervaring en wil nog veel bijleren, ook buiten
               WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
               Vite, Tailwind en Framer Motion.
             </p>

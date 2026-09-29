@@ -33,9 +33,9 @@ export default function Footer() {
               </p>
             </div>
 
-            <ul className="md:col-start-6 md:col-span-7 flex flex-wrap gap-3 mt-2">
+            <ul className="md:col-span-12 flex flex-wrap gap-3 mt-2">
               {contactCards.map(({ label, value, href, Icon, glow, color }) => (
-                <li key={label}>
+                <li key={label} className="flex-auto">
                   <a
                     href={href}
                     {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
@@ -60,7 +60,7 @@ export default function Footer() {
               ))}
             </ul>
 
-            <div className="md:col-start-6 md:col-span-7 flex flex-wrap items-center gap-3">
+            <div className="md:col-span-12 flex flex-wrap items-center gap-3">
               <Pill href={cvUrl} download>Download mijn cv</Pill>
               <Pill variant="outline" to="/contact">Naar de contactpagina</Pill>
             </div>

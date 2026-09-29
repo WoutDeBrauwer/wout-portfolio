@@ -8,7 +8,7 @@ import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
 import { Magnetic, VelocityMarquee } from '../components/effects'
-import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
+import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, SideGlow, TableRow, usePageMeta } from '../components/ui'
 
 const titleClass =
   'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
@@ -157,7 +157,8 @@ function Hero() {
 // Uitgelichte projecten: pas na het verhaal, als bewijs van wat ik doe
 function FeaturedProjects() {
   return (
-    <section id="projecten" className="pb-32 md:pb-48 scroll-mt-28">
+    <section id="projecten" className="relative isolate pb-32 md:pb-48 scroll-mt-28">
+      <SideGlow side="right" color="azure" className="top-[10%] [animation-delay:-4s]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Projecten</SectionLabel>

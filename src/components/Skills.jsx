@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { growing, skillGroups, skillLevels, traits } from "../data/profile";
-import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
+import { Container, Reveal, SectionLabel, SideGlow, onSpotlight } from "./ui";
 
 // Accentkleur per kaart
 const accents = [
@@ -86,7 +86,8 @@ export default function Skills() {
   const active = hover ?? focus;
 
   return (
-    <section className="pb-32 md:pb-48">
+    <section className="relative isolate pb-32 md:pb-48">
+      <SideGlow side="left" color="violet" className="top-[20%] [animation-delay:-9s]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12">
           <SectionLabel className="md:col-span-5">Tools & ervaring</SectionLabel>

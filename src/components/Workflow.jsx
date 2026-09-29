@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { services } from "../data/profile";
-import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
+import { Container, Reveal, SectionLabel, SideGlow, onSpotlight } from "./ui";
 
 // Kleur per dienst (de eerste staat in het merkverloop)
 const serviceColors = [
@@ -19,7 +19,8 @@ export default function Workflow() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section className="pb-32 md:pb-48">
+    <section className="relative isolate pb-32 md:pb-48">
+      <SideGlow side="left" color="teal" className="top-[35%]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Wat ik doe</SectionLabel>

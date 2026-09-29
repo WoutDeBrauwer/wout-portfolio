@@ -32,6 +32,20 @@ export function Aurora({ className = '' }) {
   )
 }
 
+// Eén zachte kleurbol tegen de zijkant, half buiten beeld (parent moet `relative isolate` zijn)
+const glowColors = { iris: 'bg-iris', azure: 'bg-azure', violet: 'bg-violet', teal: 'bg-teal' }
+
+export function SideGlow({ side = 'left', color = 'iris', className = '' }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`aurora-blob pointer-events-none -z-10 !opacity-[0.18] w-[70vw] h-[70vw] max-w-[520px] max-h-[520px] ${
+        side === 'left' ? '-left-[260px]' : '-right-[260px]'
+      } ${glowColors[color]} ${className}`}
+    />
+  )
+}
+
 // Zet de muispositie als CSS-variabelen voor het .spotlight-effect
 export function onSpotlight(e) {
   const rect = e.currentTarget.getBoundingClientRect()

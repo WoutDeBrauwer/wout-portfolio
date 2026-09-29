@@ -3,7 +3,7 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven bijleren en ben helemaal mee met AI."
+const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer én als persoon, en ben helemaal mee met AI."
   .split(" ")
   .map((text) => ({ text, accent: ["uitdaging.", "AI."].includes(text) }));
 
@@ -88,12 +88,6 @@ export default function AboutMe() {
               SCSS. Het leukste vind ik als een redacteur daarna zelf een pagina
               vult en alles gewoon klopt. Daarnaast regel ik ook{" "}
               <em>DNS-records</em>, domeinen en Google Workspace voor klanten.
-            </p>
-            <p>
-              Bij Atelier64 bouwde ik sites voor onder meer KOBA, OKRA en
-              Arte-Verde, met Betheme, Elementor en ACF. Daar leerde ik
-              samenwerken met designers en met klanten die hun site zelf
-              beheren.
             </p>
             <p>
               <Highlight delay={0.1}>AI</Highlight> gebruik ik elke dag, als

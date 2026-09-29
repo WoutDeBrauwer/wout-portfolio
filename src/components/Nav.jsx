@@ -1,17 +1,29 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { contact } from "../data/profile";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Pill } from "./ui";
 
-// `hash`: springt naar een blok op de home (nooit "actief", de home is dat al)
+// `hash`: springt naar een blok op de home (nooit "actief", de home is dat al).
+// Contact staat hier niet bij: dat is de gekleurde knop rechts.
 const navLinks = [
   { path: "/", label: "Home", end: true },
   { path: "/#about", label: "Over mij", hash: true },
   { path: "/portfolio", label: "Projecten" },
-  { path: "/contact", label: "Contact" },
 ];
+
+// Opvallende contactknop in het merkverloop, met zachte glow
+const contactClass =
+  "group !bg-brand !text-dark font-semibold !not-italic shadow-[0_0_24px_-6px_rgba(56,189,248,0.55)] hover:shadow-[0_0_36px_-4px_rgba(45,212,191,0.7)]";
+
+function ContactButton({ className = "" }) {
+  return (
+    <Pill to="/contact" className={`${contactClass} ${className}`}>
+      Contact
+      <ArrowRight size={16} strokeWidth={2.25} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+    </Pill>
+  );
+}
 
 function Logo() {
   return (
@@ -77,9 +89,7 @@ export default function Nav() {
         </div>
 
         <div className="col-start-3 flex justify-end">
-          <Pill variant="outline" href={contact.linkedin} className="hidden md:inline-flex !px-5 !py-2">
-            LinkedIn ↗
-          </Pill>
+          <ContactButton className="hidden md:inline-flex !px-5 !py-2" />
           <button
             onClick={() => setMenuOpen(true)}
             className="md:hidden p-2 -mr-2 text-white"
@@ -136,7 +146,7 @@ export default function Nav() {
             </div>
 
             <div className="mt-auto px-5 pb-10">
-              <Pill href={contact.linkedin} className="w-full">LinkedIn ↗</Pill>
+              <ContactButton className="w-full !py-3.5" />
             </div>
           </motion.div>
         )}

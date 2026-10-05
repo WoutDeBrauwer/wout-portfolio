@@ -95,6 +95,11 @@ export default function AboutMe() {
               Vite, Tailwind en Framer Motion.
             </p>
             <p>
+              Ook <em>webdesign</em> interesseert me. Ik kreeg het in mijn
+              opleidingen aan Artevelde en Howest, en op het werk werk ik elke
+              dag met designs in Figma.
+            </p>
+            <p>
               Buiten het werk game ik graag, ga ik naar de fitness en trek ik
               er met mijn <em>koersfiets</em> op uit.
             </p>

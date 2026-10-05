@@ -96,8 +96,9 @@ export default function AboutMe() {
             </p>
             <p>
               Ook <em>webdesign</em> interesseert me. Ik kreeg het in mijn
-              opleidingen aan Artevelde en Howest, en op het werk werk ik elke
-              dag met designs in Figma.
+              opleidingen aan Artevelde en Howest. Zelf ontwerpen doe ik
+              vandaag nog weinig. Ik wil er wel in groeien, en mijn kennis van
+              frontend development neem ik daarbij mee.
             </p>
             <p>
               Buiten het werk game ik graag, ga ik naar de fitness en trek ik

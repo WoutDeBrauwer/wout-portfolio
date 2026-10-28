@@ -12,6 +12,62 @@ const IMG = '/images/Images'
 
 export const projects = [
   {
+    slug: 'save-the-date-events',
+    title: 'Save The Date Events',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://savethedate-events.be/',
+    cover: 'https://savethedate-events.be/wp-content/uploads/2026/06/SaveTheDateEvents-afbeelding-5-1024x683.jpg',
+    tags: ['WordPress', 'Gutenberg', 'Reviews'],
+    intro:
+      'Save The Date Events organiseert huwelijken en andere feesten van het eerste idee tot de uitvoering. De website brengt hun persoonlijke aanpak helder in beeld: van het eerste gesprek en het concept tot de volledige coördinatie van het event.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'De website is gebouwd met **WordPress** en **Gutenberg**. De opbouw leidt bezoekers stap voor stap door de dienstverlening: kennismaken, een concept uitwerken en het event organiseren.',
+          'Ervaringen van klanten en duidelijke contactmogelijkheden helpen bezoekers om de stap naar een kennismakingsgesprek te zetten.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Save The Date Events neemt de organisatie en praktische opvolging uit handen, vóór, tijdens en na een event. De website maakt dat totaalpakket concreet zonder de persoonlijke aanpak uit het oog te verliezen.',
+          'De inhoud toont zowel huwelijken als andere feesten en evenementen, met aandacht voor sfeer, planning en de begeleiding op de dag zelf.',
+        ],
+      },
+    ],
+    screenshots: [],
+  },
+  {
+    slug: 'dimatec',
+    title: 'Dimatec',
+    agency: 'conversal',
+    devOnly: true,
+    url: 'https://www.dimatec.be/',
+    cover: 'https://www.dimatec.be/wp-content/uploads/2026/09/DB_7016-k-1024x683.jpg',
+    tags: ['WordPress', 'Gutenberg', 'B2B', 'Realisaties'],
+    intro:
+      'Dimatec ontwikkelt en produceert oplossingen op maat in metaal, kunststof en hout. De website stelt het familiebedrijf en zijn aanpak voor, en toont hoe ideeën van ontwerp en prototyping tot productie en afwerking worden uitgewerkt.',
+    sections: [
+      {
+        title: 'Technieken & features',
+        paragraphs: [
+          'De website is gebouwd met **WordPress** en **Gutenberg**. De inhoud combineert de verschillende diensten met concrete realisaties, zodat bezoekers zowel de mogelijkheden als het afgewerkte werk ontdekken.',
+          'Projecten voor onder meer Tomorrowland, De Lijn en Fost Plus maken de uiteenlopende toepassingen zichtbaar.',
+        ],
+      },
+      {
+        title: 'Over de website',
+        paragraphs: [
+          'Dimatec begeleidt klanten van een eerste consultatie tot een afgewerkt product, met ontwerp, prototyping en productie in het eigen atelier in Affligem.',
+          'De website licht de ervaring en persoonlijke aanpak van het familiebedrijf toe en geeft bedrijven een duidelijk beeld van de brede maakexpertise.',
+        ],
+      },
+    ],
+    screenshots: [],
+  },
+  {
     slug: 'mv-events',
     title: 'M&V Events',
     agency: 'conversal',

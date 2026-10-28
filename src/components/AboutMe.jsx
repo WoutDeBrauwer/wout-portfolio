@@ -3,9 +3,9 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design eHallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer én als persoon.n techniek samenbrengt, met AI als extra versnelling."
+const introWords = "Hallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer en als persoon."
   .split(" ")
-  .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek", "AI"].includes(text) }));
+  .map((text) => ({ text, accent: ["uitdaging.", "persoon."].includes(text) }));
 
 // Markeerstift die inkleurt zodra de zin in beeld komt
 function Highlight({ children, delay = 0 }) {
@@ -83,40 +83,26 @@ export default function AboutMe() {
               className="text-2xl md:text-4xl text-white leading-snug tracking-tight"
             />
             <p className="!mt-10">
-              Sinds januari 2026 werk ik als WordPress-expert bij Conversal in
-              Affligem. Ik bouw er WordPress-sites met <Highlight>custom
-              Gutenberg-blocks</Highlight>: van Figma-design naar blocks die
-              redacteurs zelf kunnen vullen. Die blocks bouw ik native, met PHP
-              en SCSS. Daarnaast zorg ik
-              voor het technische rond een site: <em>DNS-records</em>{" "}
-              instellen, domeinen overzetten naar Cloudflare en werken met
-              Google Workspace.
+              Als WordPress-expert bij Conversal bouw ik vooral{" "}
+              <Highlight>custom Gutenberg-blocks</Highlight>, native met PHP en
+              SCSS. Het leukste vind ik als een redacteur daarna zelf een pagina
+              vult en alles gewoon klopt. Daarnaast regel ik ook{" "}
+              <em>DNS-records</em>, domeinen en Google Workspace voor klanten.
             </p>
             <p>
-              Daarvoor werkte ik anderhalf jaar bij Atelier64 in Zottegem. Daar
-              bouwde ik sites voor klanten zoals KOBA, OKRA en Arte-Verde, met
-              Betheme, Elementor en ACF. Ik leerde er samenwerken met designers
-              en met klanten die hun site zelf willen beheren.
-            </p>
-            <p>
-              Ik ben mee met de wereld van AI en zet het elke dag bewust in. Niet
-              om mezelf te vervangen, maar om <Highlight delay={0.1}>mijn kennis te
-              combineren met AI</Highlight>. Claude Code helpt me een design sneller
-              om te zetten in een plan en in code, en is mijn sparringpartner bij
-              lastige bugs. De keuzes maak ik zelf, en elke regel code review en
-              test ik voor hij live gaat. Zo lever ik sneller op, zonder in te
-              boeten op kwaliteit.
-            </p>
-            <p>
-              Voor mij is een site pas af als de klant er zelf mee overweg kan.
-              Ik werk graag samen met de designer tot het ontwerp klopt op elk
-              scherm. Mijn doel: websites die <Highlight delay={0.2}>snel en
-              functioneel</Highlight> zijn, afgestemd op wie ze gebruikt.
-            </p>
-            <p>
-              Met ruim twee jaar ervaring wil ik nog veel bijleren, ook buiten
+              Ik heb ruim twee jaar ervaring en kijk graag verder dan
               WordPress. Deze portfolio bouwde ik zelf in <em>React</em>, met
               Vite, Tailwind en Framer Motion.
+            </p>
+            <p>
+              Ook <em>webdesign</em> interesseert me. Ik kreeg het in mijn
+              opleidingen aan Artevelde en Howest. Zelf ontwerpen doe ik
+              vandaag nog weinig. Ik wil er wel in groeien, en mijn kennis van
+              frontend development neem ik daarbij mee.
+            </p>
+            <p>
+              Buiten het werk game ik graag, ga ik naar de fitness en trek ik
+              er met mijn <em>koersfiets</em> op uit.
             </p>
           </Reveal>
         </div>

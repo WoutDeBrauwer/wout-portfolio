@@ -8,7 +8,7 @@ import Typewriter from '../components/Typewriter'
 import ProjectCarousel from '../components/ProjectCarousel'
 import Workflow from '../components/Workflow'
 import { Magnetic, VelocityMarquee } from '../components/effects'
-import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, TableRow, usePageMeta } from '../components/ui'
+import { ArrowButton, Aurora, Circle, Container, Pill, Reveal, SectionLabel, SideGlow, TableRow, usePageMeta } from '../components/ui'
 
 const titleClass =
   'font-mono font-medium tracking-tight leading-[0.95] text-[clamp(2.4rem,7vw,6.5rem)]'
@@ -93,9 +93,12 @@ function SkillMarquee() {
 
 function Hero() {
   return (
-    <header className="relative isolate overflow-hidden pt-16 md:pt-24 pb-20">
+    // Alleen horizontaal clippen: zo loopt de glow zacht door in "Over mij" i.p.v. hard af te snijden
+    <header className="relative isolate overflow-x-clip pt-16 md:pt-24 pb-20">
       <Aurora />
-      <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      </div>
 
       <Container>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-4 mb-10">
@@ -105,23 +108,22 @@ function Hero() {
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <h1 className={titleClass}>
-            <span className="sr-only">WordPress-developer</span>
-            <SplitReveal text="WordPress" delay={0.1} />
+            <span className="sr-only">Wout De Brauwer, junior webdeveloper</span>
+            <SplitReveal text="Junior" delay={0.1} />
           </h1>
           <HeroButtons className="hidden lg:flex" />
         </div>
 
-        {/* Zin en titel pas vanaf xl naast elkaar: "developer" is breed */}
+        {/* Zin en titel pas vanaf xl naast elkaar: "webdeveloper" is breed */}
         <div className="flex flex-col-reverse xl:flex-row xl:items-end xl:justify-between gap-8 mt-4 lg:mt-2">
           <Reveal delay={0.5} className="max-w-sm">
             <p className="text-white/70">
-              <em>Junior webdeveloper</em> met een passie voor WordPress. Ik bouw
-              websites die <em>er goed uitzien, vlot werken</em> en eenvoudig te
-              beheren zijn, en ik leer elke dag bij.
+              Gedreven developer die <em>AI</em> omarmt. Ik gebruik het elke
+              dag om sneller en beter te werken, de keuzes maak ik zelf.
             </p>
           </Reveal>
           <p className={`${titleClass} lg:text-right`} aria-hidden="true">
-            <Typewriter text="developer" speed={90} delay={700} cursor textClassName="text-gradient" />
+            <Typewriter text="webdeveloper" speed={90} delay={700} cursor textClassName="text-gradient" />
           </p>
         </div>
 
@@ -155,7 +157,8 @@ function Hero() {
 // Uitgelichte projecten: pas na het verhaal, als bewijs van wat ik doe
 function FeaturedProjects() {
   return (
-    <section id="projecten" className="pb-32 md:pb-48 scroll-mt-28">
+    <section id="projecten" className="relative isolate pb-32 md:pb-48 scroll-mt-28">
+      <SideGlow side="right" color="azure" className="top-[10%] [animation-delay:-4s]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Projecten</SectionLabel>
@@ -225,7 +228,8 @@ function Timeline({ title, rows, dot }) {
 
 function Experience() {
   return (
-    <section id="ervaring" className="pb-32 md:pb-48 scroll-mt-28">
+    <section id="ervaring" className="relative isolate overflow-hidden pb-32 md:pb-48 scroll-mt-28">
+      <Circle tone="violet" className="-z-10 w-[380px] h-[380px] -right-52 top-[42%] hidden md:block" />
       <Timeline
         title="Ervaring"
         rows={experience.map((job) => ({ ...job, name: job.company, text: job.role }))}
@@ -258,7 +262,7 @@ function Experience() {
 export default function Home() {
   usePageMeta()
 
-  // Volgorde als verhaal: wie ik ben → wat ik doe → hoe ik hier kwam → bewijs → details
+  // Volgorde als verhaal: wie ik ben → wat ik doe (met AI) → hoe ik hier kwam → bewijs → details
   return (
     <>
       <Hero />
@@ -266,7 +270,7 @@ export default function Home() {
       <Workflow />
       <Story />
       <div className="border-y border-line mb-32 md:mb-48">
-        <VelocityMarquee items={['WordPress', 'Gutenberg', 'Figma', 'Claude Code', 'PHP', 'SCSS']} />
+        <VelocityMarquee items={['WordPress', 'Gutenberg', 'AI', 'Claude Code', 'Figma', 'PHP', 'SCSS']} />
       </div>
       <FeaturedProjects />
       <Skills />

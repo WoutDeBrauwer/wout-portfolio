@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-dark text-white font-sans antialiased;
+  @apply bg-dark text-white text-lg font-sans antialiased;
 }
 
 ::selection {

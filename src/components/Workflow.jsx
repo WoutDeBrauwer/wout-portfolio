@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { services } from "../data/profile";
-import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
+import { Container, Reveal, SectionLabel, SideGlow, onSpotlight } from "./ui";
 
 // Kleur per dienst (de eerste staat in het merkverloop)
 const serviceColors = [
@@ -19,7 +19,8 @@ export default function Workflow() {
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
 
   return (
-    <section className="pb-32 md:pb-48">
+    <section className="relative isolate pb-32 md:pb-48">
+      <SideGlow side="left" color="teal" className="top-[35%]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12 md:mb-16">
           <SectionLabel className="md:col-span-5">Wat ik doe</SectionLabel>
@@ -30,7 +31,8 @@ export default function Workflow() {
             <p className="text-white/70 max-w-xl">
               Ik bouw nieuwe WordPress-sites vanuit een Figma-design. Ook na
               de lancering help ik klanten verder met support, onderhoud en
-              aanpassingen.
+              aanpassingen. Bij al dat werk gebruik ik AI, zo gaat het een pak
+              sneller.
             </p>
           </Reveal>
         </div>
@@ -59,8 +61,8 @@ export default function Workflow() {
                       <p className={`font-mono text-3xl font-medium mb-8 ${main ? "text-dark/70" : color.text}`}>
                         {String(i + 1).padStart(2, "0")}
                       </p>
-                      <h3 className="font-mono text-lg font-medium mb-3">{service.title}</h3>
-                      <p className={`text-sm ${main ? "text-dark/80" : "text-white/70"}`}>
+                      <h3 className="font-mono text-xl font-medium mb-3">{service.title}</h3>
+                      <p className={`text-lg ${main ? "text-dark/80" : "text-white/70"}`}>
                         {service.text}
                       </p>
                     </div>

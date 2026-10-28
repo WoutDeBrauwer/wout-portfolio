@@ -15,7 +15,7 @@ export function Container({ className = '', children }) {
 // Klein monospace label zoals "…/Over mij…"
 export function SectionLabel({ children, className = '' }) {
   return (
-    <p className={`font-mono text-xs text-white/70 ${className}`}>
+    <p className={`font-mono text-lg text-white/70 ${className}`}>
       <span className="text-iris">…/</span>{children}<span className="text-violet">…</span>
     </p>
   )
@@ -29,6 +29,20 @@ export function Aurora({ className = '' }) {
       <div className="aurora-blob bg-azure w-[34vw] h-[34vw] max-w-[460px] max-h-[460px] top-[30%] right-[22%] [animation-delay:-6s]" />
       <div className="aurora-blob bg-violet w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] top-[5%] -left-[10%] opacity-20 [animation-delay:-12s]" />
     </div>
+  )
+}
+
+// Eén zachte kleurbol tegen de zijkant, half buiten beeld (parent moet `relative isolate` zijn)
+const glowColors = { iris: 'bg-iris', azure: 'bg-azure', violet: 'bg-violet', teal: 'bg-teal' }
+
+export function SideGlow({ side = 'left', color = 'iris', className = '' }) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`aurora-blob pointer-events-none -z-10 !opacity-[0.18] w-[70vw] h-[70vw] max-w-[520px] max-h-[520px] ${
+        side === 'left' ? '-left-[260px]' : '-right-[260px]'
+      } ${glowColors[color]} ${className}`}
+    />
   )
 }
 
@@ -102,11 +116,17 @@ export function ArrowButton({ diagonal = false, direction = 'right', label, clas
 }
 
 // Dunne decoratieve cirkel (parent moet `relative overflow-hidden` zijn)
-export function Circle({ className = '' }) {
+const circleTones = {
+  iris: 'border-iris/25',
+  teal: 'border-teal/20',
+  violet: 'border-violet/20',
+}
+
+export function Circle({ tone = 'iris', className = '' }) {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute rounded-full border border-iris/25 ${className}`}
+      className={`pointer-events-none absolute rounded-full border ${circleTones[tone]} ${className}`}
     />
   )
 }
@@ -170,7 +190,7 @@ export const plainText = (text = '') => text.replace(/\*\*/g, '')
 // Titel en meta-description per pagina (SPA: anders deelt elke pagina dezelfde titel)
 export function usePageMeta(title, description) {
   useEffect(() => {
-    document.title = title ? `${title} | Wout De Brauwer` : 'Wout De Brauwer | WordPress-developer'
+    document.title = title ? `${title} | Wout De Brauwer` : 'Wout De Brauwer | Junior webdeveloper'
     const meta = document.querySelector('meta[name="description"]')
     if (!meta || !description) return
     const previous = meta.content

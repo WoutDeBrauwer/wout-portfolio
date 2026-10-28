@@ -61,74 +61,89 @@ export const skillGroups = [
   },
 ]
 
-// Eigenschappen onder de tools, zonder niveau (uit mijn cv)
-export const traits = ['AI-driven', 'Teamspeler', 'Leergierig', 'Nieuwsgierig', 'Gedreven', 'Resultaatgericht']
+// Eigenschappen onder de tools, zonder niveau: concreet i.p.v. cv-woorden
+export const traits = [
+  'Probeert nieuwe AI-tools als eerste uit',
+  'Zoekt een bug uit tot hij weg is',
+  'Kijkt zijn eigen werk altijd na',
+  'Vraagt liever één keer te veel',
+  'Leert graag van feedback',
+]
 
 // "Waar ik nu in groei" onder de tools: wat ik op dit moment bijleer
 export const growing = [
   { name: 'PHP', text: 'Meer logica in mijn blocks en eigen plugins.' },
   { name: 'API-koppelingen', text: 'Data van externe diensten in WordPress tonen.' },
   { name: 'Git', text: 'Werken met branches en reviews in een team.' },
-  { name: 'React', text: 'Deze portfolio bouwde ik zelf in React.' },
+  { name: 'React', text: 'Ook buiten WordPress bouwen, zoals deze portfolio.' },
 ]
 
 // "Wat ik doe" op de home. De eerste dienst krijgt de kaart in het merkverloop.
+// AI zit in het werk zelf, daarom staat het hier en niet in een aparte sectie.
 export const services = [
   {
     title: 'Nieuwe websites',
-    text: 'Van Figma-design tot een complete WordPress-site met custom Gutenberg-blocks die de klant zelf vult. Met Claude Code en Figma MCP gaat dat sneller.',
+    text: 'Ik zet een Figma-design om in een volledige WordPress-site met custom Gutenberg-blocks. Claude Code leest het design uit via Figma MCP en stelt een plan op. Dat plan kijk ik eerst zelf na. Daarna bouw ik de blocks met Claude Code, en test en werk ik ze zelf af.',
   },
   {
     title: 'Support voor klanten',
-    text: 'Klanten met een bestaande site help ik met hun vragen: een pagina aanpassen, een nieuwe pagina opzetten of uitleggen hoe iets werkt. Bij grotere vragen maak ik eerst een inschatting.',
+    text: 'Klanten met een bestaande site kunnen bij mij terecht met vragen. Ik pas pagina’s aan, zet nieuwe pagina’s op of leg uit hoe iets werkt. Bij grotere vragen overleg ik met Claude over de beste aanpak en maak ik een inschatting.',
   },
   {
     title: 'Onderhoud',
-    text: 'Updates van WordPress, het thema en de plugins, en nakijken of alles daarna nog werkt. Ook DNS-records en domeinen regel ik.',
+    text: 'Ik update WordPress, het thema en de plugins, en kijk daarna na of alles nog werkt. Ook DNS-records en domeinen regel ik.',
   },
   {
     title: 'Bugfixing & aanpassingen',
-    text: 'Werkt iets niet zoals het hoort, dan zoek ik de oorzaak en los ik het op. Kleine aanpassingen, zoals een extra blok of een andere lay-out, pak ik snel op.',
+    text: 'Sommige bugs zie je niet in de logs. Dan zoek ik samen met Claude in de code tot ik de oorzaak vind. Kleine aanpassingen pak ik snel op.',
   },
 ]
 
-// "Mijn verhaal" op de home. Bewust kort en feitelijk gehouden.
-// `icon` = naam van een lucide-icoon (zie Story.jsx)
+// "Mijn verhaal" op de home, in mijn eigen woorden.
+// `icon` = naam van een lucide-icoon (zie Story.jsx), `cta` = optionele knop onder de tekst
 export const story = [
   {
     years: '2013 – 2019',
     kicker: 'Middelbaar',
     title: 'Mechanische vormgeving',
-    text: 'In het middelbaar volgde ik TSO, de richting mechanische vormgevingstechnieken. Veel technisch tekenen en werken op de millimeter.',
+    text: 'In het middelbaar volgde ik TSO, de richting mechanische vormgevingstechnieken. Ik was er veel bezig met het programmeren van CNC-machines. Door die mix van theorie en praktijk ontdekte ik dat ik het best leer door iets echt te doen.',
     icon: 'wrench',
   },
   {
     years: '2019 – 2022',
     kicker: 'Odisee & Artevelde',
     title: 'Ontwerp en digitale media',
-    text: 'Ik begon aan Odisee met de bachelor ontwerp- en productietechnologie. Na een jaar ben ik overgestapt naar grafische en digitale media aan Artevelde.',
+    text: 'Aan Odisee begon ik aan de bachelor ontwerp- en productietechnologie, om verder te gaan in mechanica. Daar groeide mijn interesse in computers en coderen, dus stapte ik over naar grafische en digitale media aan Artevelde. Ik leerde er veel bij, maar ik wou een opleiding die meer op de praktijk gericht was.',
     icon: 'pen',
   },
   {
     years: '2022 – 2024',
     kicker: 'Howest',
     title: 'Webdevelopment',
-    text: 'In Kortrijk deed ik het graduaat webdevelopment en design & 3D AR. Daar begon ik met het bouwen van websites.',
+    text: 'Daarom koos ik voor het graduaat webdevelopment en design & 3D AR aan Howest in Kortrijk. Daar leerde ik HTML, CSS, JavaScript en PHP en bouwde ik mijn eerste websites. Ik wist vrij snel dat ik dit wou blijven doen.',
     icon: 'code',
   },
   {
     years: '2024 – 2025',
     kicker: 'Atelier64',
-    title: 'Mijn eerste ervaring',
-    text: 'Junior webdeveloper bij Atelier64 in Zottegem. Ik bouwde er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF.',
+    title: 'Mijn eerste werkervaring',
+    text: 'Na Howest kon ik meteen aan de slag als junior webdeveloper bij Atelier64 in Zottegem. Anderhalf jaar bouwde ik er sites voor klanten zoals KOBA, OKRA en Arte-Verde, vooral met Betheme, Elementor en ACF. Ik leerde er werken met deadlines en samenwerken met designers en klanten.',
     icon: 'rocket',
   },
   {
     years: '2026 – nu',
     kicker: 'Conversal',
     title: 'WordPress-expert',
-    text: 'Sinds januari 2026 werk ik bij Conversal in Affligem. Ik bouw er native Gutenberg-blocks, met AI als vast deel van mijn workflow.',
+    text: 'In januari 2026 stapte ik over naar Conversal in Affligem, een bureau dat net als ik veel met AI werkt. Ik bouw er sites met native Gutenberg-blocks en werk elke dag met Claude Code en Figma MCP. Naast nieuwe sites help ik klanten met support, onderhoud en bugfixing.',
     icon: 'sparkles',
+  },
+  {
+    years: 'Wat nu?',
+    kicker: 'Volgende stap',
+    title: 'Mijn volgende uitdaging',
+    text: 'Ik ben op zoek naar een nieuwe uitdaging, bij een team waar ik verder kan groeien als developer. Heb je een plek voor mij in je team? Stuur me een berichtje of bel me, dan vertel ik je graag meer.',
+    icon: 'compass',
+    cta: { label: 'Neem contact op', to: '/contact' },
   },
 ]
 

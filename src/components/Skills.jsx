@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { growing, skillGroups, skillLevels, traits } from "../data/profile";
-import { Container, Reveal, SectionLabel, onSpotlight } from "./ui";
+import { Container, Reveal, SectionLabel, SideGlow, onSpotlight } from "./ui";
 
 // Accentkleur per kaart
 const accents = [
@@ -86,7 +86,8 @@ export default function Skills() {
   const active = hover ?? focus;
 
   return (
-    <section className="pb-32 md:pb-48">
+    <section className="relative isolate pb-32 md:pb-48">
+      <SideGlow side="left" color="violet" className="top-[20%] [animation-delay:-9s]" />
       <Container>
         <div className="grid md:grid-cols-12 gap-6 mb-12">
           <SectionLabel className="md:col-span-5">Tools & ervaring</SectionLabel>
@@ -96,7 +97,7 @@ export default function Skills() {
             </h2>
             <p className="text-white/70 max-w-xl mb-8">
               De talen en programma's die ik gebruik, en hoe goed ik ze ken.
-              Klik op een niveau om te filteren.
+              Eerlijk ingeschat. Klik op een niveau om te filteren.
             </p>
 
             {/* Legende die ook filtert */}
@@ -164,7 +165,7 @@ export default function Skills() {
               {growing.map((item) => (
                 <li key={item.name}>
                   <span className="font-mono text-sm text-white/85">{item.name}</span>
-                  <p className="text-sm text-white/55 mt-1">{item.text}</p>
+                  <p className="text-lg text-white/55 mt-1">{item.text}</p>
                 </li>
               ))}
             </ul>

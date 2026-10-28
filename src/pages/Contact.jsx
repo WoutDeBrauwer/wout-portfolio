@@ -1,19 +1,17 @@
-import { contact } from "../data/profile";
-import { Aurora, Circle, Container, SectionLabel, TableRow, usePageMeta } from "../components/ui";
-
-const rows = [
-  { label: "E-mail", value: contact.email, href: `mailto:${contact.email}` },
-  { label: "Telefoon", value: contact.phone, href: contact.phoneHref },
-  { label: "LinkedIn", value: "Wout De Brauwer ↗", href: contact.linkedin },
-];
+import { cvUrl } from "../data/profile";
+import ContactCards from "../components/ContactCards";
+import { Aurora, Circle, Container, Pill, SectionLabel, usePageMeta } from "../components/ui";
 
 export default function Contact() {
-  usePageMeta("Contact", "Neem contact op met Wout De Brauwer, WordPress-developer, via e-mail, telefoon of LinkedIn.");
+  usePageMeta("Contact", "Neem contact op met Wout De Brauwer, junior webdeveloper, via e-mail, telefoon of LinkedIn.");
 
   return (
-    <section className="relative isolate overflow-hidden pt-16 md:pt-24 pb-24 md:pb-32">
+    <section className="relative isolate overflow-x-clip pt-16 md:pt-24 pb-24 md:pb-32">
       <Aurora className="opacity-70" />
-      <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      {/* Eigen clip: de sectie clipt enkel horizontaal, zodat de glow onderaan zacht uitloopt */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <Circle className="w-[440px] h-[440px] -right-24 -top-44 hidden sm:block" />
+      </div>
 
       <Container>
         <SectionLabel className="mb-10">Contact</SectionLabel>
@@ -24,31 +22,20 @@ export default function Contact() {
           </h1>
           <div className="md:col-span-6 space-y-4 text-white/70 max-w-xl">
             <p>
-              Een vraag over een project, zin om <em>ervaringen uit te
-              wisselen</em> over Gutenberg of AI in je workflow, of gewoon
-              kennismaken? Ik los graag technische uitdagingen op en leer
-              elke dag bij.
+              Ik sta open voor een <em>nieuwe uitdaging</em>. Heb je een
+              vacature, een vraag over een project of wil je eens praten over
+              WordPress of AI?
             </p>
-            <p>Stuur me gerust een berichtje, ik antwoord snel.</p>
+            <p>Mail of bel me gerust, ik antwoord zo snel mogelijk.</p>
           </div>
         </div>
-      </Container>
 
-      <div className="max-w-[1400px] mx-auto border-t border-line">
-        {rows.map((row) => (
-          <TableRow
-            key={row.label}
-            href={row.href}
-            className="grid-cols-1 sm:grid-cols-[140px_1fr] items-baseline"
-            cells={
-              <>
-                <span className="text-sm opacity-60">{row.label}</span>
-                <span className="font-mono text-lg sm:text-2xl break-all">{row.value}</span>
-              </>
-            }
-          />
-        ))}
-      </div>
+        <ContactCards />
+
+        <div className="mt-8">
+          <Pill href={cvUrl} download>Download mijn cv</Pill>
+        </div>
+      </Container>
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { Circle, Container, Reveal, SectionLabel } from "./ui";
 import { ScrollText } from "./effects";
 
 // Introzin die woord per woord oplicht bij het scrollen; accentwoorden in het verloop
-const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design en techniek samenbrengt, met AI als extra versnelling."
+const introWords = "Hallo! Ik ben Wout, een WordPress-developer die design eHallo! Ik ben Wout, junior webdeveloper op zoek naar mijn volgende uitdaging. Ik wil blijven groeien, als developer én als persoon.n techniek samenbrengt, met AI als extra versnelling."
   .split(" ")
   .map((text) => ({ text, accent: ["WordPress-developer", "design", "techniek", "AI"].includes(text) }));
 
